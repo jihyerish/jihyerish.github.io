@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTTPB Prototype</title>
+<style>
+#textbox {
+	width: 490px;
+	height: 20px;
+}
+#button {
+	width: 150px;
+	height: 26px;
+}
+</style>
+<script>
+window.addEventListener("load", function() {
+	var btn = document.querySelector("#button")
+	btn.addEventListener("click", function() {
+		var textbox = document.querySelector("#textbox")
+		a.href = textbox.value;
+	});
+})
+</script>
+</head>
+<body>
+<img src="httpb_banner.png" /> <br/>
+<input id="textbox" type="text" value="httpb://10.177.221.55/manage">
+<a id="a" href="httpb://10.177.221.55/manage"><input id="button" type="button" value="Connect"></a>
+</body>
+</html
