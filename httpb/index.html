@@ -5,26 +5,31 @@
 <style>
 #textbox {
 	width: 490px;
-	height: 20px;
+	height: 50px;
+	font-size: 28px;
 }
 #button {
 	width: 150px;
-	height: 26px;
+	height: 56px;
+	font-size: 28px;
 }
 </style>
 <script>
 window.addEventListener("load", function() {
 	var btn = document.querySelector("#button")
 	btn.addEventListener("click", function() {
-		var textbox = document.querySelector("#textbox")
-		a.href = textbox.value;
+		var textbox = document.querySelector("#textbox");
+		if (textbox.value.indexOf("http") != 0)
+			a.href = "http://" + textbox.value;
+		else
+			a.href = textbox.value;
 	});
 })
 </script>
 </head>
 <body>
 <img src="httpb_banner.png" /> <br/>
-<input id="textbox" type="text" value="httpb://10.177.221.55/manage">
-<a id="a" href="httpb://10.177.221.55/manage"><input id="button" type="button" value="Connect"></a>
+<input id="textbox" type="text" value="httpb://10.177.221.51/manage">
+<a id="a"><input id="button" type="button" value="Connect"></a>
 </body>
-</html
+</html>
