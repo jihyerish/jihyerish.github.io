@@ -6,4 +6,4 @@ Demos created by Jihye Hong (jihyerish)
 * WebVR Polyfill Demos
 * Houdini APIs Demos
 * Scroll Demos
-* [webOS Virtual Grid List](https://jihyerish.github.io/VirtualGridList/)
+* [webOS Virtual Grid List](https://jihyerish.github.io/virtual-grid-list/)
