@@ -54,44 +54,45 @@ document.getElementById('scroller').onkeydown = function(evt) {
   var focusableBox;
 
   if (evt.keyCode == 40) { // Arrow Down
-    if(!focusedBox.nextElementSibling)
-      return;
-    else {
-      focusableBox = focusedBox.nextElementSibling;
-      console.log("1");
-      
+    focusableBox = focusedBox;
+    
+    for (var columncnt = 0; columncnt < 5; columncnt++){
       if(!focusableBox.nextElementSibling)
         return;
-      
       else {
         focusableBox = focusableBox.nextElementSibling;
-        console.log("2");
-        
+      }
+    }
+    /*
+    if(!focusableBox.nextElementSibling)
+      return;
+    else {
+      focusableBox = focusableBox.nextElementSibling;
+      if(!focusableBox.nextElementSibling)
+        return;
+      else {
+        focusableBox = focusableBox.nextElementSibling;
         if(!focusableBox.nextElementSibling)
           return;
         
         else {
           focusableBox = focusableBox.nextElementSibling;
-          console.log("3");
-          
           if(!focusableBox.nextElementSibling)
             return;
           
           else {
             focusableBox = focusableBox.nextElementSibling;
-            console.log("4");
-            
             if(!focusableBox.nextElementSibling)
               return;
             
             else {
               focusableBox = focusableBox.nextElementSibling;
-              console.log("5");
             }
           }
         }
       }
-    }
+      
+    }*/
   } else if (evt.keyCode == 37) { // Arrow Left
     focusableBox = focusedBox.previousElementSibling;
   } else if (evt.keyCode == 39) { // Arrow Right
