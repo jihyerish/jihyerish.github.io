@@ -1,6 +1,8 @@
 var selectedBox;
 var anchorScrollTop;
 
+var lastX, lastY;
+
 for (var i=0; i < document.querySelectorAll('.box').length; i++){
   document.querySelectorAll('.box')[i].style.backgroundColor = "#"+ getRandomInt(0, 999) ;
 }
@@ -20,13 +22,22 @@ function selectBox(element) {
 }
 
 document.getElementById('scroller').addEventListener('focusin', function(e) {
+
+  console.log("anchorScrollTop focus: "+ anchorScrollTop);
+
   selectBox(e.target);
 });
 
 document.getElementById('scroller').addEventListener('mouseover', function(e) {
   anchorScrollTop = document.getElementById('scroller').scrollTop;
 
-  e.target.focus();
+  // Ignore synthetic mouse events that occur while focusing by keydown event
+  if (lastX != e.clientX || lastY != e.clientY) {
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    e.target.focus();
+  }
 });
 
 document.getElementById('scroller').addEventListener('mousewheel', function(e) {
@@ -34,13 +45,14 @@ document.getElementById('scroller').addEventListener('mousewheel', function(e) {
 });
 
 document.getElementById('scroller').addEventListener('scroll', function(e) {
-  if (anchorScrollTop)
+  if (anchorScrollTop != null)
     document.getElementById('scroller').scrollTop = anchorScrollTop;
 });
 
 document.getElementById('scroller').onkeydown = function(evt) {
   anchorScrollTop = null;
-  var focusedBox = document.getElementsByClassName("selected")[0];
+
+  var focusedBox = document.getElementsByClassName('selected')[0];
   var focusableBox;
 
   if (evt.keyCode == 40) { // Arrow Down
