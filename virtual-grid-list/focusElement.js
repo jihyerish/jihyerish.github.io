@@ -52,71 +52,30 @@ document.getElementById('scroller').onkeydown = function(evt) {
 
   var focusedBox = document.getElementsByClassName('selected')[0];
   var focusableBox;
+  var columnCnt = 5;
 
   if (evt.keyCode == 40) { // Arrow Down
     focusableBox = focusedBox;
     
-    for (var columncnt = 0; columncnt < 5; columncnt++){
+    for (var next = 0; next < columnCnt; next++){
       if(!focusableBox.nextElementSibling)
         return;
       else {
         focusableBox = focusableBox.nextElementSibling;
       }
     }
-    /*
-    if(!focusableBox.nextElementSibling)
-      return;
-    else {
-      focusableBox = focusableBox.nextElementSibling;
-      if(!focusableBox.nextElementSibling)
-        return;
-      else {
-        focusableBox = focusableBox.nextElementSibling;
-        if(!focusableBox.nextElementSibling)
-          return;
-        
-        else {
-          focusableBox = focusableBox.nextElementSibling;
-          if(!focusableBox.nextElementSibling)
-            return;
-          
-          else {
-            focusableBox = focusableBox.nextElementSibling;
-            if(!focusableBox.nextElementSibling)
-              return;
-            
-            else {
-              focusableBox = focusableBox.nextElementSibling;
-            }
-          }
-        }
-      }
-      
-    }*/
   } else if (evt.keyCode == 37) { // Arrow Left
     focusableBox = focusedBox.previousElementSibling;
   } else if (evt.keyCode == 39) { // Arrow Right
     focusableBox = focusedBox.nextElementSibling;
   } else if (evt.keyCode == 38) { // Arrow Up
-    if(!focusedBox.previousElementSibling)
-      return;
-    else {
-      if(!focusedBox.previousElementSibling.previousElementSibling)
+    focusableBox = focusedBox;
+    
+    for (var prev = 0; prev < columnCnt; prev++){
+      if(!focusableBox.previousElementSibling)
         return;
       else {
-        if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling)
-          return;
-        else {
-          if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
-            return;
-          else {
-            if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
-              return;
-            else {
-              focusableBox = focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
-            }
-          }
-        }
+        focusableBox = focusableBox.previousElementSibling;
       }
     }
   }
