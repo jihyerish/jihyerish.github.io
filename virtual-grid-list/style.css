@@ -23,7 +23,7 @@ form {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 50px;
   background-color: #fff;
   color: #444;
