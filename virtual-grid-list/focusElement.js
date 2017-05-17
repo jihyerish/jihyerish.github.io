@@ -1,7 +1,8 @@
 var selectedBox;
 var anchorScrollTop;
-
 var lastX, lastY;
+
+var option = document.querySelector('input[value="noscroll"]');
 
 for (var i=0; i < document.querySelectorAll('.box').length; i++){
   document.querySelectorAll('.box')[i].style.backgroundColor = "#"+ getRandomInt(0, 999) ;
@@ -22,9 +23,6 @@ function selectBox(element) {
 }
 
 document.getElementById('scroller').addEventListener('focusin', function(e) {
-
-  console.log("anchorScrollTop focus: "+ anchorScrollTop);
-
   selectBox(e.target);
 });
 
@@ -45,7 +43,7 @@ document.getElementById('scroller').addEventListener('mousewheel', function(e) {
 });
 
 document.getElementById('scroller').addEventListener('scroll', function(e) {
-  if (anchorScrollTop != null)
+  if (anchorScrollTop != null && option.checked)
     document.getElementById('scroller').scrollTop = anchorScrollTop;
 });
 
