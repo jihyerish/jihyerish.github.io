@@ -57,16 +57,24 @@ document.getElementById('scroller').onkeydown = function(evt) {
     if(!focusedBox.nextElementSibling)
       return;
     else {
-      if(!focusedBox.nextElementSibling.nextElementSibling)
+      focusedBox = focusedBox.nextElementSibling;
+      if(!focusedBox.nextElementSibling)
         return;
       else {
-        if(!focusedBox.nextElementSibling.nextElementSibling.nextElementSibling)
+        focusedBox = focusedBox.nextElementSibling;
+        if(!focusedBox.nextElementSibling)
           return;
         else {
-          if(!focusedBox.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+          focusedBox = focusedBox.nextElementSibling;
+          if(!focusedBox.nextElementSibling)
             return;
           else {
-            focusableBox = focusedBox.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+            focusedBox = focusedBox.nextElementSibling;
+            if(!focusedBox.nextElementSibling)
+              return;
+            else {
+              focusedBox = focusedBox.nextElementSibling;
+            }
           }
         }
       }
