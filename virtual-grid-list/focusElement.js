@@ -58,22 +58,35 @@ document.getElementById('scroller').onkeydown = function(evt) {
       return;
     else {
       focusedBox = focusedBox.nextElementSibling;
+      console.log(next1);
+      
       if(!focusedBox.nextElementSibling)
         return;
+      
       else {
         focusedBox = focusedBox.nextElementSibling;
+        console.log(next2);
+        
         if(!focusedBox.nextElementSibling)
           return;
+        
         else {
           focusedBox = focusedBox.nextElementSibling;
+          console.log(next3);
+          
           if(!focusedBox.nextElementSibling)
             return;
+          
           else {
             focusedBox = focusedBox.nextElementSibling;
+            console.log(next4);
+            
             if(!focusedBox.nextElementSibling)
               return;
+            
             else {
               focusedBox = focusedBox.nextElementSibling;
+              console.log(next5);
             }
           }
         }
@@ -96,7 +109,11 @@ document.getElementById('scroller').onkeydown = function(evt) {
           if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
             return;
           else {
-            focusableBox = focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+            if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
+              return;
+            else {
+              focusableBox = focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+            }
           }
         }
       }
