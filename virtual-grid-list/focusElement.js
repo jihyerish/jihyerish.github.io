@@ -57,35 +57,35 @@ document.getElementById('scroller').onkeydown = function(evt) {
     if(!focusedBox.nextElementSibling)
       return;
     else {
-      focusedBox = focusedBox.nextElementSibling;
+      focusableBox = focusedBox.nextElementSibling;
       console.log("1");
       
-      if(!focusedBox.nextElementSibling)
+      if(!focusableBox.nextElementSibling)
         return;
       
       else {
-        focusedBox = focusedBox.nextElementSibling;
+        focusableBox = focusableBox.nextElementSibling;
         console.log("2");
         
-        if(!focusedBox.nextElementSibling)
+        if(!focusableBox.nextElementSibling)
           return;
         
         else {
-          focusedBox = focusedBox.nextElementSibling;
+          focusableBox = focusableBox.nextElementSibling;
           console.log("3");
           
-          if(!focusedBox.nextElementSibling)
+          if(!focusableBox.nextElementSibling)
             return;
           
           else {
-            focusedBox = focusedBox.nextElementSibling;
+            focusableBox = focusableBox.nextElementSibling;
             console.log("4");
             
-            if(!focusedBox.nextElementSibling)
+            if(!focusableBox.nextElementSibling)
               return;
             
             else {
-              focusedBox = focusedBox.nextElementSibling;
+              focusableBox = focusableBox.nextElementSibling;
               console.log("5");
             }
           }
