@@ -52,23 +52,16 @@ document.getElementById('scroller').onkeydown = function(evt) {
 
   var focusedBox = document.getElementsByClassName('selected')[0];
   var focusableBox;
+  var columnCnt = 5;
 
   if (evt.keyCode == 40) { // Arrow Down
-    if(!focusedBox.nextElementSibling)
-      return;
-    else {
-      if(!focusedBox.nextElementSibling.nextElementSibling)
+    focusableBox = focusedBox;
+    
+    for (var next = 0; next < columnCnt; next++){
+      if(!focusableBox.nextElementSibling)
         return;
       else {
-        if(!focusedBox.nextElementSibling.nextElementSibling.nextElementSibling)
-          return;
-        else {
-          if(!focusedBox.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
-            return;
-          else {
-            focusableBox = focusedBox.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-          }
-        }
+        focusableBox = focusableBox.nextElementSibling;
       }
     }
   } else if (evt.keyCode == 37) { // Arrow Left
@@ -76,21 +69,13 @@ document.getElementById('scroller').onkeydown = function(evt) {
   } else if (evt.keyCode == 39) { // Arrow Right
     focusableBox = focusedBox.nextElementSibling;
   } else if (evt.keyCode == 38) { // Arrow Up
-    if(!focusedBox.previousElementSibling)
-      return;
-    else {
-      if(!focusedBox.previousElementSibling.previousElementSibling)
+    focusableBox = focusedBox;
+    
+    for (var prev = 0; prev < columnCnt; prev++){
+      if(!focusableBox.previousElementSibling)
         return;
       else {
-        if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling)
-          return;
-        else {
-          if(!focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
-            return;
-          else {
-            focusableBox = focusedBox.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
-          }
-        }
+        focusableBox = focusableBox.previousElementSibling;
       }
     }
   }
