@@ -405,13 +405,13 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
    <p><em>This section is not normative.</em></p>
    <p>Authors have possibilities to position objects like boxes or containers relative to each other or absolutely in their own coordinate system. CSS Transforms extends these possibilities with a set of transform functions allowing authors to mutate the object’s <a data-link-type="dfn" href="https://drafts.csswg.org/css-transforms-1/#local-coordinate-system">local coordinate system</a>. With CSS Animations and CSS Transitions, these static placements can change over a given period of time. Both kind of animations are powerful to express transitions in time but not suitable to describe transitions of location of an object over time.</p>
    <p>This specification allows authors to specify a path. The object can be positioned, transitioned and animated along this path over a given period of time. The time may be static if no animation was specified.</p>
-   <div class="example" id="example-940bdc6e">
-    <a class="self-link" href="#example-940bdc6e"></a> 
+   <div class="example" id="example-b70f907f">
+    <a class="self-link" href="#example-b70f907f"></a> 
     <p>In the following example, a schematic of an air plane is animated along a path. The plane faces in the direction of the path at each position on the path. </p>
-    <div class="figure">
+    <figure>
       <img alt="Example Path" height="120" src="images/motion-path.svg" width="470"> 
      <p class="caption">A black plane at different positions on a blue dotted path, rotated in the direction of the path.</p>
-    </div>
+    </figure>
    </div>
    <h2 class="heading settled" data-level="2" id="placement"><span class="secno">2. </span><span class="content">Module interactions</span><a class="self-link" href="#placement"></a></h2>
    <p>This specification defines a set of CSS properties that affect the visual rendering of elements to which those properties are applied. These effects are applied after <a href="https://www.w3.org/TR/css-display-3/#box">box</a>es have been sized and positioned according to the <a href="https://www.w3.org/TR/CSS2/visuren.html">Visual formatting model</a> from <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a>. Some values of <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-1">offset-path</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-1">offset-position</a> result in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>.</p>
@@ -518,8 +518,8 @@ and its ancestors have no transformation applied.</p>
         The used value of <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-4">offset-distance</a> is clamped so that the box is entirely contained within the path. 
        <p>If no <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-5">offset-distance</a> would lead to the box being enclosed by the path, the path size is minimally increased so that such an <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-6">offset-distance</a> exists.</p>
      </dl>
-     <div class="example" id="example-d71f8837">
-      <a class="self-link" href="#example-d71f8837"></a> Here are some examples.
+     <div class="example" id="example-a0bb6bca">
+      <a class="self-link" href="#example-a0bb6bca"></a> Here are some examples.
 		The first example shows that some parts of boxes are outside of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-4">offset path</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
@@ -548,10 +548,10 @@ and its ancestors have no transformation applied.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"blueBox"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-      <div class="figure">
+      <figure>
         <img alt="An image of boxes positioned without contain" src="images/offset_distance_without_contain.png" style="width: 200px;"> 
        <figcaption><a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-4">offset-path</a> without <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a></figcaption>
-      </div>
+      </figure>
       <p>In the second example, <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a> is given to the <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-5">offset-path</a> value of each box
 		to avoid overflowing.</p>
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
@@ -581,10 +581,10 @@ and its ancestors have no transformation applied.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"blueBox"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-      <div class="figure">
+      <figure>
         <img alt="An image of boxes positioned with contain" src="images/offset_distance_with_contain.png" style="width: 200px;"> 
        <figcaption><a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-6">offset-path</a> with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a></figcaption>
-      </div>
+      </figure>
        In the third example, the path size is increased so that the box can be contained. The <a data-link-type="dfn" href="#used-offset-distance" id="ref-for-used-offset-distance-1">used offset distance</a> is negative. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
@@ -609,10 +609,10 @@ and its ancestors have no transformation applied.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"blueBox"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-      <div class="figure">
+      <figure>
         <img alt="An image of an increased path size" src="images/increase-size.svg" style="width: 400px; height: 335;"> 
        <figcaption><a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-7">offset-path</a> with path size increased</figcaption>
-      </div>
+      </figure>
      </div>
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> || <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a>
     <dd>
@@ -638,8 +638,8 @@ and its ancestors have no transformation applied.</p>
 	If <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> is supplied without a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a>, the initial position is the left end of the top horizontal line, immediately to the right of any <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a> arc, and the initial direction is to the right.</p>
      <p>Apart from polygons with non-zero length, the <a data-link-type="dfn" href="#offset-path-initial-direction" id="ref-for-offset-path-initial-direction-2">initial direction</a> is 90 degrees (i.e. to the right).</p>
      <p class="note" role="note">Note: This gives <span class="css">0deg</span> rotation when <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-2">offset-rotate</a> is <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-1">auto</a>.</p>
-     <div class="example" id="example-d1581e01">
-      <a class="self-link" href="#example-d1581e01"></a> This example shows how &lt;geometry-box> <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-6">offset path</a> works in combination with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>. 
+     <div class="example" id="example-52fbf975">
+      <a class="self-link" href="#example-52fbf975"></a> This example shows how &lt;geometry-box> <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-6">offset path</a> works in combination with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
@@ -659,13 +659,13 @@ and its ancestors have no transformation applied.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"blueBox"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-      <div class="figure">
+      <figure>
         <img alt="An image of example for geometry-box with border-radius" src="images/geometry-box.svg" style="width: 470px; text-align: center"> 
        <figcaption>The initial position is the left end of the top horizontal line.</figcaption>
-      </div>
+      </figure>
      </div>
-     <div class="example" id="example-b8e683a5">
-      <a class="self-link" href="#example-b8e683a5"></a> This example uses a circle with implicit center position. 
+     <div class="example" id="example-c3566267">
+      <a class="self-link" href="#example-c3566267"></a> This example uses a circle with implicit center position. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">323</span><span class="kt">px</span><span class="p">;</span>
@@ -693,10 +693,10 @@ and its ancestors have no transformation applied.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-      <div class="figure">
+      <figure>
         <img alt="Normal flow determining circle center" height="324" src="images/normal-flow.svg" width="505"> 
        <figcaption>The circle center is determined by normal flow.</figcaption>
-      </div>
+      </figure>
      </div>
     <dt><dfn class="css" data-dfn-for="offset-path" data-dfn-type="function" data-export="" id="funcdef-offset-path-path">path()<a class="self-link" href="#funcdef-offset-path-path"></a></dfn> = path(<a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#string-value">&lt;string></a>)
     <dd>The <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#string-value">&lt;string></a> represents an SVG Path data string.
@@ -799,8 +799,8 @@ sub-paths.</p>
       </dl>
     </ol>
    </div>
-   <div class="example" id="example-8e17e28b">
-    <a class="self-link" href="#example-8e17e28b"></a> This example shows boxes placed along an unclosed interval. 
+   <div class="example" id="example-20fc1a5e">
+    <a class="self-link" href="#example-20fc1a5e"></a> This example shows boxes placed along an unclosed interval. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">.</span><span class="nc">item</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
@@ -822,13 +822,13 @@ sub-paths.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span> <span class="na">id</span><span class="o">=</span><span class="s">"box2"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example of boxes placed along an unclosed interval" src="images/offset-distance-unclosed.svg" style="width: 700px;"> 
      <figcaption>An example of boxes placed along an unclosed interval</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-5e15e452">
-    <a class="self-link" href="#example-5e15e452"></a> This example shows boxes placed along a closed interval. 
+   <div class="example" id="example-32fcde8f">
+    <a class="self-link" href="#example-32fcde8f"></a> This example shows boxes placed along a closed interval. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">.</span><span class="nc">item</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
@@ -850,13 +850,13 @@ sub-paths.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span> <span class="na">id</span><span class="o">=</span><span class="s">"box2"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example of boxes placed along a closed interval" src="images/offset-distance-closed.svg" style="width: 700px;"> 
      <figcaption>An example of boxes placed along a closed interval</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-74d9e68f">
-    <a class="self-link" href="#example-74d9e68f"></a> This example shows a way to align boxes within the polar coordinate system using <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-9">offset-path</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-10">offset-distance</a>. 
+   <div class="example" id="example-fef175c0">
+    <a class="self-link" href="#example-fef175c0"></a> This example shows a way to align boxes within the polar coordinate system using <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-9">offset-path</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-10">offset-distance</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -893,10 +893,10 @@ sub-paths.</p>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"circleBox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"circle3"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An image of three boxes positioned to polar coordinates" src="images/simple_offset_position.png" style="width: 300px;"> 
      <figcaption>An example of positioning box in polar coordinates</figcaption>
-    </div>
+    </figure>
    </div>
    <h3 class="heading settled" data-level="4.3" id="offset-position-property"><span class="secno">4.3. </span><span class="content">Define the starting point of the path: The <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-5">offset-position</a> property</span><a class="self-link" href="#offset-position-property"></a></h3>
    <table class="def propdef" data-link-for-hint="offset-position">
@@ -949,8 +949,8 @@ and a dimensionless point (zero-sized box) as the object area.
    </dl>
    <p>A computed value of other than <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-2">auto</a> results in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>, per usual for <a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transforms</a>.</p>
    <p><a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-9">offset-position</a> is ignored if <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-11">offset-path</a> is a geometry-box, or a basic shape (other than a circle or ellipse with implicit center). In these cases, the geometry-box or basic shape specifies the initial position.</p>
-   <div class="example" id="example-b1880288">
-    <a class="self-link" href="#example-b1880288"></a> This example shows positioning a box with <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-10">offset-position</a>. 
+   <div class="example" id="example-21fc5d17">
+    <a class="self-link" href="#example-21fc5d17"></a> This example shows positioning a box with <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-10">offset-position</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
@@ -977,13 +977,13 @@ and a dimensionless point (zero-sized box) as the object area.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An image of offset-position: auto" src="images/offset_position_auto.png" width="300"> 
      <figcaption>An example when <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-3">auto</a> is given to <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-11">offset-position</a></figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-3f9feb2c">
-    <a class="self-link" href="#example-3f9feb2c"></a> This example shows the interaction with the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">transform</a> property, and with an individual transform property (<a href="https://drafts.csswg.org/css-transforms-2/#propdef-rotate"><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-rotate">rotate</a></a>). The motion path transform is a vertical translation moving (<a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-left">left</a>, <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-top">top</a>) to <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-12">offset-position</a>. 
+   <div class="example" id="example-8a6f8f63">
+    <a class="self-link" href="#example-8a6f8f63"></a> This example shows the interaction with the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">transform</a> property, and with an individual transform property (<a href="https://drafts.csswg.org/css-transforms-2/#propdef-rotate"><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-rotate">rotate</a></a>). The motion path transform is a vertical translation moving (<a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-left">left</a>, <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-top">top</a>) to <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-12">offset-position</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -1026,13 +1026,13 @@ and a dimensionless point (zero-sized box) as the object area.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example when motion path and other transforms interact" height="350" src="images/position-transform.svg" width="400"> 
      <figcaption>An example when motion path and other transforms interact</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-c5e27272">
-    <a class="self-link" href="#example-c5e27272"></a> This example uses <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> <a class="property" data-link-type="propdesc">static</a>, so <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-13">offset-position</a> generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using <a href="https://drafts.csswg.org/css-transforms-2/#propdef-scale"><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-scale">scale</a></a>, the normal flow is rotated 180 degrees around the <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-14">offset-position</a>, and the boxes are exploded away from each other. 
+   <div class="example" id="example-e1419162">
+    <a class="self-link" href="#example-e1419162"></a> This example uses <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> <a class="property" data-link-type="propdesc">static</a>, so <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-13">offset-position</a> generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using <a href="https://drafts.csswg.org/css-transforms-2/#propdef-scale"><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-scale">scale</a></a>, the normal flow is rotated 180 degrees around the <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-14">offset-position</a>, and the boxes are exploded away from each other. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -1074,13 +1074,13 @@ and a dimensionless point (zero-sized box) as the object area.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example when motion path and scale interact" height="304" src="images/position-scale.svg" width="604"> 
      <figcaption>An example when motion path and scale interact</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-04a98ac8">
-    <a class="self-link" href="#example-04a98ac8"></a> In this example, each <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-15">offset-position</a> value is ignored as <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-12">offset-path</a> is a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a>, but the other offset properties combine to have an effect equivalent to that for <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-16">offset-position</a> 'right bottom'. 
+   <div class="example" id="example-0bcace1d">
+    <a class="self-link" href="#example-0bcace1d"></a> In this example, each <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-15">offset-position</a> value is ignored as <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-12">offset-path</a> is a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a>, but the other offset properties combine to have an effect equivalent to that for <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-16">offset-position</a> 'right bottom'. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -1132,10 +1132,10 @@ and a dimensionless point (zero-sized box) as the object area.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example when offset-position is ignored" height="430" src="images/position-absolute.svg" width="550"> 
      <figcaption>An example when offset-position is ignored</figcaption>
-    </div>
+    </figure>
    </div>
    <h3 class="heading settled" data-level="4.4" id="offset-anchor-property"><span class="secno">4.4. </span><span class="content">Define an anchor point: The <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-2">offset-anchor</a> property</span><a class="self-link" href="#offset-anchor-property"></a></h3>
    <table class="def propdef" data-link-for-hint="offset-anchor">
@@ -1190,20 +1190,20 @@ as the point that is moved along the <a data-link-type="dfn" href="https://url.s
       <dd>A length value gives a length offset from the upper left corner of the box’s content area.
      </dl>
    </dl>
-   <div class="example" id="example-611b321c">
-    <a class="self-link" href="#example-611b321c"></a> The following explains how to set the <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-5">anchor point</a> of the box. 
+   <div class="example" id="example-afb3e83f">
+    <a class="self-link" href="#example-afb3e83f"></a> The following explains how to set the <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-5">anchor point</a> of the box. 
 <pre class="lang-css highlight"><span class="nt">#plane </span><span class="p">{</span>
   <span class="k">offset-anchor</span><span class="p">:</span> center<span class="p">;</span>
 <span class="p">}</span>
 </pre>
     <p>The red dot in the middle of the shape indicates the <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-6">anchor point</a> of the shape.</p>
-    <div class="figure">
+    <figure>
       <img alt="Shape with its anchor point" height="140" src="images/plane.svg" width="160"> 
      <figcaption>A red dot in the middle of a plane shape indicates the shape’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-7">anchor point</a>.</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-93a64095">
-    <a class="self-link" href="#example-93a64095"></a> This example shows an alignment of four boxes with different <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-8">anchor point</a>s. 
+   <div class="example" id="example-4c6b0438">
+    <a class="self-link" href="#example-4c6b0438"></a> This example shows an alignment of four boxes with different <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-8">anchor point</a>s. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -1244,13 +1244,13 @@ as the point that is moved along the <a data-link-type="dfn" href="https://url.s
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"item4"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example of offset-anchor" src="images/offset_anchor.png" style="width: 300px;"> 
      <figcaption>An example of <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-4">offset-anchor</a></figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-15add8bd">
-    <a class="self-link" href="#example-15add8bd"></a> This example shows boxes centered at their offset-position. 
+   <div class="example" id="example-041fec04">
+    <a class="self-link" href="#example-041fec04"></a> This example shows boxes centered at their offset-position. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
@@ -1289,13 +1289,13 @@ as the point that is moved along the <a data-link-type="dfn" href="https://url.s
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"item4"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example of offset-anchor: center" src="images/offset_anchor_center.svg"> 
      <figcaption>An example of 'offset-anchor: center'</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-8b903310">
-    <a class="self-link" href="#example-8b903310"></a> This example shows how offset-anchor computes to their offset-position. 
+   <div class="example" id="example-2e3e956a">
+    <a class="self-link" href="#example-2e3e956a"></a> This example shows how offset-anchor computes to their offset-position. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
@@ -1334,10 +1334,10 @@ as the point that is moved along the <a data-link-type="dfn" href="https://url.s
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span> <span class="na">id</span><span class="o">=</span><span class="s">"item4"</span><span class="p">>&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An example of offset-anchor: auto" src="images/offset_anchor_auto.svg"> 
      <figcaption>An example of 'offset-anchor: auto'</figcaption>
-    </div>
+    </figure>
    </div>
    <h3 class="heading settled" data-level="4.5" id="offset-rotate-property"><span class="secno">4.5. </span><span class="content">Rotation at point: The <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-4">offset-rotate</a> property</span><a class="self-link" href="#offset-rotate-property"></a></h3>
    <table class="def propdef" data-link-for-hint="offset-rotate">
@@ -1400,47 +1400,47 @@ either one of the keywords.
    <p>When the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-26">offset path</a> is a zero length path, the value of <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-5">offset-rotate</a> is 0 degree, the direction of the positive x-axis.</p>
    <p>If the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-27">offset path</a> is composed of multiple line segments, the orientation at the connection between the segments is the same as the direction of the previous segment.</p>
    <p class="note" role="note">Note: The rotation described here does not override or replace any rotation defined by the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">transform</a> property.</p>
-   <div class="example" id="example-95c12679">
-    <a class="self-link" href="#example-95c12679"></a> The following examples use the shape of a plane.
+   <div class="example" id="example-f42a3051">
+    <a class="self-link" href="#example-f42a3051"></a> The following examples use the shape of a plane.
 The red dot in the middle of the shape indicates the <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-9">anchor point</a> of the shape.
 When no offset properties are set, the shape is not translated or rotated along the path. 
-    <div class="figure">
+    <figure>
       <img alt="Path without offset" height="120" src="images/offset-initial.svg" width="470"> 
      <figcaption>A black plane at the beginning of the path, with no offset properties set.</figcaption>
-    </div>
+    </figure>
     <p>When the shape’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-10">anchor point</a> is placed at different positions along the path and <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-6">offset-rotate</a> is <span class="css">0deg</span>, the shape is not rotated.</p>
-    <div class="figure">
+    <figure>
       <img alt="Path without rotation" height="120" src="images/offset-rotate-none.svg" width="470"> 
      <figcaption>A black plane at different positions on a blue dotted path without
 	rotation transforms.</figcaption>
-    </div>
+    </figure>
     <p>If the <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-7">offset-rotate</a> property is set to <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-9">auto</a>, and the shape’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-11">anchor point</a> is
 placed at different positions along the path,
 the shape is rotated based on the gradient at the current position and faces
 the direction of the path at this position.</p>
-    <div class="figure">
+    <figure>
       <img alt="Path with auto rotation" height="120" src="images/offset-rotate-auto.svg" width="470"> 
      <figcaption>A black plane at different positions on a blue dotted path,
 	rotated in the direction of the path.</figcaption>
-    </div>
+    </figure>
     <p>In this example, the <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-8">offset-rotate</a> property is set to <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-3">reverse</a>.
 The plane faces the opposite direction of the path at each position on the path.</p>
-    <div class="figure">
+    <figure>
       <img alt="Path with reverse auto rotation" height="120" src="images/offset-rotate-reverse.svg" width="470"> 
      <figcaption>A black plane at different positions on a blue dotted path,
 	rotated in the opposite direction of the path.</figcaption>
-    </div>
+    </figure>
     <p>The last example sets the <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-9">offset-rotate</a> property to <span class="css">-45deg</span>.
 The shape is rotated anticlockwise by 45 degree once and keeps the rotation at each position
 on the path.</p>
-    <div class="figure">
+    <figure>
       <img alt="Path with fixed rotation" height="120" src="images/offset-rotate-45.svg" width="470"> 
      <figcaption>A black plane at different positions on a blue dotted path,
 	rotated by a fixed amount of degree.</figcaption>
-    </div>
+    </figure>
    </div>
-   <div class="example" id="example-f7574e18">
-    <a class="self-link" href="#example-f7574e18"></a> This example shows how <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-10">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-4">reverse</a> work when specified in combination
+   <div class="example" id="example-bf6cdf5b">
+    <a class="self-link" href="#example-bf6cdf5b"></a> This example shows how <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-10">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-4">reverse</a> work when specified in combination
 with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>.
 The computed value of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> is added to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-11">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-5">reverse</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
@@ -1501,11 +1501,11 @@ The computed value of <a class="production css" data-link-type="type" href="http
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"circle"</span> <span class="na">id</span><span class="o">=</span><span class="s">"item6"</span><span class="p">></span>6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">></span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">></span>
 </pre>
-    <div class="figure">
+    <figure>
       <img alt="An image of example for offset-rotate" src="images/rotate_by_angle_with_auto.png" style="width: 250px; text-align: center"> 
      <figcaption>The boxes are rotated by the value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-12">auto</a> with
 	a fixed amount of degree.</figcaption>
-    </div>
+    </figure>
    </div>
    <h4 class="heading settled" data-level="4.5.1" id="calculating-path-transform"><span class="secno">4.5.1. </span><span class="content">Calculating the path transform</span><a class="self-link" href="#calculating-path-transform"></a></h4>
    <div class="switch">
