@@ -645,7 +645,7 @@ This example shows positioning a box with 'offset-position'.
 </figure>
 </div>
 <div class='example'>
-This example shows the interaction with the 'transform' property, and with an individual transform property (<a href="https://drafts.csswg.org/css-transforms-2/#propdef-rotate">'rotate'</a>). The motion path transform is a vertical translation moving ('left', 'top') to 'offset-position'.
+This example shows the interaction with the 'transform' property, and with an individual transform property ('rotate'). The motion path transform is a vertical translation moving ('left', 'top') to 'offset-position'.
 <pre class="lang-html">
   &lt;style>
     #wrap {
@@ -695,7 +695,7 @@ This example shows the interaction with the 'transform' property, and with an in
 </figure>
 </div>
 <div class='example'>
-This example uses 'position' 'static', so 'offset-position' generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using <a href="https://drafts.csswg.org/css-transforms-2/#propdef-scale">'scale'</a>, the normal flow is rotated 180 degrees around the 'offset-position', and the boxes are exploded away from each other.
+This example uses 'position' 'static', so 'offset-position' generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using 'scale', the normal flow is rotated 180 degrees around the 'offset-position', and the boxes are exploded away from each other.
 <pre class="lang-html">
   &lt;style>
     #wrap {
