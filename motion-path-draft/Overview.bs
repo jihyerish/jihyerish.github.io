@@ -4,7 +4,7 @@ Shortname: motion
 Level: 1
 Status: WD
 ED: https://drafts.fxtf.org/motion-1/
-TR: https://www.w3.org/TR/2015/WD-motion-1-20150409/
+TR: https://www.w3.org/TR/motion-1/
 Previous Version: https://www.w3.org/TR/2015/WD-motion-1-20150409/
 Group: fxtf
 Link Defaults: css-shapes-1 (type) <basic-shape>, css-transforms-1 (property) transform/transform-origin
