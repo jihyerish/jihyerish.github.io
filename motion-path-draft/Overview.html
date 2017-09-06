@@ -7,7 +7,7 @@
   <link href="../default.css" rel="stylesheet" type="text/css">
   <link href="../csslogo.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD" rel="stylesheet" type="text/css">
-  <meta content="Bikeshed version 4db56f8ff9d40bd2546516022f31a7252df752e5" name="generator">
+  <meta content="Bikeshed version 872fb1bbb75c7b4e192209b354c34f634da3ac0d" name="generator">
   <link href="https://www.w3.org/TR/motion-1/" rel="canonical">
 <style>
   /* Style for bikeshed variant of switch/case <dl>s */
@@ -291,17 +291,19 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1>Motion Path Module Level 1</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-07-12">12 July 2017</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-07-20">20 July 2017</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-motion-1-20170712/">https://www.w3.org/TR/2017/WD-motion-1-20170712/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-motion-1-20170720/">https://www.w3.org/TR/2017/WD-motion-1-20170720/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/motion-1/">https://www.w3.org/TR/motion-1/</a>
      <dt>Editor's Draft:
      <dd><a href="https://drafts.fxtf.org/motion-1/">https://drafts.fxtf.org/motion-1/</a>
      <dt>Previous Versions:
      <dd><a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/" rel="prev">https://www.w3.org/TR/2015/WD-motion-1-20150409/</a>
+     <dt>Test Suite:
+     <dd><a href="https://github.com/w3c/web-platform-tests/tree/master/css/motion-1">https://github.com/w3c/web-platform-tests/tree/master/css/motion-1</a>
      <dt>Issue Tracking:
      <dd><a href="#issues-index">Inline In Spec</a>
      <dd><span><a href="https://github.com/w3c/fxtf-drafts/labels/motion-1">GitHub Issues</a></span>
@@ -317,7 +319,7 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>Motion path allows authors to animate any graphical object along an author specified path.</p>
+   <p>Motion path allows authors to position any graphical object and animate it along an author specified path.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
@@ -429,7 +431,7 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
       <td><dfn class="dfn-paneled css" data-dfn-type="property" data-export="" id="propdef-offset-path">offset-path</dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod">none <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> ray( [ <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-all">&amp;&amp;</a> <a class="production css" data-link-type="type" href="#typedef-size" id="ref-for-typedef-size-1" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-all">&amp;&amp;</a> contain<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> ] ) <br> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> <a class="production css" data-link-type="function">&lt;path()></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#url-value">&lt;url></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> [ <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> ]
+      <td class="prod">none <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> <a class="css" data-link-type="maybe" href="#valdef-offsetpath-ray" id="ref-for-valdef-offsetpath-ray-1">ray()</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> <a href="#offsetpath-pathfunc" id="ref-for-offsetpath-pathfunc-1">path()</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#url-value">&lt;url></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one">|</a> [ <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> ]
      <tr>
       <th>Initial:
       <td>none
@@ -453,74 +455,70 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
       <td>per grammar
      <tr>
       <th>Animatable:
-      <td>as <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> or <a href="https://www.w3.org/TR/SVG/paths.html#DAttribute">&lt;path()></a>
+      <td>as <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> or <a href="#offsetpath-pathfunc" id="ref-for-offsetpath-pathfunc-2">path()</a>
    </table>
    <p>Specifies the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-1">offset path</a>, a geometrical path the box gets positioned on.
 An <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="offset-path">offset path</dfn> is either a specified path with one or multiple sub-paths or the geometry
 of a not styled basic shape.</p>
-   <p>A path may consist of a <a data-link-type="dfn" href="#offset-path-ray" id="ref-for-offset-path-ray-1">ray</a> or a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> like <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-circle">&lt;circle()></a>, <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-inset">&lt;inset()></a> or <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-polygon">&lt;polygon()></a>. To allow authors to specify curves and sub-paths, this specification adds the <a class="production css" data-link-type="function">&lt;path()></a> function in addition to the existing <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> functions. The <a class="production css" data-link-type="function">&lt;path()></a> function takes an SVG Path string as input <a data-link-type="biblio" href="#biblio-svg2">[SVG2]</a>. As another option, authors may reference an SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a> by <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#url-value">&lt;url></a> which is used as the path.</p>
+   <p>A path may consist of a <a class="css" data-link-type="maybe" href="#valdef-offsetpath-ray" id="ref-for-valdef-offsetpath-ray-2">ray()</a> or a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> like <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-circle">&lt;circle()></a>, <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-inset">&lt;inset()></a> or <a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-polygon">&lt;polygon()></a>. To allow authors to specify curves and sub-paths, this specification adds <a href="#offsetpath-pathfunc" id="ref-for-offsetpath-pathfunc-3">path()</a> in addition to the existing <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> functions. The <a href="#offsetpath-pathfunc" id="ref-for-offsetpath-pathfunc-4">path()</a> takes an SVG Path string as input <a data-link-type="biblio" href="#biblio-svg2">[SVG2]</a>. As another option, authors may reference an SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a> by <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#url-value">&lt;url></a> which is used as the path.</p>
    <p>In this specification, a direction (or rotation) of <span class="css">0 degree</span> is equivalent to the direction of
 the negative y-axis in the object’s <a data-link-type="dfn" href="https://drafts.csswg.org/css-transforms-1/#local-coordinate-system">local coordinate system</a>.
 E.g. A rotation of <span class="css">0 degree</span> points to the upper side of the UA if the object
 and its ancestors have no transformation applied.</p>
    <p>Values have the following meanings:</p>
    <dl>
-    <dt><dfn class="dfn-paneled" data-dfn-for="offset-path" data-dfn-type="dfn" data-noexport="" id="offset-path-ray">ray</dfn>( [ <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> &amp;&amp; <a class="production css" data-link-type="type" href="#typedef-size" id="ref-for-typedef-size-2" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> &amp;&amp; contain? ] )
+    <dt><dfn class="dfn-paneled css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="valdef-offsetpath-ray">ray()</dfn> = ray( [ <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> &amp;&amp; <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-images/#size" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> &amp;&amp; contain? ] )
     <dd>
      <dl>
       <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>
       <dd>
         The <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-2">offset path</a> is a line segment that starts from the position of the box and proceeds in the
-	direction defined by the specified <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. As with <a href="https://www.w3.org/TR/css3-images/#gradients">CSS gradients</a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> values are interpreted
-	as bearing angles, with <span class="css">0deg</span> pointing up and positive angles representing clockwise rotation. 
+      direction defined by the specified <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. As with <a href="https://www.w3.org/TR/css3-images/#gradients">CSS gradients</a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> values are interpreted
+      as bearing angles, with <span class="css">0deg</span> pointing up and positive angles representing clockwise rotation. 
        <p class="note" role="note">Note: Defining an <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-3">offset path</a> with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>,
-	the box can be positioned with the used of polar coordinates.
-	The polar coordinate system is a two-dimensional coordinate system in which each point on a plane
-	is determined by a distance from a fixed point and an angle from a fixed line.
-	The fixed point which is similar to the origin of a Cartesian coordinate system is called the pole,
-	and the fixed line which is a ray from the pole is the polar axis.
-	This coordinate system specifies the position of a point with a certain distance from the pole
-	and a certain angle measured from the polar axis to the segment connecting the pole.
-	In mathematical theory, the polar axis is commonly defined as the positive direction
-	of the x axis, but we consider the polar axis as the positive direction of the y axis
-	for consistency with other CSS specifications such as <a data-link-type="biblio" href="#biblio-css3val">[CSS3VAL]</a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> value.
-	(as the preceding line doesn’t have "x axis position") </p>
-     </dl>
-     <dl>
-      <dt><dfn class="dfn-paneled css" data-dfn-for="" data-dfn-type="type" data-export="" id="typedef-size">&lt;size></dfn>
+      the box can be positioned with the used of polar coordinates.
+      The polar coordinate system is a two-dimensional coordinate system in which each point on a plane
+      is determined by a distance from a fixed point and an angle from a fixed line.
+      The fixed point which is similar to the origin of a Cartesian coordinate system is called the pole,
+      and the fixed line which is a ray from the pole is the polar axis.
+      This coordinate system specifies the position of a point with a certain distance from the pole
+      and a certain angle measured from the polar axis to the segment connecting the pole.
+      In mathematical theory, the polar axis is commonly defined as the positive direction
+      of the x axis, but we consider the polar axis as the positive direction of the y axis
+      for consistency with other CSS specifications such as <a data-link-type="biblio" href="#biblio-css3val">[CSS3VAL]</a>, <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> value.
+      (as the preceding line doesn’t have "x axis position") </p>
+      <dt><dfn class="css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="valdef-offsetpath-size">&lt;size><a class="self-link" href="#valdef-offsetpath-size"></a></dfn>
       <dd>
-       Decides the path length used when <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-2">offset-distance</a> is expressed as a percentage, using the distance to the containing box. For <a class="production css" data-link-type="type" href="#typedef-size" id="ref-for-typedef-size-3" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> values other than <var>sides</var>, the path length is independent of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. 
+       Decides the path length used when <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-2">offset-distance</a> is expressed as a percentage, using the distance to the containing box. For <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-images/#size" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> values other than <a href="#size-sides" id="ref-for-size-sides-1">sides</a>, the path length is independent of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. 
        <p>It is defined as</p>
        <p> <b>&lt;size></b> = [ closest-side | closest-corner | farthest-side | farthest-corner | sides ]</p>
        <dl>
-        <dt><dfn data-dfn-for="<size>" data-dfn-type="dfn" data-noexport="" id="size-closest-side">closest-side<a class="self-link" href="#size-closest-side"></a></dfn>
+        <dt><dfn class="css" data-dfn-for="<size>" data-dfn-type="value" data-export="" id="valdef-size-closest-side">closest-side<a class="self-link" href="#valdef-size-closest-side"></a></dfn>
         <dd>The distance is measured between the initial position and the closest side
-				of the box from it.
-        <dt><dfn data-dfn-for="<size>" data-dfn-type="dfn" data-noexport="" id="size-closest-corner">closest-corner<a class="self-link" href="#size-closest-corner"></a></dfn>
+        of the box from it.
+        <dt><dfn class="css" data-dfn-for="<size>" data-dfn-type="value" data-export="" id="valdef-size-closest-corner">closest-corner<a class="self-link" href="#valdef-size-closest-corner"></a></dfn>
         <dd>The distance is measured between the initial position and the closest corner
-				of the box from it.
-        <dt><dfn data-dfn-for="<size>" data-dfn-type="dfn" data-noexport="" id="size-farthest-side">farthest-side<a class="self-link" href="#size-farthest-side"></a></dfn>
+        of the box from it.
+        <dt><dfn class="css" data-dfn-for="<size>" data-dfn-type="value" data-export="" id="valdef-size-farthest-side">farthest-side<a class="self-link" href="#valdef-size-farthest-side"></a></dfn>
         <dd>The distance is measured between the initial position and the farthest side
-				of the box from it.
-        <dt><dfn data-dfn-for="<size>" data-dfn-type="dfn" data-noexport="" id="size-farthest-corner">farthest-corner<a class="self-link" href="#size-farthest-corner"></a></dfn>
+        of the box from it.
+        <dt><dfn class="css" data-dfn-for="<size>" data-dfn-type="value" data-export="" id="valdef-size-farthest-corner">farthest-corner<a class="self-link" href="#valdef-size-farthest-corner"></a></dfn>
         <dd>The distance is measured between the initial position and the farthest corner
-				of the box from it.
-        <dt><dfn data-dfn-for="<size>" data-dfn-type="dfn" data-noexport="" id="size-sides">sides<a class="self-link" href="#size-sides"></a></dfn>
+        of the box from it.
+        <dt><dfn class="dfn-paneled css" data-dfn-for="<size>" data-dfn-type="value" data-export="" id="size-sides">sides</dfn>
         <dd>The distance is measured between the initial position and the intersection of the ray with the box. If the initial position is not within the box, the distance is 0.
        </dl>
        <p class="note" role="note">Note: When the initial position is on one of the edges of
-			the containing block, the closest side takes the edge that the initial position
-			is on, and thus the path length used for percentage <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-3">offset-distance</a> values is 0.</p>
-     </dl>
-     <dl>
-      <dt><dfn data-dfn-for="offset-path" data-dfn-type="dfn" data-noexport="" id="offset-path-contain">contain<a class="self-link" href="#offset-path-contain"></a></dfn>
+      the containing block, the closest side takes the edge that the initial position
+      is on, and thus the path length used for percentage <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-3">offset-distance</a> values is 0.</p>
+      <dt><dfn class="css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="valdef-offsetpath-contain">contain<a class="self-link" href="#valdef-offsetpath-contain"></a></dfn>
       <dd>
         The used value of <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-4">offset-distance</a> is clamped so that the box is entirely contained within the path. 
        <p>If no <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-5">offset-distance</a> would lead to the box being enclosed by the path, the path size is minimally increased so that such an <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-6">offset-distance</a> exists.</p>
      </dl>
-     <div class="example" id="example-a0bb6bca">
-      <a class="self-link" href="#example-a0bb6bca"></a> Here are some examples.
-		The first example shows that some parts of boxes are outside of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-4">offset path</a>. 
+     <div class="example" id="example-e919f9f6">
+      <a class="self-link" href="#example-e919f9f6"></a> Here are some examples.
+    The first example shows that some parts of boxes are outside of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-4">offset path</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -553,7 +551,7 @@ and its ancestors have no transformation applied.</p>
        <figcaption><a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-4">offset-path</a> without <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a></figcaption>
       </figure>
       <p>In the second example, <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a> is given to the <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-5">offset-path</a> value of each box
-		to avoid overflowing.</p>
+    to avoid overflowing.</p>
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -617,29 +615,29 @@ and its ancestors have no transformation applied.</p>
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> || <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a>
     <dd>
      The <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-5">offset path</a> is a basic shape as specified in CSS Shapes <a data-link-type="biblio" href="#biblio-css-shapes">[CSS-SHAPES]</a>. 
-     <p><a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-3">offset-position</a> is ignored for circle and ellipse basic shapes with explicit center positions, and for other types of basic shapes. If a circle or ellipse basic shape has no explicit center position, the shape is centered at the initial position of the path, as described in <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-4">offset-position</a>.</p>
-     <p>The <dfn class="dfn-paneled" data-dfn-for="offset-path" data-dfn-type="dfn" data-noexport="" id="offset-path-initial-position">initial position</dfn> and <dfn class="dfn-paneled" data-dfn-for="offset-path" data-dfn-type="dfn" data-noexport="" id="offset-path-initial-direction">initial direction</dfn> of the path describe the position of the box along the path when <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-7">offset-distance</a> begins increasing from <span class="css">0%</span>.</p>
-     <p>The <a data-link-type="dfn" href="#offset-path-initial-position" id="ref-for-offset-path-initial-position-1">initial position</a> for basic shapes are defined as follows:</p>
+     <p><a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-3">offset-position</a> is ignored for circle and ellipse basic shapes with explicit center positions, and for other types of basic shapes. If a circle or ellipse basic shape has no explicit center position, the shape is centered at the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-1">initial position</a> of the path, as described in <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-4">offset-position</a>.</p>
+     <p>The <dfn class="dfn-paneled css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="valdef-offsetpath-initial-position">initial position</dfn> and <dfn class="dfn-paneled css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="valdef-offsetpath-initial-direction">initial direction</dfn> of the path describe the position of the box along the path when <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-7">offset-distance</a> begins increasing from <span class="css">0%</span>.</p>
+     <p>The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-2">initial position</a> for basic shapes are defined as follows:</p>
      <dl>
       <dt><a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-circle">&lt;circle()></a>
       <dt><a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-ellipse">&lt;ellipse()></a>
-      <dd>The <a data-link-type="dfn" href="#offset-path-initial-position" id="ref-for-offset-path-initial-position-2">initial position</a> is defined by the point where a horizontal tangent
-		to the circle/ellipse would reach the top vertical position.
+      <dd>The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-3">initial position</a> is defined by the point where a horizontal tangent
+    to the circle/ellipse would reach the top vertical position.
       <dt><a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-inset">&lt;inset()></a>
-      <dd>The <a data-link-type="dfn" href="#offset-path-initial-position" id="ref-for-offset-path-initial-position-3">initial position</a> is the left end of the top horizontal line, immediately to the right of any <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a> arc.
+      <dd>The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-4">initial position</a> is the left end of the top horizontal line, immediately to the right of any <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a> arc.
       <dt><a class="production css" data-link-type="function" href="https://www.w3.org/TR/css-shapes-1/#funcdef-polygon">&lt;polygon()></a>
-      <dd>The <a data-link-type="dfn" href="#offset-path-initial-position" id="ref-for-offset-path-initial-position-4">initial position</a> is defined by the first coordinate pair
-		of the polygon.
-		The <a data-link-type="dfn" href="#offset-path-initial-direction" id="ref-for-offset-path-initial-direction-1">initial direction</a> is defined by the vector connecting
-		the initial position with the next following coordinate pair
-		that isn’t equal to the initial position.
+      <dd>The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-5">initial position</a> is defined by the first coordinate pair
+    of the polygon.
+    The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-direction" id="ref-for-valdef-offsetpath-initial-direction-1">initial direction</a> is defined by the vector connecting
+    the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-6">initial position</a> with the next following coordinate pair
+    that isn’t equal to the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-7">initial position</a>.
      </dl>
      <p>The <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> specified in combination with a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a> provides the reference box for the <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a>. If no reference box is specified, the border-box will be used as reference box.
-	If <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> is supplied without a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a>, the initial position is the left end of the top horizontal line, immediately to the right of any <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a> arc, and the initial direction is to the right.</p>
-     <p>Apart from polygons with non-zero length, the <a data-link-type="dfn" href="#offset-path-initial-direction" id="ref-for-offset-path-initial-direction-2">initial direction</a> is 90 degrees (i.e. to the right).</p>
+  If <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-masking-1/#typedef-geometry-box">&lt;geometry-box></a> is supplied without a <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css-shapes-1/#typedef-basic-shape">&lt;basic-shape></a>, the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-8">initial position</a> is the left end of the top horizontal line, immediately to the right of any <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a> arc, and the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-direction" id="ref-for-valdef-offsetpath-initial-direction-2">initial direction</a> is to the right.</p>
+     <p>Apart from polygons with non-zero length, the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-direction" id="ref-for-valdef-offsetpath-initial-direction-3">initial direction</a> is 90 degrees (i.e. to the right).</p>
      <p class="note" role="note">Note: This gives <span class="css">0deg</span> rotation when <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-2">offset-rotate</a> is <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-1">auto</a>.</p>
-     <div class="example" id="example-52fbf975">
-      <a class="self-link" href="#example-52fbf975"></a> This example shows how &lt;geometry-box> <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-6">offset path</a> works in combination with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>. 
+     <div class="example" id="example-bccd2070">
+      <a class="self-link" href="#example-bccd2070"></a> This example shows how &lt;geometry-box> <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-6">offset path</a> works in combination with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
@@ -661,11 +659,11 @@ and its ancestors have no transformation applied.</p>
 </pre>
       <figure>
         <img alt="An image of example for geometry-box with border-radius" src="images/geometry-box.svg" style="width: 470px; text-align: center"> 
-       <figcaption>The initial position is the left end of the top horizontal line.</figcaption>
+       <figcaption>The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-9">initial position</a> is the left end of the top horizontal line.</figcaption>
       </figure>
      </div>
-     <div class="example" id="example-c3566267">
-      <a class="self-link" href="#example-c3566267"></a> This example uses a circle with implicit center position. 
+     <div class="example" id="example-69c6d794">
+      <a class="self-link" href="#example-69c6d794"></a> This example uses a circle with implicit center position. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">323</span><span class="kt">px</span><span class="p">;</span>
@@ -698,18 +696,18 @@ and its ancestors have no transformation applied.</p>
        <figcaption>The circle center is determined by normal flow.</figcaption>
       </figure>
      </div>
-    <dt><dfn class="css" data-dfn-for="offset-path" data-dfn-type="function" data-export="" id="funcdef-offset-path-path">path()<a class="self-link" href="#funcdef-offset-path-path"></a></dfn> = path(<a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#string-value">&lt;string></a>)
+    <dt><dfn class="dfn-paneled css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="offsetpath-pathfunc" type="function">path()</dfn> = path(<a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#string-value">&lt;string></a>)
     <dd>The <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#string-value">&lt;string></a> represents an SVG Path data string.
-		The path data string must be conform to the grammar and parsing rules of SVG 1.1 <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>.
-		The initial position is defined by the first “move to” argument in the path string. For the initial direction follow SVG 1.1 <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>. 
+    The path data string must be conform to the grammar and parsing rules of SVG 1.1 <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>.
+    The <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-10">initial position</a> is defined by the first “move to” argument in the path string. For the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-direction" id="ref-for-valdef-offsetpath-initial-direction-4">initial direction</a> follow SVG 1.1 <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>. 
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#url-value">&lt;url></a>
     <dd>References an SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a> and uses its geometry as <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-7">offset path</a>.
-	See SVG 1.1 for more information about the initial position and initial direction <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>. 
-    <dt><dfn class="css" data-dfn-for="offset-path" data-dfn-type="value" data-export="" id="valdef-offset-path-none">none<a class="self-link" href="#valdef-offset-path-none"></a></dfn>
-    <dd>No <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-8">offset path</a> gets created. When <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-8">offset-path</a> is <span class="css">none</span>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-8">offset-distance</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-3">offset-rotate</a> have no effect.
+  See SVG 1.1 for more information about the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-11">initial position</a> and <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-direction" id="ref-for-valdef-offsetpath-initial-direction-5">initial direction</a> <a data-link-type="biblio" href="#biblio-svg11">[SVG11]</a>. 
+    <dt><dfn class="dfn-paneled css" data-dfn-for="offsetpath" data-dfn-type="value" data-export="" id="offsetpath-none">none</dfn>
+    <dd>No <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-8">offset path</a> gets created. When <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-8">offset-path</a> is <a href="#offsetpath-none" id="ref-for-offsetpath-none-1">none</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-8">offset-distance</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-3">offset-rotate</a> have no effect.
    </dl>
-   <p>A computed value of other than <span class="css">none</span> results in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>, per usual for <a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transforms</a>.</p>
-   <p>A reference that fails to download, is not a reference to an SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a>, or is non-existent, is treated as equivalent to <span class="css">path("m 0 0")</span>.</p>
+   <p>A computed value of other than <a href="#offsetpath-none" id="ref-for-offsetpath-none-2">none</a> results in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>, per usual for <a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transforms</a>.</p>
+   <p>A reference that fails to download, is not a reference to an SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a>, or is non-existent, is treated as equivalent to <code>path("m 0 0")</code>.</p>
    <p class="note" role="note">Note: This is a zero length path with <a href="https://www.w3.org/TR/SVG11/implnote.html#PathElementImplementationNotes">directionality</a> aligned with the positive x-axis.</p>
    <p>See the section <a href="#calculating-path-transform">“Calculating the path transform”</a> for how to use the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-9">offset path</a> to compute the transform.</p>
    <p>For SVG <a data-link-type="dfn" href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a>s without associated CSS layout box, the <a data-link-type="dfn" href="https://drafts.csswg.org/css-cascade-4/#used-value">used value</a> for <a class="css" data-link-type="value" href="https://www.w3.org/TR/css-masking-1/#valuedef-content-box0">content-box</a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/css-masking-1/#valuedef-padding-box0">padding-box</a>, <a class="css" data-link-type="value" href="https://www.w3.org/TR/css-masking-1/#valuedef-border-box0">border-box</a> and <a class="css" data-link-type="value" href="https://www.w3.org/TR/css-masking-1/#valuedef-margin-box0">margin-box</a> is <a class="css" data-link-type="value" href="https://www.w3.org/TR/css-masking-1/#valuedef-fill-box0">fill-box</a>.</p>
@@ -752,9 +750,9 @@ and its ancestors have no transformation applied.</p>
    <dl>
     <dt><a class="production css" data-link-type="type" href="https://drafts.csswg.org/css-values-4/#typedef-length-percentage">&lt;length-percentage></a>
     <dd>
-     Specifies the distance from the initial position of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-11">offset path</a> to the position of the box’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-2">anchor point</a>. 
+     Specifies the distance from the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-12">initial position</a> of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-11">offset path</a> to the position of the box’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-2">anchor point</a>. 
      <p>Percentages are relative to the length of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-12">offset path</a>—<wbr>that is, the distance between
-the initial position and the end position of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-13">offset path</a>.</p>
+the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-13">initial position</a> and the end position of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-13">offset path</a>.</p>
     <p></p>
    </dl>
    <h4 class="heading settled" data-level="4.2.1" id="calculating-the-computed-distance-along-a-path"><span class="secno">4.2.1. </span><span class="content">Calculating the computed distance along a path</span><a class="self-link" href="#calculating-the-computed-distance-along-a-path"></a></h4>
@@ -932,23 +930,23 @@ sub-paths.</p>
       <th>Animatable:
       <td>as <a href="https://www.w3.org/TR/css3-transitions/#animtype-lpcalc">position</a>
    </table>
-   <p>Specifies the initial position of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-25">offset path</a>.
+   <p>Specifies the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-14">initial position</a> of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-25">offset path</a>.
 If <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> is specified with <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-positioning/#valdef-position-static">static</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-6">offset-position</a> would be ignored.</p>
    <p>Values are defined as follows:</p>
    <dl>
     <dt><var>auto</var>
     <dd>
-     Indicates the initial position is the position of the box specified with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> property. 
-     <p class="note" role="note">Note: When <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> is <a class="property" data-link-type="propdesc">static</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-7">offset-position</a> is <a class="property" data-link-type="propdesc">auto</a> (and not ignored due to <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-10">offset-path</a>), we have positioning relative to <a href="https://drafts.csswg.org/css-position-3/#normal-flow">normal flow</a>.</p>
+     Indicates the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-15">initial position</a> is the position of the box specified with <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> property. 
+     <p class="note" role="note">Note: When <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> is <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-positioning/#valdef-position-static">static</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-7">offset-position</a> is <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-2">auto</a> (and not ignored due to <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-10">offset-path</a>), we have positioning relative to <a href="https://drafts.csswg.org/css-position-3/#normal-flow">normal flow</a>.</p>
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-background/#ltpositiongt">&lt;position></a>
     <dd>
-     Specifies the initial position,
+     Specifies the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-16">initial position</a>,
 with the the containing block as the positioning area
 and a dimensionless point (zero-sized box) as the object area. 
      <p class="note" role="note">Note: This is similar to absolute positioning, except that <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-8">offset-position</a> does not prevent boxes from impacting the layout of later siblings.</p>
    </dl>
-   <p>A computed value of other than <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-2">auto</a> results in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>, per usual for <a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transforms</a>.</p>
-   <p><a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-9">offset-position</a> is ignored if <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-11">offset-path</a> is a geometry-box, or a basic shape (other than a circle or ellipse with implicit center). In these cases, the geometry-box or basic shape specifies the initial position.</p>
+   <p>A computed value of other than <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-3">auto</a> results in the creation of a <a data-link-type="dfn" href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a> <a data-link-type="biblio" href="#biblio-css21">[CSS21]</a> and <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">containing block</a>, per usual for <a href="https://drafts.csswg.org/css-transforms-1/#propdef-transform">transforms</a>.</p>
+   <p><a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-9">offset-position</a> is ignored if <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-11">offset-path</a> is a geometry-box, or a basic shape (other than a circle or ellipse with implicit center). In these cases, the geometry-box or basic shape specifies the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-17">initial position</a>.</p>
    <div class="example" id="example-21fc5d17">
     <a class="self-link" href="#example-21fc5d17"></a> This example shows positioning a box with <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-10">offset-position</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
@@ -979,7 +977,7 @@ and a dimensionless point (zero-sized box) as the object area.
 </pre>
     <figure>
       <img alt="An image of offset-position: auto" src="images/offset_position_auto.png" width="300"> 
-     <figcaption>An example when <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-3">auto</a> is given to <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-11">offset-position</a></figcaption>
+     <figcaption>An example when <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-4">auto</a> is given to <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-11">offset-position</a></figcaption>
     </figure>
    </div>
    <div class="example" id="example-55f0dcd4">
@@ -1031,8 +1029,8 @@ and a dimensionless point (zero-sized box) as the object area.
      <figcaption>An example when motion path and other transforms interact</figcaption>
     </figure>
    </div>
-   <div class="example" id="example-43597aaf">
-    <a class="self-link" href="#example-43597aaf"></a> This example uses <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> <a class="property" data-link-type="propdesc">static</a>, so <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-13">offset-position</a> generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-scale">scale</a>, the normal flow is rotated 180 degrees around the <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-14">offset-position</a>, and the boxes are exploded away from each other. 
+   <div class="example" id="example-ca4415d1">
+    <a class="self-link" href="#example-ca4415d1"></a> This example uses <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-positioning/#propdef-position">position</a> <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css3-positioning/#valdef-position-static">static</a>, so <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-13">offset-position</a> generates translations from the <a href="https://drafts.csswg.org/css-position/#normal-flow">normal flow</a> positions. By amplifying these translations using <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-transforms-2/#propdef-scale">scale</a>, the normal flow is rotated 180 degrees around the <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-14">offset-position</a>, and the boxes are exploded away from each other. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">transform-style</span><span class="p">:</span> <span class="kc">preserve-3d</span><span class="p">;</span>
@@ -1171,14 +1169,14 @@ and a dimensionless point (zero-sized box) as the object area.
       <th>Animatable:
       <td>as <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-background/#ltpositiongt">&lt;position></a>
    </table>
-   <p>Defines an <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-3">anchor point</a> of the box positioned along the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a>.
+   <p>Defines an <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-3">anchor point</a> of the box positioned along the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-26">offset path</a>.
 The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="anchor-point">anchor point</dfn> specifies the point of the box which is to be considered
-as the point that is moved along the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a>.</p>
+as the point that is moved along the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-27">offset path</a>.</p>
    <p>Values have the following meanings:</p>
    <dl>
     <dt><var>auto</var>
-    <dd>Computes to the value from <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-17">offset-position</a>, provided <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-13">offset-path</a> is <span class="css">none</span> and <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-18">offset-position</a> is not <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-4">auto</a>. Otherwise, computes
-	to the value from <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform-origin">transform-origin</a>. When <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-5">auto</a> is given to <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-3">offset-anchor</a>, and <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-14">offset-path</a> is <span class="css">none</span>, <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-19">offset-position</a> behaves similar to <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#background-position">background-position</a>. 
+    <dd>Computes to the value from <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-17">offset-position</a>, provided <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-13">offset-path</a> is <a href="#offsetpath-none" id="ref-for-offsetpath-none-3">none</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-18">offset-position</a> is not <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-5">auto</a>. Otherwise, computes
+	to the value from <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform-origin">transform-origin</a>. When <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-6">auto</a> is given to <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-3">offset-anchor</a>, and <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-14">offset-path</a> is <a href="#offsetpath-none" id="ref-for-offsetpath-none-4">none</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-19">offset-position</a> behaves similar to <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css3-background/#background-position">background-position</a>. 
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-background/#ltpositiongt">&lt;position></a>
     <dd>
      <dl>
@@ -1373,32 +1371,32 @@ as the point that is moved along the <a data-link-type="dfn" href="https://url.s
       <th>Animatable:
       <td>yes
    </table>
-   <p>Defines the orientation of the box while positioning along the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a>.</p>
+   <p>Defines the orientation of the box while positioning along the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-28">offset path</a>.</p>
    <p>Values have the following meanings:</p>
    <dl>
     <dt><dfn class="dfn-paneled css" data-dfn-for="offset-rotate" data-dfn-type="value" data-export="" id="valdef-offset-rotate-auto">auto</dfn>
     <dd>Indicates that the object is rotated (over time if <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-11">offset-distance</a> is animated) by
 the angle of the direction
-(i.e., directional tangent vector) of the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a>, relative to the positive x-axis.
+(i.e., directional tangent vector) of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-29">offset path</a>, relative to the positive x-axis.
 If specified in combination with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>, the computed value of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> is added
-to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-6">auto</a>.
-    <p class="note" role="note">Note: For ray paths, the rotation implied by <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-7">auto</a> is 90 degrees less than the ray’s bearing <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>.</p>
+to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-7">auto</a>.
+    <p class="note" role="note">Note: For ray paths, the rotation implied by <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-8">auto</a> is 90 degrees less than the ray’s bearing <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>.</p>
     <dt><dfn class="dfn-paneled css" data-dfn-for="offset-rotate" data-dfn-type="value" data-export="" id="valdef-offset-rotate-reverse">reverse</dfn>
     <dd>
      Indicates that the object is rotated (over time if <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-12">offset-distance</a> is animated) by
  the angle of the direction
-(i.e., directional tangent vector) of the <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-path">path</a>, relative to the positive x-axis, plus 180 degrees.
+(i.e., directional tangent vector) of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-30">offset path</a>, relative to the positive x-axis, plus 180 degrees.
 	If specified in combination with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>, the computed value of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> is added
 	to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-1">reverse</a>. 
      <p class="note" role="note">Note: This is the same as specifying <span class="css">auto 180deg</span>.</p>
     <dt><a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>
     <dd>Indicates that the box has a constant clockwise rotation transformation applied
 to it by the specified rotation angle.
-See definitions of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-8">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-2">reverse</a> if specified in combination with
+See definitions of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-9">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-2">reverse</a> if specified in combination with
 either one of the keywords.
    </dl>
-   <p>When the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-26">offset path</a> is a zero length path, the value of <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-5">offset-rotate</a> is 0 degree, the direction of the positive x-axis.</p>
-   <p>If the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-27">offset path</a> is composed of multiple line segments, the orientation at the connection between the segments is the same as the direction of the previous segment.</p>
+   <p>When the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-31">offset path</a> is a zero length path, the value of <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-5">offset-rotate</a> is 0 degree, the direction of the positive x-axis.</p>
+   <p>If the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-32">offset path</a> is composed of multiple line segments, the orientation at the connection between the segments is the same as the direction of the previous segment.</p>
    <p class="note" role="note">Note: The rotation described here does not override or replace any rotation defined by the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">transform</a> property.</p>
    <div class="example" id="example-f42a3051">
     <a class="self-link" href="#example-f42a3051"></a> The following examples use the shape of a plane.
@@ -1414,7 +1412,7 @@ When no offset properties are set, the shape is not translated or rotated along 
      <figcaption>A black plane at different positions on a blue dotted path without
 	rotation transforms.</figcaption>
     </figure>
-    <p>If the <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-7">offset-rotate</a> property is set to <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-9">auto</a>, and the shape’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-11">anchor point</a> is
+    <p>If the <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-7">offset-rotate</a> property is set to <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-10">auto</a>, and the shape’s <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-11">anchor point</a> is
 placed at different positions along the path,
 the shape is rotated based on the gradient at the current position and faces
 the direction of the path at this position.</p>
@@ -1440,9 +1438,9 @@ on the path.</p>
     </figure>
    </div>
    <div class="example" id="example-bf6cdf5b">
-    <a class="self-link" href="#example-bf6cdf5b"></a> This example shows how <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-10">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-4">reverse</a> work when specified in combination
+    <a class="self-link" href="#example-bf6cdf5b"></a> This example shows how <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-11">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-4">reverse</a> work when specified in combination
 with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>.
-The computed value of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> is added to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-11">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-5">reverse</a>. 
+The computed value of <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a> is added to the computed value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-12">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-5">reverse</a>. 
 <pre class="lang-html highlight"><span class="p">&lt;</span><span class="nt">style</span><span class="p">></span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
@@ -1503,7 +1501,7 @@ The computed value of <a class="production css" data-link-type="type" href="http
 </pre>
     <figure>
       <img alt="An image of example for offset-rotate" src="images/rotate_by_angle_with_auto.png" style="width: 250px; text-align: center"> 
-     <figcaption>The boxes are rotated by the value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-12">auto</a> with
+     <figcaption>The boxes are rotated by the value of <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-13">auto</a> with
 	a fixed amount of degree.</figcaption>
     </figure>
    </div>
@@ -1513,9 +1511,9 @@ The computed value of <a class="production css" data-link-type="type" href="http
      <li data-md="">
       <p>Create a supplemental transformation matrix <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="t1">T1</dfn> for the local coordinate system of the box.</p>
      <li data-md="">
-      <p>Find the <a data-link-type="dfn" href="#offset-path-initial-position" id="ref-for-offset-path-initial-position-5">initial position</a> of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-28">offset path</a> specified by <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-20">offset-position</a> as <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="t2">T2</dfn>.</p>
+      <p>Find the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-18">initial position</a> of the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-33">offset path</a> specified by <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-20">offset-position</a> as <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="t2">T2</dfn>.</p>
      <li data-md="">
-      <p>Let <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="p">P</dfn> be the point at the <a data-link-type="dfn" href="#used-offset-distance" id="ref-for-used-offset-distance-7">used offset distance</a> along the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-29">offset path</a>.</p>
+      <p>Let <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="p">P</dfn> be the point at the <a data-link-type="dfn" href="#used-offset-distance" id="ref-for-used-offset-distance-7">used offset distance</a> along the <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-34">offset path</a>.</p>
      <li data-md="">
       <p>Find the translation of the box such that its <a data-link-type="dfn" href="#anchor-point" id="ref-for-anchor-point-12">anchor point</a> is placed at <a data-link-type="dfn" href="#p" id="ref-for-p-1">P</a>, and apply that to <a data-link-type="dfn" href="#t2" id="ref-for-t2-1">T2</a>.</p>
      <li data-md="">
@@ -1527,7 +1525,7 @@ The computed value of <a class="production css" data-link-type="type" href="http
     </ol>
    </div>
    <p class="issue" id="issue-8c7a4468"><a class="self-link" href="#issue-8c7a4468"></a>Do we need to say how to get the position in more detail?</p>
-   <p class="issue" id="issue-bfe608d2"><a class="self-link" href="#issue-bfe608d2"></a>There needs to be a process for converting <var>rotate</var> to an angle.</p>
+   <p class="issue" id="issue-c41904a2"><a class="self-link" href="#issue-c41904a2"></a>There needs to be a process for converting <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css-transforms-1/#funcdef-rotate">rotate()</a> to an angle.</p>
    <h3 class="heading settled" data-level="4.6" id="offset-shorthand"><span class="secno">4.6. </span><span class="content">Offset shorthand: The <a class="property" data-link-type="propdesc" href="#propdef-offset" id="ref-for-propdef-offset-1">offset</a> property</span><a class="self-link" href="#offset-shorthand"></a></h3>
    <table class="def propdef" data-link-for-hint="offset">
     <tbody>
@@ -1536,7 +1534,7 @@ The computed value of <a class="production css" data-link-type="type" href="http
       <td><dfn class="dfn-paneled css" data-dfn-type="property" data-export="" id="propdef-offset">offset</dfn>
      <tr class="value">
       <th>Value:
-      <td class="prod">[ <a class="production css" data-link-type="type">&lt;offset-position></a><a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> [ <a class="production css" data-link-type="type">&lt;offset-path></a> [ <a class="production css" data-link-type="type">&lt;offset-distance></a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> <a class="production css" data-link-type="type">&lt;offset-rotate></a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-req">!</a> <br> [ / <a class="production css" data-link-type="type">&lt;offset-anchor></a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a>
+      <td class="prod">[ <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-21">offset-position</a><a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> [ <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-15">offset-path</a> [ <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-13">offset-distance</a> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-any">||</a> <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-11">offset-rotate</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-req">!</a> <br> [ / <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-5">offset-anchor</a> ]<a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-opt">?</a>
      <tr>
       <th>Initial:
       <td>see individual properties
@@ -1562,32 +1560,32 @@ The computed value of <a class="production css" data-link-type="type" href="http
       <th>Animatable:
       <td>see individual properties
    </table>
-   <p>This is a shorthand property for setting <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-21">offset-position</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-15">offset-path</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-13">offset-distance</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-11">offset-rotate</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-5">offset-anchor</a>.
+   <p>This is a shorthand property for setting <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-22">offset-position</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-16">offset-path</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-14">offset-distance</a>, <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-12">offset-rotate</a> and <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-6">offset-anchor</a>.
 Omitted values are set to their initial values.</p>
    <h2 class="no-num heading settled" id="changes"><span class="content">Changes</span><a class="self-link" href="#changes"></a></h2>
    <p><em>This section is non-normative.</em> </p>
    <p>The following changes were made since the <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/">9 April 2015 First Public Working Draft</a>. </p>
    <ul>
     <li>
-     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#motion-path-property">motion-path</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-16">offset-path</a> for integrating with <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-angle-property">polar-angle</a>. </p>
+     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#motion-path-property">motion-path</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-path" id="ref-for-propdef-offset-path-17">offset-path</a> for integrating with <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-angle-property">polar-angle</a>. </p>
      <ul>
       <li>
-       <p>Added the <a data-link-type="dfn" href="#offset-path-ray" id="ref-for-offset-path-ray-2">ray</a> function to define an <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-30">offset path</a> as a line segment which direction is specified by <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. </p>
+       <p>Added the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-ray" id="ref-for-valdef-offsetpath-ray-3">ray()</a> to define an <a data-link-type="dfn" href="#offset-path" id="ref-for-offset-path-35">offset path</a> as a line segment which direction is specified by <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. </p>
       <li>
-       <p>Added <a class="production css" data-link-type="type" href="#typedef-size" id="ref-for-typedef-size-4" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> and <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a> value for the <a data-link-type="dfn" href="#offset-path-ray" id="ref-for-offset-path-ray-3">ray</a> function. </p>
+       <p>Added <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-images/#size" title="Expands to: farthest-side | closest-corner | <length-percentage>{2} | <length> | closest-side | farthest-corner | sides">&lt;size></a> and <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-contain-1/#propdef-contain">contain</a> value for the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-ray" id="ref-for-valdef-offsetpath-ray-4">ray()</a>. </p>
      </ul>
     <li>
-     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#propdef-motion-offset">motion-offset</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-14">offset-distance</a> for integrating with <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-distance-property">polar-distance</a>. </p>
+     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#propdef-motion-offset">motion-offset</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-distance" id="ref-for-propdef-offset-distance-15">offset-distance</a> for integrating with <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-distance-property">polar-distance</a>. </p>
     <li>
-     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#propdef-motion-rotation">motion-rotation</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-12">offset-rotate</a>. </p>
+     <p>Renamed <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#propdef-motion-rotation">motion-rotation</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-13">offset-rotate</a>. </p>
     <li>
-     <p>Added <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-22">offset-position</a> to specify the initial position of the path by merging <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-origin-property">polar-origin</a> from <a data-link-type="biblio" href="#biblio-css-round-display-1">[CSS-ROUND-DISPLAY-1]</a>. </p>
+     <p>Added <a class="property" data-link-type="propdesc" href="#propdef-offset-position" id="ref-for-propdef-offset-position-23">offset-position</a> to specify the <a class="css" data-link-type="maybe" href="#valdef-offsetpath-initial-position" id="ref-for-valdef-offsetpath-initial-position-19">initial position</a> of the path by merging <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-origin-property">polar-origin</a> from <a data-link-type="biblio" href="#biblio-css-round-display-1">[CSS-ROUND-DISPLAY-1]</a>. </p>
     <li>
-     <p>Added <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-6">offset-anchor</a> to specify the origin point of the element by merging <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-anchor-property">polar-anchor</a> from <a data-link-type="biblio" href="#biblio-css-round-display-1">[CSS-ROUND-DISPLAY-1]</a>. </p>
+     <p>Added <a class="property" data-link-type="propdesc" href="#propdef-offset-anchor" id="ref-for-propdef-offset-anchor-7">offset-anchor</a> to specify the origin point of the element by merging <a href="https://www.w3.org/TR/2016/WD-css-round-display-1-20160301/#polar-anchor-property">polar-anchor</a> from <a data-link-type="biblio" href="#biblio-css-round-display-1">[CSS-ROUND-DISPLAY-1]</a>. </p>
     <li>
      <p>Renamed the shorthand property <a href="https://www.w3.org/TR/2015/WD-motion-1-20150409/#propdef-motion">motion</a> to <a class="property" data-link-type="propdesc" href="#propdef-offset" id="ref-for-propdef-offset-2">offset</a>. </p>
     <li>
-     <p>Made <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-13">offset-rotate</a> specify the rotation transformation by <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-13">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-6">reverse</a> in combination with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. </p>
+     <p>Made <a class="property" data-link-type="propdesc" href="#propdef-offset-rotate" id="ref-for-propdef-offset-rotate-14">offset-rotate</a> specify the rotation transformation by <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-auto" id="ref-for-valdef-offset-rotate-auto-14">auto</a> or <a class="css" data-link-type="maybe" href="#valdef-offset-rotate-reverse" id="ref-for-valdef-offset-rotate-reverse-6">reverse</a> in combination with <a class="production css" data-link-type="type" href="https://www.w3.org/TR/css3-values/#angle-value" title="Expands to: turn | rad | grad | deg">&lt;angle></a>. </p>
    </ul>
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content">Acknowledgments</span><a class="self-link" href="#acknowledgments"></a></h2>
    <p>The editors would like to thank to Eric Willigers for contributing to this specification.
@@ -1596,7 +1594,7 @@ fantasai,
 Hyojin Song,
 and
 all the rest of the CSS WG members
-for their reviews, comments, and corrections. </p>
+for their reviews, comments, and corrections.</p>
   </main>
   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
   <h3 class="no-ref heading settled" id="conventions"><span class="content"> Document conventions</span><a class="self-link" href="#conventions"></a></h3>
@@ -1688,14 +1686,14 @@ for their reviews, comments, and corrections. </p>
   <ul class="index">
    <li><a href="#anchor-point">anchor point</a><span>, in §4.4</span>
    <li><a href="#valdef-offset-rotate-auto">auto</a><span>, in §4.5</span>
-   <li><a href="#size-closest-corner">closest-corner</a><span>, in §4.1</span>
-   <li><a href="#size-closest-side">closest-side</a><span>, in §4.1</span>
-   <li><a href="#offset-path-contain">contain</a><span>, in §4.1</span>
-   <li><a href="#size-farthest-corner">farthest-corner</a><span>, in §4.1</span>
-   <li><a href="#size-farthest-side">farthest-side</a><span>, in §4.1</span>
-   <li><a href="#offset-path-initial-direction">initial direction</a><span>, in §4.1</span>
-   <li><a href="#offset-path-initial-position">initial position</a><span>, in §4.1</span>
-   <li><a href="#valdef-offset-path-none">none</a><span>, in §4.1</span>
+   <li><a href="#valdef-size-closest-corner">closest-corner</a><span>, in §4.1</span>
+   <li><a href="#valdef-size-closest-side">closest-side</a><span>, in §4.1</span>
+   <li><a href="#valdef-offsetpath-contain">contain</a><span>, in §4.1</span>
+   <li><a href="#valdef-size-farthest-corner">farthest-corner</a><span>, in §4.1</span>
+   <li><a href="#valdef-size-farthest-side">farthest-side</a><span>, in §4.1</span>
+   <li><a href="#valdef-offsetpath-initial-direction">initial direction</a><span>, in §4.1</span>
+   <li><a href="#valdef-offsetpath-initial-position">initial position</a><span>, in §4.1</span>
+   <li><a href="#offsetpath-none">none</a><span>, in §4.1</span>
    <li><a href="#propdef-offset">offset</a><span>, in §4.6</span>
    <li><a href="#propdef-offset-anchor">offset-anchor</a><span>, in §4.4</span>
    <li><a href="#propdef-offset-distance">offset-distance</a><span>, in §4.2</span>
@@ -1705,11 +1703,11 @@ for their reviews, comments, and corrections. </p>
    <li><a href="#propdef-offset-position">offset-position</a><span>, in §4.3</span>
    <li><a href="#propdef-offset-rotate">offset-rotate</a><span>, in §4.5</span>
    <li><a href="#p">P</a><span>, in §4.5.1</span>
-   <li><a href="#funcdef-offset-path-path">path()</a><span>, in §4.1</span>
-   <li><a href="#offset-path-ray">ray</a><span>, in §4.1</span>
+   <li><a href="#offsetpath-pathfunc">path()</a><span>, in §4.1</span>
+   <li><a href="#valdef-offsetpath-ray">ray()</a><span>, in §4.1</span>
    <li><a href="#valdef-offset-rotate-reverse">reverse</a><span>, in §4.5</span>
    <li><a href="#size-sides">sides</a><span>, in §4.1</span>
-   <li><a href="#typedef-size">&lt;size></a><span>, in §4.1</span>
+   <li><a href="#valdef-offsetpath-size">&lt;size></a><span>, in §4.1</span>
    <li><a href="#t1">T1</a><span>, in §4.5.1</span>
    <li><a href="#t2">T2</a><span>, in §4.5.1</span>
    <li><a href="#total-length">total length</a><span>, in §4.2.1</span>
@@ -1717,13 +1715,6 @@ for their reviews, comments, and corrections. </p>
   </ul>
   <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
-   <li>
-    <a data-link-type="biblio">[css-backgrounds-3]</a> defines the following terms:
-    <ul>
-     <li><a href="https://www.w3.org/TR/css3-background/#ltpositiongt">&lt;position></a>
-     <li><a href="https://www.w3.org/TR/css3-background/#background-position">background-position</a>
-     <li><a href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>
-    </ul>
    <li>
     <a data-link-type="biblio">[css-cascade-4]</a> defines the following terms:
     <ul>
@@ -1767,6 +1758,7 @@ for their reviews, comments, and corrections. </p>
     <a data-link-type="biblio">[CSS-TRANSFORMS-1]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-transforms-1/#local-coordinate-system">local coordinate system</a>
+     <li><a href="https://www.w3.org/TR/css-transforms-1/#funcdef-rotate">rotate()</a>
      <li><a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">transform</a>
      <li><a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform-origin">transform-origin</a>
     </ul>
@@ -1783,10 +1775,21 @@ for their reviews, comments, and corrections. </p>
      <li><a href="https://www.w3.org/TR/CSS21/visuren.html#x43">stacking context</a>
     </ul>
    <li>
+    <a data-link-type="biblio">[css3-background]</a> defines the following terms:
+    <ul>
+     <li><a href="https://www.w3.org/TR/css3-background/#ltpositiongt">&lt;position></a>
+     <li><a href="https://www.w3.org/TR/css3-background/#background-position">background-position</a>
+     <li><a href="https://www.w3.org/TR/css3-background/#border-radius">border-radius</a>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[css3-images]</a> defines the following terms:
+    <ul>
+     <li><a href="https://www.w3.org/TR/css3-images/#size">&lt;size></a>
+    </ul>
+   <li>
     <a data-link-type="biblio">[CSS3VAL]</a> defines the following terms:
     <ul>
      <li><a href="https://drafts.csswg.org/css-values-4/#mult-req">!</a>
-     <li><a href="https://drafts.csswg.org/css-values-4/#comb-all">&amp;&amp;</a>
      <li><a href="https://www.w3.org/TR/css3-values/#angle-value">&lt;angle></a>
      <li><a href="https://drafts.csswg.org/css-values-4/#typedef-length-percentage">&lt;length-percentage></a>
      <li><a href="https://www.w3.org/TR/css3-values/#length-value">&lt;length></a>
@@ -1802,17 +1805,10 @@ for their reviews, comments, and corrections. </p>
     <ul>
      <li><a href="https://svgwg.org/svg2-draft/shapes.html#TermShapeElement">shape element</a>
     </ul>
-   <li>
-    <a data-link-type="biblio">[URL]</a> defines the following terms:
-    <ul>
-     <li><a href="https://url.spec.whatwg.org/#concept-url-path">path</a>
-    </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-css-backgrounds-3">[CSS-BACKGROUNDS-3]
-   <dd>CSS Backgrounds and Borders Module Level 3 URL: <a href="https://www.w3.org/TR/css3-background/">https://www.w3.org/TR/css3-background/</a>
    <dt id="biblio-css-cascade-4">[CSS-CASCADE-4]
    <dd>Elika Etemad; Tab Atkins Jr.. <a href="https://www.w3.org/TR/css-cascade-4/">CSS Cascading and Inheritance Level 4</a>. URL: <a href="https://www.w3.org/TR/css-cascade-4/">https://www.w3.org/TR/css-cascade-4/</a>
    <dt id="biblio-css-contain-1">[CSS-CONTAIN-1]
@@ -1829,6 +1825,10 @@ for their reviews, comments, and corrections. </p>
    <dd>CSS Transforms Module Level 2 URL: <a href="https://drafts.csswg.org/css-transforms-2/">https://drafts.csswg.org/css-transforms-2/</a>
    <dt id="biblio-css21">[CSS21]
    <dd>Bert Bos; et al. <a href="https://www.w3.org/TR/CSS2">Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification</a>. 7 June 2011. REC. URL: <a href="https://www.w3.org/TR/CSS2">https://www.w3.org/TR/CSS2</a>
+   <dt id="biblio-css3-background">[CSS3-BACKGROUND]
+   <dd>Bert Bos; Elika Etemad; Brad Kemper. <a href="https://www.w3.org/TR/css3-background/">CSS Backgrounds and Borders Module Level 3</a>. URL: <a href="https://www.w3.org/TR/css3-background/">https://www.w3.org/TR/css3-background/</a>
+   <dt id="biblio-css3-images">[CSS3-IMAGES]
+   <dd>Elika Etemad; Tab Atkins Jr.. <a href="https://www.w3.org/TR/css3-images/">CSS Image Values and Replaced Content Module Level 3</a>. 17 April 2012. CR. URL: <a href="https://www.w3.org/TR/css3-images/">https://www.w3.org/TR/css3-images/</a>
    <dt id="biblio-css3val">[CSS3VAL]
    <dd>Tab Atkins Jr.; Elika Etemad. <a href="https://www.w3.org/TR/css-values-3/">CSS Values and Units Module Level 3</a>. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
    <dt id="biblio-rfc2119">[RFC2119]
@@ -1837,8 +1837,6 @@ for their reviews, comments, and corrections. </p>
    <dd>Erik Dahlström; et al. <a href="https://www.w3.org/TR/SVG11/">Scalable Vector Graphics (SVG) 1.1 (Second Edition)</a>. 16 August 2011. REC. URL: <a href="https://www.w3.org/TR/SVG11/">https://www.w3.org/TR/SVG11/</a>
    <dt id="biblio-svg2">[SVG2]
    <dd>Nikos Andronikos; et al. <a href="https://www.w3.org/TR/SVG2/">Scalable Vector Graphics (SVG) 2</a>. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a>
-   <dt id="biblio-url">[URL]
-   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/">URL Standard</a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
   </dl>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
@@ -1863,7 +1861,7 @@ for their reviews, comments, and corrections. </p>
     <tbody>
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef-offset">offset</a>
-      <td>[ &lt;offset-position>? [ &lt;offset-path> [ &lt;offset-distance> || &lt;offset-rotate> ]? ]? ]!  [ / &lt;offset-anchor> ]?
+      <td>[ offset-position? [ offset-path [ offset-distance || offset-rotate ]? ]? ]!  [ / offset-anchor ]?
       <td>see individual properties
       <td>transformable elements
       <td>no
@@ -1896,13 +1894,13 @@ for their reviews, comments, and corrections. </p>
       <td>For &lt;length> the absolute value, otherwise a percentage.
      <tr>
       <th scope="row"><a class="css" data-link-type="property" href="#propdef-offset-path">offset-path</a>
-      <td>none | ray( [ &lt;angle> &amp;&amp; &lt;size> &amp;&amp; contain? ] )  | &lt;path()> | &lt;url> | [ &lt;basic-shape> || &lt;geometry-box> ]
+      <td>none | ray() | path() | &lt;url> | [ &lt;basic-shape> || &lt;geometry-box> ]
       <td>none
       <td>transformable elements
       <td>no
       <td>n/a
       <td>visual
-      <td>as &lt;angle>, &lt;basic-shape> or &lt;path()>
+      <td>as &lt;angle>, &lt;basic-shape> or path()
       <td>per grammar
       <td>as specified
      <tr>
@@ -1932,7 +1930,7 @@ for their reviews, comments, and corrections. </p>
   <h2 class="no-num no-ref heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
    <div class="issue">Do we need to say how to get the position in more detail?<a href="#issue-8c7a4468"> ↵ </a></div>
-   <div class="issue">There needs to be a process for converting <var>rotate</var> to an angle.<a href="#issue-bfe608d2"> ↵ </a></div>
+   <div class="issue">There needs to be a process for converting <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css-transforms-1/#funcdef-rotate">rotate()</a> to an angle.<a href="#issue-c41904a2"> ↵ </a></div>
   </div>
   <aside class="dfn-panel" data-for="propdef-offset-path">
    <b><a href="#propdef-offset-path">#propdef-offset-path</a></b><b>Referenced in:</b>
@@ -1943,8 +1941,8 @@ for their reviews, comments, and corrections. </p>
     <li><a href="#ref-for-propdef-offset-path-9">4.2.1. Calculating the computed distance along a path</a>
     <li><a href="#ref-for-propdef-offset-path-10">4.3. Define the starting point of the path: The offset-position property</a> <a href="#ref-for-propdef-offset-path-11">(2)</a> <a href="#ref-for-propdef-offset-path-12">(3)</a>
     <li><a href="#ref-for-propdef-offset-path-13">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-propdef-offset-path-14">(2)</a>
-    <li><a href="#ref-for-propdef-offset-path-15">4.6. Offset shorthand: The offset property</a>
-    <li><a href="#ref-for-propdef-offset-path-16">Changes</a>
+    <li><a href="#ref-for-propdef-offset-path-15">4.6. Offset shorthand: The offset property</a> <a href="#ref-for-propdef-offset-path-16">(2)</a>
+    <li><a href="#ref-for-propdef-offset-path-17">Changes</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="offset-path">
@@ -1954,36 +1952,52 @@ for their reviews, comments, and corrections. </p>
     <li><a href="#ref-for-offset-path-10">4.2. Position on the path: The offset-distance property</a> <a href="#ref-for-offset-path-11">(2)</a> <a href="#ref-for-offset-path-12">(3)</a> <a href="#ref-for-offset-path-13">(4)</a>
     <li><a href="#ref-for-offset-path-14">4.2.1. Calculating the computed distance along a path</a> <a href="#ref-for-offset-path-15">(2)</a> <a href="#ref-for-offset-path-16">(3)</a> <a href="#ref-for-offset-path-17">(4)</a> <a href="#ref-for-offset-path-18">(5)</a> <a href="#ref-for-offset-path-19">(6)</a> <a href="#ref-for-offset-path-20">(7)</a> <a href="#ref-for-offset-path-21">(8)</a> <a href="#ref-for-offset-path-22">(9)</a> <a href="#ref-for-offset-path-23">(10)</a> <a href="#ref-for-offset-path-24">(11)</a>
     <li><a href="#ref-for-offset-path-25">4.3. Define the starting point of the path: The offset-position property</a>
-    <li><a href="#ref-for-offset-path-26">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-offset-path-27">(2)</a>
-    <li><a href="#ref-for-offset-path-28">4.5.1. Calculating the path transform</a> <a href="#ref-for-offset-path-29">(2)</a>
-    <li><a href="#ref-for-offset-path-30">Changes</a>
+    <li><a href="#ref-for-offset-path-26">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-offset-path-27">(2)</a>
+    <li><a href="#ref-for-offset-path-28">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-offset-path-29">(2)</a> <a href="#ref-for-offset-path-30">(3)</a> <a href="#ref-for-offset-path-31">(4)</a> <a href="#ref-for-offset-path-32">(5)</a>
+    <li><a href="#ref-for-offset-path-33">4.5.1. Calculating the path transform</a> <a href="#ref-for-offset-path-34">(2)</a>
+    <li><a href="#ref-for-offset-path-35">Changes</a>
    </ul>
   </aside>
-  <aside class="dfn-panel" data-for="offset-path-ray">
-   <b><a href="#offset-path-ray">#offset-path-ray</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="valdef-offsetpath-ray">
+   <b><a href="#valdef-offsetpath-ray">#valdef-offsetpath-ray</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-offset-path-ray-1">4.1. Define a path: The offset-path property</a>
-    <li><a href="#ref-for-offset-path-ray-2">Changes</a> <a href="#ref-for-offset-path-ray-3">(2)</a>
+    <li><a href="#ref-for-valdef-offsetpath-ray-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-valdef-offsetpath-ray-2">(2)</a>
+    <li><a href="#ref-for-valdef-offsetpath-ray-3">Changes</a> <a href="#ref-for-valdef-offsetpath-ray-4">(2)</a>
    </ul>
   </aside>
-  <aside class="dfn-panel" data-for="typedef-size">
-   <b><a href="#typedef-size">#typedef-size</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="size-sides">
+   <b><a href="#size-sides">#size-sides</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-typedef-size-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-typedef-size-2">(2)</a> <a href="#ref-for-typedef-size-3">(3)</a>
-    <li><a href="#ref-for-typedef-size-4">Changes</a>
+    <li><a href="#ref-for-size-sides-1">4.1. Define a path: The offset-path property</a>
    </ul>
   </aside>
-  <aside class="dfn-panel" data-for="offset-path-initial-position">
-   <b><a href="#offset-path-initial-position">#offset-path-initial-position</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="valdef-offsetpath-initial-position">
+   <b><a href="#valdef-offsetpath-initial-position">#valdef-offsetpath-initial-position</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-offset-path-initial-position-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-offset-path-initial-position-2">(2)</a> <a href="#ref-for-offset-path-initial-position-3">(3)</a> <a href="#ref-for-offset-path-initial-position-4">(4)</a>
-    <li><a href="#ref-for-offset-path-initial-position-5">4.5.1. Calculating the path transform</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-position-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-valdef-offsetpath-initial-position-2">(2)</a> <a href="#ref-for-valdef-offsetpath-initial-position-3">(3)</a> <a href="#ref-for-valdef-offsetpath-initial-position-4">(4)</a> <a href="#ref-for-valdef-offsetpath-initial-position-5">(5)</a> <a href="#ref-for-valdef-offsetpath-initial-position-6">(6)</a> <a href="#ref-for-valdef-offsetpath-initial-position-7">(7)</a> <a href="#ref-for-valdef-offsetpath-initial-position-8">(8)</a> <a href="#ref-for-valdef-offsetpath-initial-position-9">(9)</a> <a href="#ref-for-valdef-offsetpath-initial-position-10">(10)</a> <a href="#ref-for-valdef-offsetpath-initial-position-11">(11)</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-position-12">4.2. Position on the path: The offset-distance property</a> <a href="#ref-for-valdef-offsetpath-initial-position-13">(2)</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-position-14">4.3. Define the starting point of the path: The offset-position property</a> <a href="#ref-for-valdef-offsetpath-initial-position-15">(2)</a> <a href="#ref-for-valdef-offsetpath-initial-position-16">(3)</a> <a href="#ref-for-valdef-offsetpath-initial-position-17">(4)</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-position-18">4.5.1. Calculating the path transform</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-position-19">Changes</a>
    </ul>
   </aside>
-  <aside class="dfn-panel" data-for="offset-path-initial-direction">
-   <b><a href="#offset-path-initial-direction">#offset-path-initial-direction</a></b><b>Referenced in:</b>
+  <aside class="dfn-panel" data-for="valdef-offsetpath-initial-direction">
+   <b><a href="#valdef-offsetpath-initial-direction">#valdef-offsetpath-initial-direction</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-offset-path-initial-direction-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-offset-path-initial-direction-2">(2)</a>
+    <li><a href="#ref-for-valdef-offsetpath-initial-direction-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-valdef-offsetpath-initial-direction-2">(2)</a> <a href="#ref-for-valdef-offsetpath-initial-direction-3">(3)</a> <a href="#ref-for-valdef-offsetpath-initial-direction-4">(4)</a> <a href="#ref-for-valdef-offsetpath-initial-direction-5">(5)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="offsetpath-pathfunc">
+   <b><a href="#offsetpath-pathfunc">#offsetpath-pathfunc</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-offsetpath-pathfunc-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-offsetpath-pathfunc-2">(2)</a> <a href="#ref-for-offsetpath-pathfunc-3">(3)</a> <a href="#ref-for-offsetpath-pathfunc-4">(4)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="offsetpath-none">
+   <b><a href="#offsetpath-none">#offsetpath-none</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-offsetpath-none-1">4.1. Define a path: The offset-path property</a> <a href="#ref-for-offsetpath-none-2">(2)</a>
+    <li><a href="#ref-for-offsetpath-none-3">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-offsetpath-none-4">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="propdef-offset-distance">
@@ -1994,8 +2008,8 @@ for their reviews, comments, and corrections. </p>
     <li><a href="#ref-for-propdef-offset-distance-9">4.2. Position on the path: The offset-distance property</a>
     <li><a href="#ref-for-propdef-offset-distance-10">4.2.1. Calculating the computed distance along a path</a>
     <li><a href="#ref-for-propdef-offset-distance-11">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-propdef-offset-distance-12">(2)</a>
-    <li><a href="#ref-for-propdef-offset-distance-13">4.6. Offset shorthand: The offset property</a>
-    <li><a href="#ref-for-propdef-offset-distance-14">Changes</a>
+    <li><a href="#ref-for-propdef-offset-distance-13">4.6. Offset shorthand: The offset property</a> <a href="#ref-for-propdef-offset-distance-14">(2)</a>
+    <li><a href="#ref-for-propdef-offset-distance-15">Changes</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="used-offset-distance">
@@ -2027,8 +2041,8 @@ for their reviews, comments, and corrections. </p>
     <li><a href="#ref-for-propdef-offset-position-5">4.3. Define the starting point of the path: The offset-position property</a> <a href="#ref-for-propdef-offset-position-6">(2)</a> <a href="#ref-for-propdef-offset-position-7">(3)</a> <a href="#ref-for-propdef-offset-position-8">(4)</a> <a href="#ref-for-propdef-offset-position-9">(5)</a> <a href="#ref-for-propdef-offset-position-10">(6)</a> <a href="#ref-for-propdef-offset-position-11">(7)</a> <a href="#ref-for-propdef-offset-position-12">(8)</a> <a href="#ref-for-propdef-offset-position-13">(9)</a> <a href="#ref-for-propdef-offset-position-14">(10)</a> <a href="#ref-for-propdef-offset-position-15">(11)</a> <a href="#ref-for-propdef-offset-position-16">(12)</a>
     <li><a href="#ref-for-propdef-offset-position-17">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-propdef-offset-position-18">(2)</a> <a href="#ref-for-propdef-offset-position-19">(3)</a>
     <li><a href="#ref-for-propdef-offset-position-20">4.5.1. Calculating the path transform</a>
-    <li><a href="#ref-for-propdef-offset-position-21">4.6. Offset shorthand: The offset property</a>
-    <li><a href="#ref-for-propdef-offset-position-22">Changes</a>
+    <li><a href="#ref-for-propdef-offset-position-21">4.6. Offset shorthand: The offset property</a> <a href="#ref-for-propdef-offset-position-22">(2)</a>
+    <li><a href="#ref-for-propdef-offset-position-23">Changes</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="propdef-offset-anchor">
@@ -2036,8 +2050,8 @@ for their reviews, comments, and corrections. </p>
    <ul>
     <li><a href="#ref-for-propdef-offset-anchor-1">4. Motion Paths</a>
     <li><a href="#ref-for-propdef-offset-anchor-2">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-propdef-offset-anchor-3">(2)</a> <a href="#ref-for-propdef-offset-anchor-4">(3)</a>
-    <li><a href="#ref-for-propdef-offset-anchor-5">4.6. Offset shorthand: The offset property</a>
-    <li><a href="#ref-for-propdef-offset-anchor-6">Changes</a>
+    <li><a href="#ref-for-propdef-offset-anchor-5">4.6. Offset shorthand: The offset property</a> <a href="#ref-for-propdef-offset-anchor-6">(2)</a>
+    <li><a href="#ref-for-propdef-offset-anchor-7">Changes</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="anchor-point">
@@ -2057,18 +2071,18 @@ for their reviews, comments, and corrections. </p>
     <li><a href="#ref-for-propdef-offset-rotate-2">4.1. Define a path: The offset-path property</a> <a href="#ref-for-propdef-offset-rotate-3">(2)</a>
     <li><a href="#ref-for-propdef-offset-rotate-4">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-propdef-offset-rotate-5">(2)</a> <a href="#ref-for-propdef-offset-rotate-6">(3)</a> <a href="#ref-for-propdef-offset-rotate-7">(4)</a> <a href="#ref-for-propdef-offset-rotate-8">(5)</a> <a href="#ref-for-propdef-offset-rotate-9">(6)</a>
     <li><a href="#ref-for-propdef-offset-rotate-10">4.5.1. Calculating the path transform</a>
-    <li><a href="#ref-for-propdef-offset-rotate-11">4.6. Offset shorthand: The offset property</a>
-    <li><a href="#ref-for-propdef-offset-rotate-12">Changes</a> <a href="#ref-for-propdef-offset-rotate-13">(2)</a>
+    <li><a href="#ref-for-propdef-offset-rotate-11">4.6. Offset shorthand: The offset property</a> <a href="#ref-for-propdef-offset-rotate-12">(2)</a>
+    <li><a href="#ref-for-propdef-offset-rotate-13">Changes</a> <a href="#ref-for-propdef-offset-rotate-14">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="valdef-offset-rotate-auto">
    <b><a href="#valdef-offset-rotate-auto">#valdef-offset-rotate-auto</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-valdef-offset-rotate-auto-1">4.1. Define a path: The offset-path property</a>
-    <li><a href="#ref-for-valdef-offset-rotate-auto-2">4.3. Define the starting point of the path: The offset-position property</a> <a href="#ref-for-valdef-offset-rotate-auto-3">(2)</a>
-    <li><a href="#ref-for-valdef-offset-rotate-auto-4">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-valdef-offset-rotate-auto-5">(2)</a>
-    <li><a href="#ref-for-valdef-offset-rotate-auto-6">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-valdef-offset-rotate-auto-7">(2)</a> <a href="#ref-for-valdef-offset-rotate-auto-8">(3)</a> <a href="#ref-for-valdef-offset-rotate-auto-9">(4)</a> <a href="#ref-for-valdef-offset-rotate-auto-10">(5)</a> <a href="#ref-for-valdef-offset-rotate-auto-11">(6)</a> <a href="#ref-for-valdef-offset-rotate-auto-12">(7)</a>
-    <li><a href="#ref-for-valdef-offset-rotate-auto-13">Changes</a>
+    <li><a href="#ref-for-valdef-offset-rotate-auto-2">4.3. Define the starting point of the path: The offset-position property</a> <a href="#ref-for-valdef-offset-rotate-auto-3">(2)</a> <a href="#ref-for-valdef-offset-rotate-auto-4">(3)</a>
+    <li><a href="#ref-for-valdef-offset-rotate-auto-5">4.4. Define an anchor point: The offset-anchor property</a> <a href="#ref-for-valdef-offset-rotate-auto-6">(2)</a>
+    <li><a href="#ref-for-valdef-offset-rotate-auto-7">4.5. Rotation at point: The offset-rotate property</a> <a href="#ref-for-valdef-offset-rotate-auto-8">(2)</a> <a href="#ref-for-valdef-offset-rotate-auto-9">(3)</a> <a href="#ref-for-valdef-offset-rotate-auto-10">(4)</a> <a href="#ref-for-valdef-offset-rotate-auto-11">(5)</a> <a href="#ref-for-valdef-offset-rotate-auto-12">(6)</a> <a href="#ref-for-valdef-offset-rotate-auto-13">(7)</a>
+    <li><a href="#ref-for-valdef-offset-rotate-auto-14">Changes</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="valdef-offset-rotate-reverse">
