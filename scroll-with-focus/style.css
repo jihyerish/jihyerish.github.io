@@ -1,11 +1,16 @@
-body {
-  scroll-behavior: smooth;
+nav {
+  border: 2px solid #D80546;
+  display: block;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
 }
 
 #section {
   scroll-behavior: smooth;
   border: 1px solid gray;
-  overflow: scroll;
+  overflow-y: scroll;
+  height: 300px;
 }
 
 button {
