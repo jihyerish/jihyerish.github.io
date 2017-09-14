@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+    <title>Scroll by the Tab focusing</title>
+  </head>
+  <body>
+  <button class="manual" id="scrollIntoView">scrollIntoView() on #2</button>
+  <button class="manual" id="focus">focus() on #2</button>
+    <nav>
+      <a href="#1">1</a>
+      <a href="#2">2</a>
+      <a href="#3">3</a>
+      <a href="#4">4</a>
+      <a href="#5">5</a>
+    </nav>
+    <div id="section">
+      <button id="1">
+        <br><strong>1</strong>
+      </button>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <button id="2">
+        <br><strong>2</strong>
+      </button>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <button id="3">
+        <br><strong>3</strong>
+      </button>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <button id="4">
+        <br><strong>4</strong>
+      </button>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <button id="5">
+        <br><strong>5</strong>
+      </button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var box = document.getElementById("2");
+
+    document.getElementById('scrollIntoView').addEventListener('click', function(){
+      box.scrollIntoView();
+    });
+
+    document.getElementById('focus').addEventListener('click', function(){
+      box.focus();
+    });
+  </script>
+</html>
