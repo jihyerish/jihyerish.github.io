@@ -1,0 +1,47 @@
+nav {
+  border: 2px solid #D80546;
+  display: block;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
+}
+
+#section {
+  scroll-behavior: smooth;
+  border: 1px solid gray;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+button {
+  text-align: center;
+  font-size: 100%;
+  border-radius: 1em;
+  padding: 1em;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  justify-content: center;
+}
+
+button strong {
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.35;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  font-size: 150%;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+button:hover,
+button:focus {
+  background-color: #D80546;
+  box-shadow: inset 0 0 10px 10px #aaa;
+  color: #fff;
+  outline: none;
+}
