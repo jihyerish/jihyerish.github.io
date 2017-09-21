@@ -1,0 +1,93 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Saira');
+
+h1 {
+  text-align: center;
+  font-family: 'Saira', sans-serif;
+}
+h1:after {
+  background: #F67280;
+  content: '';
+  display: block;
+  height: 6px;
+  margin: 30px;
+}
+
+nav {
+  border: 2px solid #D80546;
+  padding: 1em 0;
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+  font-family: 'Saira', sans-serif;
+}
+
+form {
+  width: 80%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  font-family: 'Saira', sans-serif;
+  font-size: 16px;
+}
+
+#scrolloptions {
+  display: inline;
+}
+
+.manual {
+  width: 100px;
+  height: 50px;
+  margin-left: 250px;
+}
+
+#container {
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: auto auto;
+}
+
+#scrollBox {
+  border: 1px solid gray;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 600px;
+  width: 800px;
+  margin: auto auto;
+  padding: 10px;
+}
+
+button {
+  text-align: center;
+  font-size: 100%;
+  border-radius: 1em;
+  padding: 1em;
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  justify-content: center;
+  font-family: 'Saira', sans-serif;
+}
+
+button strong {
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.35;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  font-size: 150%;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+button:hover,
+button:focus {
+  background-color: #D80546;
+  box-shadow: inset 0 0 10px 10px #aaa;
+  color: #fff;
+  outline: none;
+}
