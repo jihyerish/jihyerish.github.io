@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# jihyerish.github.io
-
-Demos created by Jihye Hong (jihyerish)
-=======
 # Samples using the Web Standard APIs
 
 Demos created by Jihye Hong (@jihyerish)
@@ -18,4 +13,3 @@ Demos created by Jihye Hong (@jihyerish)
 
 ## Media
 * [Media Session Demos](https://jihyerish.github.io/media-session-demo/mymediaplayer)
->>>>>>> 74d41cc167cb57f5cdd7558f30ce2fc110c60c07
