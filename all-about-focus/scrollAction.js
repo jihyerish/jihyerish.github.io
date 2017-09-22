@@ -8,10 +8,10 @@ document.getElementById('function').addEventListener('change', function(){
 	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
 
 	if(method != "scrollIntoView") {
-		document.getElementById('scrollIntoViewOptions').style.visibility = "hidden";
+		document.getElementById('scrollIntoViewOptions').style.display="none";
 	}
 	else {
-    document.getElementById('scrollIntoViewOptions').style.visibility = "visible";
+    document.getElementById('scrollIntoViewOptions').style.display="inline";
   }
 });
 
