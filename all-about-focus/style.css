@@ -13,17 +13,15 @@ h1:after {
   margin: 10px;
 }
 
-nav {
-  border: 2px solid #D80546;
-  padding: 1em 0;
-  text-align: center;
-  margin: 10px auto;
-  width: 80%;
-  font-family: 'Saira', sans-serif;
+#optionField {
+  display: inline;
+  width: 100%;
+  margin: 10%;
 }
 
 form {
-  width: 80%;
+  display: inline-block;
+  width: 70%;
   padding-bottom: 10px;
   font-family: 'Saira', sans-serif;
   font-size: 16px;
@@ -34,9 +32,9 @@ form {
 }
 
 #manual {
+  display: inline;
   width: 100px;
   height: 50px;
-  margin: auto auto;
 }
 
 #container {
@@ -45,10 +43,13 @@ form {
   margin: auto auto;
 }
 
-#optionField {
-  background: ivory;
+nav {
+  border: 2px solid #D80546;
+  padding: 1em 0;
+  text-align: center;
   margin: 10px auto;
   width: 80%;
+  font-family: 'Saira', sans-serif;
 }
 
 #scrollBox {
