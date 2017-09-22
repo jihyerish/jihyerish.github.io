@@ -9,6 +9,7 @@
   <body>
     <h1>All the focus navigations on Web</h1>
     <div id="container">
+      <div id="optionField">
       <form>
         <fieldset>
           <legend>Option</legend>
@@ -56,12 +57,11 @@
             <option value="13">13</option>
             <option value="14">14</option>
             <option value="15">15</option>
-            <option value="16">16</option>
           </select>
-        <button id="manual">Action!</button>
         </fieldset>
       </form>
-
+      <button id="manual">Action!</button>
+      </div>
       <nav>
         <a href="#1">1</a>
         <a href="#2">2</a>
@@ -115,53 +115,48 @@
         <button class="box" id="15">
           <br><strong>15</strong>
         </button>
-        <button class="box" id="16">
-          <br><strong>16</strong>
-        </button>
       </div>
     </div>
   </body>
-  <!--script type="text/javascript" src="scrollAction.js"></script-->
-	<script type="text/javascript">
+  <script type="text/javascript" src="scrollAction.js"></script>
+	<!--script type="text/javascript">
 		var method;
-var behavior;
-var direction;
-var position;
-var selectedBox;
+    var behavior;
+    var direction;
+    var position;
+    var selectedBox;
 
+    document.getElementById('function').addEventListener('change', function(){
+    	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
 
-document.getElementById('function').addEventListener('change', function(){
-	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
-	
-	if(method != "scrollIntoView") {		
-		document.getElementById('scrollIntoViewOptions').style.visibility = "hidden";
-	}
-});
+    	if(method != "scrollIntoView") {
+    		document.getElementById('scrollIntoViewOptions').style.visibility = "hidden";
+    	}
+      else {
+        document.getElementById('scrollIntoViewOptions').style.visibility = "visible";
+      }
+    });
 
-document.getElementById('manual').addEventListener('click', function() {
-  getOptions();
-	
-	if(method == "scrollIntoView"){
-		//document.getElementById(selectedBox).scrollIntoView({
-    //    behavior: behavior,
-    //    direction: position
-     // });
-	}
-	else if(method == "focus"){
-		console.log("selected: "+selectedBox);
-		//document.getElementById(selectedBox).focus();
-	}
-});
+    document.getElementById('manual').addEventListener('click', function() {
+      //getOptions();
+      if(method == "scrollIntoView"){
+        behavior = document.getElementById('behavior').options[document.getElementById('behavior').selectedIndex].value;
+        direction = document.getElementById('flowDirection').options[document.getElementById('flowDirection').selectedIndex].value;
+        position = document.getElementById('logicalPosition').options[document.getElementById('logicalPosition').selectedIndex].value;
+      }
 
-function getOptions() {
-	
-	if(method == "scrollIntoView"){
-		behavior = document.getElementById('behavior').options[document.getElementById('behavior').selectedIndex].value;
-		direction = document.getElementById('flowDirection').options[document.getElementById('flowDirection').selectedIndex].value;
-		position = document.getElementById('logicalPosition').options[document.getElementById('logicalPosition').selectedIndex].value;
-	}
-	
-	selectedBox = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
-}
-	</script>
+      selectedBox = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
+
+    	if(method == "scrollIntoView"){
+    		document.getElementById(selectedBox).scrollIntoView({
+           behavior: behavior,
+           direction: position
+         });
+    	}
+    	else if(method == "focus"){
+    		console.log("selected: "+selectedBox);
+    		document.getElementById(selectedBox).focus();
+    	}
+    });
+	</script-->
 </html>
