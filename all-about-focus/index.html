@@ -25,13 +25,15 @@
               <option value="instant" >instant</option>
               <option value="smooth" >smooth</option>
             </select>
-            <span> , </span>
-            <select id="flowDirection" name="flowDirection">
-              <option value="block" selected="selected">block</option>
-              <option value="inline" >inline</option>
+            <span> , inline : </span>
+            <select id="inlinePosition" name="inlinePosition">
+              <option value="start">start</option>
+              <option value="nearest" selected="selected">nearest</option>
+              <option value="end" >end</option>
+              <option value="center" >center</option>
             </select>
-            <span> : </span>
-            <select id="logicalPosition" name="logicalPosition">
+            <span> , block : </span>
+            <select id="blockPosition" name="blockPosition">
               <option value="start" selected="selected">start</option>
               <option value="nearest" >nearest</option>
               <option value="end" >end</option>
@@ -57,6 +59,9 @@
             <option value="13">13</option>
             <option value="14">14</option>
             <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
           </select>
         </fieldset>
       </form>
@@ -115,48 +120,17 @@
         <button class="box" id="15">
           <br><strong>15</strong>
         </button>
+        <button class="box" id="16">
+          <br><strong>16</strong>
+        </button>
+        <button class="box" id="17">
+          <br><strong>17</strong>
+        </button>
+        <button class="box" id="18">
+          <br><strong>18</strong>
+        </button>
       </div>
     </div>
   </body>
   <script type="text/javascript" src="scrollAction.js"></script>
-	<!--script type="text/javascript">
-		var method;
-    var behavior;
-    var direction;
-    var position;
-    var selectedBox;
-
-    document.getElementById('function').addEventListener('change', function(){
-    	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
-
-    	if(method != "scrollIntoView") {
-    		document.getElementById('scrollIntoViewOptions').style.visibility = "hidden";
-    	}
-      else {
-        document.getElementById('scrollIntoViewOptions').style.visibility = "visible";
-      }
-    });
-
-    document.getElementById('manual').addEventListener('click', function() {
-      //getOptions();
-      if(method == "scrollIntoView"){
-        behavior = document.getElementById('behavior').options[document.getElementById('behavior').selectedIndex].value;
-        direction = document.getElementById('flowDirection').options[document.getElementById('flowDirection').selectedIndex].value;
-        position = document.getElementById('logicalPosition').options[document.getElementById('logicalPosition').selectedIndex].value;
-      }
-
-      selectedBox = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
-
-    	if(method == "scrollIntoView"){
-    		document.getElementById(selectedBox).scrollIntoView({
-           behavior: behavior,
-           direction: position
-         });
-    	}
-    	else if(method == "focus"){
-    		console.log("selected: "+selectedBox);
-    		document.getElementById(selectedBox).focus();
-    	}
-    });
-	</script-->
 </html>

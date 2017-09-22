@@ -1,25 +1,28 @@
-var method;
+var method = "scrollIntoView";
 var behavior;
-var direction;
-var position;
+var inlineValue, blockValue;
 var selectedBox;
 
 
 document.getElementById('function').addEventListener('change', function(){
 	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
-	
-	if(method != "scrollIntoView") {		
+
+	if(method != "scrollIntoView") {
 		document.getElementById('scrollIntoViewOptions').style.visibility = "hidden";
 	}
+	else {
+    document.getElementById('scrollIntoViewOptions').style.visibility = "visible";
+  }
 });
 
 document.getElementById('manual').addEventListener('click', function() {
   getOptions();
-	
+
 	if(method == "scrollIntoView"){
 		document.getElementById(selectedBox).scrollIntoView({
         behavior: behavior,
-        direction: position
+        inline: inlineValue,
+        block: blockValue
       });
 	}
 	else {
@@ -28,12 +31,14 @@ document.getElementById('manual').addEventListener('click', function() {
 });
 
 function getOptions() {
-	
+
 	if(method == "scrollIntoView"){
 		behavior = document.getElementById('behavior').options[document.getElementById('behavior').selectedIndex].value;
-		direction = document.getElementById('flowDirection').options[document.getElementById('flowDirection').selectedIndex].value;
-		position = document.getElementById('logicalPosition').options[document.getElementById('logicalPosition').selectedIndex].value;
+		inlineValue = document.getElementById('inlinePosition').options[document.getElementById('inlinePosition').selectedIndex].value;
+		blockValue = document.getElementById('blockPosition').options[document.getElementById('blockPosition').selectedIndex].value;
+
+		console.log("block: "+ blockValue + ", inline: "+ inlineValue);
 	}
-	
+
 	selectedBox = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
 }
