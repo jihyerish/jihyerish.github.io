@@ -1,4 +1,4 @@
-var method = "scrollIntoView";
+var method = "focus";
 var behavior;
 var inlineValue, blockValue;
 var selectedBox;
@@ -7,7 +7,7 @@ var selectedBox;
 document.getElementById('function').addEventListener('change', function(){
 	method = document.getElementById('function').options[document.getElementById('function').selectedIndex].value;
 
-	if(method != "scrollIntoView") {
+	if(method == "focus") {
 		document.getElementById('scrollIntoViewOptions').style.display="none";
 	}
 	else {

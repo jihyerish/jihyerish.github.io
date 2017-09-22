@@ -28,7 +28,7 @@ form {
 }
 
 #scrollIntoViewOptions {
-  display: inline;
+  display: none;
 }
 
 #manual {
