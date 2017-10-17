@@ -5,61 +5,87 @@
   <meta charset='UTF-8' />
   
   <style>
-    .container{
-        width: 200px;
-        height: 100px;
-        background-color: red;
-        overflow-y: scroll;
-        white-space: nowrap;
-    }
+    .inline-container{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
 
-    .content ul{
-        padding: 0px;
-        margin: 0px;
-    }
+.block-container{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    overflow-y: scroll;
+}
 
-    .item{
-        padding: 1px 10px 1px 10px;
-        background-color: green;
-        border: 1px black solid;
-        margin: 1px;
-        display: block;
-    }
+.content ul{
+    padding: 0px;
+    margin: 0px;
+}
 
-    :focus {
-      background-color: blue;
-    }
+.item{
+    padding: 1px 10px 1px 10px;
+    background-color: green;
+    border: 1px black solid;
+    margin: 1px;
+    display: inline-block;
+}
+
+.item1{
+    padding: 1px 10px 1px 10px;
+    background-color: green;
+    border: 1px black solid;
+    margin: 1px;
+    display: block;
+}
+
+:focus {
+  background-color: blue;
+}
   </style>
 </head>
 <body>
-	<div>
-    <button id="manual">Action!</button>
-  </div>
+<div>
+  <button id="manual">Action!</button>
+</div>
 
-  <div class="container">    
-    <div class="content">    
-        <ul>
-            <li class="item" id="box1">a</li>
-            <li class="item" id="box2">bb</li>
-            <li class="item" id="box3">ccc</li>
-            <li class="item" id="box4">dddd</li>
-            <li class="item" id="box5">***</li>
-            <li class="item" id="box6">eeeee</li>
-            <li class="item" id="box7">eeeee</li>
-            <li class="item" id="box8">eeeee</li>
-            <li class="item" id="box9">eeeee</li>
-        </ul>
-    </div>
-  </div>
+<div class="inline-container">   
+  <div class="item" id="box1" tabindex="1">a</div>
+  <div class="item" id="box2" tabindex="1">bb</div>
+  <div class="item" id="box3" tabindex="1">ccc</div>
+  <div class="item" id="box4" tabindex="1">dddd</div>
+  <div class="item" id="box5" tabindex="1">***</div>
+  <div class="item" id="box6" tabindex="1">eeeee</div>
+  <div class="item" id="box7" tabindex="1">eeeee</div>
+  <div class="item" id="box8" tabindex="1">eeeee</div>
+  <div class="item" id="box9" tabindex="1">eeeee</div>
+</div>
+
+<br><br>
+
+<!--div class="block-container">    
+  <div class="item1" id="box_1" tabindex="1">a</div>
+  <div class="item1" id="box_2" tabindex="1">bb</div>
+  <div class="item1" id="box_3" tabindex="1">ccc</div>
+  <div class="item1" id="box_4" tabindex="1">dddd</div>
+  <div class="item1" id="box_5" tabindex="1">***</div>
+  <div class="item1" id="box_6" tabindex="1">eeeee</div>
+  <div class="item1" id="box_7" tabindex="1">eeeee</div>
+  <div class="item1" id="box_8" tabindex="1">eeeee</div>
+  <div class="item1" id="box_9" tabindex="1">eeeee</div>
+</div-->
 </body>
 <script> 
-  selectedBox = document.getElementById("box5");
+  var selectedBox = document.getElementById("box5");
+  var selectedBox2 = document.getElementById("box_5");
 
   document.getElementById('manual').addEventListener('click', function() {
 
-    console.log("click"+ selectedBox);
-    selectedBox.focus();
-    //selectedBox.scrollIntoView();
-  });
+	console.log("click"+ selectedBox);
+  selectedBox.focus();
+  //selectedBox.scrollIntoView();
+});
 </script>
 </html>
