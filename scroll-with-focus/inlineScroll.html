@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline scroll</title>
+  <meta charset='UTF-8' />
+  
+  <style>
+    .container{
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        overflow-x: scroll;
+        //overflow-y: scroll;
+        white-space: nowrap;
+    }
+
+    .content ul{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .item{
+        padding: 1px 10px 1px 10px;
+        background-color: green;
+        border: 1px black solid;
+        margin: 1px;
+        //display: block;
+        display: inline-block;
+    }
+
+    :focus {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+	<div>
+    <button id="manual">Action!</button>
+  </div>
+
+  <div class="container">    
+    <div class="content">    
+        <ul>
+            <li class="item" id="box1">a</li>
+            <li class="item" id="box2">bb</li>
+            <li class="item" id="box3">ccc</li>
+            <li class="item" id="box4">dddd</li>
+            <li class="item" id="box5">***</li>
+            <li class="item" id="box6">eeeee</li>
+            <li class="item" id="box7">eeeee</li>
+            <li class="item" id="box8">eeeee</li>
+            <li class="item" id="box9">eeeee</li>
+        </ul>
+    </div>
+  </div>
+</body>
+<script> 
+	selectedBox = document.getElementById("box5");
+
+  document.getElementById('manual').addEventListener('click', function() {
+
+    console.log("click"+ selectedBox);
+    //selectedBox.focus();
+    selectedBox.scrollIntoView();
+  });
+</script>
+</html>
