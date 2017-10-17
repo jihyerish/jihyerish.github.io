@@ -55,13 +55,13 @@
   </div>
 </body>
 <script> 
-	selectedBox = document.getElementById("box5");
+  selectedBox = document.getElementById("box5");
 
   document.getElementById('manual').addEventListener('click', function() {
 
     console.log("click"+ selectedBox);
-    //selectedBox.focus();
-    selectedBox.scrollIntoView();
+    selectedBox.focus();
+    //selectedBox.scrollIntoView();
   });
 </script>
 </html>
