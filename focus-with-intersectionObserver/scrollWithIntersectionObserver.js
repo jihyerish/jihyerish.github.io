@@ -128,10 +128,10 @@ function handler(entries, observer) {
      document.getElementById('statusText').textContent = ' entirely in the view ';
     } else if (intersectionRatio <= 0) {
       statusBox.className = 'no';
-      document.getElementById('statusText').textContent = ' entirely out of the view ';
+      document.getElementById('statusText').textContent = ' entirely hidden ';
     } else {
       statusBox.className = 'partial';
-      document.getElementById('statusText').textContent = ' partialy in the view ';
+      document.getElementById('statusText').textContent = ' partialy hidden ';
     }
   }
 }
