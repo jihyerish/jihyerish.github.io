@@ -103,11 +103,12 @@ function getDisplayOptions() {
 
 function getTargetElement() {
 	target = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
-	document.getElementById(target).setAttribute('id', 'target');
+	var targetElement = document.getElementById(target);
+	targetElement.setAttribute('id', 'targetBox');
 	
 	// how to remove #target when untargetted?
 	
-	observer.observe(document.getElementById(target));
+	observer.observe(targetElement);
 }
 
 function handlePartialElement() {
