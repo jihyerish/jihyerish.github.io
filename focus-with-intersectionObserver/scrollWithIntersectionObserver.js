@@ -37,6 +37,17 @@ document.getElementById('selectElement').addEventListener('change', function(){
 	getTargetElement();
 });
 
+document.getElementById('positionOptions').addEventListener('change', function(){
+	var pOption = document.getElementById('positionOptions').options[document.getElementById('positionOptions').selectedIndex].value;
+	
+	console.log('position option: '+pOption);
+	
+	if (display == 'block')
+		blockValue = pOption;
+	else 
+		inlineValue = pOption;
+});
+
 document.getElementById('manual').addEventListener('click', function() {
 	targetElement.focus();	
 	
