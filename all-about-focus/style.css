@@ -27,8 +27,12 @@ form {
   font-size: 16px;
 }
 
-#scrollIntoViewOptions {
+#scrollIntoViewOptions, #inlinePositionOptions {
   display: none;
+}
+
+#blockPositionOptions {
+  display: inline;
 }
 
 #manual {
@@ -52,17 +56,6 @@ nav {
   font-family: 'Saira', sans-serif;
 }
 
-#scrollBox {
-  border: 1px solid gray;
-  display: block;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  height: 500px;
-  width: 800px;
-  margin: auto auto;
-  padding: 10px;
-}
-
 button {
   text-align: center;
   font-size: 100%;
@@ -75,22 +68,37 @@ button {
   font-family: 'Saira', sans-serif;
 }
 
-button strong {
-  display: block;
-  box-sizing: border-box;
-  line-height: 1.35;
-  width: 1.5em;
-  height: 1.5em;
-  text-align: center;
-  font-size: 150%;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  margin: 0 auto;
+#scrollBox {
+  border: 1px solid gray;
+  height: 400px;
+  width: 400px;
+  margin: 2em auto;
+  padding: 10px;
 }
 
-button:hover,
-button:focus {
+.block-scrollBox {  
+  overflow-y: scroll;
+}
+
+.inline-scrollBox {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.box {
+  text-align: center;
+  font-size: 100%;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em auto;
+  width: 100px;
+  height: 100px;
+  font-family: 'Saira', sans-serif;
+  background-color: gray;
+}
+
+.box:hover,
+.box:focus {
   background-color: #D80546;
   box-shadow: inset 0 0 10px 10px #aaa;
   color: #fff;
