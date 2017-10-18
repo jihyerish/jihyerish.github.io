@@ -1,8 +1,9 @@
 var scrollBox;
 var boxes;
 var inlineValue = 'nearest', blockValue = 'nearest';
-var target;
-var statusText;
+var targetId;
+var targetElement;
+var prevElement;
 var statusBox;
 let observer;
 
@@ -37,10 +38,10 @@ document.getElementById('selectElement').addEventListener('change', function(){
 });
 
 document.getElementById('manual').addEventListener('click', function() {
-	document.getElementById(target).focus();	
+	targetElement.focus();	
 	
-	if (statusBox.className == "partial") {
-		
+	if (statusBox.className == 'partial') {
+		handlePartialElement();
 	}
 });
 
@@ -72,26 +73,26 @@ function init() {
 	});
 	
 	getDisplayOptions();
-	getTargetElement();	
+	getTargetElement();
 	
-	statusBox = document.getElementById("statusBox");
-	statusText = document.getElementById("statusText");
+	statusBox = document.getElementById('statusBox');
 }
 
 function handler(entries, observer) {
-  for (entry of entries) {
-    console.log(entry);
-	    
+  for (entry of entries) {	    
     let intersectionRatio = entry.intersectionRatio;
 
-    statusText.textContent = intersectionRatio;
+    document.getElementById('ratio').textContent = intersectionRatio;
 
     if (intersectionRatio >= 1) {
-     statusBox.className = "yes";
+     statusBox.className = 'yes';
+     document.getElementById('statusText').textContent = 'entirely in the view';
     } else if (intersectionRatio <= 0) {
-      statusBox.className = "no";
+      statusBox.className = 'no';
+      document.getElementById('statusText').textContent = 'entirely out of the view';
     } else {
-      statusBox.className = "partial";
+      statusBox.className = 'partial';
+      document.getElementById('statusText').textContent = 'partialy in the view';
     }
   }
 }
@@ -102,19 +103,24 @@ function getDisplayOptions() {
 }
 
 function getTargetElement() {
-	target = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
-	var targetElement = document.getElementById(target);
-	targetElement.setAttribute('id', 'targetBox');
+	if (targetId){
+		prevElement = document.getElementById(targetId);
+		targetElement.setAttribute('class', 'box');
+	}	
 	
-	// how to remove #target when untargetted?
+	targetId = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
+	targetElement = document.getElementById(targetId);
+	targetElement.setAttribute('class', 'targetBox');
 	
 	observer.observe(targetElement);
 }
 
 function handlePartialElement() {
+  console.log('Move the partialy viewed element!' + targetElement);
+	
   var behavior = 'smooth';
 		
-  document.getElementById(target).scrollIntoView({
+  targetElement.scrollIntoView({
     behavior: behavior,
     inline: inlineValue,
     block: blockValue
