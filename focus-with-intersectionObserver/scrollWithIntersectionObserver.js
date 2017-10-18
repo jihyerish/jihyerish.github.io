@@ -1,6 +1,7 @@
 var scrollBox;
 var boxes;
 var inlineValue = 'nearest', blockValue = 'nearest';
+var positionOption;
 var targetId;
 var targetElement;
 var prevElement;
@@ -11,6 +12,9 @@ let observer;
 var numBoxes = 18;
 var display = 'block';
 var behavior;
+var scrollBarFlag = false;
+
+var lastX, lastY;
 
 document.getElementById('displayType').addEventListener('change', function(){
 	getDisplayOptions();
@@ -38,22 +42,27 @@ document.getElementById('selectElement').addEventListener('change', function(){
 });
 
 document.getElementById('positionOptions').addEventListener('change', function(){
-	var pOption = document.getElementById('positionOptions').options[document.getElementById('positionOptions').selectedIndex].value;
-	
-	console.log('position option: '+pOption);
+	getPositionOptions();
 	
 	if (display == 'block')
-		blockValue = pOption;
+		blockValue = positionOption;
 	else 
-		inlineValue = pOption;
+		inlineValue = positionOption;
 });
 
 document.getElementById('manual').addEventListener('click', function() {
-	targetElement.focus();	
-	
-	if (statusBox.className == 'partial') {
+    if (statusBox.className == 'partial') {    	    	
 		handlePartialElement();
 	}
+	else {
+		targetElement.focus();
+	}
+});
+
+document.getElementById('manual').addEventListener('mouseover', function(e){
+	lastX = scrollBox.scrollLeft;
+	lastY = scrollBox.scrollTop;
+	console.log('Last x: '+lastX+', y: '+lastY);
 });
 
 function init() {	
@@ -71,7 +80,25 @@ function init() {
 		scrollBox.appendChild(boxes[i]);
 	}
 	
-	console.log('box num: '+boxes.length);	
+	scrollBox.addEventListener('mouseover', function(event){
+		scrollBarFlag = true;		
+	});
+	
+	scrollBox.addEventListener('mouseout', function(event){
+		scrollBarFlag = false;		
+	});
+	
+	scrollBox.addEventListener('scroll', function(event){
+		console.log('scrolling : x: '+ this.scrollLeft+ ', y: '+this.scrollTop);
+		
+		if (!scrollBarFlag){
+			if (positionOption == 'none' && statusBox.className == 'partial'){
+				scrollBox.scrollTo(lastX, lastY);
+				console.log('prevent scroll');
+			}
+		}		
+		
+	});
 	
 	/* This custom threshold invokes the handler whenever:
 	   1. The target begins entering the viewport (0 < ratio < 1).
@@ -85,6 +112,7 @@ function init() {
 	
 	getDisplayOptions();
 	getTargetElement();
+	getPositionOptions();	
 	
 	statusBox = document.getElementById('statusBox');
 }
@@ -126,16 +154,30 @@ function getTargetElement() {
 	observer.observe(targetElement);
 }
 
+function getPositionOptions(){
+	positionOption = document.getElementById('positionOptions').options[document.getElementById('positionOptions').selectedIndex].value;
+}
+
 function handlePartialElement() {
-  console.log('Move the partialy viewed element!' + targetElement);
-	
+  console.log('Move the partialy viewed element!');
+  console.log('position option: '+positionOption);
+  
   var behavior = 'smooth';
-		
-  targetElement.scrollIntoView({
-    behavior: behavior,
-    inline: inlineValue,
-    block: blockValue
-  });
+
+  if (positionOption == 'none'){
+	//prevent Scrolling
+	targetElement.focus();
+  }
+  else{
+	  targetElement.focus();
+	  
+	  //scroll the element with the specified position option
+	  targetElement.scrollIntoView({
+		    behavior: behavior,
+		    inline: inlineValue,
+		    block: blockValue
+	  });
+  }  
 }
 
 window.onload = init;
