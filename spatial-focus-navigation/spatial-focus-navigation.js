@@ -1,11 +1,13 @@
-var boxes;
 var focusedElement = {
   box: null,
-  position: null
+  position: null,
+  size: null
 };
 
 var pressedKey = false;
 var targetElement;
+var allElements;
+var candidateElements;
 
 var keyCodes = {
   9 : "tab",
@@ -15,14 +17,9 @@ var keyCodes = {
   40 : "down-arrow"
 };
 
-//var day = {"sun", "mon", "tue", "wed", "thu", "fri", "sat"};
+var flag = "Direction";
 
-/*
-var focusedElementInfo = {
-  box: focusedElement,
-  position: getPosition(focusedElement)
-};
-*/
+//var day = {"sun", "mon", "tue", "wed", "thu", "fri", "sat"};
 
 function getPosition(el) {
   var xPos = 0;
@@ -66,85 +63,315 @@ function getNextFocusableElement(direction){
 
 function getUpElement(){
   console.log("Up");
+  candidateElements = new Array();
   //if Nearest Element
+  if (flag == "Nearest"){
 
-  //else if Projection Element
+  } else if (flag == "Projection"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).y < focusedElement.position.y){
+        if ((getPosition(allElements[i]).x >= focusedElement.position.x) &&
+            (getPosition(allElements[i]).x < focusedElement.position.x + focusedElement.size.width)){
+          candidateElements.push(allElements[i]);
+        }
+      }
+    }
 
+    if(candidateElements) {
+      candidateElements.sort(function(a, b) { // sorting with y position in decreasing order
+        return getPosition(a).y > getPosition(b).y ? -1 : getPosition(a).y < getPosition(b).y ? 1 : 0;
+      });
 
-  //else if Direction Element
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).y > getPosition(candidateElements[i]).y)
+          candidateElements.pop();
+      }
+    }
+    if(candidateElements) {
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
 
+      candidateElements.sort(function(a, b) { // sorting with x position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+
+  } else if (flag == "Direction"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).y < focusedElement.position.y)
+        candidateElements.push(allElements[i]);
+    }
+
+    if(candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with y position in decreasing order
+        return getPosition(a).y > getPosition(b).y ? -1 : getPosition(a).y < getPosition(b).y ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).y > getPosition(candidateElements[i]).y)
+          candidateElements.pop();
+      }
+    }
+
+    if(candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+  }
+
+  if(targetElement)
+    console.log("Target Element: "+targetElement.id);
+  //setFocus();
 }
 
 function getDownElement(){
   console.log("Down");
-
+  candidateElements = new Array();
   //if Nearest Element
+  if (flag == "Nearest"){
 
-  //else if Projection Element
+  } else if (flag == "Projection"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).y > focusedElement.position.y + focusedElement.size.height){
+        if ((getPosition(allElements[i]).x >= focusedElement.position.x) &&
+            (getPosition(allElements[i]).x < focusedElement.position.x + focusedElement.size.width)){
+          candidateElements.push(allElements[i]);
+        }
+      }
+    }
 
-  //else if Direction Element
+    if (candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).y < getPosition(candidateElements[i]).y)
+          candidateElements.pop();
+      }
+    }
+
+    if (candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+
+  } else if (flag == "Direction"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).y > focusedElement.position.y + focusedElement.size.height)
+        candidateElements.push(allElements[i]);
+    }
+
+    if (candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).y < getPosition(candidateElements[i]).y)
+          candidateElements.pop();
+      }
+    }
+
+    if (candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+  }
+
+  if(targetElement)
+    console.log("Target Element: "+targetElement.id);
 }
 
 function getLeftElement(){
   console.log("Left");
+  candidateElements = new Array();
 
   //if Nearest Element
+  if (flag == "Nearest"){
 
-  //else if Projection Element
+  } else if (flag == "Projection"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).x < focusedElement.position.x){
+        if ((getPosition(allElements[i]).y >= focusedElement.position.y) &&
+            (getPosition(allElements[i]).y < focusedElement.position.y + focusedElement.size.height)){
+          candidateElements.push(allElements[i]);
+        }
+      }
+    }
 
-  //else if Direction Element
+    if(candidateElements) {
+      candidateElements.sort(function(a, b) { // sorting with x position in decreasing order
+        return getPosition(a).x > getPosition(b).x ? -1 : getPosition(a).x < getPosition(b).x ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).x > getPosition(candidateElements[i]).x)
+          candidateElements.pop();
+      }
+    }
+    if(candidateElements) {
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+
+  } else if (flag == "Direction"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).x < focusedElement.position.x)
+        candidateElements.push(allElements[i]);
+    }
+
+    if(candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with x position in decreasing order
+        return getPosition(a).x > getPosition(b).x ? -1 : getPosition(a).x < getPosition(b).x ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).x > getPosition(candidateElements[i]).x)
+          candidateElements.pop();
+      }
+    }
+
+    if(candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+  }
+
+  if(targetElement)
+    console.log("Target Element: "+targetElement.id);
+  //setFocus();
 }
 
 function getRightElement(){
   console.log("Right");
+  candidateElements = new Array();
 
   //if Nearest Element
+  if (flag == "Nearest"){
 
-  //else if Projection Element
+  } else if (flag == "Projection"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).x > focusedElement.position.x + focusedElement.size.width){
+        if ((getPosition(allElements[i]).y >= focusedElement.position.y) &&
+            (getPosition(allElements[i]).y < focusedElement.position.y + focusedElement.size.height)){
+          candidateElements.push(allElements[i]);
+        }
+      }
+    }
 
-  //else if Direction Element
+    if (candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with x position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
 
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).x < getPosition(candidateElements[i]).x)
+          candidateElements.pop();
+      }
+    }
+
+    if (candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+
+  } else if (flag == "Direction"){
+    for (var i = 0; i < allElements.length; i++){
+      if (getPosition(allElements[i]).x > focusedElement.position.x + focusedElement.size.width)
+        candidateElements.push(allElements[i]);
+    }
+
+    if (candidateElements){
+      candidateElements.sort(function(a, b) { // sorting with x position in increasing order
+        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      });
+
+      for (var i = candidateElements.length-1; i > 0; i--){
+        if (getPosition(candidateElements[0]).x < getPosition(candidateElements[i]).x)
+          candidateElements.pop();
+      }
+    }
+
+    if (candidateElements){
+      console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
+
+      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
+        return getPosition(a).y < getPosition(b).y ? -1 : getPosition(a).y > getPosition(b).y ? 1 : 0;
+      });
+
+      targetElement = candidateElements[0];
+    }
+  }
+
+  if(targetElement)
+    console.log("Target Element: "+targetElement.id);
 }
-
-/*
-
-function getNearestElement(){
-
-}
-
-function getProjectionElement(){
-
-}
-
-function getDirectionElement(){
-
-}
-*/
 
 function setFocus(){
   targetElement.focus();
 }
 
 function getPressedKey(){
+
   document.querySelector('body').onkeydown = function (e) {
     if ( !e.metaKey ) {
       e.preventDefault();
     }
+
+    getFocusedElement();
 
     pressedKey = e.keyCode;
     getNextFocusableElement(e.keyCode);
   };
 }
 
+function getFocusedElement(){
+  focusedElement.box = document.activeElement;
+  focusedElement.position = getPosition(focusedElement.box);
+
+  console.log("x: "+focusedElement.position.x + ", y: "+focusedElement.position.y);
+
+  focusedElement.size = focusedElement.box.getBoundingClientRect();
+
+  console.log("width: "+focusedElement.size.width + ", height: "+focusedElement.size.height);
+}
+
 function init() {
-  boxes = new Array();
+  allElements = document.querySelectorAll('.schedule');
 
-  document.querySelector('body').onfocus = function (e) {
-    focusedElement.box = document.activeElement;
-    focusedElement.position = getPosition(focusedElement.box);
-
-    console.log();
-  };
+  console.log("Num of all items: "+ allElements.length);
 
   getPressedKey();
 }
