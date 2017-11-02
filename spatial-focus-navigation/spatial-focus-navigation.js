@@ -57,8 +57,6 @@ function getNextFocusableElement(direction){
   } else if(direction == 40) {
     getDownElement()
   }
-
-  //console.log("x: "+focusedElement.position.x+", y: "+focusedElement.position.y);
 }
 
 function getUpElement(){
@@ -69,21 +67,32 @@ function getUpElement(){
 
   } else if (flag == "Projection"){
     for (var i = 0; i < allElements.length; i++){
-      if (getPosition(allElements[i]).y < focusedElement.position.y){
+      if (getPosition(allElements[i]).y + allElements[i].getBoundingClientRect().height < focusedElement.position.y){
         if ((getPosition(allElements[i]).x >= focusedElement.position.x) &&
             (getPosition(allElements[i]).x < focusedElement.position.x + focusedElement.size.width)){
-          candidateElements.push(allElements[i]);
+
+              var box = {
+                id: null,
+                edgeX: null,
+                edgeY: null
+              };
+
+              box.id = allElements[i].id;
+              box.edgeX = getPosition(allElements[i]).x;
+              box.edgeY = getPosition(allElements[i]).y + allElements[i].getBoundingClientRect().height;
+
+              candidateElements.push(box);
         }
       }
     }
 
     if(candidateElements) {
       candidateElements.sort(function(a, b) { // sorting with y position in decreasing order
-        return getPosition(a).y > getPosition(b).y ? -1 : getPosition(a).y < getPosition(b).y ? 1 : 0;
+        return a.edgeY > b.edgeY ? -1 : a.edgeY < b.edgeY ? 1 : 0;
       });
 
       for (var i = candidateElements.length-1; i > 0; i--){
-        if (getPosition(candidateElements[0]).y > getPosition(candidateElements[i]).y)
+        if (candidateElements[0].edgeY > candidateElements[i].edgeY)
           candidateElements.pop();
       }
     }
@@ -91,25 +100,36 @@ function getUpElement(){
       console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
 
       candidateElements.sort(function(a, b) { // sorting with x position in increasing order
-        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+        return a.edgeX < a.edgeX ? -1 : a.edgeX > a.edgeX ? 1 : 0;
       });
 
-      targetElement = candidateElements[0];
+      targetElement = document.getElementById(candidateElements[0].id);
     }
 
   } else if (flag == "Direction"){
     for (var i = 0; i < allElements.length; i++){
-      if (getPosition(allElements[i]).y < focusedElement.position.y)
-        candidateElements.push(allElements[i]);
+      if (getPosition(allElements[i]).y + allElements[i].getBoundingClientRect().height < focusedElement.position.y){
+        var box = {
+          id: null,
+          edgeX: null,
+          edgeY: null
+        };
+
+        box.id = allElements[i].id;
+        box.edgeX = getPosition(allElements[i]).x;
+        box.edgeY = getPosition(allElements[i]).y + allElements[i].getBoundingClientRect().height;
+
+        candidateElements.push(box);
+      }
     }
 
     if(candidateElements){
       candidateElements.sort(function(a, b) { // sorting with y position in decreasing order
-        return getPosition(a).y > getPosition(b).y ? -1 : getPosition(a).y < getPosition(b).y ? 1 : 0;
+        return a.edgeY > b.edgeY ? -1 : a.edgeY < b.edgeY ? 1 : 0;
       });
 
       for (var i = candidateElements.length-1; i > 0; i--){
-        if (getPosition(candidateElements[0]).y > getPosition(candidateElements[i]).y)
+        if (candidateElements[0].edgeY > candidateElements[i].edgeY)
           candidateElements.pop();
       }
     }
@@ -117,17 +137,16 @@ function getUpElement(){
     if(candidateElements){
       console.log("candidate: "+candidateElements.length+ ", first: "+candidateElements[0].id);
 
-      candidateElements.sort(function(a, b) { // sorting with y position in increasing order
-        return getPosition(a).x < getPosition(b).x ? -1 : getPosition(a).x > getPosition(b).x ? 1 : 0;
+      candidateElements.sort(function(a, b) { // sorting with x position in increasing order
+        return a.edgeX < a.edgeX ? -1 : a.edgeX > a.edgeX ? 1 : 0;
       });
 
-      targetElement = candidateElements[0];
+      targetElement = document.getElementById(candidateElements[0].id);
     }
   }
 
   if(targetElement)
     console.log("Target Element: "+targetElement.id);
-  //setFocus();
 }
 
 function getDownElement(){
@@ -208,7 +227,7 @@ function getLeftElement(){
 
   } else if (flag == "Projection"){
     for (var i = 0; i < allElements.length; i++){
-      if (getPosition(allElements[i]).x < focusedElement.position.x){
+      if (getPosition(allElements[i]).x + allElements[i].getBoundingClientRect().width < focusedElement.position.x){
         if ((getPosition(allElements[i]).y >= focusedElement.position.y) &&
             (getPosition(allElements[i]).y < focusedElement.position.y + focusedElement.size.height)){
           candidateElements.push(allElements[i]);
@@ -238,7 +257,7 @@ function getLeftElement(){
 
   } else if (flag == "Direction"){
     for (var i = 0; i < allElements.length; i++){
-      if (getPosition(allElements[i]).x < focusedElement.position.x)
+      if (getPosition(allElements[i]).x + allElements[i].getBoundingClientRect().width < focusedElement.position.x)
         candidateElements.push(allElements[i]);
     }
 
@@ -266,7 +285,6 @@ function getLeftElement(){
 
   if(targetElement)
     console.log("Target Element: "+targetElement.id);
-  //setFocus();
 }
 
 function getRightElement(){
@@ -339,10 +357,6 @@ function getRightElement(){
     console.log("Target Element: "+targetElement.id);
 }
 
-function setFocus(){
-  targetElement.focus();
-}
-
 function getPressedKey(){
 
   document.querySelector('body').onkeydown = function (e) {
@@ -354,6 +368,9 @@ function getPressedKey(){
 
     pressedKey = e.keyCode;
     getNextFocusableElement(e.keyCode);
+
+    if(targetElement)
+      targetElement.focus();
   };
 }
 
