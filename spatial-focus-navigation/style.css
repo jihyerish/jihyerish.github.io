@@ -2,6 +2,17 @@ body {
   margin: 10px;
 }
 
+#optionField {
+  width: 90%;
+  margin: 10px;
+}
+
+.wrapper {
+  background-color: #fff;
+  color: #444;
+  width: 100%;
+}
+
 .month {
   paddig: 0px;
   margin-top: 5px;
@@ -17,7 +28,7 @@ body {
   padding: 5px;
   font-size: 15px;
   text-align: center;
-  width: 90%;
+  width: calc(100% - 10px);
   border: 1px solid #fce6bf;
 }
 
@@ -43,12 +54,10 @@ body {
 
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(12, 50px);
+  grid-template-rows: repeat(calc(17*7), 50px);
 }
 
 .date {
-  grid-row: 1;
-
   font-size: 20px;
   font-style: bold;
   font-family: 'Roboto', sans-serif;
@@ -66,10 +75,8 @@ body {
   color: #000;
 }
 
-.wrapper {
-  background-color: #fff;
-  color: #444;
-  width: 100%;
+.extra{
+  display: block;
 }
 
 .content {
@@ -109,21 +116,21 @@ body {
   grid-area: mon;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 .tue {
   grid-area: tue;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 .wed {
   grid-area: wed;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 #s5 {
@@ -134,7 +141,7 @@ body {
   grid-area: thu;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 #s16 {
@@ -145,30 +152,34 @@ body {
   grid-row: 11/13;
 }
 
+#s20 {
+  grid-row: 11/13;
+}
+
 .fri {
   grid-area: fri;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 #s6 {
-  grid-row: 8/9;
+  grid-row: 8/10;
 }
 
 #s7 {
-  grid-row: 13/14;
+  grid-row: 17/18;
 }
 
 #s12 {
-  grid-row: 14/15;
+  grid-row: 15/17;
 }
 
 .sat {
   grid-area: sat;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 #s13 {
@@ -195,22 +206,22 @@ body {
   grid-area: sun;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-rows: 40px repeat(13, 50px);
+  grid-template-rows: repeat(17, 50px);
 }
 
 .wrapper {
   display: grid;
   grid-gap: 0em;
+  grid-template-columns: 100px auto;
   grid-template-areas:
-   "header"
-   "sidebar"
-   "sun"
-   "mon"
-   "tue"
-   "wed"
-   "thu"
-   "fri"
-   "sat";
+   "header header"
+   "sidebar sun"
+   "sidebar mon"
+   "sidebar tue"
+   "sidebar wed"
+   "sidebar thu"
+   "sidebar fri"
+   "sidebar sat";
 }
 
 
@@ -222,6 +233,18 @@ body {
     "header  header  header header header header header header"
     "sidebar sun mon tue wed thu fri sat";
     max-width: 800px;
+  }
+
+  .weekly {
+    width: 90%;
+  }
+
+  .sidebar {
+    grid-template-rows: repeat(13, 50px);
+  }
+
+  .extra{
+    display: none;
   }
 }
 
@@ -241,7 +264,7 @@ body {
   background-color: #027dc5;
 }
 
-:focus {
+.schedule:focus {
   box-shadow: inset 0 0 5px 5px #D80546;
   color: #fff;
   outline: none;
