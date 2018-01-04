@@ -1,0 +1,78 @@
+.box {
+	border:1px solid #ccc;
+}
+
+.ball1 {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	width: 9px;
+	height: 9px;
+	background-color: #F7E8E8;
+	border: 2px #EFCFCF solid;
+	
+	-webkit-perspective: 150;
+	-webkit-animation-name: bounce1;
+	-webkit-animation-duration: 3.6s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.ball2 {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	width: 9px;
+	height: 9px;
+	background-color: #F7E8E8;
+	border: 2px #EFCFCF solid;
+	
+	-webkit-animation-name: bounce2;
+	-webkit-animation-duration: 3.4s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce1 {
+	0% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	25% {
+		top: 423px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	50% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	75% {
+		top: 423px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	100% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+
+@-webkit-keyframes bounce2 {
+	0% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	25% {
+		top: 423px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	50% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	75% {
+		top: 423px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	100% {
+		top: 150px;
+		-webkit-animation-timing-function: ease-in;
+	}
+}
