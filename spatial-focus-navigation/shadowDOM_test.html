@@ -6,6 +6,7 @@
   <style>
   body {
     margin: 0;
+    border: 2px solid blue;
   }
   </style>
   </head>
@@ -22,6 +23,18 @@
       <section>content panel 3</section>
     </fancy-tabs>
     <br><br>
+
+    <profile-card-gallery>
+      <profile-card>
+        <header>
+          <h1>Kitty Cat</h1>
+          <em>Feline Software Engineer</em>
+        </header>
+        <img width="80" height="80" alt="Cat" src="../assets/cat.jpg">
+        <p>Quisque at fringilla erat. Vestibulum lacinia vitae tellus ut congue. Duis bibendum nibh in justo faucibus fringilla. Sed cursus, metus eu commodo.</p>
+      </profile-card>
+  </profile-card-gallery>
+
     <a href="https://dom.spec.whatwg.org/#shadow-trees" target="_blank">Shadow DOM Spec</a>
   </body>
   <script>
@@ -41,13 +54,15 @@
       constructor() {
         super(); // always call super() first in the ctor.
         // Create shadow DOM for the component.
-        let shadowRoot = this.attachShadow({mode: 'open'});
+        //let shadowRoot = this.attachShadow({mode: 'open'});
+        let shadowRoot = this.attachShadow({mode: 'open', delegatesFocus: true});
         shadowRoot.innerHTML = `
           <style>
             :host {
               display: inline-block;
               width: 650px;
               font-family: 'Roboto Slab';
+              background: blue;
               contain: content;
             }
             :host([background]) {
@@ -137,9 +152,9 @@
 
         // Save refer to we can remove listeners later.
         this._boundOnTitleClick = this._onTitleClick.bind(this);
-        this._boundOnKeyDown = this._onKeyDown.bind(this);
+        //this._boundOnKeyDown = this._onKeyDown.bind(this);
         tabsSlot.addEventListener('click', this._boundOnTitleClick);
-        tabsSlot.addEventListener('keydown', this._boundOnKeyDown);
+        //tabsSlot.addEventListener('keydown', this._boundOnKeyDown);
 
         this.selected = this._findFirstSelectedTab() || 0;
       }
