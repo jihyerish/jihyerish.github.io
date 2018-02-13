@@ -55,16 +55,14 @@
   (function() {
     'use strict';
 
-    document.addEventListener("keydown", function(){
-        console.log("Focused element: " + document.activeElement);
-    });
-
     // Feature detect
     if (!(window.customElements && document.body.attachShadow)) {
       document.querySelector('fancy-tabs').innerHTML = "<b>Your browser doesn't support Shadow DOM and Custom Elements v1.</b>";
       return;
     }
+
     let selected_ = null;
+    let shadowRoot = null;
 
     // See https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
 
@@ -73,7 +71,7 @@
         super(); // always call super() first in the ctor.
         // Create shadow DOM for the component.
         //let shadowRoot = this.attachShadow({mode: 'open'});
-        let shadowRoot = this.attachShadow({mode: 'open', delegatesFocus: true});
+        shadowRoot = this.attachShadow({mode: 'open', delegatesFocus: true});
         shadowRoot.innerHTML = `
           <style>
             :host {
@@ -238,6 +236,16 @@
 
     });
 
+      document.addEventListener("keydown", function(){
+          console.log("Focused element: " + document.activeElement);
+
+          if (shadowRoot){
+            console.log("Focused element in Shadow DOM: " + shadowRoot.activeElement);
+          }
+
+      });
+
     })();
+
   </script>
 </html>
