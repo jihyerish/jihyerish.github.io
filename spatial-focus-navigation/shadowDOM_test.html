@@ -5,9 +5,20 @@
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <style>
   body {
-    margin: 0;
-    border: 2px solid blue;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto';
   }
+
+  :focus {
+    background-color: salmon;
+  }
+
+  #profile {
+    margin: 100px;
+    text-align: left;
+  }
+
   </style>
   </head>
   <body>
@@ -24,22 +35,29 @@
     </fancy-tabs>
     <br><br>
 
-    <profile-card-gallery>
-      <profile-card>
-        <header>
-          <h1>Kitty Cat</h1>
-          <em>Feline Software Engineer</em>
-        </header>
-        <img width="80" height="80" alt="Cat" src="../assets/cat.jpg">
-        <p>Quisque at fringilla erat. Vestibulum lacinia vitae tellus ut congue. Duis bibendum nibh in justo faucibus fringilla. Sed cursus, metus eu commodo.</p>
-      </profile-card>
-  </profile-card-gallery>
-
+    <div id="profile">
+      <profile-card-gallery>
+        <profile-card>
+          <header>
+            <h1>Shadow DOM</h1>
+            <em>Subtree of DOM nodes that you can create on any HTML element.</em>
+          </header>
+          <img alt="Web" height="120" src="images/web.jpg">
+          <p> The shadow DOM subtree gets merged into the main DOM, but unlike the main DOM tree,
+            shadow nodes can't be styled from outside.</p>
+        </profile-card>
+      </profile-card-gallery>
+    </div>
     <a href="https://dom.spec.whatwg.org/#shadow-trees" target="_blank">Shadow DOM Spec</a>
   </body>
+
   <script>
   (function() {
     'use strict';
+
+    document.addEventListener("keydown", function(){
+        console.log("Focused element: " + document.activeElement);
+    });
 
     // Feature detect
     if (!(window.customElements && document.body.attachShadow)) {
@@ -104,12 +122,13 @@
               border: none; /* if the user users a <button> */
             }
             #tabs ::slotted([aria-selected="true"]) {
-              font-weight: 600;
               background: white;
               box-shadow: none;
             }
             #tabs ::slotted(:focus) {
               z-index: 1; /* make sure focus ring doesn't get buried */
+              font-weight: 900;
+              font-style: oblique;
             }
             #panels ::slotted([aria-hidden="true"]) {
               display: none;
@@ -120,6 +139,10 @@
           </div>
           <div id="panels">
             <slot id="panelsSlot"></slot>
+            <br>
+            <input></input>
+            <br><br>
+            <button>click</button>
           </div>
         `;
       }

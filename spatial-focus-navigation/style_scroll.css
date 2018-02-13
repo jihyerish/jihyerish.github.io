@@ -20,6 +20,15 @@ h2 {
     margin: 30px;
 }
 
+.menu {
+  text-align: center;
+}
+
+.index {
+  font-family: 'Saira', sans-serif;
+  font-size: 14px;
+}
+
 .elm {
 	position: relative;
 	width: 50px;
