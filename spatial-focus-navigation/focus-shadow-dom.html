@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta name="application-name" content="Shadow DOM in Spatial Navigation<">
+  <meta name="application-name" content="Shadow DOM in Spatial Navigation">
   <meta name="author" content="Jihye Hong">
   <meta name="description" content="How Spatial Navigation works for the Shadow DOM.">
   <title>Shadow DOM in Spatial Navigation</title>
@@ -27,6 +27,18 @@
 
     :focus {
       outline: 2px solid red;
+    }
+
+    .root {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border: 1px dotted black;
+      padding: 16px;
+    }
+
+    button {
+      margin-left: 10px;
     }
   </style>
 
@@ -56,6 +68,24 @@
     <div class="example">
       <c-focus tabindex="0"></c-focus>
     </div>
+    <div class="example">
+      <div id="root">
+        <div>Focusable DOM text
+          <p>Root Options: (<code>None</code>)</p>
+        </div>
+        <button>Button</button>
+        <button>Button</button>
+      </div>
+    </div>
+    <div class="example">
+      <div tabindex="0" id="root">
+        <div>Focusable DOM text
+          <p>Root Options: (<code>tabindex="0"</code>)</p>
+        </div>
+        <button>Button</button>
+        <button>Button</button>
+      </div>
+    </div>
   </body>
 
 <script>
@@ -76,14 +106,15 @@ customElements.define('a-focus', class extends HTMLElement {
         :focus {
           outline: 2px solid blue;
         }
-        input {
+        button {
           margin-left: 10px;
         }
       </style>
       <div>Focusable Shadow DOM text
-        <p>(<code>delegatesFocus: false</code>)</p>
+        <p>Shadow Root Options: (<code>delegatesFocus: false</code>)</p>
       </div>
-      <input type="text" placeholder="Input inside shadow dom">
+      <button>Button</button>
+      <button>Button</button>
       `;
 
     // Know the focused element inside shadow DOM:
@@ -95,41 +126,6 @@ customElements.define('a-focus', class extends HTMLElement {
 });
 
 customElements.define('b-focus', class extends HTMLElement {
-  constructor() {
-    super(); // always call super() first in the ctor.
-
-    const root = this.attachShadow({mode: 'open', delegatesFocus: true});
-    root.innerHTML =
-    `<style>
-        :host {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          border: 1px dotted black;
-          padding: 16px;
-        }
-        :focus {
-          outline: 2px solid blue;
-        }
-        input {
-          margin-left: 10px;
-        }
-      </style>
-      <div>Focusable Shadow DOM text
-        <p>(<code>delegatesFocus: true</code>)</p>
-      </div>
-      <input type="text" placeholder="Input inside shadow dom">
-      `;
-
-    // Know the focused element inside shadow DOM:
-    this.addEventListener('focus', function(e) {
-      console.log('Active element (inside shadow dom):',
-                  this.shadowRoot.activeElement);
-    });
-  }
-});
-
-customElements.define('c-focus', class extends HTMLElement {
   constructor() {
     super(); // always call super() first in the ctor.
 
@@ -146,14 +142,51 @@ customElements.define('c-focus', class extends HTMLElement {
         :focus {
           outline: 2px solid blue;
         }
-        input {
+        button {
           margin-left: 10px;
         }
       </style>
       <div>Focusable Shadow DOM text
-        <p>(<code>delegatesFocus: true</code>, <code>tabindex="0"</code>)</p>
+        <p>Shadow Root Options: (<code>delegatesFocus: false</code>, <code>tabindex="0"</code>)</p>
       </div>
-      <input type="text" placeholder="Input inside shadow dom">
+      <button>Button</button>
+      <button>Button</button>
+      `;
+
+    // Know the focused element inside shadow DOM:
+    this.addEventListener('focus', function(e) {
+      console.log('Active element (inside shadow dom):',
+                  this.shadowRoot.activeElement);
+    });
+  }
+});
+
+customElements.define('c-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open', delegatesFocus: true});
+    root.innerHTML =
+    `<style>
+        :host {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          outline: 2px solid blue;
+        }
+        button {
+          margin-left: 10px;
+        }
+      </style>
+      <div>Focusable Shadow DOM text
+        <p>Shadow Root Options: (<code>delegatesFocus: true</code>)</p>
+      </div>
+      <button>Button</button>
+      <button>Button</button>
       `;
 
     // Know the focused element inside shadow DOM:
