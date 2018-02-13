@@ -1,0 +1,109 @@
+<!doctype html><html lang="en">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Shadow DOM in Spatial Navigation</title>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+  <style>
+    body {
+      margin: auto;
+      text-align: center;
+      font-family: 'Roboto';
+    }
+
+    .example {
+      margin: 50px;
+      outline: 1px solid gray;
+      padding: 50px;
+    }
+
+    #profile {
+      margin: 50px;
+      text-align: left;
+    }
+
+    :focus {
+      outline: 2px solid red;
+    }
+  </style>
+
+  </head>
+  <body>
+    <h1>Shadow DOM Demo</h1>
+    <div id="profile">
+      <profile-card-gallery>
+        <profile-card>
+          <header>
+            <h2>Shadow DOM</h2>
+            <a href="https://developers.google.com/web/fundamentals/web-components/shadowdom?hl=ko" target="_blank">Shadow DOM Guide</a>
+            <h4>Subtree of DOM nodes that you can create on any HTML element.</h4>
+          </header>
+          <img tabindex="0" alt="Web" height="200" src="images/shadow-dom.png">
+          <p> The shadow DOM subtree gets merged into the main DOM, but unlike the main DOM tree,
+            shadow nodes can't be styled from outside.</p>
+        </profile-card>
+      </profile-card-gallery>
+    </div>
+    <div class="example">
+      <a-focus></a-focus>
+    </div>
+    <div class="example">
+      <b-focus></b-focus>
+    </div>
+  </body>
+
+<script>
+customElements.define('a-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open', delegatesFocus: false});
+    root.innerHTML = `
+      <style>
+        :host {
+          display: flex;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          outline: 2px solid blue;
+        }
+      </style>
+      <div>Clickable Shadow DOM text</div>
+      <input type="text" placeholder="Input inside shadow dom">`;
+
+    // Know the focused element inside shadow DOM:
+    this.addEventListener('focus', function(e) {
+      console.log('Active element (inside shadow dom):',
+                  this.shadowRoot.activeElement);
+    });
+  }
+});
+
+customElements.define('b-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open', delegatesFocus: true});
+    root.innerHTML = `
+      <style>
+        :host {
+          display: flex;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          outline: 2px solid blue;
+        }
+      </style>
+      <div>Clickable Shadow DOM text</div>
+      <input type="text" placeholder="Input inside shadow dom">`;
+
+    // Know the focused element inside shadow DOM:
+    this.addEventListener('focus', function(e) {
+      console.log('Active element (inside shadow dom):',
+                  this.shadowRoot.activeElement);
+    });
+  }
+});
+</script>
