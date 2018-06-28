@@ -68,9 +68,20 @@
     <div class="example">
       <c-focus></c-focus>
     </div>
+    <div class="example">
+      <d-focus tabindex="0"></d-focus>
+    </div>
   </body>
 
 <script>
+
+document.addEventListener('focusin', function(e) {
+  console.log('Active element (main dom):', this.activeElement);
+  if (this.activeElement.shadowRoot)
+    console.log('Active element (inside shadow dom):',
+              this.activeElement.shadowRoot.activeElement);
+});
+
 customElements.define('a-focus', class extends HTMLElement {
   constructor() {
     super(); // always call super() first in the ctor.
@@ -95,15 +106,15 @@ customElements.define('a-focus', class extends HTMLElement {
       <div>Focusable Shadow DOM text
         <p>Shadow Root Options: (<code>delegatesFocus: false</code>)</p>
       </div>
-      <button>Button</button>
-      <button>Button</button>
+      <button>Button1</button>
+      <button>Button2</button>
       `;
 
-    // Know the focused element inside shadow DOM:
+    /* Know the focused element inside shadow DOM:
     this.addEventListener('focus', function(e) {
       console.log('Active element (inside shadow dom):',
                   this.shadowRoot.activeElement);
-    });
+    });*/
   }
 });
 
@@ -131,15 +142,10 @@ customElements.define('b-focus', class extends HTMLElement {
       <div>Focusable Shadow DOM text
         <p>Shadow Root Options: (<code>delegatesFocus: false</code>, <code>tabindex="0"</code>)</p>
       </div>
-      <button>Button</button>
-      <button>Button</button>
+      <button>Button1</button>
+      <button>Button2</button>
       `;
 
-    // Know the focused element inside shadow DOM:
-    this.addEventListener('focus', function(e) {
-      console.log('Active element (inside shadow dom):',
-                  this.shadowRoot.activeElement);
-    });
   }
 });
 
@@ -167,15 +173,42 @@ customElements.define('c-focus', class extends HTMLElement {
       <div>Focusable Shadow DOM text
         <p>Shadow Root Options: (<code>delegatesFocus: true</code>)</p>
       </div>
-      <button>Button</button>
-      <button>Button</button>
+      <button>Button1</button>
+      <button>Button2</button>
       `;
 
-    // Know the focused element inside shadow DOM:
-    this.addEventListener('focus', function(e) {
-      console.log('Active element (inside shadow dom):',
-                  this.shadowRoot.activeElement);
-    });
   }
 });
+
+customElements.define('d-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open', delegatesFocus: true});
+    root.innerHTML =
+    `<style>
+        :host {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          background-color: blue;
+        }
+        button {
+          margin-left: 10px;
+        }
+      </style>
+      <div>Focusable Shadow DOM text
+        <p>Shadow Root Options: (<code>delegatesFocus: true</code>, <code>tabindex="0")</code></p>
+      </div>
+      <button>Button1</button>
+      <button>Button2</button>
+      `;
+
+  }
+});
+
 </script>
