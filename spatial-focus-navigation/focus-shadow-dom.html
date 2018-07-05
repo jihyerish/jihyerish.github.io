@@ -79,10 +79,25 @@
     <div class="example">
       <g-focus tabindex="-1"></g-focus>
     </div>
+
+    <div class="example">
+      <h-focus tabindex="0"></h-focus>
+    </div>
+
+    <div class="example">
+      <div tabindex="-1">
+        <div>Focusable DOM text
+        </div>
+        <button>Button1</button>
+        <button>Button2</button>
+      </div>
+    </div>
+
+    <div id="test">test</div>
   </body>
 
 <script>
-
+document.getElementById("test").tabIndex = "-1";
 document.addEventListener('focusin', function(e) {
   console.log('Active element (main dom):', this.activeElement);
   if (this.activeElement.shadowRoot)
@@ -272,7 +287,41 @@ customElements.define('g-focus', class extends HTMLElement {
         }
       </style>
       <div>Focusable Shadow DOM text
+        <p>Shadow Root Options: (<code>mode: open</code>, <code>tabindex="0")</code></p>
+        <p>Shadow Host Options: (<code>tabindex="-1")</code></p>
+      </div>
+      <button>Button1</button>
+      <button>Button2</button>
+      `;
+
+  }
+});
+
+customElements.define('h-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open'});
+    root.tabIndex = "-1";
+    root.innerHTML =
+    `<style>
+        :host {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          background-color: blue;
+        }
+        button {
+          margin-left: 10px;
+        }
+      </style>
+      <div>Focusable Shadow DOM text
         <p>Shadow Root Options: (<code>mode: open</code>, <code>tabindex="-1")</code></p>
+        <p>Shadow Host Options: (<code>tabindex="0")</code></p>
       </div>
       <button>Button1</button>
       <button>Button2</button>
