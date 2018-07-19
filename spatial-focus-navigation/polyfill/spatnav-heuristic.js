@@ -169,6 +169,8 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
     }
 
     if (!parentContainer && container) {
+      // Getting out from the current spatnav container
+      console.log('Getting out from the current spatnav container');
       if (eventTarget.nodeName === 'IFRAME') {
         container = window;
 
