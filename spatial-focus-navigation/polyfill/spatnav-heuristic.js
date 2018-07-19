@@ -110,10 +110,9 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
     let container = eventTarget.getSpatnavContainer();
     let parentContainer = container.getSpatnavContainer();
 
-    // The container is IFRAME
-    if (container.nodeName === 'IFRAME') {
-      parentContainer = window;
-
+    // When the container is the viewport of a browsing context
+    if (!parentContainer) {
+      // The container is IFRAME, so parentContainer
       if ( window.location !== window.parent.location ) {
         parentContainer = window.parent;
       }
@@ -171,9 +170,8 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
     if (!parentContainer && container) {
       // Getting out from the current spatnav container
       console.log('Getting out from the current spatnav container');
-      if (eventTarget.nodeName === 'IFRAME') {
-        container = window;
-
+      if (!eventTarget.getSpatnavContainer()) {
+        // The container is IFRAME, so parentContainer
         if ( window.location !== window.parent.location ) {
           container = window.parent;
         }
