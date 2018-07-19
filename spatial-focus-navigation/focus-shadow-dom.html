@@ -88,13 +88,10 @@
         <button>Button2</button>
       </div>
     </div>
-
-    <div id="test">test</div>
   </body>
 
 <script>
-document.getElementById("test").tabIndex = "-1";
-document.addEventListener('focusin', function(e) {
+document.addEventListener('keydown', function(e) {
   console.log('Active element (main dom):', this.activeElement);
   if (this.activeElement.shadowRoot)
     console.log('Active element (inside shadow dom):',
@@ -252,7 +249,7 @@ customElements.define('f-focus', class extends HTMLElement {
         }
       </style>
       <div>Focusable Shadow DOM text
-        <p>Shadow Root Options: (<code>mode: closed</code>, <code>tabindex="0")</code></p>
+        <p>Shadow Root Options: (<code>mode: closed</code>)</code></p>
       </div>
       <button>Button1</button>
       <button>Button2</button>
