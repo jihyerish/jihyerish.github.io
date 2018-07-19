@@ -169,11 +169,12 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
     }
 
     if (!parentContainer && container) {
+      if (eventTarget.nodeName === 'IFRAME') {
+        container = window;
 
-      parentContainer = window;
-
-      if ( window.location !== window.parent.location ) {
-        parentContainer = window.parent;
+        if ( window.location !== window.parent.location ) {
+          container = window.parent;
+        }
       }
 
       const candidates = filteredCandidates(eventTarget, container.focusableAreas(), dir, container);
