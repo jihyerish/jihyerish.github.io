@@ -154,6 +154,8 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
             else {
               return;
             }
+
+            parentContainer = parentContainer.getSpatnavContainer();
           }
           else {
             // avoiding when spatnav container with tabindex=-1
