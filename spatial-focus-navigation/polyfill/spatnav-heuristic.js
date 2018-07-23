@@ -182,9 +182,9 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
 
         // The container is IFRAME,
         // set container as the document of the parent window
-        // and the eventTarget as the iframe element
-        if ( window.location !== window.parent.location ) {
-          eventTarget = container;
+        // and the eventTarget as the iframe element, not the document of it
+        if ( window.location !== window.parent.location )
+          eventTarget = window.frameElement;
           container = window.parent.document.documentElement;
         }
       }
