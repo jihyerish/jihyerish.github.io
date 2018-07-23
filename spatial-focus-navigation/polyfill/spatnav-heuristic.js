@@ -174,9 +174,13 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
       // Getting out from the current spatnav container
       console.log('Getting out from the current spatnav container');
       if (!eventTarget.getSpatnavContainer()) {
-        // The container is IFRAME, so parentContainer
         container = window.document.documentElement;
+
+        // The container is IFRAME,
+        // set container as the document of the parent window
+        // and the eventTarget as the iframe element
         if ( window.location !== window.parent.location ) {
+          eventTarget = container;
           container = window.parent.document.documentElement;
         }
       }
