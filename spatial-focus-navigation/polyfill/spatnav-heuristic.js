@@ -176,19 +176,7 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
 
     if (!parentContainer && container) {
       // Getting out from the current spatnav container
-      console.log('Getting out from the current spatnav container');
-      if (!eventTarget.getSpatnavContainer()) {
-        container = window.document.documentElement;
-
-        // The container is IFRAME,
-        // set container as the document of the parent window
-        // and the eventTarget as the iframe element, not the document of it
-        if ( window.location !== window.parent.location ) {
-          eventTarget = window.frameElement;
-          container = window.parent.document.documentElement;
-        }
-      }
-
+      
       const candidates = filteredCandidates(eventTarget, container.focusableAreas(), dir, container);
 
       if (Array.isArray(candidates) && candidates.length > 0) {
