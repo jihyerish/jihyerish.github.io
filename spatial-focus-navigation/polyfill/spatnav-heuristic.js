@@ -112,10 +112,10 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
 
     // When the container is the viewport of a browsing context
     if (!parentContainer) {
-      parentContainer = window;
+      parentContainer = window.document;
       // The container is IFRAME, so parentContainer
       if ( window.location !== window.parent.location ) {
-        parentContainer = window.parent;
+        parentContainer = window.parent.document;
       }
     }
 
@@ -145,11 +145,11 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
           console.log('navnotarget');
 
           if (container === document || container === document.documentElement) {
-            container = window;
+            container = window.document;
 
             if ( window.location !== window.parent.location ) {
               // The page is in an iframe
-              container = window.parent;
+              container = window.parent.document;
             }
             else {
               return;
@@ -173,9 +173,9 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
       console.log('Getting out from the current spatnav container');
       if (!eventTarget.getSpatnavContainer()) {
         // The container is IFRAME, so parentContainer
-        container = window;
+        container = window.document;
         if ( window.location !== window.parent.location ) {
-          container = window.parent;
+          container = window.parent.document;
         }
       }
 
