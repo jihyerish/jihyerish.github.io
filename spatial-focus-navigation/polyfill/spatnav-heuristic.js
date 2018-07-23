@@ -152,7 +152,7 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
 
               // eventTarget needs to be reset because the position of the element in the IFRAME
               // is unuseful when the focus moves out of the iframe
-              eventTarget = container;
+              eventTarget = window.frameElement;
               container = window.parent.document.documentElement;
             }
             else {
