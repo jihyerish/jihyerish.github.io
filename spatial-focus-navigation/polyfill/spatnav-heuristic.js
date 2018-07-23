@@ -147,8 +147,12 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
           if (container === document || container === document.documentElement) {
             container = window.document.documentElement;
 
+            // The page is in an iframe
             if ( window.location !== window.parent.location ) {
-              // The page is in an iframe
+
+              // eventTarget needs to be reset because the position of the element in the IFRAME
+              // is unuseful when the focus moves out of the iframe
+              eventTarget = container;
               container = window.parent.document.documentElement;
             }
             else {
