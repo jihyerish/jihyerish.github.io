@@ -88,109 +88,8 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
 
     // 5
     // At this point, spatNavSearch can be applied.
-    // If startingPoint is either a scroll container or the document,
-    // find the best candidate within startingPoint
-    if ((isContainer(eventTarget) || eventTarget.nodeName === 'BODY') && !(eventTarget.nodeName === 'INPUT')) {
-      if (eventTarget.nodeName === 'IFRAME')
-        eventTarget = eventTarget.contentDocument.body;
-
-      const candidates = eventTarget.focusableAreas();
-      let bestCandidate;
-
-      if (Array.isArray(candidates) && candidates.length > 0) {
-        bestCandidate = selectBestCandidateFromEdge(eventTarget, candidates, dir);
-        focusingController(bestCandidate, dir);
-        return;
-      }
-
-      if (scrollingController(eventTarget, dir)) return;
-    }
-
-    // 6
-    // Let container be the nearest ancestor of eventTarget
-    let container = eventTarget.getSpatnavContainer();
-    let parentContainer = container.getSpatnavContainer();
-
-    // When the container is the viewport of a browsing context
-    if (!parentContainer) {
-      parentContainer = window.document.documentElement;
-      // The container is IFRAME, so parentContainer will be retargeted to the document of the parent window
-      if ( window.location !== window.parent.location ) {
-        parentContainer = window.parent.document.documentElement;
-      }
-    }
-
-    while (parentContainer) {
-      // 7
-      const candidates = filteredCandidates(eventTarget, container.focusableAreas(), dir, container);
-
-      if (Array.isArray(candidates) && candidates.length > 0) {
-        // 9
-        const bestCandidate = selectBestCandidate(eventTarget, candidates, dir);
-        if (bestCandidate) {
-          // 10 & 11
-          focusingController(bestCandidate, dir);
-          return;
-        }
-      }
-      // 8
-      else {
-        // If there isn't any candidate and the best candidate among candidate:
-        // 1) Scroll or 2) Find candidates of the ancestor container
-        if (scrollingController(container, dir)) return;
-        else {
-          // [event] navnotarget : Fired when spatial navigation has failed to find any acceptable candidate to move the focus
-          // to in the current spatnav container and when that same spatnav container cannot be scrolled either,
-          // before going up the tree to search in the nearest ancestor spatnav container.
-          SpatNavAPI.createNavEvents('notarget', container, dir);
-
-          if (container === document || container === document.documentElement) {
-            container = window.document.documentElement;
-
-            // The page is in an iframe
-            if ( window.location !== window.parent.location ) {
-
-              // eventTarget needs to be reset because the position of the element in the IFRAME
-              // is unuseful when the focus moves out of the iframe
-              eventTarget = window.frameElement;
-              container = window.parent.document.documentElement;
-            }
-            else {
-              return;
-            }
-
-            parentContainer = container.getSpatnavContainer();
-          }
-          else {
-            // avoiding when spatnav container with tabindex=-1
-            if (isFocusable(container)) {
-              eventTarget = container;
-            }
-
-            container = parentContainer;
-            parentContainer = container.getSpatnavContainer();
-          }
-        }
-      }
-    }
-
-    if (!parentContainer && container) {
-      // Getting out from the current spatnav container
-
-      const candidates = filteredCandidates(eventTarget, container.focusableAreas(), dir, container);
-
-      if (Array.isArray(candidates) && candidates.length > 0) {
-        // 9
-        const bestCandidate = selectBestCandidate(eventTarget, candidates, dir);
-        if (bestCandidate) {
-          // 10 & 11
-          focusingController(bestCandidate, dir);
-          return;
-        }
-      }
-    }
-
-    if (scrollingController(container, dir)) return;
+    let bestCandidate = eventTarget.spatNavSearch (dir);
+    focusingController(bestCandidate, dir);
   }
 
   /**
@@ -202,11 +101,10 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
   * @returns NaN
   */
   function focusingController(bestCandidate, dir) {
-    const eventTarget = document.activeElement;
-    const container = eventTarget.getSpatnavContainer();
-
     // When bestCandidate is found
     if (bestCandidate) {
+      const container = bestCandidate.getSpatnavContainer();
+
       // Scrolling container or document when the next focusing element isn't entirely visible
       if (isScrollContainer(container) && !isEntirelyVisible(bestCandidate))
         bestCandidate.scrollIntoView();
@@ -264,54 +162,46 @@ function focusNavigationHeuristics(spatnavPolyfillOptions) {
   */
   function spatNavSearch (dir, candidates, container) {
     // Let container be the nearest ancestor of eventTarget that is a spatnav container.
-    let container_, candidates_;
-    let targetElement = null;
+    let targetElement = this;
     let bestCandidate = null;
 
     console.log('spatnavsearch');
 
     // If the container is unknown, get the closest container from the element
-    if (container)
-      container_ = container;
-    else
-      container_ = this.getSpatnavContainer();
+    if (!container)
+      container = this.getSpatnavContainer();
 
     // If the candidates is unknown, find candidates
-    if(Array.isArray(candidates) && candidates.length > 0) {
-      candidates_ = candidates;
-    }
-    else {
+    // 5-1
+    if(!Array.isArray(candidates) || candidates.length < 0) {
       if((isContainer(this) || this.nodeName === 'BODY') && !(this.nodeName === 'INPUT')) {
         if (this.nodeName === 'IFRAME')
           targetElement = this.contentDocument.body;
-      }
-      else
-        targetElement = this;
 
-      candidates_ = this.focusableAreas();
+        candidates = targetElement.focusableAreas();
+      }
+      else {
+        candidates = filteredCandidates(targetElement, container.focusableAreas(), dir, container);
+      }
+    }
+    else {
+      candidates = filteredCandidates(targetElement, container.focusableAreas(), dir, container);
     }
 
     // Find the best candidate
-    if ((isContainer(eventTarget) || eventTarget.nodeName === 'BODY') && !(eventTarget.nodeName === 'INPUT')) {
-      if (Array.isArray(candidates_) && candidates_.length > 0) {
-        bestCandidate = selectBestCandidateFromEdge(targetElement, candidates_, dir);
-        return bestCandidate;
+    // 5
+    // If startingPoint is either a scroll container or the document,
+    // find the best candidate within startingPoint
+    if ((isContainer(targetElement) || targetElement.nodeName === 'BODY') && !(targetElement.nodeName === 'INPUT')) {
+      if (Array.isArray(candidates) && candidates.length > 0) {
+        bestCandidate = selectBestCandidateFromEdge(targetElement, candidates, dir);
       }
     }
-
-    // Let container be the nearest ancestor of eventTarget
-    let container = targetElement.getSpatnavContainer();
-    let parentContainer = container.getSpatnavContainer();
-
-    // When the container is the viewport of a browsing context
-    if (!parentContainer) {
-      parentContainer = window.document.documentElement;
-      // The container is IFRAME, so parentContainer will be retargeted to the document of the parent window
-      if ( window.location !== window.parent.location ) {
-        parentContainer = window.parent.document.documentElement;
+    else {
+      if (Array.isArray(candidates) && candidates.length > 0) {
+        bestCandidate = selectBestCandidate(targetElement, candidates, dir);
       }
     }
-
     return bestCandidate;
   }
 
