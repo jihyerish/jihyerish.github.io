@@ -13,7 +13,13 @@
         <form>
           <fieldset>
             <legend>Option</legend>
-
+            <div>
+            	<span>display: </span>
+	            <select id="displayType" name=display>
+	              <option value="inline">inline</option>
+	  			  <option value="block" selected="selected">block</option>
+	            </select>
+            </div>            
             <div>
             	<span>Focus on : </span>
 
@@ -38,15 +44,27 @@
 	              <option value="18">18</option>
 	            </select>
             </div>
+            <div>
+		         <span>(partially viewed element will be : </span>
+		         <select id="positionOptions" name="blockPosition">
+		                <option value="center" >center</option>
+		                <option value="end" >end</option>
+		                <option value="nearest" >nearest</option>
+		                <option value="start" selected="selected">start</option>
+		                <option value="none">non scrolling</option>
+		          </select>
+		          <span>)</span>
+		   </div>         
           </fieldset>
         </form>
+        <button id="manual">Action!</button>
       </div>
       <div id="scrollBox"></div>
     </div>
     <div id="statusBox">
     	<p>Target Element is <span id="statusText">unknown</span></p>
-    	<p>( intersectionRatio === <span id="ratio">unknown</span> )</p>
+    	<p>( intersectionRatio === <span id="ratio">unknown</span> )</p>    
     </div>
   </body>
-  <script type="text/javascript" src="simpleIntersectionObserver.js"></script>
+  <script type="text/javascript" src="scrollWithIntersectionObserver.js"></script>
 </html>
