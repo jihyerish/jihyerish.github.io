@@ -18,10 +18,10 @@ var lastX, lastY;
 
 document.getElementById('displayType').addEventListener('change', function(){
 	getDisplayOptions();
-	
-	if(display == 'block') {		
+
+	if(display == 'block') {
 		scrollBox.setAttribute('class', 'block-scrollBox');
-		   
+
 		for(var i=0; i < boxes.length; i++){
 		  boxes[i].style.display='block';
 		  boxes[i].style.margin='1em auto';
@@ -29,7 +29,7 @@ document.getElementById('displayType').addEventListener('change', function(){
 	}
 	else {
 	   scrollBox.setAttribute('class', 'inline-scrollBox');
-	   
+
 	   for(var i=0; i < boxes.length; i++){
 		   boxes[i].style.display='inline-block';
 		   boxes[i].style.margin='auto 1em';
@@ -43,33 +43,33 @@ document.getElementById('selectElement').addEventListener('change', function(){
 
 document.getElementById('positionOptions').addEventListener('change', function(){
 	getPositionOptions();
-	
+
 	if (display == 'block')
 		blockValue = positionOption;
-	else 
+	else
 		inlineValue = positionOption;
 });
 
 document.getElementById('manual').addEventListener('click', function() {
-    if (statusBox.className == 'partial') {    	    	
-		handlePartialElement();
-	}
-	else {
-		targetElement.focus();
-	}
+  if (statusBox.className == 'partial') {
+    handlePartialElement();
+  }
+  else {
+    targetElement.focus();
+  }
 });
 
 document.getElementById('manual').addEventListener('mouseover', function(e){
-	lastX = scrollBox.scrollLeft;
-	lastY = scrollBox.scrollTop;
-	console.log('Last x: '+lastX+', y: '+lastY);
+  lastX = scrollBox.scrollLeft;
+  lastY = scrollBox.scrollTop;
+  console.log('Last x: '+lastX+', y: '+lastY);
 });
 
-function init() {	
-	boxes = new Array();
-	scrollBox = document.querySelector('#scrollBox');
-	scrollBox.setAttribute('class', 'block-scrollBox');
-		
+function init() {
+  boxes = new Array();
+  scrollBox = document.querySelector('#scrollBox');
+  scrollBox.setAttribute('class', 'block-scrollBox');
+
 	for(var i=0; i < numBoxes; i++){
 		boxes.push(document.createElement('div'));
 		boxes[i].appendChild(document.createTextNode(i+1));
@@ -79,27 +79,27 @@ function init() {
 		boxes[i].style.display='block';
 		scrollBox.appendChild(boxes[i]);
 	}
-	
+
 	scrollBox.addEventListener('mouseover', function(event){
-		scrollBarFlag = true;		
+		scrollBarFlag = true;
 	});
-	
+
 	scrollBox.addEventListener('mouseout', function(event){
-		scrollBarFlag = false;		
+		scrollBarFlag = false;
 	});
-	
+
 	scrollBox.addEventListener('scroll', function(event){
 		console.log('scrolling : x: '+ this.scrollLeft+ ', y: '+this.scrollTop);
-		
+
 		if (!scrollBarFlag){
 			if (positionOption == 'none' && statusBox.className == 'partial'){
 				scrollBox.scrollTo(lastX, lastY);
 				console.log('prevent scroll');
 			}
-		}		
-		
+		}
+
 	});
-	
+
 	/* This custom threshold invokes the handler whenever:
 	   1. The target begins entering the viewport (0 < ratio < 1).
 	   2. The target fully enters the viewport (ratio >= 1).
@@ -109,16 +109,16 @@ function init() {
 	observer = new IntersectionObserver(handler, {
 	  threshold: [0, 1]
 	});
-	
+
 	getDisplayOptions();
 	getTargetElement();
-	getPositionOptions();	
-	
+	getPositionOptions();
+
 	statusBox = document.getElementById('statusBox');
 }
 
 function handler(entries, observer) {
-  for (entry of entries) {	    
+  for (entry of entries) {
     let intersectionRatio = entry.intersectionRatio;
 
     document.getElementById('ratio').textContent = intersectionRatio;
@@ -145,12 +145,12 @@ function getTargetElement() {
 	if (targetId){
 		prevElement = document.getElementById(targetId);
 		targetElement.setAttribute('class', 'box');
-	}	
-	
+	}
+
 	targetId = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
 	targetElement = document.getElementById(targetId);
 	targetElement.setAttribute('class', 'targetBox');
-	
+
 	observer.observe(targetElement);
 }
 
@@ -159,25 +159,25 @@ function getPositionOptions(){
 }
 
 function handlePartialElement() {
-  console.log('Move the partialy viewed element!');
-  console.log('position option: '+positionOption);
-  
-  var behavior = 'smooth';
+	console.log('Move the partialy viewed element!');
+	console.log('position option: '+positionOption);
 
-  if (positionOption == 'none'){
+	var behavior = 'smooth';
+
+	if (positionOption == 'none'){
 	//prevent Scrolling
 	targetElement.focus();
-  }
-  else{
-	  targetElement.focus();
-	  
-	  //scroll the element with the specified position option
-	  targetElement.scrollIntoView({
-		    behavior: behavior,
-		    inline: inlineValue,
-		    block: blockValue
-	  });
-  }  
+	}
+	else{
+		targetElement.focus();
+
+		//scroll the element with the specified position option
+		targetElement.scrollIntoView({
+			behavior: behavior,
+			inline: inlineValue,
+			block: blockValue
+		});
+	}
 }
 
 window.onload = init;
