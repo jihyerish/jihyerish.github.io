@@ -1,4 +1,7 @@
 const root = document.querySelector('#root');
+let changeNum = document.querySelector('#statusNum');
+let statusText = document.querySelector('#statusChange');
+
 const options = {
   childList: true,
   attributes: true,
@@ -72,9 +75,9 @@ const removeNode = (target) => {
 };
 
 if ('MutationObserver' in window) {
-  let ts = (new Date()).getTime();
+  //let ts = (new Date()).getTime();
   let observer = new MutationObserver(mutations => {
-    console.log(`${ts} --- ${mutations.length}건의 변형 감지`);
+    changeNum.textContent = mutations.length;
     mutations.forEach(mutation => {
       let target = mutation.target;
       let oldValueInfo;
@@ -83,20 +86,20 @@ if ('MutationObserver' in window) {
         case 'attributes':
           oldValueInfo = mutation.oldValue ? '"' + mutation.oldValue + '"에서 ' : '';
           curValueInfo = '"' + target.getAttribute(mutation.attributeName) + '"으로';
-          console.log(`${target.nodeName}노드의 ${mutation.attributeName}속성이 ${oldValueInfo}${curValueInfo} 변경됨`);
+          statusText.textContent = `${target.nodeName}노드의 ${mutation.attributeName}속성이 ${oldValueInfo}${curValueInfo} 변경됨`;
           break;
         case 'childList':
           Array.prototype.forEach.call(mutation.addedNodes, node => {
-            console.log(`${target.nodeName}노드에 ${node.nodeName}노드가 추가됨`);
+            statusText.textContent = `${target.nodeName}노드에 ${node.nodeName}노드가 추가됨`;
           });
           Array.prototype.forEach.call(mutation.removedNodes, node => {
-            console.log(`${target.nodeName}노드에 ${node.nodeName}노드가 제거됨`);
+            statusText.textContent = `${target.nodeName}노드에 ${node.nodeName}노드가 제거됨`;
           });
           break;
         case 'characterData':
           oldValueInfo = mutation.oldValue ? '"' + mutation.oldValue + '"에서 ' : '';
           curValueInfo = '"' + target.data + '"으로';
-          console.log(`${target.nodeName}노드의 characterData가 ${oldValueInfo}${curValueInfo} 변경됨`);
+          statusText.textContent = `${target.nodeName}노드의 characterData가 ${oldValueInfo}${curValueInfo} 변경됨`;
           break;
       }
     });
