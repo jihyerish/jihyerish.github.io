@@ -1,18 +1,18 @@
-var scrollBox;
-var boxes;
-var inlineValue = 'nearest', blockValue = 'nearest';
-var positionOption;
-var targetId = "1";
-var targetElement;
-var prevElement;
-var statusBox;
+let scrollBox;
+let boxes;
+let inlineValue = 'nearest', blockValue = 'nearest';
+let positionOption;
+let targetId = "1";
+let targetElement;
+let prevElement;
+let statusBox;
 let observer;
 
 // number of boxes
-var numBoxes = 18;
-var display = 'block';
-var behavior;
-var scrollBarFlag = false;
+const numBoxes = 18;
+let display = 'block';
+let behavior;
+let scrollBarFlag = false;
 
 var lastX, lastY;
 
@@ -20,7 +20,7 @@ document.getElementById('selectElement').addEventListener('change', function(){
 	getTargetElement();
 });
 
-function init() {
+const init = () => {
   boxes = new Array();
   scrollBox = document.querySelector('#scrollBox');
 
@@ -83,7 +83,7 @@ function handler(entries, observer) {
   }
 }
 
-function getTargetElement() {
+const getTargetElement = () => {
 	if (prevElement){
 		targetElement.setAttribute('class', 'box');
 	}
@@ -96,15 +96,15 @@ function getTargetElement() {
 	prevElement = targetElement;
 }
 
-function handlePartialElement() {
+const handlePartialElement = () => {
 	console.log('Move the partialy viewed element!');
 	console.log('position option: '+positionOption);
 
-	var behavior = 'smooth';
+	let behavior = 'smooth';
 
 	if (positionOption == 'none'){
-	//prevent Scrolling
-	targetElement.focus();
+		//prevent Scrolling
+		targetElement.focus();
 	}
 	else{
 		targetElement.focus();
@@ -118,4 +118,6 @@ function handlePartialElement() {
 	}
 }
 
-window.onload = init;
+window.addEventListener("load", function() {
+  init();
+});
