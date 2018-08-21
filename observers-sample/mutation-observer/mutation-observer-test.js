@@ -13,9 +13,8 @@ const options = {
 };
 
 const init = () => {
-  root.appendChild(getButton('자식노드추가', addNode));
-  root.appendChild(getButton('속성들추가', setAttrs));
-  root.appendChild(getButton('내용변경', setCharacterData));
+  root.appendChild(getButton('Add child nodes', addNode));
+  root.appendChild(getButton('Modify attributes', setAttrs));
 };
 const getButton = (textContent, listener) => {
   let button = document.createElement("button");
@@ -34,13 +33,12 @@ const addNode = (target = root) => {
   let ul = document.createElement('ul');
   let level = Number(target.getAttribute('data-level')) + 1;
 
-  span.textContent = level + '레벨 자식';
+  span.textContent = level + 'th level child nodes';
   ul.setAttribute('data-level', level);
   ul.appendChild(span);
-  ul.appendChild(getButton('자식노드추가', addNode));
-  ul.appendChild(getButton('속성들추가', setAttrs));
-  ul.appendChild(getButton('내용변경', setCharacterData));
-  ul.appendChild(getButton('제거', removeNode));
+  ul.appendChild(getButton('Add child nodes', addNode));
+  ul.appendChild(getButton('Modify attributes', setAttrs));
+  ul.appendChild(getButton('Remove child nodes', removeNode));
   setStyle(ul);
   li.appendChild(ul);
   target.appendChild(li);
@@ -48,7 +46,7 @@ const addNode = (target = root) => {
 
 const setAttrs = (target = root) => {
   setStyle(target);
-  target.setAttribute('class', 'attr-changed');
+  setClass(target);
 };
 
 const setStyle = (target = root) => {
@@ -57,17 +55,13 @@ const setStyle = (target = root) => {
     Math.random() * 255 ^ 0,
     Math.random() * 255 ^ 0
   ].join();
-  let styleTmpl = `background-color: rgb(${rgb})`;
+  let backgroundStyle = `background-color: rgb(${rgb})`;
 
-  target.setAttribute('style', styleTmpl);
+  target.setAttribute('style', backgroundStyle);
 };
 
-const setCharacterData = (target = root) => {
-  let level = Number.parseInt(target.getAttribute('data-level'));
-  let ts = (new Date()).getTime();
-  let text = target.querySelector('span').firstChild;
-
-  text.data = (level > 0 ? level + '레벨 자식' : '루트') + ` (수정:${ts})`;
+const setClass = (target = root) => {
+  target.setAttribute('class', 'attr-changed');
 };
 
 const removeNode = (target) => {
@@ -75,38 +69,39 @@ const removeNode = (target) => {
 };
 
 if ('MutationObserver' in window) {
-  //let ts = (new Date()).getTime();
   let observer = new MutationObserver(mutations => {
     changeNum.textContent = mutations.length;
+    let status = "";
     mutations.forEach(mutation => {
       let target = mutation.target;
       let oldValueInfo;
       let curValueInfo;
       switch (mutation.type) {
         case 'attributes':
-          oldValueInfo = mutation.oldValue ? '"' + mutation.oldValue + '"에서 ' : '';
-          curValueInfo = '"' + target.getAttribute(mutation.attributeName) + '"으로';
-          statusText.textContent = `${target.nodeName}노드의 ${mutation.attributeName}속성이 ${oldValueInfo}${curValueInfo} 변경됨`;
+          Array.prototype.forEach.call(mutation.attributeName, node => {
+            if (mutation.oldValue) {
+              curValueInfo = target.getAttribute(mutation.attributeName);
+              status +=
+                `${mutation.attributeName} Attribute of ${target.nodeName} Node is changed
+                from ${mutation.oldValue} to ${curValueInfo}.\r\n`;
+            }
+          });
           break;
         case 'childList':
           Array.prototype.forEach.call(mutation.addedNodes, node => {
-            statusText.textContent = `${target.nodeName}노드에 ${node.nodeName}노드가 추가됨`;
+            status += `${node.nodeName} Node is added to  ${target.nodeName} Node.\r\n`;
           });
           Array.prototype.forEach.call(mutation.removedNodes, node => {
-            statusText.textContent = `${target.nodeName}노드에 ${node.nodeName}노드가 제거됨`;
+            status += `${node.nodeName} Node is removed from ${target.nodeName} Node.\r\n`;
           });
-          break;
-        case 'characterData':
-          oldValueInfo = mutation.oldValue ? '"' + mutation.oldValue + '"에서 ' : '';
-          curValueInfo = '"' + target.data + '"으로';
-          statusText.textContent = `${target.nodeName}노드의 characterData가 ${oldValueInfo}${curValueInfo} 변경됨`;
           break;
       }
     });
+    statusText.textContent = status;
   });
   observer.observe(root, options);
 } else {
-  alert('MutationObserver를 사용할 수 없습니다');
+  alert('This browser cannot support MutationObserver');
 }
 
 window.addEventListener("load", function() {
