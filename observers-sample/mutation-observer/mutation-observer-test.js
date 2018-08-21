@@ -78,14 +78,10 @@ if ('MutationObserver' in window) {
       let curValueInfo;
       switch (mutation.type) {
         case 'attributes':
-          Array.prototype.forEach.call(mutation.attributeName, node => {
-            if (mutation.oldValue) {
-              curValueInfo = target.getAttribute(mutation.attributeName);
-              status +=
-                `${mutation.attributeName} Attribute of ${target.nodeName} Node is changed
-                from ${mutation.oldValue} to ${curValueInfo}.\r\n`;
-            }
-          });
+          curValueInfo = target.getAttribute(mutation.attributeName);
+          status +=
+            `${mutation.attributeName} Attribute of ${target.nodeName} Node is changed
+            from ${mutation.oldValue} to ${curValueInfo}.\r\n`;
           break;
         case 'childList':
           Array.prototype.forEach.call(mutation.addedNodes, node => {
