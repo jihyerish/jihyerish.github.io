@@ -13,6 +13,9 @@ Demos created by Jihye Hong (@jihyerish)
 * Focus Demos
   * [Focus Navigation](https://jihyerish.github.io/all-about-focus/)
   * [Focus using IntersectionObserver](https://jihyerish.github.io/focus-with-intersectionObserver/)
+* Observers in the Web Demos
+  * [MutationObserver](https://jihyerish.github.io/observers-sample/mutation-observer)
+  * [IntersectionObserver](https://jihyerish.github.io/observers-sample/intersection-observer)
 
 ## Media
 * [Media Session Demos](https://jihyerish.github.io/media-session-demo/mymediaplayer)
