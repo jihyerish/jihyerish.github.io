@@ -37,16 +37,6 @@ const init = () => {
 		scrollBox.appendChild(boxes[i]);
 	}
 
-	/* This custom threshold invokes the handler whenever:
-	   1. The target begins entering the viewport (0 < ratio < 1).
-	   2. The target fully enters the viewport (ratio >= 1).
-	   3. The target begins leaving the viewport (1 > ratio > 0).
-	   4. The target fully leaves the viewport (ratio <= 0).
-   */
-	observer = new IntersectionObserver(handler, {
-	  threshold: [0, 1]
-	});
-
 	getTargetElement();
 
 	scrollBox.addEventListener('scroll', function(event){
@@ -62,7 +52,34 @@ const init = () => {
 	});
 
 	statusBox = document.getElementById('statusBox');
+
+	const observer = new IntersectionObserver((entries) => {
+		event.innerHTML = '';
+		entries
+			.filter(entry => entry.isIntersecting)
+			.forEach(entry => document.getElementById('ratio').textContent = (entry.target.id + ': ' + entry.intersectionRatio));
+	}, {
+		root: scrollBox,
+		threshold: new Array(101).fill(0).map((zero, index) => {
+			return index * 0.01;
+		})
+	});
+
+	
 }
+
+
+
+/* This custom threshold invokes the handler whenever:
+	   1. The target begins entering the viewport (0 < ratio < 1).
+	   2. The target fully enters the viewport (ratio >= 1).
+	   3. The target begins leaving the viewport (1 > ratio > 0).
+	   4. The target fully leaves the viewport (ratio <= 0).
+  
+	observer = new IntersectionObserver(handler, {
+	  threshold: [0, 1]
+	});
+
 
 function handler(entries, observer) {
   for (entry of entries) {
@@ -81,42 +98,7 @@ function handler(entries, observer) {
       document.getElementById('statusText').textContent = ' partialy hidden ';
     }
   }
-}
-
-const getTargetElement = () => {
-	if (prevElement){
-		targetElement.setAttribute('class', 'box');
-	}
-
-	targetId = document.getElementById('selectElement').options[document.getElementById('selectElement').selectedIndex].value;
-	targetElement = document.getElementById(targetId);
-	targetElement.setAttribute('class', 'targetBox');
-	observer.observe(targetElement);
-
-	prevElement = targetElement;
-}
-
-const handlePartialElement = () => {
-	console.log('Move the partialy viewed element!');
-	console.log('position option: '+positionOption);
-
-	let behavior = 'smooth';
-
-	if (positionOption == 'none'){
-		//prevent Scrolling
-		targetElement.focus();
-	}
-	else{
-		targetElement.focus();
-
-		//scroll the element with the specified position option
-		targetElement.scrollIntoView({
-			behavior: behavior,
-			inline: inlineValue,
-			block: blockValue
-		});
-	}
-}
+} */
 
 window.addEventListener("load", function() {
   init();
