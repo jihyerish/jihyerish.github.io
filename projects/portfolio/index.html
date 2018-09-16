@@ -8,103 +8,115 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__inner">
-        <h1 class="header__title">
-          Jihye Hong
-        </h1>
-      </div>
-    </header>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__title">
+            Jihye Hong
+          </h1>
+        </div>
+      </header>
 
-    <nav id="drawer" class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#about">About</a></li>
-        <li class="nav__item"><a href="#education">Education</a></li>
-        <li class="nav__item"><a href="#experience">Work Experience</a></li>
-        <li class="nav__item"><a href="#project">Project</a></li>
-        <li class="nav__item"><a href="#publication">Publication</a></li>
-      </ul>
-    </nav>
-
-    <main>
-        <section id="about">
-          <h2 class="title">About</h2>
-          <ul>
-            <li class="content__item">
-              <span>Born: 28th Jan, 1989</span>
-            </li>
-            <li class="content__item">
-              <span>Nationality: South Korea</span>
-            </li>
-          </ul>
-        </section>
-
-        <section id="education">
-          <h2 class="title">Education</h2>
-          <h3 class="subtitle">B.S. Computer Science (2007 - 2011)</h3>
-          <div class="content">
-            <p>Ewha Womans University (South Korea)</p>
-          </div>
-          <h3 class="subtitle">M.S. Computer Science (2011 - 2013)</h3>
-          <div class="content">
-            <p>Korea Advanced Institute of Science and Technology (South Korea)</p>
-          </div>
-        </section>
-
-        <section id="experience">
-          <h2 class="title">Work Experience</h2>
-          <h3 class="subtitle">Software Engineer (2013 - Present)</h3>
-          <div class="content">
-            <p>LG Electronics (South Korea)</p>
-          </div>
-        </section>
-
-        <section id="project">
-          <h2 class="title">Project</h2>
-          <h3 class="subtitle">W3C CSS Round Display (2015 - 2016)</h3>
-          <div class="content">
-            <ul>
-              <li class="content__item">
-                <span>Proposed and edited CSS Round Display Specification as a co-editor</span>
-              </li>
-              <li class="content__item">
-                <span>Implemented the polyfill about the spec, and several demos</span>
-              </li>
-            </ul>
-          </div>
-          <h3 class="subtitle">W3C CSS Motion Path (2016 - Present)</h3>
-          <div class="content">
-            <ul>
-              <li class="content__item">
-                <span>Added the new features to the CSS Motion Path Specification as a co-editor</span>
-              </li>
-            </ul>
-          </div>
-          <h3 class="subtitle">Contributed to WHATWG HTML Specification (2017)</h3>
-          <div class="content">
-            <ul>
-              <li class="content__item">
-                <span>Proposed to add 'preventScroll' option to Element.focus()</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="publication">
-          <h2 class="title">Publication</h2>
-          <h3 class="subtitle">AR Paint (ICEC, 2012)</h3>
-          <h3 class="subtitle">Efficient 3D content authoring framework based on mobile AR (VSMM, 2012)</h3>
-          <h3 class="subtitle">Signage Service Platform (TTA Journal, 2017)</h3>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <ul class="contact__list">
-          <li class="contect__item" ><a href="mailto:jihyerish@gmail.com"><img class="contect_img" src="img/mail.png" alt="email to jihye"></a></li>
-          <li class="contect__item" ><a href="https://github.com/jihyerish"><img class="contect_img" src="img/github.png" alt="github of jihye"></a></li>
-          <li class="contect__item" ><a href="https://www.linkedin.com/in/jihye-hong-03b69abb/"><img class="contect_img" src="img/linkedin.png" alt="linkedin of jihye"></a></li>
-          <li class="contect__item" ><a href="https://twitter.com/jihyerish"><img class="contect_img" src="img/twitter.png" alt="follow jihye"></a></li>
+      <nav id="drawer" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#education">Education</a></li>
+          <li class="nav__item"><a href="#experience">Work Experience</a></li>
+          <li class="nav__item"><a href="#project">Project</a></li>
+          <li class="nav__item"><a href="#publication">Publication</a></li>
         </ul>
-      </footer>
+      </nav>
+
+      <main>
+          <section id="about">
+            <h2 class="title">About</h2>
+            <div class="description">
+              <ul>
+                <li class="description__item">
+                  <span>Born: 28th Jan, 1989</span>
+                </li>
+                <li class="description__item">
+                  <span>Nationality: South Korea</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="education">
+            <h2 class="title">Education</h2>
+            <div class="content">
+              <h3 class="subtitle">B.S. Computer Science (2007 - 2011)</h3>
+              <div class="description">
+                <p>Ewha Womans University (South Korea)</p>
+              </div>
+              <h3 class="subtitle">M.S. Computer Science (2011 - 2013)</h3>
+              <div class="description">
+                <p>Korea Advanced Institute of Science and Technology (South Korea)</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="experience">
+            <h2 class="title">Work Experience</h2>
+            <div class="content">
+              <h3 class="subtitle">Software Engineer (2013 - Present)</h3>
+              <div class="description">
+                <p>LG Electronics (South Korea)</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="project">
+            <h2 class="title">Project</h2>
+            <div class="content">
+              <h3 class="subtitle">W3C CSS Round Display (2015 - 2016)</h3>
+              <div class="description">
+                <ul>
+                  <li class="description__item">
+                    <span>Proposed and edited CSS Round Display Specification as a co-editor</span>
+                  </li>
+                  <li class="description__item">
+                    <span>Implemented the polyfill about the spec, and several demos</span>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="subtitle">W3C CSS Motion Path (2016 - Present)</h3>
+              <div class="description">
+                <ul>
+                  <li class="description__item">
+                    <span>Added the new features to the CSS Motion Path Specification as a co-editor</span>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="subtitle">Contributed to WHATWG HTML Specification (2017)</h3>
+              <div class="description">
+                <ul>
+                  <li class="description__item">
+                    <span>Proposed to add 'preventScroll' option to Element.focus()</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="publication">
+            <h2 class="title">Publication</h2>
+            <div class="content">
+              <h3 class="subtitle">AR Paint (ICEC, 2012)</h3>
+              <h3 class="subtitle">Efficient 3D content authoring framework based on mobile AR (VSMM, 2012)</h3>
+              <h3 class="subtitle">Signage Service Platform (TTA Journal, 2017)</h3>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <ul class="contact__list">
+            <li class="contect__item" ><a href="mailto:jihyerish@gmail.com"><img class="contect_img" src="img/mail.png" alt="email to jihye"></a></li>
+            <li class="contect__item" ><a href="https://github.com/jihyerish"><img class="contect_img" src="img/github.png" alt="github of jihye"></a></li>
+            <li class="contect__item" ><a href="https://www.linkedin.com/in/jihye-hong-03b69abb/"><img class="contect_img" src="img/linkedin.png" alt="linkedin of jihye"></a></li>
+            <li class="contect__item" ><a href="https://twitter.com/jihyerish"><img class="contect_img" src="img/twitter.png" alt="follow jihye"></a></li>
+          </ul>
+        </footer>
+      </div>
   </body>
 </html>
