@@ -13,7 +13,7 @@ nav, footer {
 
 body {
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 16px;
   color: #424242;
 }
 
@@ -65,10 +65,10 @@ img {
     flex-flow: row;
   }
   .description__image {
-    width: 40%;
+    width: 50%;
   }
   .description {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -81,16 +81,16 @@ img {
     flex-flow: row;
   }
   .description__image {
-    width: 30%;
+    width: 40%;
   }
   .description {
-    width: 70%;
+    width: 60%;
   }
 }
 
 .header {
   background-color: #d291bc;
-  padding: 5%;
+  padding: 2%;
 }
 
 .header__inner {
@@ -118,7 +118,7 @@ img {
 }
 .nav__item {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0.5em;
 }
 
@@ -127,12 +127,12 @@ img {
 }
 
 .title {
-  font-size: 16px;
+  font-size: 20px;
   color: #957dad;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .description, .description__plain {
