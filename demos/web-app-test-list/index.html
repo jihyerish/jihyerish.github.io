@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Web app list</title>
+<link rel="stylesheet" href="css3.css">
+<script src="stats.js"></script>
+</head>
+<body>
+	<div id="status"></div>
+	<button id="web_app_1" >Web App 1</button>
+	<button id="web_app_2">Web App 2</button>
+	<button id="h264_video">H.264 video 2K 4K</button>
+	<button id="vp9_video">VP9 1K 2K</button>
+	<button id="vp9_60fps_video">VP9 60fps 2K 4K</button>
+	<br>
+	<!--target screen 1920x1080-->
+	<iframe id="my_iframe" width="1700" height="850" frameborder="1" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</body>
+<script type="text/javascript">
+	var stats = new Stats();
+	stats.setMode( 0 );
+	document.getElementById('status').appendChild( stats.domElement );
+	var myIframe = document.getElementById('my_iframe');
+
+	window.onload = function() {
+		window.requestAnimationFrame(update);
+	}
+
+	function update() {
+		stats.update();
+		window.requestAnimationFrame(update);
+	}
+
+	document.getElementById('web_app_1').addEventListener("click", function() {
+	  document.getElementById('my_iframe').setAttribute('src', "background_color_animation.html");
+	});
+	document.getElementById('web_app_2').addEventListener("click", function() {
+	  document.getElementById('my_iframe').setAttribute('src', "https://codepen.io/cubix4u/pen/KXpKRe");
+	});
+	document.getElementById('h264_video').addEventListener("click", function() {
+	  document.getElementById('my_iframe').setAttribute('src', "https://www.youtube.com/embed/OrfF_FgqhSw");
+	});
+	document.getElementById('vp9_video').addEventListener("click", function() {
+	  document.getElementById('my_iframe').setAttribute('src', "https://www.youtube.com/embed/pMxgov6_5TA");
+	});
+	document.getElementById('vp9_60fps_video').addEventListener("click", function() {
+	  document.getElementById('my_iframe').setAttribute('src', "https://www.youtube.com/embed/mkggXE5e2yk");
+	});
+
+</script>
+</html>

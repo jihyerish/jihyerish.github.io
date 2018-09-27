@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Scroll by the Tab focusing</title>
+  </head>
+  <body>
+    <form>
+        <fieldset>
+          <legend>Option</legend>
+          <select id="pickup_place" name="pickup_place">
+            <option value="" selected="selected">Select One</option>
+            <option value="office" >Taxi Office</option>
+            <option value="town_hall" >Town Hall</option>
+            <option value="telepathy" >We'll Guess!</option>
+          </select>
+        </fieldset>
+    </form>
+  <button class="manual" id="scrollIntoView">scrollIntoView() on #2</button>
+  <button class="manual" id="focus">focus() on #2</button>
+  <button class="manual" id="smooth_scrollIntoView">scrollIntoView({behevior: smooth}) on #2</button>
+    <div id="container">
+      <nav>
+        <a href="#1">1</a>
+        <a href="#2">2</a>
+        <a href="#3">3</a>
+        <a href="#4">4</a>
+        <a href="#5">5</a>
+      </nav>
+      <div id="scrollBox">
+        <button class="box" id="1">
+          <br><strong>1</strong>
+        </button>
+        <button class="box" id="2">
+          <br><strong>2</strong>
+        </button>
+        <button class="box" id="3">
+          <br><strong>3</strong>
+        </button>
+        <button class="box" id="4">
+          <br><strong>4</strong>
+        </button>
+        <button class="box" id="5">
+          <br><strong>5</strong>
+        </button>
+        <button class="box" id="6">
+          <br><strong>6</strong>
+        </button>
+        <button class="box" id="7">
+          <br><strong>7</strong>
+        </button>
+        <button class="box" id="8">
+          <br><strong>8</strong>
+        </button>
+        <button class="box" id="9">
+          <br><strong>9</strong>
+        </button>
+        <button class="box" id="10">
+          <br><strong>10</strong>
+        </button>
+        <button class="box" id="11">
+          <br><strong>11</strong>
+        </button>
+        <button class="box" id="12">
+          <br><strong>12</strong>
+        </button>
+        <button class="box" id="13">
+          <br><strong>13</strong>
+        </button>
+        <button class="box" id="14">
+          <br><strong>14</strong>
+        </button>
+        <button class="box" id="15">
+          <br><strong>15</strong>
+        </button>
+        <button class="box" id="16">
+          <br><strong>16</strong>
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var box = document.getElementById("2");
+
+    document.getElementById('scrollIntoView').addEventListener('click', function(){
+      box.scrollIntoView();
+    });
+
+    document.getElementById('smooth_scrollIntoView').addEventListener('click', function(){
+      box.scrollIntoView({
+        behavior: 'smooth',
+        inline: start
+      });
+    });
+
+    document.getElementById('focus').addEventListener('click', function(){
+      box.focus();
+    });
+  </script>
+</html>

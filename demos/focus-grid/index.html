@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Sequential Navigation on the Grid Layout</title>
+  </head>
+  <body>
+    <h1>DOM Order</h1>
+    <div>
+      <button>
+        <br> This appears <strong>1</strong> in source order.
+      </button>
+      <button>
+        <br> This appears <strong>2</strong> in source order.
+      </button>
+    </div>
+    <div>
+      <button>
+        <br> This appears <strong>3</strong> in source order.
+      </button>
+      <button>
+        <br> This appears <strong>4</strong> in source order.
+      </button>
+    </div>
+    <div>
+      <button>
+        <br> This appears <strong>5</strong> in source order.
+      </button>
+      <button>
+          <br> This appears <strong>6</strong> in source order.
+        </button>
+    </div>
+
+
+    <h1>Visual Order (with CSS Grid)</h1>
+    <div id="grid">
+      <div id="section1">
+        <button>
+          <br> This appears <strong>1</strong> in source order.
+        </button>
+        <button>
+          <br> This appears <strong>2</strong> in source order.
+        </button>
+      </div>
+      <div id="section2">
+        <button>
+          <br> This appears <strong>3</strong> in source order.
+        </button>
+        <button>
+          <br> This appears <strong>4</strong> in source order.
+        </button>
+      </div>
+      <div id="section3">
+        <button>
+          <br> This appears <strong>5</strong> in source order.
+        </button>
+        <button>
+          <br> This appears <strong>6</strong> in source order.
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

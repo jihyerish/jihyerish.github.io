@@ -1,0 +1,72 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Saira');
+
+h1 {
+  text-align: center;
+  font-family: 'Saira', sans-serif;
+}
+h1:after {
+  background: #F67280;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 10px;
+}
+
+span {
+  display: block;
+  text-shadow: 1px 1px 1px white;
+}
+
+ul {
+  height: 100%;
+  padding: 0px;
+  background-color: white;
+  border: solid #ccc 3px;
+  padding: 0.5em;
+}
+
+button {
+  display: block;
+}
+
+li {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0.5em;
+}
+
+li:after {
+  clear: both;
+}
+
+#button_tmpl {
+  display: none;
+}
+
+#statusBox {
+  position: fixed;
+  bottom: 2em;
+  left: 10em;
+  right: 10em;
+  font-family: 'Saira', sans-serif;
+  font-size: 100%;
+  padding: 0.5em;
+  margin: auto auto;
+  background-color: #ff8;
+  border: 3px solid #cc5;
+  opacity: .9;
+  text-align: center;
+}
+
+#statusChange, #statusNum {
+	background-color: black;
+	color: white;
+	padding: 0.2em;
+  weight: 200px;
+}
+
+#statusNum {
+  display: inline-block;
+}

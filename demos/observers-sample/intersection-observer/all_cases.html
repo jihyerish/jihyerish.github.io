@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Focus Navigation Test</title>
+  </head>
+  <body>
+    <h1>Focusing the element with IntersectionObserver</h1>
+    <div id="container">
+      <div id="optionField">
+        <form>
+          <fieldset>
+            <legend>Option</legend>
+            <div>
+            	<span>display: </span>
+	            <select id="displayType" name=display>
+	              <option value="inline">inline</option>
+	  			  <option value="block" selected="selected">block</option>
+	            </select>
+            </div>            
+            <div>
+            	<span>Focus on : </span>
+
+	            <select id="selectElement" name="selectElement">
+	              <option value="1" selected="selected">1</option>
+	              <option value="2">2</option>
+	              <option value="3">3</option>
+	              <option value="4">4</option>
+	              <option value="5">5</option>
+	              <option value="6">6</option>
+	              <option value="7">7</option>
+	              <option value="8">8</option>
+	              <option value="9">9</option>
+	              <option value="10">10</option>
+	              <option value="11">11</option>
+	              <option value="12">12</option>
+	              <option value="13">13</option>
+	              <option value="14">14</option>
+	              <option value="15">15</option>
+	              <option value="16">16</option>
+	              <option value="17">17</option>
+	              <option value="18">18</option>
+	            </select>
+            </div>
+            <div>
+		         <span>(partially viewed element will be : </span>
+		         <select id="positionOptions" name="blockPosition">
+		                <option value="center" >center</option>
+		                <option value="end" >end</option>
+		                <option value="nearest" >nearest</option>
+		                <option value="start" selected="selected">start</option>
+		                <option value="none">non scrolling</option>
+		          </select>
+		          <span>)</span>
+		   </div>         
+          </fieldset>
+        </form>
+        <button id="manual">Action!</button>
+      </div>
+      <div id="scrollBox"></div>
+    </div>
+    <div id="statusBox">
+    	<p>Target Element is <span id="statusText">unknown</span></p>
+    	<p>( intersectionRatio === <span id="ratio">unknown</span> )</p>    
+    </div>
+  </body>
+  <script type="text/javascript" src="scrollWithIntersectionObserver.js"></script>
+</html>

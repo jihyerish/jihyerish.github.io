@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Grid List Sample</title>
+  </head>
+  <body>
+    <h1>Virtual Grid List Sample</h1>
+    <h3>Background</h3>
+    <p>
+      The input device of the smart TV is the remote controller. Focusing an element with the remote controller is based on pointing(<code>mouseover</code>) and pressing buttons(<code>onkeydown</code>).
+    </p>
+    <p>Element.focus() is used the UA may scroll the element into view. The result is reasonable when focusing based on <code>onkeydown</code>. But when focusing by <code>mouseover</code> the element, focus event also triggers the scroll behavior. In this case, it may bring too much scrolling. This behavior dosen't meet with the requirement of TV app developers and users and it isn't good UX for the smart TV.
+    </p>
+    <h3>Demo</h3>
+    <p>This demo is the grid list sample. An element in the grid list can be focused by pressing the keyboard (up, down, left, right buttons) or pointing with the mouse.</p>
+    <p>This shows no scrolling behavior when focusing by <code>mouseover</code>. If the option isn't checked, it also shows the result of the default scroll behavior triggered by Element.focus().</p>
+    <form>
+        <fieldset>
+          <legend>Option</legend>
+          <div>
+            <input type="checkbox" id="goodUX" name="interest" value="noscroll" checked>
+            <label for="coding">No scrolling when focusing by <code>mouseover</code></label>
+          </div>
+        </fieldset>
+    </form>
+    <div id=scroller>
+      <div class="wrapper">
+        <div class="box" tabindex="0">item 001</div>
+        <div class="box" tabindex="0">item 002</div>
+        <div class="box" tabindex="0">item 003</div>
+        <div class="box" tabindex="0">item 004</div>
+        <div class="box" tabindex="0">item 005</div>
+        <div class="box" tabindex="0">item 006</div>
+        <div class="box" tabindex="0">item 007</div>
+        <div class="box" tabindex="0">item 008</div>
+        <div class="box" tabindex="0">item 009</div>
+        <div class="box" tabindex="0">item 010</div>
+        <div class="box" tabindex="0">item 011</div>
+        <div class="box" tabindex="0">item 012</div>
+        <div class="box" tabindex="0">item 013</div>
+        <div class="box" tabindex="0">item 014</div>
+        <div class="box" tabindex="0">item 015</div>
+        <div class="box" tabindex="0">item 016</div>
+        <div class="box" tabindex="0">item 017</div>
+        <div class="box" tabindex="0">item 018</div>
+        <div class="box" tabindex="0">item 019</div>
+        <div class="box" tabindex="0">item 020</div>
+        <div class="box" tabindex="0">item 021</div>
+        <div class="box" tabindex="0">item 022</div>
+        <div class="box" tabindex="0">item 023</div>
+        <div class="box" tabindex="0">item 024</div>
+        <div class="box" tabindex="0">item 025</div>
+        <div class="box" tabindex="0">item 026</div>
+        <div class="box" tabindex="0">item 027</div>
+        <div class="box" tabindex="0">item 028</div>
+        <div class="box" tabindex="0">item 029</div>
+        <div class="box" tabindex="0">item 030</div>
+        <div class="box" tabindex="0">item 031</div>
+        <div class="box" tabindex="0">item 032</div>
+        <div class="box" tabindex="0">item 033</div>
+        <div class="box" tabindex="0">item 034</div>
+        <div class="box" tabindex="0">item 035</div>
+        <div class="box" tabindex="0">item 036</div>
+        <div class="box" tabindex="0">item 037</div>
+        <div class="box" tabindex="0">item 038</div>
+        <div class="box" tabindex="0">item 039</div>
+        <div class="box" tabindex="0">item 040</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="focusElement.js"></script>
+  </body>
+</html>
