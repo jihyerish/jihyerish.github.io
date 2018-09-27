@@ -20,6 +20,11 @@ body {
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
+
+img {
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -43,7 +48,7 @@ h1, h2, h3, h4, h5 {
   .content {
     flex-flow: column wrap;
   }
-  .subtitle {
+  .description__image {
     width: 100%;
   }
   .description {
@@ -57,9 +62,9 @@ h1, h2, h3, h4, h5 {
   }
 
   .content {
-    flex-flow: row wrap;
+    flex-flow: row;
   }
-  .subtitle {
+  .description__image {
     width: 40%;
   }
   .description {
@@ -73,9 +78,9 @@ h1, h2, h3, h4, h5 {
   }
 
   .content {
-    flex-flow: row wrap;
+    flex-flow: row;
   }
-  .subtitle {
+  .description__image {
     width: 30%;
   }
   .description {
@@ -84,7 +89,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .header {
-  background-color: #cb738d;
+  background-color: #d291bc;
   padding: 5%;
 }
 
@@ -95,13 +100,14 @@ h1, h2, h3, h4, h5 {
   margin: auto;
 }
 .header__title {
-  border: 3px solid #903e5a;
+  border: 3px solid #5f1854;
   border-radius: 5%;
   color: white;
+  padding: 5px;
 }
 
 .nav {
-  background-color: #efa5a9;
+  background-color: #fec8d8;
   padding: 0;
 }
 .nav__list {
@@ -122,18 +128,25 @@ h1, h2, h3, h4, h5 {
 
 .title {
   font-size: 16px;
+  color: #957dad;
 }
 
 .subtitle {
   font-size: 14px;
 }
 
+.description, .description__plain {
+  margin-inline-start: 1em;
+}
+
 .content {
   display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 .footer {
-  background-color: #efa5a9;
+  background-color: #fec8d8;
   text-align: center;
   max-width: 100%;
 }

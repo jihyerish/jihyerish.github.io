@@ -30,47 +30,107 @@
       <main>
           <section id="about">
             <h2 class="title">About</h2>
-            <div class="description">
+            <div class="description__plain">
               <ul>
-                <li class="description__item">
-                  <span>Born: 28th Jan, 1989</span>
-                </li>
-                <li class="description__item">
-                  <span>Nationality: South Korea</span>
-                </li>
+                <li><span>Born: 28th Jan, 1989</span></li>
+                <li><span>Nationality: South Korea</span></li>
               </ul>
             </div>
           </section>
 
           <section id="education">
             <h2 class="title">Education</h2>
-            <div class="content">
-              <h3 class="subtitle">B.S. Computer Science (2007 - 2011)</h3>
-              <div class="description">
-                <p>Ewha Womans University (South Korea)</p>
-              </div>
-              <h3 class="subtitle">M.S. Computer Science (2011 - 2013)</h3>
-              <div class="description">
-                <p>Korea Advanced Institute of Science and Technology (South Korea)</p>
-              </div>
+            <div class="description__plain">
+              <ul>
+                <li><span>M.S. Computer Science, KAIST (South Korea), 2011 - 2013</span></li>
+                <li><span>B.S. Computer Science, Ewha Womans University (South Korea), 2007 - 2011</span></li>
+              </ul>
             </div>
           </section>
 
           <section id="experience">
             <h2 class="title">Work Experience</h2>
-            <div class="content">
-              <h3 class="subtitle">Software Engineer (2013 - Present)</h3>
-              <div class="description">
-                <p>LG Electronics (South Korea)</p>
-              </div>
+            <div class="description__plain">
+              <ul>
+                <li><span>Software Engineer, LG Electronics (South Korea), 2013 - Present</span></li>
+              </ul>
             </div>
           </section>
 
           <section id="project">
             <h2 class="title">Project</h2>
             <div class="content">
-              <h3 class="subtitle">W3C CSS Round Display (2015 - 2016)</h3>
+              <div class="description__image">
+                <img src="img/spatial-navigation.png"></img>
+              </div>
               <div class="description">
+                <h3 class="subtitle">W3C Spatial Navigation specification (LGE, Oct 2017 - Present)
+</h3>
+                <ul>
+                  <li class="description__item">
+                    <span>Proposed and added new features to the spec as a co-editor</span>
+                  </li>
+                  <li class="description__item">
+                    <span>Addressed  issues related to the spec in the CSS Working Group meetings, WICG(Web Incubation Community Group) meetings</span>
+                  </li>
+                  <li class="description__item">
+                    <span>Implemented the polyfill about the spec, and several demos</span>
+                  </li>
+                </ul>
+                <div class="link">
+                  <span><a href="https://wicg.github.io/spatial-navigation/" target="_blank">[Spec]</a></span>
+                  <span><a href="https://wicg.github.io/spatial-navigation/demo/" target="_blank">[Demo]</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="description__image">
+                <img src="img/element-focus-preventscroll.png"></img>
+              </div>
+              <div class="description">
+                <h3 class="subtitle">Contributed to WHATWG HTML specification (LGE, Aug 2017 - Oct 2017)</h3>
+                <ul>
+                  <li class="description__item">
+                    <span>Proposed to add 'preventScroll' option to Element.focus()</span>
+                  </li>
+                  <li class="description__item">
+                    <span>Currently, this feature is supported in the latest version of Chrome, Firefox, and Edge browser</span>
+                  </li>
+                </ul>
+                <div class="link">
+                  <span><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" target="_blank">[Spec]</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="description__image">
+                <img src="img/motion-path.svg"></img>
+              </div>
+              <div class="description">
+                <h3 class="subtitle">W3C CSS Motion Path specification (LGE, Apr 2016 - Present)
+</h3>
+                <ul>
+                  <li class="description__item">
+                    <span>Added the new features to the CSS Motion Path Specification as a co-editor</span>
+                  </li>
+                  <li class="description__item">
+                    <span>Contributed to test suits of the spec</span>
+                  </li>
+                </ul>
+                <div class="link">
+                  <span><a href="https://www.w3.org/TR/motion-1/" target="_blank">[Spec]</a></span>
+                  <span><a href="https://googlechrome.github.io/samples/css-motion-path/" target="_blank">[Demo]</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="description__image">
+                <img src="img/cssrounddisplay-weatherapp.jpg"></img>
+              </div>
+              <div class="description">
+                <h3 class="subtitle">W3C CSS Round Display specification (LGE, Jun 2015 - Dec 2016)</h3>
                 <ul>
                   <li class="description__item">
                     <span>Proposed and edited CSS Round Display Specification as a co-editor</span>
@@ -79,32 +139,24 @@
                     <span>Implemented the polyfill about the spec, and several demos</span>
                   </li>
                 </ul>
-              </div>
-              <h3 class="subtitle">W3C CSS Motion Path (2016 - Present)</h3>
-              <div class="description">
-                <ul>
-                  <li class="description__item">
-                    <span>Added the new features to the CSS Motion Path Specification as a co-editor</span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="subtitle">Contributed to WHATWG HTML Specification (2017)</h3>
-              <div class="description">
-                <ul>
-                  <li class="description__item">
-                    <span>Proposed to add 'preventScroll' option to Element.focus()</span>
-                  </li>
-                </ul>
+                <div class="link">
+                  <span><a href="https://www.w3.org/TR/css-round-display-1/" target="_blank">[Spec]</a></span>
+                  <span><a href="https://www.w3.org/TR/motion-1/" target="_blank">[Demo]</a></span>
+                </div>
               </div>
             </div>
+            <div>
+
           </section>
 
           <section id="publication">
             <h2 class="title">Publication</h2>
-            <div class="content">
-              <h3 class="subtitle">AR Paint (ICEC, 2012)</h3>
-              <h3 class="subtitle">Efficient 3D content authoring framework based on mobile AR (VSMM, 2012)</h3>
-              <h3 class="subtitle">Signage Service Platform (TTA Journal, 2017)</h3>
+            <div class="description__plain">
+              <ul>
+                <li><span>Signage Service Platform (TTA Journal, 2017)</span></li>
+                <li><span>Efficient 3D content authoring framework based on mobile AR (VSMM, 2012)</span></li>
+                <li><span>AR Paint (ICEC, 2012)</span></li>
+              </ul>
             </div>
           </section>
         </main>
