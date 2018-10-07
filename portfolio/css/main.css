@@ -17,7 +17,11 @@ body {
   color: #424242;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -29,6 +33,7 @@ img {
   display: flex;
   flex-flow: row wrap;
 }
+
 .wrapper > * {
   padding: 10px;
   flex: 1 100%;
@@ -41,19 +46,31 @@ img {
 
   .nav__item {
     text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.3);
-    border-right: 1px solid rgba(0,0,0,0.1);
     width: 50%;
   }
 
   .content {
     flex-flow: column wrap;
   }
+
+  .content:after {
+    content: "";
+    display: block;
+    width: 80%;
+    border-bottom: 1px solid #bcbcbc;
+    margin: 20px auto;
+  }
+
   .description__image {
     width: 95%;
   }
+
   .description {
     width: 95%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 0.5em;
   }
 }
 
@@ -65,11 +82,17 @@ img {
   .content {
     flex-flow: row;
   }
+
   .description__image {
     width: 50%;
   }
+
   .description {
     width: 50%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 1.5em;
   }
 }
 
@@ -81,11 +104,17 @@ img {
   .content {
     flex-flow: row;
   }
+
   .description__image {
     width: 40%;
   }
+
   .description {
     width: 60%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 1.5em;
   }
 }
 
@@ -107,6 +136,7 @@ img {
   text-align: center;
   margin: auto;
 }
+
 .header__title {
   border: 3px solid #5f1854;
   border-radius: 5%;
@@ -134,8 +164,8 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .nav__item {
-  display: block;
   font-size: 14px;
   padding: 0.5em;
 }
@@ -153,14 +183,10 @@ img {
   font-size: 16px;
 }
 
-.description, .description__plain {
-  margin-inline-start: 1em;
-}
-
 .content {
   display: flex;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
 }
 
 .footer {
@@ -168,6 +194,7 @@ img {
   text-align: center;
   max-width: 100%;
 }
+
 .contact__list {
   display: flex;
   justify-content: center;
@@ -175,10 +202,11 @@ img {
   margin: 0;
   padding: 0;
 }
-.contect__item{
-  display: block;
+
+.contect__item {
   padding: 1em;
 }
+
 .contect_img {
   width: 25px;
 }
