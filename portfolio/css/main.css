@@ -13,7 +13,7 @@ nav, footer {
 
 body {
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 18px;
   color: #424242;
 }
 
@@ -51,14 +51,6 @@ img {
 
   .content {
     flex-flow: column wrap;
-  }
-
-  .content:after {
-    content: "";
-    display: block;
-    width: 80%;
-    border-bottom: 1px solid #bcbcbc;
-    margin: 20px auto;
   }
 
   .description__image {
@@ -148,7 +140,7 @@ img {
   position: relative;
   left: 0;
   top: 10%;
-  background-color: #fec8d8;
+  background-color: rgba(254, 200, 216, 0.9);
   padding: 0;
 }
 
@@ -166,7 +158,7 @@ img {
 }
 
 .nav__item {
-  font-size: 14px;
+  font-size: 16px;
   padding: 0.5em;
 }
 
@@ -187,6 +179,8 @@ img {
   display: flex;
   margin-block-start: 2em;
   margin-block-end: 2em;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bcbcbc;
 }
 
 .footer {
