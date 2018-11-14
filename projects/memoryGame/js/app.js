@@ -1,7 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
-
+let cardList = document.querySelectorAll('card');
 
 /*
  * Display the cards on the page
@@ -25,6 +25,7 @@ function shuffle(array) {
     return array;
 }
 
+shuffle(cardList);
 
 /*
  * set up the event listener for a card. If a card is clicked:
