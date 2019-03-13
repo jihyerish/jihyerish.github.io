@@ -1,0 +1,164 @@
+<!doctype html>
+<head>Paint Worklet</head>
+<style>
+.tabs {
+  --tab-multiplier: 1;
+  --tab-margin: 1px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.tabs--tab {
+  background: red;
+  border-image-outset: 30px;
+  border-image-slice: 0 fill;
+  border-image-source: paint(tab, middle);
+  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  font-size: 1em;
+  padding: .15em .25em;
+  position: relative;
+  margin: 0
+  padding: 0;
+}
+
+.tabs--tab:first-of-type {
+  border-image-source: paint(tab, left);
+  margin-right: var(--tab-margin);
+}
+
+.tabs--tab:last-of-type {
+  border-image-source: paint(tab, right);
+  margin-left: var(--tab-margin);
+}
+
+.tabs--tab:not(:first-of-type):not(:last-of-type) {
+  margin-left: var(--tab-margin);
+  margin-right: var(--tab-margin);
+}
+
+.tabs--tab:nth-of-type(2) {
+  background: orange;
+}
+
+.tabs--tab:nth-of-type(3) {
+  background: green;
+  color: white;
+}
+
+.tabs--tab:nth-of-type(4) {
+  background: blue;
+  color: white;
+}
+
+.tabs--tab button {
+  color: inherit;
+  text-decoration: none;
+  padding: inherit;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.tabs--tab[data-active='true'] {
+  z-index: 2;
+}
+
+.tabs--container {
+  position: relative;
+}
+
+.tabs--section {
+  height: 25vh;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+  padding: .25em 1em;
+  box-sizing: border-box;
+}
+
+.tabs--section[data-active='true'] {
+  z-index: 0;
+}
+
+#first {
+  background: red;
+}
+
+#second {
+  background: orange;
+}
+
+#third {
+  background: green;
+  color: white;
+}
+
+#fourth {
+  background: blue;
+  color: white;
+}
+</style>
+<body>
+  <ul class="tabs">
+    <li class="tabs--tab" data-active="true"><button for="first">First</button></li>
+    <li class="tabs--tab"><button for="second">Second</button></li>
+    <li class="tabs--tab"><button for="third">Third</button></li>
+    <li class="tabs--tab"><button for="fourth">Fourth</button></li>
+  </ul>
+  <div class="tabs--container">
+    <section class="tabs--section" data-active="true" id="first">
+      <p>The first section! Isn't this cool?</p>
+    </section>
+    <section class="tabs--section" id="second">
+      <p>The second section! Isn't this cool?</p>
+    </section>
+    <section class="tabs--section" id="third">
+      <p>The third section! Isn't this cool?</p>
+    </section>
+    <section class="tabs--section" id="fourth">
+      <p>The fourth section! Isn't this cool?</p>
+    </section>
+  </div>
+</body>
+<script>
+CSS.registerProperty({
+  name: '--tab-multiplier',
+  syntax: '<number>',
+  inherits: true,
+  initialValue: 1,
+});
+
+const buttons = document.querySelectorAll('.tabs--tab button');
+const sections = document.querySelectorAll('.tabs--section');
+
+for (const button of buttons) {
+  button.addEventListener('click', swap);
+}
+
+function swap(e) {
+  const target = e.target;
+  const targetFor = target.getAttribute('for');
+
+  // Set Active attribute on section
+  for (const section of sections) {
+    if (section.id === targetFor) {
+      section.setAttribute('data-active', true);
+    } else {
+      section.removeAttribute('data-active');
+    }
+  }
+
+  // Set Active attribute on tab
+  for (const button of buttons) {
+    if (button === target) {
+      button.closest('.tabs--tab').setAttribute('data-active', true);
+    } else {
+      button.closest('.tabs--tab').removeAttribute('data-active');
+    }
+  }
+};
+</script>
+</html>
