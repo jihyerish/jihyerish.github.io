@@ -13,10 +13,18 @@ h1:after {
   margin: 10px;
 }
 
+#container {
+  display: block;
+}
+
 #optionField {
   display: inline;
-  width: 100%;
-  margin: 10%;
+  margin: 20%;
+}
+
+#buttonField {
+  display: inline;
+  margin: 20%;
 }
 
 form {
@@ -37,14 +45,10 @@ form {
 
 #manual {
   display: inline;
-  width: 100px;
-  height: 50px;
 }
 
-#container {
-  width: 90%;
-  height: 90%;
-  margin: auto auto;
+#repeat {
+  display: inline;
 }
 
 nav {
@@ -61,8 +65,8 @@ button {
   font-size: 100%;
   border-radius: 1em;
   padding: 1em;
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 50px;
   margin: 20px;
   justify-content: center;
   font-family: 'Saira', sans-serif;
@@ -99,8 +103,6 @@ button {
 
 .box:hover,
 .box:focus {
-  background-color: #D80546;
-  box-shadow: inset 0 0 10px 10px #aaa;
   color: #fff;
-  outline: none;
+  outline: 5px solid #D80546;
 }

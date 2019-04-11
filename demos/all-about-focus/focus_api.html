@@ -39,12 +39,22 @@
             </div>
             <input type="checkbox" id="preventScroll">prevent scroll</input>
           </fieldset>
-        </form>
-        <button id="manual">Action!</button>
+        </form>        
       </div>
-      
+      <div id="buttonField">
+        <button id="manual">Focus</button>
+        <button id="repeat">Redundant Focus</button>
+      </div>      
       <div id="scrollBox"></div>
     </div>
   </body>
-  <script type="text/javascript" src="scrollAction.js"></script>
+  <script src="scrollAction.js"></script>
+  <script>
+    document.getElementById('repeat').addEventListener('click', () => {
+      const selectedBox = document.getElementById('selectElement').value;
+
+      document.getElementById(selectedBox).focus({preventScroll: true});
+      document.getElementById(selectedBox).focus({preventScroll: false});
+    });
+  </script>
 </html>
