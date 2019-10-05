@@ -1,0 +1,27 @@
+<html>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-rows: repeat(4, 100px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  </style>
+  <body>
+    <div class='header'>Image Gallery</div>
+    <div class='grid-container'></div>
+  </body>
+  <script>
+    let container = docuement.getElementByClass('grid-container');
+    
+    let images = new Image(100, 200);
+
+    for (let i = 0, tmp; i < albumNum; i++) {
+        tmp = new ImageSurface({ opacity: 0.5 });
+        tmp.img = new Image();
+        tmp.img.src = `src/albumcovers/${i + 1}.jpg`;
+        albumCovers.push(tmp);
+      }
+    myImage.src = 'picture.jpg';
+    document.body.appendChild(myImage);
+  </script>
+</html>
