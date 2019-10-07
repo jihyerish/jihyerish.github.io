@@ -8,24 +8,24 @@
   
   <body>
     <div class='header'>Image Gallery</div>
-    <div class='grid-container'></div>
+    <div id='grid-container'></div>
   </body>
 
   <script>
     
     window.addEventListener('load', () => {
 
-      const gridContainer = document.getElementsByClassName('grid-container');
+      let gridContainer = document.getElementById('grid-container');
       const filePath = getImages('sourceImages');
       
       const imageCount = 8;
       const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'
       ];
       for (let imageNum = 0; imageNum < imageCount; i++) {
-        let imageElm = document.createElement('img');
-        imageElm.setAttribute('src', 'sourceImages/'+fileName[imageNum]+'.jpg');
-        imageElm.setAttribute('class', 'grid-image');
-        gridContainer.appendChild(imageElm);
+        let image = document.createElement('img');
+        image.src = 'sourceImages/'+fileName[imageNum]+'.jpg';
+        image.setAttribute('class', 'grid-image');
+        gridContainer.appendChild(image);
       }
     });
   </script>
