@@ -7,23 +7,45 @@
   </head>
   
   <body>
-    <div class='header'>Image Gallery</div>
-    <div id='grid-container'></div>
+    <div id='title' class='header'>Image Gallery</div>
+    <div id='container' class='grid-layout'></div>
+    <div class='footer'>Footer
+    </div>
   </body>
 
   <script>
     
     window.addEventListener('load', () => {
 
-      let gridContainer = document.getElementById('grid-container');
+      let container = document.getElementById('container');
       
       const imageCount = 8;
       const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'
       ];
       for (let imageNum = 0; imageNum < imageCount; imageNum++) {
-        gridContainer.appendChild(createImageElement('sourceImages/'+fileName[imageNum]+'.jpg', 'grid-image'));
+        container.appendChild(createImageElement('sourceImages/'+fileName[imageNum]+'.jpg', 'grid-image'));
       }
     });
+    
+    document.addEventListener('click', e => {
+      if (container.className === 'grid-layout') {
+        let imageElements = document.getElementById('container').childNodes;
+        document.getElementById('title').style.visibility = 'hidden';
+        container.className = 'detail-layout';
+      
+        imageElements.forEach(image => {
+          if (image == e.Target) {
+            image.style.width = '100%';
+            image.style.height = '20%';
+          }
+          else {
+            image.style.display = 'none';
+          }
+        });
+      }
+    });
+    
+    // TODO: use get and set
     
     function createImageElement(src, class_name) {
       let image = document.createElement('img');
