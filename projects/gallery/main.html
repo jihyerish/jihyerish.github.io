@@ -9,7 +9,7 @@
   <body>
     <div id='title' class='header'>Image Gallery</div>
     <div id='container' class='grid-layout'></div>
-    <div class='footer'>Footer
+    <div id='tools' class='footer'>Footer
     </div>
   </body>
 
@@ -34,14 +34,27 @@
         container.className = 'detail-layout';
       
         imageElements.forEach(image => {
-          if (image == e.Target) {
-            image.style.width = '100%';
-            image.style.height = '20%';
+          if (image == e.target) {
+            image.style.objectFit = 'contain';
           }
           else {
             image.style.display = 'none';
           }
         });
+      }
+    });
+
+    document.addEventListener('mouseover', e => {
+      if (container.className === 'detail-layout') {
+        document.getElementById('title').style.visibility = 'visible';
+        document.getElementById('footer').style.visibility = 'visible';
+      }
+    });
+
+    document.addEventListener('touchstart', e => {
+      if (container.className === 'detail-layout') {
+        document.getElementById('title').style.visibility = 'visible';
+        document.getElementById('tools').style.visibility = 'visible';
       }
     });
     
