@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+}
+
 .grid-layout {
   display: grid;
   width: 90%;
@@ -10,19 +14,44 @@
 
 .detail-layout {
   display: block;
+  width: 100%;
+  height: 80%;
 }
 
 .header {
-  background-color: gray;
+  background-color: #E8E8E8;
   width: 100%;
+  height: 10%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > #text {
+  color: #303030;
+}
+
+.header > #closeButton {
+  display: none;
+  position: absolute;
+  right: 10px;
 }
 
 .footer {
- visibility: hidden;
- width: 100%;
- background-color: gray;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #303030;
+}
+
+.footer > .button {
+  object-fit: contain;
 }
 
 .grid-image {

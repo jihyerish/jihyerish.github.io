@@ -3,43 +3,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src='grid.js'></script>
+    <script src='setting.js'></script>
   </head>
   
   <body>
-    <div id='title' class='header'>Image Gallery</div>
+    <div id='title' class='header'>
+      <span id='text'>Image gallery</span>
+      <img id='closeButton' src='sourceIcons/ic_close.png'></img>
+    </div>
     <div id='container' class='grid-layout'></div>
-    <div id='tools' class='footer'>Footer
+    <div id='tools' class='footer'>
+      <img src='sourceIcons/ic_plus1.png'></img>
+      <img src='sourceIcons/ic_comment.png'></img>
+      <img src='sourceIcons/ic_add.png'></img>
+      <img src='sourceIcons/ic_share.png'></img>
     </div>
   </body>
 
   <script>
-    
-    window.addEventListener('load', () => {
+    const imageCount = 8;
+    const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'];
+    const dirName = 'sourceImages/'
+    const container = document.getElementById('container');
 
-      let container = document.getElementById('container');
-      
-      const imageCount = 8;
-      const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'
-      ];
+    window.addEventListener('load', () => {
       for (let imageNum = 0; imageNum < imageCount; imageNum++) {
-        container.appendChild(createImageElement('sourceImages/'+fileName[imageNum]+'.jpg', 'grid-image'));
+        container.appendChild(createImageElement(dirName+fileName[imageNum]+'.jpg', 'grid-image'));
       }
     });
     
     document.addEventListener('click', e => {
       if (container.className === 'grid-layout') {
-        let imageElements = document.getElementById('container').childNodes;
-        document.getElementById('title').style.visibility = 'hidden';
-        container.className = 'detail-layout';
-      
-        imageElements.forEach(image => {
-          if (image == e.target) {
-            image.style.objectFit = 'contain';
-          }
-          else {
-            image.style.display = 'none';
-          }
+        const imageElements = container.childNodes;
+
+        readyForDetailLayout(imageElements, e.target).then(function () {
+          container.className = 'detail-layout';
         });
       }
     });
@@ -47,7 +45,7 @@
     document.addEventListener('mouseover', e => {
       if (container.className === 'detail-layout') {
         document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('footer').style.visibility = 'visible';
+        document.getElementById('tools').style.visibility = 'visible';
       }
     });
 
@@ -57,6 +55,15 @@
         document.getElementById('tools').style.visibility = 'visible';
       }
     });
+
+    document.querySelector('#title > #closeButton').addEventListener('click', e => {
+      e.stopPropagation();
+      const imageElements = container.childNodes;
+      
+      readyForGridLayout(imageElements).then(function () {
+        container.className = 'grid-layout';
+      });
+    });
     
     // TODO: use get and set
     
@@ -65,6 +72,57 @@
       image.src = src;
       image.className = class_name;
       return image;
+    }
+
+    function readyForGridLayout(imageElements) {
+      document.body.style.backgroundColor = 'white';
+
+      const header = document.getElementById('title');
+      const headerTitle = document.querySelector('#title > #text');
+      const closeBtn = document.querySelector('#title > #closeButton');
+      closeBtn.style.display = 'none';
+      header.style.flexDirection = 'column';
+      header.style.backgroundColor = '#E8E8E8';
+      headerTitle.innerText = 'Image gallery';
+      headerTitle.style.color = '#303030';
+
+      document.getElementById('tools').style.visibility = 'hidden';
+
+      imageElements.forEach(image => {
+        image.style.display = 'block';
+        image.style.objectFit = 'cover';
+      });
+
+      return new Promise(function (resolve) {
+        resolve();
+      });
+    }
+
+    function readyForDetailLayout(imageElements, target) {
+      document.body.style.backgroundColor = 'black';
+
+      const header = document.getElementById('title');
+      const headerTitle = document.querySelector('#title > #text');
+      const closeBtn = document.querySelector('#title > #closeButton');
+      closeBtn.style.display = 'block';
+      header.style.visibility = 'hidden';
+      header.style.flexDirection = 'row';
+      header.style.backgroundColor = '#303030';
+      headerTitle.innerText = (target.src.split(dirName)[1]).split('.')[0];
+      headerTitle.style.color = '#E8E8E8';
+
+      imageElements.forEach(image => {
+        if (image == target) {
+          image.style.objectFit = 'contain';
+        }
+        else {
+          image.style.display = 'none';
+        }
+      });
+
+      return new Promise(function (resolve) {
+        resolve();
+      });
     }
   </script>
 </html>
