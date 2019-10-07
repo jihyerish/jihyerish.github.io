@@ -19,7 +19,8 @@
       const filePath = getImages('sourceImages');
       
       const imageCount = 8;
-      const fileName = {'air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'};
+      const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'
+      ];
       for (let imageNum = 0; imageNum < imageCount; i++) {
         let imageElm = document.createElement('img');
         imageElm.setAttribute('src', 'sourceImages/'+fileName[imageNum]+'.jpg');
