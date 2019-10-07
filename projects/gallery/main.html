@@ -9,14 +9,14 @@
   <body>
     <div id='title' class='header'>
       <span id='text'>Image gallery</span>
-      <img id='closeButton' src='sourceIcons/ic_close.png'></img>
+      <img id='closeButton' class='button' src='sourceIcons/ic_close.png'></img>
     </div>
     <div id='container' class='grid-layout'></div>
     <div id='tools' class='footer'>
-      <img src='sourceIcons/ic_plus1.png'></img>
-      <img src='sourceIcons/ic_comment.png'></img>
-      <img src='sourceIcons/ic_add.png'></img>
-      <img src='sourceIcons/ic_share.png'></img>
+      <img class='button' src='sourceIcons/ic_plus1.png'></img>
+      <img class='button' src='sourceIcons/ic_comment.png'></img>
+      <img class='button' src='sourceIcons/ic_add.png'></img>
+      <img class='button' src='sourceIcons/ic_share.png'></img>
     </div>
   </body>
 
@@ -45,14 +45,14 @@
     document.addEventListener('mouseover', e => {
       if (container.className === 'detail-layout') {
         document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('tools').style.visibility = 'visible';
+        document.getElementById('tools').style.display = 'flex';
       }
     });
 
     document.addEventListener('touchstart', e => {
       if (container.className === 'detail-layout') {
         document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('tools').style.visibility = 'visible';
+        document.getElementById('tools').style.display = 'flex';
       }
     });
 
@@ -86,7 +86,7 @@
       headerTitle.innerText = 'Image gallery';
       headerTitle.style.color = '#303030';
 
-      document.getElementById('tools').style.visibility = 'hidden';
+      document.getElementById('tools').style.display = 'none';
 
       imageElements.forEach(image => {
         image.style.display = 'block';
