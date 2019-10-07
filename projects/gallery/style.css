@@ -1,9 +1,20 @@
 #grid-container {
   display: grid;
-  grid-template-rows: repeat(4, 100px);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 2rem;
+  margin: 3rem;
+}
+
+.header {
+  background-color: gray;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
 }
 
 .grid-image {
-  width: 90%;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }

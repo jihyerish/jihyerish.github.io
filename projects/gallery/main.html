@@ -16,17 +16,20 @@
     window.addEventListener('load', () => {
 
       let gridContainer = document.getElementById('grid-container');
-      const filePath = getImages('sourceImages');
       
       const imageCount = 8;
       const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'
       ];
-      for (let imageNum = 0; imageNum < imageCount; i++) {
-        let image = document.createElement('img');
-        image.src = 'sourceImages/'+fileName[imageNum]+'.jpg';
-        image.setAttribute('class', 'grid-image');
-        gridContainer.appendChild(image);
+      for (let imageNum = 0; imageNum < imageCount; imageNum++) {
+        gridContainer.appendChild(createImageElement('sourceImages/'+fileName[imageNum]+'.jpg', 'grid-image'));
       }
     });
+    
+    function createImageElement(src, class_name) {
+      let image = document.createElement('img');
+      image.src = src;
+      image.className = class_name;
+      return image;
+    }
   </script>
 </html>
