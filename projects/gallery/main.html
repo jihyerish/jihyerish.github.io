@@ -42,6 +42,7 @@
     });
     
     document.addEventListener('click', e => {
+      e.stopPropagation();
       if (container.className === 'grid-layout') {
         const imageElements = container.childNodes;
 
@@ -59,10 +60,10 @@
       }
     });
 
-    document.addEventListener('click', e => {
+    document.addEventListener('touchmove', e => {
       if (container.className === 'detail-layout') {
-        document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('tools').style.display = 'flex';
+        document.getElementById('title').style.visibility = 'hidden';
+        document.getElementById('tools').style.display = 'none';
       }
     });
 
@@ -116,11 +117,12 @@
       const headerTitle = document.querySelector('#title > #text');
       const closeBtn = document.querySelector('#title > #closeButton');
       closeBtn.style.display = 'block';
-      header.style.visibility = 'hidden';
       header.style.flexDirection = 'row';
       header.style.backgroundColor = '#303030';
       headerTitle.innerText = (target.src.split(dirName)[1]).split('.')[0];
       headerTitle.style.color = '#E8E8E8';
+
+      document.getElementById('tools').style.display = 'flex';
 
       let targetIndex = null;
 
@@ -160,6 +162,9 @@
 
         if (handleGesture(imageElements, detailTargetIndex))
           headerTitle.innerText = (imageElements[detailTargetIndex].src.split(dirName)[1]).split('.')[0];
+
+        document.getElementById('title').style.visibility = 'visible';
+        document.getElementById('tools').style.display = 'flex';
       }
     }, false);
 
