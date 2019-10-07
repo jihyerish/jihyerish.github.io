@@ -27,6 +27,7 @@
     const container = document.getElementById('container');
     let detailTargetIndex = null;
 
+    // TODO: Fix lazy loading
     window.addEventListener('load', () => {
       for (let imageNum = 0; imageNum < imageCount; imageNum++) {
         container.appendChild(createImageElement(dirName+fileName[imageNum]+'.jpg', 'grid-image'));
@@ -68,6 +69,7 @@
     });
     
     // TODO: use get and set
+    // TODO: Modularization
     
     function createImageElement(src, class_name) {
       let image = document.createElement('img');
@@ -154,6 +156,7 @@
       }
     }, false);
 
+    // TODO: Using scroll-snap. More natural transition
     function handleGesture(imageList, targetIndex) {
       if (touchendX <= touchstartX) {
         // Swiped left: Previous image
