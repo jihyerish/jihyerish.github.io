@@ -25,6 +25,7 @@
     const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'];
     const dirName = 'sourceImages/'
     const container = document.getElementById('container');
+    let detailTargetIndex = null;
 
     window.addEventListener('load', () => {
       for (let imageNum = 0; imageNum < imageCount; imageNum++) {
@@ -36,8 +37,9 @@
       if (container.className === 'grid-layout') {
         const imageElements = container.childNodes;
 
-        readyForDetailLayout(imageElements, e.target).then(function () {
+        readyForDetailLayout(imageElements, e.target).then(function (index) {
           container.className = 'detail-layout';
+          detailTargetIndex = index;
         });
       }
     });
@@ -49,7 +51,7 @@
       }
     });
 
-    document.addEventListener('touchstart', e => {
+    document.addEventListener('click', e => {
       if (container.className === 'detail-layout') {
         document.getElementById('title').style.visibility = 'visible';
         document.getElementById('tools').style.display = 'flex';
@@ -111,9 +113,12 @@
       headerTitle.innerText = (target.src.split(dirName)[1]).split('.')[0];
       headerTitle.style.color = '#E8E8E8';
 
-      imageElements.forEach(image => {
+      let targetIndex = null;
+
+      imageElements.forEach((image, index) => {
         if (image == target) {
           image.style.objectFit = 'contain';
+          targetIndex = index;
         }
         else {
           image.style.display = 'none';
@@ -121,8 +126,62 @@
       });
 
       return new Promise(function (resolve) {
-        resolve();
+        resolve(targetIndex);
       });
+    }
+
+    // Move to anothor image in detailed view
+    let touchstartX = 0;
+    let touchstartY = 0;
+    let touchendX = 0;
+    let touchendY = 0;
+
+    container.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX;
+      touchstartY = e.changedTouches[0].screenY;
+    }, false);
+
+    container.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX;
+      touchendY = e.changedTouches[0].screenY;
+
+      if (container.className === 'detail-layout') {
+        const imageElements = container.childNodes;
+        const headerTitle = document.querySelector('#title > #text');
+
+        if (handleGesture(imageElements, detailTargetIndex))
+          headerTitle.innerText = (imageElements[detailTargetIndex].src.split(dirName)[1]).split('.')[0];
+      }
+    }, false);
+
+    function handleGesture(imageList, targetIndex) {
+      if (touchendX <= touchstartX) {
+        // Swiped left: Previous image
+        console.log('Swiped left');
+        if (targetIndex > 0) {
+          imageList[targetIndex].style.display = 'none';
+          detailTargetIndex = targetIndex - 1;
+
+          imageList[detailTargetIndex].style.objectFit = 'contain';
+          imageList[detailTargetIndex].style.display = 'block';
+          return true;
+        }
+      }
+
+      if (touchendX >= touchstartX) {
+        // Swiped right: Next image
+        console.log('Swiped right');
+        if (targetIndex < imageList.length - 1) {
+          imageList[targetIndex].style.display = 'none';
+          detailTargetIndex = targetIndex + 1;
+
+          imageList[detailTargetIndex].style.objectFit = 'contain';
+          imageList[detailTargetIndex].style.display = 'block';
+          return true;
+        }
+      }
+
+      return false;
     }
   </script>
 </html>
