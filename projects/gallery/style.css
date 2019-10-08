@@ -21,15 +21,23 @@ body {
 }
 
 .header {
-  background-color: #E8E8E8;
   width: 100%;
   height: 10%;
   text-align: center;
   font-size: 1.5em;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header-grid {
+  background-color: #E8E8E8;
+  flex-direction: column;
+}
+
+.header-detail {
+  background-color: #303030;
+  flex-direction: row;
 }
 
 .header > #text {

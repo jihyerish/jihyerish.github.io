@@ -8,7 +8,7 @@
   </head>
   
   <body>
-    <div id='title' class='header'>
+    <div id='title' class='header header-grid'>
       <span id='text'>Image gallery</span>
       <img id='closeButton' class='button' src='sourceIcons/ic_close.png'></img>
     </div>
@@ -26,19 +26,13 @@
     const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'];
     const dirName = 'sourceImages/'
     const container = document.getElementById('container');
+    const header = document.getElementById('title');
+    const footer = document.getElementById('tools');
     let detailTargetIndex = null;
 
     // TODO: Fix lazy loading
     window.addEventListener('load', () => {
-      for (let imageNum = 0; imageNum < imageCount; imageNum++) {
-        container.appendChild(createImageElement(dirName+fileName[imageNum]+'.jpg', 'grid-image'));
-
-        //var img2 = document.createElement('amp-img'); // Use DOM HTMLImageElement
-        //img2.src = dirName + fileName[imageNum] + '.jpg';
-        //img2.className = 'grid-image';
-        //img2.setAttribute('layout', 'fixed');
-        //container.appendChild(img2);
-      }
+      loadImages(container, dirName, fileName);      
     });
     
     document.addEventListener('click', e => {
@@ -46,7 +40,7 @@
       if (container.className === 'grid-layout') {
         const imageElements = container.childNodes;
 
-        readyForDetailLayout(imageElements, e.target).then(function (index) {
+        readyForDetailLayout(header, imageElements, footer, e.target).then(function (index) {
           container.className = 'detail-layout';
           detailTargetIndex = index;
         });
@@ -55,91 +49,26 @@
 
     document.addEventListener('mouseover', e => {
       if (container.className === 'detail-layout') {
-        document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('tools').style.display = 'flex';
+        header.style.visibility = 'visible';
+        footer.style.display = 'flex';
       }
     });
 
     document.addEventListener('touchmove', e => {
       if (container.className === 'detail-layout') {
-        document.getElementById('title').style.visibility = 'hidden';
-        document.getElementById('tools').style.display = 'none';
+        header.style.visibility = 'hidden';
+        footer.style.display = 'none';
       }
     });
 
-    document.querySelector('#title > #closeButton').addEventListener('click', e => {
+    container.querySelector('#title > #closeButton').addEventListener('click', e => {
       e.stopPropagation();
       const imageElements = container.childNodes;
       
-      readyForGridLayout(imageElements).then(function () {
+      readyForGridLayout(header, imageElements, footer).then(function () {
         container.className = 'grid-layout';
       });
     });
-    
-    // TODO: use get and set
-    // TODO: Modularization
-    
-    function createImageElement(src, class_name) {
-      let image = document.createElement('img');
-      image.src = src;
-      image.className = class_name;
-      return image;
-    }
-
-    function readyForGridLayout(imageElements) {
-      document.body.style.backgroundColor = 'white';
-
-      const header = document.getElementById('title');
-      const headerTitle = document.querySelector('#title > #text');
-      const closeBtn = document.querySelector('#title > #closeButton');
-      closeBtn.style.display = 'none';
-      header.style.flexDirection = 'column';
-      header.style.backgroundColor = '#E8E8E8';
-      headerTitle.innerText = 'Image gallery';
-      headerTitle.style.color = '#303030';
-
-      document.getElementById('tools').style.display = 'none';
-
-      imageElements.forEach(image => {
-        image.style.display = 'block';
-        image.style.objectFit = 'cover';
-      });
-
-      return new Promise(function (resolve) {
-        resolve();
-      });
-    }
-
-    function readyForDetailLayout(imageElements, target) {
-      document.body.style.backgroundColor = 'black';
-
-      const header = document.getElementById('title');
-      const headerTitle = document.querySelector('#title > #text');
-      const closeBtn = document.querySelector('#title > #closeButton');
-      closeBtn.style.display = 'block';
-      header.style.flexDirection = 'row';
-      header.style.backgroundColor = '#303030';
-      headerTitle.innerText = (target.src.split(dirName)[1]).split('.')[0];
-      headerTitle.style.color = '#E8E8E8';
-
-      document.getElementById('tools').style.display = 'flex';
-
-      let targetIndex = null;
-
-      imageElements.forEach((image, index) => {
-        if (image == target) {
-          image.style.objectFit = 'contain';
-          targetIndex = index;
-        }
-        else {
-          image.style.display = 'none';
-        }
-      });
-
-      return new Promise(function (resolve) {
-        resolve(targetIndex);
-      });
-    }
 
     // Move to anothor image in detailed view
     let touchstartX = 0;
@@ -158,45 +87,15 @@
 
       if (container.className === 'detail-layout') {
         const imageElements = container.childNodes;
-        const headerTitle = document.querySelector('#title > #text');
+        const headerTitle = header.querySelector('#text');
 
         if (handleGesture(imageElements, detailTargetIndex))
           headerTitle.innerText = (imageElements[detailTargetIndex].src.split(dirName)[1]).split('.')[0];
 
-        document.getElementById('title').style.visibility = 'visible';
-        document.getElementById('tools').style.display = 'flex';
+        header.style.visibility = 'visible';
+        footer.style.display = 'flex';
       }
     }, false);
 
-    // TODO: Using scroll-snap. More natural transition
-    function handleGesture(imageList, targetIndex) {
-      if (touchendX <= touchstartX) {
-        // Swiped left: Previous image
-        console.log('Swiped left');
-        if (targetIndex > 0) {
-          imageList[targetIndex].style.display = 'none';
-          detailTargetIndex = targetIndex - 1;
-
-          imageList[detailTargetIndex].style.objectFit = 'contain';
-          imageList[detailTargetIndex].style.display = 'block';
-          return true;
-        }
-      }
-
-      if (touchendX >= touchstartX) {
-        // Swiped right: Next image
-        console.log('Swiped right');
-        if (targetIndex < imageList.length - 1) {
-          imageList[targetIndex].style.display = 'none';
-          detailTargetIndex = targetIndex + 1;
-
-          imageList[detailTargetIndex].style.objectFit = 'contain';
-          imageList[detailTargetIndex].style.display = 'block';
-          return true;
-        }
-      }
-
-      return false;
-    }
   </script>
 </html>
