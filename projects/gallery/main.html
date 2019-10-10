@@ -120,9 +120,9 @@
         const headerTitle = header.querySelector('#text');
         const updatedIndex = handleGesture(imageList, detailTargetIndex, touchstart, touchend);
        
-        if (updatedIndex => 0) {
-          detailTargetIndex = updatedIndex;          
-        }
+        if (updatedIndex => 0)
+          detailTargetIndex = updatedIndex;
+
         headerTitle.innerText = getFileName(imageList[detailTargetIndex]);
         header.style.visibility = 'visible';
         footer.style.display = 'flex';
