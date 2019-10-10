@@ -24,6 +24,7 @@
   <script>
     const imageCount = 8;
     const fileName = ['air', 'desks', 'hive', 'logo', 'lounge', 'lounge2', 'mountainview', 'racecar'];
+    var imageList = null;
     const dirName = 'sourceImages/'
     const container = document.getElementById('container');
     const header = document.getElementById('title');
@@ -32,16 +33,15 @@
 
     // TODO: Fix lazy loading
     window.addEventListener('load', () => {
-      loadImages(container, dirName, fileName);      
+      loadImages(container, dirName, fileName).then(function () {
+        imageList = container.childNodes;
+      });      
     });
     
     document.addEventListener('click', e => {
       e.stopPropagation();
       if (container.className === 'grid-layout') {
-        const imageElements = container.childNodes;
-
-        readyForDetailLayout(header, imageElements, footer, e.target).then(function (index) {
-          container.className = 'detail-layout';
+        readyForDetailLayout(header, container, imageList, footer, e.target).then(function (index) {
           detailTargetIndex = index;
         });
       }
@@ -54,44 +54,76 @@
       }
     });
 
-    document.addEventListener('touchmove', e => {
-      if (container.className === 'detail-layout') {
-        header.style.visibility = 'hidden';
-        footer.style.display = 'none';
-      }
-    });
-
     document.querySelector('#title > #closeButton').addEventListener('click', e => {
       e.stopPropagation();
-      const imageElements = container.childNodes;
-      
-      readyForGridLayout(header, imageElements, footer).then(function () {
+      readyForGridLayout(header, imageList, footer).then(function () {
         container.className = 'grid-layout';
       });
     });
 
     // Move to anothor image in detailed view
-    let touchstartX = 0;
-    let touchstartY = 0;
-    let touchendX = 0;
-    let touchendY = 0;
+    let touchstart = {
+      x: 0,
+      y: 0
+    };
+    let touchnow = {
+      x: 0,
+      y: 0
+    };
+    let touchend = {
+      x: 0,
+      y: 0
+    };
 
     container.addEventListener('touchstart', e => {
-      touchstartX = e.changedTouches[0].screenX;
-      touchstartY = e.changedTouches[0].screenY;
+      if (container.className === 'detail-layout') {
+        touchstart.x = e.changedTouches[0].screenX;
+        touchstart.y = e.changedTouches[0].screenY;
+      }
     }, false);
 
+    container.addEventListener('touchmove', e => {
+      if (container.className === 'detail-layout') {
+        touchnow.x = e.changedTouches[0].screenX;
+        touchnow.y = e.changedTouches[0].screenY;
+
+        header.style.visibility = 'hidden';
+        footer.style.display = 'none';
+
+        if (touchnow.x < touchstart.x) {
+          // Swiped left: Next image
+          console.log('Swiped left');
+          if (detailTargetIndex < imageList.length - 1) {
+            let diffPos = Math.abs(touchnow.x - touchstart.x);
+            imageList[detailTargetIndex].style.transform = `translateX(${-diffPos}px)`;
+            imageList[detailTargetIndex+1].style.transform = `translateX(${-diffPos}px)`;
+          }
+        }
+
+        if (touchnow.x > touchstart.x) {
+          // Swiped right: Previous image
+          console.log('Swiped right');
+          if (detailTargetIndex >= 1) {
+            let diffPos = Math.abs(touchnow.x - touchstart.x);
+            imageList[detailTargetIndex].style.transform = `translateX(${diffPos}px)`;
+            imageList[detailTargetIndex-1].style.transform = `translateX(${diffPos}px)`;
+          }
+        }
+      }
+    });
+
     container.addEventListener('touchend', e => {
-      touchendX = e.changedTouches[0].screenX;
-      touchendY = e.changedTouches[0].screenY;
+      touchend.x = e.changedTouches[0].screenX;
+      touchend.y = e.changedTouches[0].screenY;
 
       if (container.className === 'detail-layout') {
-        const imageElements = container.childNodes;
         const headerTitle = header.querySelector('#text');
-
-        if (handleGesture(imageElements, detailTargetIndex))
-          headerTitle.innerText = (imageElements[detailTargetIndex].src.split(dirName)[1]).split('.')[0];
-
+        const updatedIndex = handleGesture(imageList, detailTargetIndex, touchstart, touchend);
+       
+        if (updatedIndex => 0) {
+          detailTargetIndex = updatedIndex;
+          headerTitle.innerText = getFileName(imageList[detailTargetIndex]);
+        }
         header.style.visibility = 'visible';
         footer.style.display = 'flex';
       }
