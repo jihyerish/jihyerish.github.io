@@ -39,7 +39,6 @@ function createImageElement(src, class_name) {
     return image;
 }
 
-// TODO: Using scroll-snap. More natural transition
 function handleGesture(imageList, targetIndex, startPos, endPos) {
   
   if (endPos.x < startPos.x) {
@@ -54,7 +53,7 @@ function handleGesture(imageList, targetIndex, startPos, endPos) {
       targetIndex++;
 
       imageList[targetIndex - 1].style.display = 'block';
-      imageList[targetIndex - 1].style.left = `${-window.innerWidth}px`;
+      imageList[targetIndex - 1].style.left = `${-window.screen.width}px`;
       imageList[targetIndex - 1].style.transform = 'translateX(0)';        
 
       imageList[targetIndex].style.left = '0px';
@@ -62,7 +61,7 @@ function handleGesture(imageList, targetIndex, startPos, endPos) {
 
       if (targetIndex + 1 <= imageList.length - 1) {
         imageList[targetIndex + 1].style.display = 'block';
-        imageList[targetIndex + 1].style.left = `${window.innerWidth}px`;
+        imageList[targetIndex + 1].style.left = `${window.screen.width}px`;
         imageList[targetIndex + 1].style.transform = 'translateX(0)'; 
       }
 
@@ -83,7 +82,7 @@ function handleGesture(imageList, targetIndex, startPos, endPos) {
 
       if (targetIndex >= 1) {
         imageList[targetIndex - 1].style.display = 'block';
-        imageList[targetIndex - 1].style.left = `${-window.innerWidth}px`;
+        imageList[targetIndex - 1].style.left = `${-window.screen.width}px`;
         imageList[targetIndex - 1].style.transform = 'translateX(0)';     
       }   
 
@@ -91,7 +90,7 @@ function handleGesture(imageList, targetIndex, startPos, endPos) {
       imageList[targetIndex].style.transform = 'translateX(0)';
       
       imageList[targetIndex + 1].style.display = 'block';
-      imageList[targetIndex + 1].style.left = `${window.innerWidth}px`;
+      imageList[targetIndex + 1].style.left = `${window.screen.width}px`;
       imageList[targetIndex + 1].style.transform = 'translateX(0)';
       
       return targetIndex;
@@ -152,12 +151,12 @@ function readyForDetailLayout(header, container, imageElements, footer, target) 
 
     if (targetIndex >= 1) {
       imageElements[targetIndex - 1].style.display = 'block';
-      imageElements[targetIndex - 1].style.left = `${-window.innerWidth}px`;
+      imageElements[targetIndex - 1].style.left = `${-window.screen.width}px`;
     }
 
     if (targetIndex < imageElements.length - 1) {
       imageElements[targetIndex + 1].style.display = 'block';
-      imageElements[targetIndex + 1].style.left = `${window.innerWidth}px`;
+      imageElements[targetIndex + 1].style.left = `${window.screen.width}px`;
     }
 
     return new Promise(function (resolve) {
