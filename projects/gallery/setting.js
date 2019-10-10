@@ -115,6 +115,7 @@ function readyForGridLayout(header, imageElements, footer) {
 
     imageElements.forEach(image => {
       image.className = 'grid-image';
+      image.style.display = 'block';
     });
 
     return new Promise(function (resolve) {
