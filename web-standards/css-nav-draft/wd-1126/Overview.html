@@ -4,15 +4,11 @@
   <title>CSS Spatial Navigation Level 1</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="exploring" name="csswg-work-status">
-  <meta content="ED" name="w3c-status">
+  <meta content="WD" name="w3c-status">
   <meta content="This specification defines a general model for navigating the focus using the arrow keys,      as well as related CSS, JavaScript features and Events." name="abstract">
   <link href="../default.css" rel="stylesheet" type="text/css">
   <link href="../csslogo.ico" rel="shortcut icon" type="image/x-icon">
-<style>
-  body {
-    background: url("https://www.w3.org/StyleSheets/TR/logo-ED") top left no-repeat;
-  }
-  </style>
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD" rel="stylesheet" type="text/css">
   <meta content="Bikeshed version 83d3ceadc5400c8422976bbcbe49615aace9cf1e" name="generator">
   <link href="https://www.w3.org/TR/css-nav-1/" rel="canonical">
 <style>
@@ -316,28 +312,27 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">CSS Spatial Navigation Level 1</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Editor’s Draft, <time class="dt-updated" datetime="2019-11-25">25 November 2019</time></span></h2>
-   <details>
-    <summary>Specification Metadata</summary>
-    <div data-fill-with="spec-metadata">
-     <dl>
-      <dt>This version:
-      <dd><a class="u-url" href="https://www.w3.org/TR/2019/WD-css-nav-1-20191126/">https://www.w3.org/TR/2019/WD-css-nav-1-20191126/</a>
-      <dt>Latest published version:
-      <dd><a href="https://www.w3.org/TR/css-nav-1/">https://www.w3.org/TR/css-nav-1/</a>
-      <dt>Previous Versions:
-      <dd><a href="https://www.w3.org/TR/2019/WD-css-nav-1-20190423/" rel="prev">https://www.w3.org/TR/2019/WD-css-nav-1-20190423/</a>
-      <dt>Issue Tracking:
-      <dd><a href="#issues-index">Inline In Spec</a>
-      <dd><a href="https://github.com/w3c/csswg-drafts/labels/css-nav-1">GitHub Issues</a>
-      <dt class="editor">Editors:
-      <dd class="editor p-author h-card vcard" data-editor-id="79168"><a class="p-name fn u-email email" href="mailto:jh.hong@lge.com">Jihye Hong</a> (<span class="p-org org">LG Electronics</span>)
-      <dd class="editor p-author h-card vcard" data-editor-id="43241"><a class="p-name fn u-url url" href="https://florian.rivoal.net">Florian Rivoal</a> (<span class="p-org org">Invited Expert</span>)
-      <dt>Suggest an Edit for this Spec:
-      <dd><a href="https://github.com/w3c/csswg-drafts/blob/master/css-nav-1/Overview.bs">GitHub Editor</a>
-     </dl>
-    </div>
-   </details>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2019-11-25">25 November 2019</time></span></h2>
+   <div data-fill-with="spec-metadata">
+    <dl>
+     <dt>This version:
+     <dd><a class="u-url" href="https://www.w3.org/TR/2019/WD-css-nav-1-20191125/">https://www.w3.org/TR/2019/WD-css-nav-1-20191125/</a>
+     <dt>Latest published version:
+     <dd><a href="https://www.w3.org/TR/css-nav-1/">https://www.w3.org/TR/css-nav-1/</a>
+     <dt>Editor's Draft:
+     <dd><a href="https://drafts.csswg.org/css-nav-1/">https://drafts.csswg.org/css-nav-1/</a>
+     <dt>Previous Versions:
+     <dd><a href="https://www.w3.org/TR/2019/WD-css-nav-1-20190423/" rel="prev">https://www.w3.org/TR/2019/WD-css-nav-1-20190423/</a>
+     <dt>Issue Tracking:
+     <dd><a href="#issues-index">Inline In Spec</a>
+     <dd><a href="https://github.com/w3c/csswg-drafts/labels/css-nav-1">GitHub Issues</a>
+     <dt class="editor">Editors:
+     <dd class="editor p-author h-card vcard" data-editor-id="79168"><a class="p-name fn u-email email" href="mailto:jh.hong@lge.com">Jihye Hong</a> (<span class="p-org org">LG Electronics</span>)
+     <dd class="editor p-author h-card vcard" data-editor-id="43241"><a class="p-name fn u-url url" href="https://florian.rivoal.net">Florian Rivoal</a> (<span class="p-org org">Invited Expert</span>)
+     <dt>Suggest an Edit for this Spec:
+     <dd><a href="https://github.com/w3c/csswg-drafts/blob/master/css-nav-1/Overview.bs">GitHub Editor</a>
+    </dl>
+   </div>
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2019 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
@@ -349,27 +344,34 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     as well as related CSS, JavaScript features and Events.</p>
     <a href="https://www.w3.org/TR/CSS/">CSS</a> is a language for describing the rendering of structured documents
 (such as HTML and XML)
-on screen, on paper, etc.
+on screen, on paper, etc. 
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p> This is a public copy of the editors’ draft.
-	It is provided for discussion only and may change at any moment.
-	Its publication here does not imply endorsement of its contents by W3C.
-	Don’t cite this document other than as work in progress. </p>
-   <p> <a href="https://github.com/w3c/csswg-drafts/issues">GitHub Issues</a> are preferred for discussion of this specification.
-	When filing an issue, please put the text “css-nav” in the title,
-	preferably like this:
-	“[css-nav] <i data-lt>…summary of comment…</i>”.
-	All issues and comments are <a href="https://lists.w3.org/Archives/Public/public-css-archive/">archived</a>,
-	and there is also a <a href="https://lists.w3.org/Archives/Public/www-style/">historical archive</a>. </p>
-   <p> This document was produced by the <a href="https://www.w3.org/Style/CSS/">CSS Working Group</a>. </p>
-   <p> This document was produced by a group operating under
-	the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
-	W3C maintains a <a href="https://www.w3.org/2004/01/pp-impl/32061/status" rel="disclosure">public list of any patent disclosures</a> made in connection with the deliverables of the group;
-	that page also includes instructions for disclosing a patent.
-	An individual who has actual knowledge of a patent which the individual believes contains <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>. </p>
-   <p> This document is governed by the <a href="https://www.w3.org/2019/Process-20190301/" id="w3c_process_revision">1 March 2019 W3C Process Document</a>. </p>
+   <p><em>This section describes the status of this document at the time of
+   its publication. Other documents may supersede this document. A list of
+   current W3C publications and the latest revision of this technical report
+   can be found in the <a href="https://www.w3.org/TR/">W3C technical reports
+   index at https://www.w3.org/TR/.</a></em> </p>
+   <p>Publication as a Working Draft does not imply endorsement by the W3C
+   Membership. This is a draft document and may be updated, replaced or
+   obsoleted by other documents at any time. It is inappropriate to cite this
+   document as other than work in progress. </p>
+   <p><a href="https://github.com/w3c/csswg-drafts/issues">GitHub Issues</a> are preferred for discussion of this specification.
+    When filing an issue, please put the text “css-nav” in the title,
+    preferably like this:
+    “[css-nav] <i data-lt>…summary of comment…</i>”.
+    All issues and comments are <a href="https://lists.w3.org/Archives/Public/public-css-archive/">archived</a>,
+    and there is also a <a href="https://lists.w3.org/Archives/Public/www-style/">historical archive</a>. </p>
+   <p>This document was produced by the <a href="https://www.w3.org/Style/CSS/">CSS Working Group</a>. </p>
+   <p>This document was produced by a group operating under the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+   W3C maintains a <a href="https://www.w3.org/2004/01/pp-impl/32061/status" rel="disclosure">public list of any patent disclosures</a> made in
+   connection with the deliverables of the group; that page also includes
+   instructions for disclosing a patent. An individual who has actual
+   knowledge of a patent which the individual believes contains <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential
+   Claim(s)</a> must disclose the information in accordance with <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section
+   6 of the W3C Patent Policy</a>.</p>
+   <p>This document is governed by the <a href="https://www.w3.org/2019/Process-20190301/" id="w3c_process_revision">1 March 2019 W3C Process Document</a>.</p>
    <p></p>
   </div>
   <div data-fill-with="at-risk">
@@ -466,13 +468,13 @@ This is only meant as a reading aid,
 the specification remains the full document.</p>
    <input id="api-check" type="checkbox">
    <label for="api-check">Hide JavaScript APIs, including events</label>
-   <br>
+   <br> 
    <input id="cssapi-check" type="checkbox">
    <label for="cssapi-check">Hide CSS properties that enable selecting behavior variants, and related information</label>
-   <br>
+   <br> 
    <input id="verbose-check" type="checkbox">
    <label for="verbose-check">Hide informative sections that explain and summarize normative sections without adding more information</label>
-   <br>
+   <br> 
    <h2 class="non-normative heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content"> Introduction</span><a class="self-link" href="#intro"></a></h2>
    <p><em>This section is not normative.</em></p>
    <p>Historically, most browsers have not offered features to let the user move the focus directionally.
@@ -487,7 +489,7 @@ The figure below represents a photo gallery arranged in a grid layout.
 If the user presses the <code class="key">Tab</code> key to move focus around the images,
 they need to press the key many times to reach the desired image element.</p>
    <figure>
-     <img alt="When elements are laid out in a grid pattern, spatial navigation makes it much easier to predict and control where focus should move to." src="images/gallery-app.png" style="width: 500px;">
+     <img alt="When elements are laid out in a grid pattern, spatial navigation makes it much easier to predict and control where focus should move to." src="images/gallery-app.png" style="width: 500px;"> 
     <figcaption>Photo gallery application example using a grid layout</figcaption>
    </figure>
    <p>Also, <a data-link-type="dfn" href="#spatial-navigation" id="ref-for-spatial-navigation①">spatial navigation</a> moves the focus to the predictable element for users
@@ -568,7 +570,7 @@ These enable the author to prevent the upcoming action
 (by calling <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-preventdefault" id="ref-for-dom-event-preventdefault">preventDefault()</a></code>),
 and if desired to provide an alternate action,
 such as using the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" id="ref-for-dom-focus">focus()</a></code> method on a different
-element of the author’s choosing.
+element of the author’s choosing. 
      <p>To help the author write such alternate actions,
 and as part of exposing underlying platform primitives as per the <a href="https://github.com/extensibleweb/manifesto">Extensible Web</a> principles,
 this specification also defines JavaScript APIs
@@ -581,19 +583,19 @@ and <a href="#declarative">§ 9 Controlling spatial navigation through declara
     arranged in a scrollable element
     would be navigated when using spatial navigation.
     For the sake of keeping the description simple,
-    this example assumes a User Agent where spatial navigation is triggered using arrow keys.
+    this example assumes a User Agent where spatial navigation is triggered using arrow keys. 
      <figure>
-       <img alt src="images/spatnav-scroll-visible-1.png" style="width: 200px;"> <img alt src="images/spatnav-scroll-visible-2.png" style="width: 200px;">
+       <img alt src="images/spatnav-scroll-visible-1.png" style="width: 200px;"> <img alt src="images/spatnav-scroll-visible-2.png" style="width: 200px;"> 
       <figcaption>Moving focus to the visible element in the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers⑤">spatial navigation container</a>.</figcaption>
      </figure>
      <p>On the left of figure 2, "Box 2" is focused.
     Pressing the <code class="key">ArrowDown</code> key moves the focus to
-    "Box 3" without scrolling because "Box 3" is visible in the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scrollport" id="ref-for-scrollport">scrollport</a> of the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers⑥">spatial navigation container</a>.</p>
+    "Box 3" without scrolling because "Box 3" is visible in the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scrollport" id="ref-for-scrollport">scrollport</a> of the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers⑥">spatial navigation container</a>.</p>
      <figure>
-       <img alt src="images/spatnav-scroll-invisible-1.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-2.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-3.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-4.png" style="width: 160px;">
+       <img alt src="images/spatnav-scroll-invisible-1.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-2.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-3.png" style="width: 160px;"> <img alt src="images/spatnav-scroll-invisible-4.png" style="width: 160px;"> 
       <figcaption>Moving focus to the hidden element in the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers⑦">spatial navigation container</a>.</figcaption>
      </figure>
-     <p>On the first of figure 3, under "Box 3", there isn’t any visible element in the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scrollport" id="ref-for-scrollport①">scrollport</a>.
+     <p>On the first of figure 3, under "Box 3", there isn’t any visible element in the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scrollport" id="ref-for-scrollport①">scrollport</a>.
     Therefore, the effect of pressing the <code class="key">ArrowDown</code> is to scroll down, as shown in the second.
     The next press of the <code class="key">ArrowDown</code> key makes "Box 4" come into the <span id="ref-for-scrollport②">scrollport</span>,
     and the focus will move to it when there is additional pressing the <code class="key">ArrowDown</code>, as the fourth.</p>
@@ -656,7 +658,7 @@ the event must be fired prior to running the <a data-link-type="dfn" href="#spat
     with the key set to one of <code class="key">ArrowDown</code>, <code class="key">ArrowLeft</code>, <code class="key">ArrowRight</code>,
     or <code class="key">ArrowUp</code>,
     followed if not canceled by running the <a data-link-type="dfn" href="#spatial-navigation-steps" id="ref-for-spatial-navigation-steps②">spatial navigation steps</a><span class="api">,
-    including firing the relevant <code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent">NavigationEvent</a></code>s</span>.
+    including firing the relevant <code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent">NavigationEvent</a></code>s</span>. 
       <p>A User Agent on a desktop computer that triggers spatial navigation
     using the arrow keys of the keyboard
     would follow the same sequence.</p>
@@ -726,7 +728,7 @@ that does not depend on vendor specific UI conventions.</p>
 </pre>
     <div class="algorithm" data-algorithm="windowNavigate steps">
       When the <dfn class="dfn-paneled idl-code" data-dfn-for="Window" data-dfn-type="method" data-export id="dom-window-navigate"><code>navigate(dir)</code></dfn> method is called,
-the User Agent must run the following step:
+the User Agent must run the following step: 
      <ul>
       <li data-md>
        <p>If direction <var>dir</var> is <code>"up"</code>, <code>"down"</code>, <code>"left"</code>, or <code>"right"</code>,
@@ -782,7 +784,7 @@ the nearest <span id="ref-for-spatial-navigation-containers①①">spatial navig
       <dd data-md>
        <ol>
         <li data-md>
-         <p>Let <var>visibleOnly</var> be <code>false</code> if <var>option</var> is present and its value is equal to <code><a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-cascade-4/#propdef-all" id="ref-for-propdef-all">all</a></code>,
+         <p>Let <var>visibleOnly</var> be <code>false</code> if <var>option</var> is present and its value is equal to <code><a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-cascade-4/#propdef-all" id="ref-for-propdef-all">all</a></code>,
 or <code>true</code> otherwise.</p>
         <li data-md>
          <p>Let <var>areas</var> be the result of <a data-link-type="dfn" href="#find-focusable-areas" id="ref-for-find-focusable-areas">finding focusable areas</a> within the element with <var>visibleOnly</var> as argument.</p>
@@ -795,7 +797,7 @@ or <code>true</code> otherwise.</p>
      <a class="self-link" href="#focusAreas-visible"></a> The following code shows how to get all the visible focusable elements in the current page using <code class="idl"><a data-link-type="idl" href="#dom-element-focusableareas" id="ref-for-dom-element-focusableareas③">focusableAreas()</a></code>.
     If the method finds a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers①②">spatial navigation container</a>, it recursively finds focusable areas inside it.
     Because the value of the <code class="idl"><a data-link-type="idl" href="#dom-focusableareasoption-mode" id="ref-for-dom-focusableareasoption-mode">mode</a></code> attribute in this method is <code>visible</code>,
-    the focusable elements which aren’t inside the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scrollport" id="ref-for-scrollport③">scrollport</a> are excluded from the result.
+    the focusable elements which aren’t inside the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scrollport" id="ref-for-scrollport③">scrollport</a> are excluded from the result. 
 <pre><code class="highlight"><c- p>&lt;</c-><c- f>body</c-><c- p>></c->
     <c- p>&lt;</c-><c- f>button</c-><c- p>>&lt;/</c-><c- f>button</c-><c- p>></c->
     <c- p>&lt;</c-><c- f>div</c-> <c- e>style</c-><c- o>=</c-><c- s>"width:300px; height:200px; overflow-x: scroll;"</c-><c- p>></c->
@@ -812,7 +814,7 @@ focusableAreas <c- o>&amp;&amp;</c-> focusableAreas<c- p>.</c->forEach<c- p>(</c
 </code></pre>
      <p>The figure below is the result of this code.</p>
      <figure>
-       <img alt="An image about focusableAreas()" src="images/focusableareas-visible-example.png" style="width: 450px;">
+       <img alt="An image about focusableAreas()" src="images/focusableareas-visible-example.png" style="width: 450px;"> 
       <figcaption>Find all visible focusable areas inside the document.</figcaption>
      </figure>
     </div>
@@ -883,28 +885,28 @@ For full normative details, see <a href="#processing-model">§ 8 Processing Mo
      <table class="def">
       <tbody>
        <tr>
-        <th>Type
-        <td><strong><code>navbeforefocus</code></strong>
+        <th>Type 
+        <td><strong><code>navbeforefocus</code></strong> 
        <tr>
-        <th>Interface
-        <td><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent④">NavigationEvent</a></code>
+        <th>Interface 
+        <td><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent④">NavigationEvent</a></code> 
        <tr>
-        <th>Bubbles
-        <td>Yes
+        <th>Bubbles 
+        <td>Yes 
        <tr>
-        <th>Cancelable
-        <td>Yes
+        <th>Cancelable 
+        <td>Yes 
        <tr>
-        <th>Attributes of the event
+        <th>Attributes of the event 
         <td>
          <dl>
-          <dt><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event">Event</a></code>.<code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target" id="ref-for-dom-event-target">target</a></code>
+          <dt><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event">Event</a></code>.<code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target" id="ref-for-dom-event-target">target</a></code> 
           <dd>The focused element or if no element focused,
-                then <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2" id="ref-for-the-body-element-2">the body element</a> if available, otherwise the root element
-          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑤">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-relatedtarget" id="ref-for-dom-navigationevent-relatedtarget">relatedTarget</a></code>
-          <dd>The DOM anchor of the focusable area that will be focused
-          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑥">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-dir" id="ref-for-dom-navigationevent-dir">dir</a></code>
-          <dd>The direction of the navigation as requested by the user
+                then <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2" id="ref-for-the-body-element-2">the body element</a> if available, otherwise the root element 
+          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑤">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-relatedtarget" id="ref-for-dom-navigationevent-relatedtarget">relatedTarget</a></code> 
+          <dd>The DOM anchor of the focusable area that will be focused 
+          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑥">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-dir" id="ref-for-dom-navigationevent-dir">dir</a></code> 
+          <dd>The direction of the navigation as requested by the user 
          </dl>
      </table>
      <p>The User Agent <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="dispatches navbeforefocus event | dispatching navbeforefocus event" data-noexport id="dispatches-navbeforefocus-event">dispatches <a class="idl-code" data-link-type="event" href="#eventdef-navigationevent-navbeforefocus" id="ref-for-eventdef-navigationevent-navbeforefocus">navbeforefocus</a> event</dfn> before spatial navigation moves the focus.
@@ -915,37 +917,37 @@ the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.
      <div class="example" id="example-feaa7715">
       <a class="self-link" href="#example-feaa7715"></a> This example shows the <a href="https://www.w3.org/TR/uievents/#event-order">UI Events §event-order</a> when pressing the <code class="key">ArrowRight</code> key.
     For the sake of keeping the description simple,
-    this example assumes a User Agent where spatial navigation is triggered using arrow keys.
+    this example assumes a User Agent where spatial navigation is triggered using arrow keys. 
       <table class="complex data">
        <thead>
         <tr>
          <th>
-         <th>Event type
-         <th><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#keyboardevent" id="ref-for-keyboardevent">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code>
-         <th>Notes
+         <th>Event type 
+         <th><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#keyboardevent" id="ref-for-keyboardevent">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code> 
+         <th>Notes 
        <tbody>
         <tr>
-         <td>1
-         <td>keydown
-         <td><code class="key">ArrowRight</code>
+         <td>1 
+         <td>keydown 
+         <td><code class="key">ArrowRight</code> 
          <td>MUST be a key which can activate spatial navigation,
-                    such as the arrow keys, or spatial navigation is not activated.
+                    such as the arrow keys, or spatial navigation is not activated. 
         <tr>
-         <td>2
-         <td>navbeforefocus
+         <td>2 
+         <td>navbeforefocus 
          <td>
          <td>Sent if the candidates for spatial navigation is not <code>null</code>,
-                    or this is not generated.
+                    or this is not generated. 
         <tr>
-         <td>3
-         <td>focusin
+         <td>3 
+         <td>focusin 
          <td>
-         <td>Sent before the target element receives focus.
+         <td>Sent before the target element receives focus. 
         <tr>
-         <td>4
-         <td>focus
+         <td>4 
+         <td>focus 
          <td>
-         <td>Sent after the target element receives focus.
+         <td>Sent after the target element receives focus. 
       </table>
      </div>
      <div class="example" id="delegation">
@@ -953,7 +955,7 @@ the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.
     so that when a scroll container would get focused,
     if it has at least one visible focusable descendant,
     the focus is automatically transferred to it,
-    recursively.
+    recursively. 
 <pre><code class="highlight">document<c- p>.</c->addEventListener<c- p>(</c-><c- t>'navbeforefocus'</c-><c- p>,</c-> e <c- p>=></c-> <c- p>{</c->
     e<c- p>.</c->preventDefault<c- p>();</c->
 
@@ -985,28 +987,28 @@ when it cannot be scrolled further.</p>
      <table class="def">
       <tbody>
        <tr>
-        <th>Type
-        <td><strong><code>navnotarget</code></strong>
+        <th>Type 
+        <td><strong><code>navnotarget</code></strong> 
        <tr>
-        <th>Interface
-        <td><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑦">NavigationEvent</a></code>
+        <th>Interface 
+        <td><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑦">NavigationEvent</a></code> 
        <tr>
-        <th>Bubbles
-        <td>Yes
+        <th>Bubbles 
+        <td>Yes 
        <tr>
-        <th>Cancelable
-        <td>Yes
+        <th>Cancelable 
+        <td>Yes 
        <tr>
-        <th>Attributes of the event
+        <th>Attributes of the event 
         <td>
          <dl>
-          <dt><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event①">Event</a></code>.<code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target" id="ref-for-dom-event-target①">target</a></code>
+          <dt><code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event①">Event</a></code>.<code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-target" id="ref-for-dom-event-target①">target</a></code> 
           <dd>The focused element or if no element focused,
-                then <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2" id="ref-for-the-body-element-2①">the body element</a> if available, otherwise the root element
-          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑧">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-relatedtarget" id="ref-for-dom-navigationevent-relatedtarget②">relatedTarget</a></code>
-          <dd>The <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers②⓪">spatial navigation container</a> that was searched in.
-          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑨">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-dir" id="ref-for-dom-navigationevent-dir①">dir</a></code>
-          <dd>The direction of the navigation as requested by the user
+                then <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2" id="ref-for-the-body-element-2①">the body element</a> if available, otherwise the root element 
+          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑧">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-relatedtarget" id="ref-for-dom-navigationevent-relatedtarget②">relatedTarget</a></code> 
+          <dd>The <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers②⓪">spatial navigation container</a> that was searched in. 
+          <dt><code class="idl"><a data-link-type="idl" href="#navigationevent" id="ref-for-navigationevent⑨">NavigationEvent</a></code>.<code class="idl"><a data-link-type="idl" href="#dom-navigationevent-dir" id="ref-for-dom-navigationevent-dir①">dir</a></code> 
+          <dd>The direction of the navigation as requested by the user 
          </dl>
      </table>
      <p>The User Agent <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="dispatches navnotarget event | dispatching navnotarget event" data-noexport id="dispatches-navnotarget-event">dispatches <a class="idl-code" data-link-type="event" href="#eventdef-navigationevent-navnotarget" id="ref-for-eventdef-navigationevent-navnotarget">navnotarget</a> event</dfn> with initializing the <a data-link-type="dfn" href="https://w3c.github.io/uievents/#event-target" id="ref-for-event-target①">event target</a> as the element which has focus and
@@ -1016,60 +1018,60 @@ the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.
      <div class="example" id="example-e7e46248">
       <a class="self-link" href="#example-e7e46248"></a> This example shows the <a href="https://www.w3.org/TR/uievents/#event-order">UI Events §event-order</a> when pressing the <code class="key">ArrowDown</code> key in the situation like the following figure.
     For the sake of keeping the description simple,
-    this example assumes a User Agent where spatial navigation is triggered using arrow keys.
+    this example assumes a User Agent where spatial navigation is triggered using arrow keys. 
       <figure>
-        <img alt="An image about navnotarget" src="images/navnotarget-example-1.png" style="width: 200px;">
-       <figcaption>Moving focus when there isn’t any candidate in the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container">scroll container</a>.</figcaption>
+        <img alt="An image about navnotarget" src="images/navnotarget-example-1.png" style="width: 200px;"> 
+       <figcaption>Moving focus when there isn’t any candidate in the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container">scroll container</a>.</figcaption>
       </figure>
       <table class="complex data">
        <thead>
         <tr>
          <th>
-         <th>Event type
-         <th>Event target
-         <th><code>relatedTarget</code>
-         <th>Notes
+         <th>Event type 
+         <th>Event target 
+         <th><code>relatedTarget</code> 
+         <th>Notes 
        <tbody>
         <tr>
-         <td>1
-         <td>keydown
-         <td><code>#box2</code>
-         <td>N/A
+         <td>1 
+         <td>keydown 
+         <td><code>#box2</code> 
+         <td>N/A 
          <td>MUST be a key which can activate spatial navigation,
                     such as the arrow keys,
-                    otherwise spatial navigation is not triggered.
+                    otherwise spatial navigation is not triggered. 
         <tr>
-         <td>2
-         <td>navnotarget
-         <td><code>#box2</code>
-         <td><code>#scrollContainer</code>
+         <td>2 
+         <td>navnotarget 
+         <td><code>#box2</code> 
+         <td><code>#scrollContainer</code> 
          <td>Sent if <code>#scrollContainer</code> doesn’t contain any candidate and
                 cannot be scrolled,
-                otherwise this would not be generated.
+                otherwise this would not be generated. 
         <tr>
-         <td>3
-         <td>navbeforefocus
-         <td><code>#box2</code>
-         <td><code>#box3</code>
+         <td>3 
+         <td>navbeforefocus 
+         <td><code>#box2</code> 
+         <td><code>#box3</code> 
          <td>Sent if the candidates in <code>#container</code> is not <code>null</code>,
-                otherwise this would not be fired.
+                otherwise this would not be fired. 
         <tr>
-         <td>4
-         <td>focusin
-         <td><code>#box3</code>
-         <td><code>#box2</code>
-         <td>Sent before the target element receives focus.
+         <td>4 
+         <td>focusin 
+         <td><code>#box3</code> 
+         <td><code>#box2</code> 
+         <td>Sent before the target element receives focus. 
         <tr>
-         <td>5
-         <td>focus
-         <td><code>#box3</code>
-         <td><code>#box2</code>
-         <td>Sent after the target element receives focus.
+         <td>5 
+         <td>focus 
+         <td><code>#box3</code> 
+         <td><code>#box2</code> 
+         <td>Sent after the target element receives focus. 
       </table>
       <p>The result of this example is the figure as follows:</p>
       <figure>
-        <img alt="An image of the result about navnotarget" src="images/navnotarget-example-2.png" style="width: 200px;">
-       <figcaption>The result of moving focus when there isn’t any candidate in the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scrollport" id="ref-for-scrollport④">scrollport</a> and <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①">scroll container</a> cannot be scrolled.</figcaption>
+        <img alt="An image of the result about navnotarget" src="images/navnotarget-example-2.png" style="width: 200px;"> 
+       <figcaption>The result of moving focus when there isn’t any candidate in the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scrollport" id="ref-for-scrollport④">scrollport</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①">scroll container</a> cannot be scrolled.</figcaption>
       </figure>
       <p>This example uses the markup as follows:</p>
 <pre class="lang-css highlight"><c- f>#container </c-><c- p>{</c->
@@ -1108,7 +1110,7 @@ the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.
     to trap the focus within a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers②②">spatial navigation container</a> which is vertically scrollable.
     When no further focusable elements can be found in the requested direction
     and the <span id="ref-for-spatial-navigation-containers②③">spatial navigation container</span> cannot be scrolled any further,
-    the focus loops back to the other side instead of moving outside of it.
+    the focus loops back to the other side instead of moving outside of it. 
       <p>However, the focus can still be moved outside by sequential navigation,
     mouse interaction,
     or programmatic calls to <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" id="ref-for-dom-focus①">focus()</a></code>.</p>
@@ -1164,7 +1166,7 @@ the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.
 to help readers of this specification build a general mental model.
 It uses intuitive but imprecise terminology,
 and glosses over many details
-for the sake of readability.
+for the sake of readability. 
     <p>This section defines the corresponding normative behavior
 and aims for as much detail as necessary
 to fully define the behavior.</p>
@@ -1177,20 +1179,20 @@ See the links within the definitions for more information.</p>
     <li data-md>
      <p>if the object is a point, the boundary box is that point</p>
     <li data-md>
-     <p>if the object is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-3/#box" id="ref-for-box">box</a> or <a data-link-type="dfn" href="https://drafts.csswg.org/css-break-4/#box-fragment" id="ref-for-box-fragment">box fragment</a>, the boundary box is the <a data-link-type="dfn" href="https://drafts.csswg.org/css2/box.html#x14" id="ref-for-x14">border box</a> of that box or fragment</p>
+     <p>if the object is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#box" id="ref-for-box">box</a> or <a data-link-type="dfn" href="https://www.w3.org/TR/css-break-4/#box-fragment" id="ref-for-box-fragment">box fragment</a>, the boundary box is the <a data-link-type="dfn" href="https://drafts.csswg.org/css2/box.html#x14" id="ref-for-x14">border box</a> of that box or fragment</p>
     <li data-md>
      <p>if the object is a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/interaction.html#focusable-area" id="ref-for-focusable-area">focusable area</a> which is not an element, the boundary box is the axis-aligned the bounding box of that <span id="ref-for-focusable-area①">focusable area</span></p>
    </ul>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="inside-area">inside area</dfn> of an object is defined as follows:</p>
    <ul>
     <li data-md>
-     <p>if the object is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container②">scroll container</a>, its <a data-link-type="dfn" href="https://drafts.csswg.org/css-scroll-snap-1/#optimal-viewing-region" id="ref-for-optimal-viewing-region">optimal viewing region</a></p>
+     <p>if the object is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container②">scroll container</a>, its <a data-link-type="dfn" href="https://www.w3.org/TR/css-scroll-snap-1/#optimal-viewing-region" id="ref-for-optimal-viewing-region">optimal viewing region</a></p>
     <li data-md>
      <p>if the object is a <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document" id="ref-for-concept-document①">document</a>, the viewport of its <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context" id="ref-for-browsing-context">browsing context</a></p>
     <li data-md>
-     <p>if the object is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-3/#box" id="ref-for-box①">box</a> or <a data-link-type="dfn" href="https://drafts.csswg.org/css-break-4/#box-fragment" id="ref-for-box-fragment①">box fragment</a>, its <a data-link-type="dfn" href="#boundary-box" id="ref-for-boundary-box">boundary box</a></p>
+     <p>if the object is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#box" id="ref-for-box①">box</a> or <a data-link-type="dfn" href="https://www.w3.org/TR/css-break-4/#box-fragment" id="ref-for-box-fragment①">box fragment</a>, its <a data-link-type="dfn" href="#boundary-box" id="ref-for-boundary-box">boundary box</a></p>
     <li data-md>
-     <p>otherwise, the <a data-link-type="dfn" href="https://drafts.csswg.org/css-scroll-snap-1/#optimal-viewing-region" id="ref-for-optimal-viewing-region①">optimal viewing region</a> of its nearest ancestor <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container③">scroll container</a></p>
+     <p>otherwise, the <a data-link-type="dfn" href="https://www.w3.org/TR/css-scroll-snap-1/#optimal-viewing-region" id="ref-for-optimal-viewing-region①">optimal viewing region</a> of its nearest ancestor <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container③">scroll container</a></p>
    </ul>
    <p class="note" role="note"><span>NOTE:</span> If an object is offscreen, the <a data-link-type="dfn" href="#inside-area" id="ref-for-inside-area">inside area</a> should be the nearest visible ancestor container.</p>
    <p class="issue" id="issue-c7f6d991"><a class="self-link" href="#issue-c7f6d991"></a> CSS should have a term for “border box taking into account corner shaping properties like border-radius”. <a href="https://github.com/w3c/csswg-drafts/issues/2324">&lt;https://github.com/w3c/csswg-drafts/issues/2324></a></p>
@@ -1214,7 +1216,7 @@ if a suitable one cannot be found inside it (see <a href="#nav">§ 8.3 Navigat
     <li data-md>
      <p>The viewport of a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context" id="ref-for-browsing-context①">browsing context</a> (not limited to the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context" id="ref-for-top-level-browsing-context②">top-level browsing context</a>)</p>
     <li data-md>
-     <p><a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container④">scroll containers</a></p>
+     <p><a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container④">scroll containers</a></p>
    </ul>
    <div class="cssapi"> Additional <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers②⑤">spatial navigation containers</a> can be created using the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-contain" id="ref-for-propdef-spatial-navigation-contain②">spatial-navigation-contain</a> property (see <a href="#container">§ 9.1 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>). </div>
    <h3 class="heading settled" data-level="8.3" id="nav"><span class="secno">8.3. </span><span class="content"> Navigation</span><a class="self-link" href="#nav"></a></h3>
@@ -1226,7 +1228,7 @@ if a suitable one cannot be found inside it (see <a href="#nav">§ 8.3 Navigat
         assuming that the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action①">spatial-navigation-action</a> property has its initial value of <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-auto" id="ref-for-valdef-spatial-navigation-action-auto">auto</a>. </figcaption>
    </figure>
    <div class="algorithm" data-algorithm="to run the spatial navigation steps">
-     To run the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="spatial-navigation-steps">spatial navigation steps</dfn> in <var>direction</var>, do the following:
+     To run the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="spatial-navigation-steps">spatial navigation steps</dfn> in <var>direction</var>, do the following: 
     <ol>
      <li data-md>
       <p>Let <var>searchOrigin</var> be the result of <a data-link-type="dfn" href="#set-the-search-origin" id="ref-for-set-the-search-origin">setting the search origin</a>.</p>
@@ -1244,10 +1246,10 @@ let <var>eventTarget</var> be the <a data-link-type="dfn" href="https://dom.spec
     set <var>eventTarget</var> be <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2" id="ref-for-the-body-element-2②">the body element</a> if it is not <code>null</code> or to the <span id="ref-for-document-element①">document element</span> otherwise.</p>
      <li data-md>
       <ul>
-       <li class="cssapi">If <var>eventTarget</var> is <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑤">scroll container</a> and the computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action②">spatial-navigation-action</a> property on <var>eventTarget</var> is <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-scroll" id="ref-for-valdef-spatial-navigation-action-scroll">scroll</a> and <var>eventTarget</var> <a data-link-type="dfn" href="#can-be-manually-scrolled" id="ref-for-can-be-manually-scrolled">can be manually scrolled</a>,
+       <li class="cssapi">If <var>eventTarget</var> is <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑤">scroll container</a> and the computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action②">spatial-navigation-action</a> property on <var>eventTarget</var> is <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-scroll" id="ref-for-valdef-spatial-navigation-action-scroll">scroll</a> and <var>eventTarget</var> <a data-link-type="dfn" href="#can-be-manually-scrolled" id="ref-for-can-be-manually-scrolled">can be manually scrolled</a>,
         then <a data-link-type="dfn" href="#directionally-scroll-an-element" id="ref-for-directionally-scroll-an-element">directionally scroll the element</a> <var>eventTarget</var> and return.
        <li>
-        <span class="cssapi">Else,</span> if <var>eventTarget</var> is either a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑥">scroll container</a> or the <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document" id="ref-for-concept-document③">document</a>
+        <span class="cssapi">Else,</span> if <var>eventTarget</var> is either a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑥">scroll container</a> or the <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-document" id="ref-for-concept-document③">document</a> 
         <ol>
          <li data-md>
           <p>Let <var>candidates</var> be the result of <a data-link-type="dfn" href="#find-focusable-areas" id="ref-for-find-focusable-areas②">finding focusable areas</a> within <var>eventTarget</var> with the argument <var>visibleOnly</var> set to <code>false</code> <span class="cssapi">if computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action③">spatial-navigation-action</a> property on <var>eventTarget</var> is <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-focus" id="ref-for-valdef-spatial-navigation-action-focus">focus</a> or to <code>true</code> otherwise. </span></p>
@@ -1257,7 +1259,7 @@ let <var>eventTarget</var> be the <a data-link-type="dfn" href="https://dom.spec
         the computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action④">spatial-navigation-action</a> property on <var>eventTarget</var> is not <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-focus" id="ref-for-valdef-spatial-navigation-action-focus①">focus</a> and <var>eventTarget</var> <a data-link-type="dfn" href="#can-be-manually-scrolled" id="ref-for-can-be-manually-scrolled①">can be manually scrolled</a>,
         then <a data-link-type="dfn" href="#directionally-scroll-an-element" id="ref-for-directionally-scroll-an-element①">directionally scroll the element</a> <var>eventTarget</var> in <var>direction</var> and return.
            <li>
-            <span class="cssapi">Else </span>if <var>candidates</var> contains at least 1 item:
+            <span class="cssapi">Else </span>if <var>candidates</var> contains at least 1 item: 
             <ol>
              <li data-md>
               <p>Let <var>bestCandidate</var> be the result of <a data-link-type="dfn" href="#select-the-best-candidate" id="ref-for-select-the-best-candidate②">selecting the best candidate</a> within <var>candidates</var> in <var>direction</var> starting from <var>searchOrigin</var></p>
@@ -1278,7 +1280,7 @@ let <var>eventTarget</var> be the <a data-link-type="dfn" href="https://dom.spec
 excluding <var>eventTarget</var> </span></p>
      <li data-md>
       <p>If <var>candidates</var> is empty:</p>
-     <li class="cssapi">If the computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action⑥">spatial-navigation-action</a> property on <var>container</var> is not <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-focus" id="ref-for-valdef-spatial-navigation-action-focus③">focus</a> and <var>container</var> is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑦">scroll container</a> that <a data-link-type="dfn" href="#can-be-manually-scrolled" id="ref-for-can-be-manually-scrolled②">can be manually scrolled</a>, <a data-link-type="dfn" href="#directionally-scroll-an-element" id="ref-for-directionally-scroll-an-element②">directionally scroll the element</a> <var>container</var> in <var>direction</var> and return.
+     <li class="cssapi">If the computed value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action⑥">spatial-navigation-action</a> property on <var>container</var> is not <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-focus" id="ref-for-valdef-spatial-navigation-action-focus③">focus</a> and <var>container</var> is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑦">scroll container</a> that <a data-link-type="dfn" href="#can-be-manually-scrolled" id="ref-for-can-be-manually-scrolled②">can be manually scrolled</a>, <a data-link-type="dfn" href="#directionally-scroll-an-element" id="ref-for-directionally-scroll-an-element②">directionally scroll the element</a> <var>container</var> in <var>direction</var> and return. 
      <li class="cssapi">Else,
      <ol>
       <li data-md>
@@ -1322,7 +1324,7 @@ in order to maximize interoperability.
 In particular, divergences in how User Agents <a data-link-type="dfn" href="#find-focusable-areas" id="ref-for-find-focusable-areas④">find focusable areas</a> may cause some elements to be focusable in some User Agents but not in others,
 which would be bad for users.</p>
    <p>All geometrical operations in this section are defined to work on the result of CSS layout,
-including all graphical transformations, such as <a data-link-type="dfn" href="https://drafts.csswg.org/css-position-3/#relative-position" id="ref-for-relative-position">relative positioning</a> or <a data-link-type="biblio" href="#biblio-css-transforms-1">[CSS-TRANSFORMS-1]</a>.</p>
+including all graphical transformations, such as <a data-link-type="dfn" href="https://www.w3.org/TR/css3-positioning/#relative-position" id="ref-for-relative-position">relative positioning</a> or <a data-link-type="biblio" href="#biblio-css-transforms-1">[CSS-TRANSFORMS-1]</a>.</p>
    <div class="algorithm" data-algorithm="to set the search origin">
     <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="set the search origin | setting the search origin" data-noexport id="set-the-search-origin">set the <a data-link-type="dfn" href="#search-origin" id="ref-for-search-origin">search origin</a></dfn>,
 run the following steps:</p>
@@ -1358,7 +1360,7 @@ run the following steps:</p>
     <ol>
      <li data-md>
       <p>Let <var>focusables</var> be the <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ordered-set" id="ref-for-ordered-set">set</a> of all the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/interaction.html#focusable-area" id="ref-for-focusable-area②">focusable areas</a> whose <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-anchor" id="ref-for-dom-anchor①">DOM anchor</a> are descendants of <var>C</var>.
-In the case of <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-3/#box" id="ref-for-box②">boxes</a> with several <a data-link-type="dfn" href="https://drafts.csswg.org/css-break-4/#box-fragment" id="ref-for-box-fragment②">box fragments</a>, each <span id="ref-for-box-fragment③">box fragment</span> is considered separately.</p>
+In the case of <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#box" id="ref-for-box②">boxes</a> with several <a data-link-type="dfn" href="https://www.w3.org/TR/css-break-4/#box-fragment" id="ref-for-box-fragment②">box fragments</a>, each <span id="ref-for-box-fragment③">box fragment</span> is considered separately.</p>
      <li data-md>
       <p>The User Agent should <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#list-remove" id="ref-for-list-remove">remove</a> from <var>focusables</var> items that have a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-anchor" id="ref-for-dom-anchor②">DOM anchor</a> whose <a data-link-type="element-attr" href="https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex" id="ref-for-attr-tabindex"><code>tabindex</code></a> attribute is set to a negative value.</p>
       <p class="note" role="note"><span>Note:</span> This is a "SHOULD" in order to mirror the exclusion of elements with negative tabindex
@@ -1477,22 +1479,22 @@ unless it too is overlapped with another higher item at the same distance, recur
      To <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="find the shortest distance | finding the shortest distance" data-noexport id="find-the-shortest-distance">find the shortest distance</dfn> between a <var>reference</var> and a <var>candidate</var> in direction <var>dir</var>,
 find the points <var>P1</var> and <var>P2</var>,
 respectively within the boundary boxes of the <var>reference</var> and of the <var>candidate</var>,
-that minimize the <var>distance</var> as defined as below:
-<pre class="prod"><var>distance</var> = <var>euclidean</var> <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#mult-one-plus" id="ref-for-mult-one-plus">+</a> <var>displacement</var> - <var>alignment</var> - <var>sqrt(Overlap)</var>
+that minimize the <var>distance</var> as defined as below: 
+<pre class="prod"><var>distance</var> = <var>euclidean</var> <a data-link-type="grammar" href="https://www.w3.org/TR/css-values-4/#mult-one-plus" id="ref-for-mult-one-plus">+</a> <var>displacement</var> - <var>alignment</var> - <var>sqrt(Overlap)</var>
 </pre>
     <p>The meaning of each term is as follows:</p>
     <dl>
-     <dt><var>euclidean</var>
-     <dd> The euclidean distance between <var>P1</var> and <var>P2</var>
-     <dt><var>displacement</var>
+     <dt><var>euclidean</var> 
+     <dd> The euclidean distance between <var>P1</var> and <var>P2</var> 
+     <dt><var>displacement</var> 
      <dd>
        The degree of displacement in <var>dir</var> between the <var>reference</var> and the <var>candidate</var>,
-        defined as
+        defined as 
 <pre><code><var>displacement</var> = (absolute distance on the axis orthogonal to <var>dir</var> between <var>P1</var> and <var>P2</var> +
                 <var>orthogonalBias</var>) *
                <var>orthogonalWeight</var>
 </code></pre>
-     <dt><var>orthogonalBias</var>:
+     <dt><var>orthogonalBias</var>: 
      <dd>
       <ul>
        <li data-md>
@@ -1502,7 +1504,7 @@ the height of the axis-aligned bounding box of <var>reference</var> / 2</p>
         <p>Else if the <var>dir</var> is <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-up" id="ref-for-dom-spatialnavigationdirection-up③">up</a></code> or <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-down" id="ref-for-dom-spatialnavigationdirection-down③">down</a></code>,
 the width of the axis-aligned bounding box of <var>reference</var> / 2</p>
       </ul>
-     <dt><var>orthogonalWeight</var>:
+     <dt><var>orthogonalWeight</var>: 
      <dd>
       <ul>
        <li data-md>
@@ -1510,13 +1512,13 @@ the width of the axis-aligned bounding box of <var>reference</var> / 2</p>
        <li data-md>
         <p>Else if the <var>dir</var> is <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-up" id="ref-for-dom-spatialnavigationdirection-up④">up</a></code> or <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-down" id="ref-for-dom-spatialnavigationdirection-down④">down</a></code>, 2</p>
       </ul>
-     <dt><var>alignment</var>
+     <dt><var>alignment</var> 
      <dd>
        The degree of alignment in <var>dir</var> between the <var>reference</var> and the <var>candidate</var>,
-        defined as:
+        defined as: 
 <pre><code><var>alignment</var> = <var>alignBias</var> * <var>alignWeight</var>
 </code></pre>
-     <dt><var>alignBias</var>:
+     <dt><var>alignBias</var>: 
      <dd>
       <ul>
        <li data-md>
@@ -1524,7 +1526,7 @@ the width of the axis-aligned bounding box of <var>reference</var> / 2</p>
        <li data-md>
         <p>Else if the <var>dir</var> is <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-up" id="ref-for-dom-spatialnavigationdirection-up⑤">up</a></code> or <code class="idl"><a data-link-type="idl" href="#dom-spatialnavigationdirection-down" id="ref-for-dom-spatialnavigationdirection-down⑤">down</a></code>, <var>projectedOverlap</var> / width of the axis-aligned bounding box of <var>reference</var></p>
       </ul>
-     <dt><var>projectedOverlap</var>:
+     <dt><var>projectedOverlap</var>: 
      <dd>
       <ul>
        <li data-md>
@@ -1537,14 +1539,14 @@ the length of the overlap between the vertical projections onto the horizontal a
 of the <var>reference</var> and the <var>candidate</var></p>
       </ul>
       <figure>
-        <img alt src="images/projected_overlap.png" style="width: 500px;">
+        <img alt src="images/projected_overlap.png" style="width: 500px;"> 
        <figcaption>projectedOverlap</figcaption>
       </figure>
-     <dt><var>alignWeight</var>:
-     <dd>5
-     <dt><var>sqrt(Overlap)</var>
+     <dt><var>alignWeight</var>: 
+     <dd>5 
+     <dt><var>sqrt(Overlap)</var> 
      <dd> The square root of area of overlap between the <var>reference</var> and the <var>candidate</var>,
-        or 0 if they do not overlap.
+        or 0 if they do not overlap. 
     </dl>
     <p class="note" role="note"><span>Note:</span> This general formula was picked from several plausible alternatives,
 based on which one most often matches intuition
@@ -1565,7 +1567,7 @@ Suggestions for improvements or simplifications are welcome.</p>
        <td><dfn class="dfn-paneled css" data-dfn-type="property" data-export id="propdef-spatial-navigation-contain">spatial-navigation-contain</dfn>
       <tr class="value">
        <th><a href="https://drafts.csswg.org/css-values/#value-defs">Value:</a>
-       <td class="prod">auto <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one" id="ref-for-comb-one">|</a> contain
+       <td class="prod">auto <a data-link-type="grammar" href="https://www.w3.org/TR/css-values-4/#comb-one" id="ref-for-comb-one">|</a> contain
       <tr>
        <th><a href="https://drafts.csswg.org/css-cascade/#initial-values">Initial:</a>
        <td>auto
@@ -1589,18 +1591,18 @@ Suggestions for improvements or simplifications are welcome.</p>
        <td>discrete
     </table>
     <dl>
-     <dt><dfn class="css" data-dfn-for="spatial-navigation-contain" data-dfn-type="value" data-export id="valdef-spatial-navigation-contain-auto">auto<a class="self-link" href="#valdef-spatial-navigation-contain-auto"></a></dfn>
-     <dd>If the element is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑧">scroll container</a> then it establishes a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③⓪">spatial navigation container</a>,
-        otherwise it does not.
-     <dt><dfn class="css" data-dfn-for="spatial-navigation-contain" data-dfn-type="value" data-export id="valdef-spatial-navigation-contain-contain">contain<a class="self-link" href="#valdef-spatial-navigation-contain-contain"></a></dfn>
-     <dd>The element establishes a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③①">spatial navigation container</a>
+     <dt><dfn class="css" data-dfn-for="spatial-navigation-contain" data-dfn-type="value" data-export id="valdef-spatial-navigation-contain-auto">auto<a class="self-link" href="#valdef-spatial-navigation-contain-auto"></a></dfn> 
+     <dd>If the element is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑧">scroll container</a> then it establishes a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③⓪">spatial navigation container</a>,
+        otherwise it does not. 
+     <dt><dfn class="css" data-dfn-for="spatial-navigation-contain" data-dfn-type="value" data-export id="valdef-spatial-navigation-contain-contain">contain<a class="self-link" href="#valdef-spatial-navigation-contain-contain"></a></dfn> 
+     <dd>The element establishes a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③①">spatial navigation container</a> 
     </dl>
     <p class="note" role="note"><span>Note:</span> In addition, as per <a href="#grouping">§ 8.2 Groupings of elements</a>, the viewport of a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context" id="ref-for-browsing-context②">browsing context</a> (not limited to the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context" id="ref-for-top-level-browsing-context④">top-level browsing context</a>)
         also establishes a <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③②">spatial navigation container</a>.</p>
     <div class="example" id="example-6752923a">
      <a class="self-link" href="#example-6752923a"></a> The following example shows a simplified TV program schedule or calendar.
     It has a grid of elements representing TV shows or calendar entries
-    and some UI buttons around it.
+    and some UI buttons around it. 
      <p>In this case, the grid is quite sparse,
     so if the user tries to move down from "Foo",
     focus would be moved to "Next Week",
@@ -1620,7 +1622,7 @@ Suggestions for improvements or simplifications are welcome.</p>
           <th>T
           <th>F
           <th>S
-          <th>S
+          <th>S 
          <tr>
           <td>0-6
           <td>
@@ -1629,7 +1631,7 @@ Suggestions for improvements or simplifications are welcome.</p>
           <td>
           <td>
           <td>
-          <td><a href="#">Foo</a>
+          <td><a href="#">Foo</a> 
          <tr>
           <td>6-9
           <td><a href="#">Bar</a>
@@ -1665,7 +1667,7 @@ Suggestions for improvements or simplifications are welcome.</p>
           <td>
           <td>
           <td>
-          <td><a href="#">Woo</a>
+          <td><a href="#">Woo</a> 
          <tr>
           <td>21-24
           <td>
@@ -1714,13 +1716,13 @@ Suggestions for improvements or simplifications are welcome.</p>
       <td><dfn class="dfn-paneled css" data-dfn-type="property" data-export id="propdef-spatial-navigation-action">spatial-navigation-action</dfn>
      <tr class="value">
       <th><a href="https://drafts.csswg.org/css-values/#value-defs">Value:</a>
-      <td class="prod">auto <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one" id="ref-for-comb-one①">|</a> focus <span id="ref-for-comb-one②">|</span> scroll
+      <td class="prod">auto <a data-link-type="grammar" href="https://www.w3.org/TR/css-values-4/#comb-one" id="ref-for-comb-one①">|</a> focus <span id="ref-for-comb-one②">|</span> scroll
      <tr>
       <th><a href="https://drafts.csswg.org/css-cascade/#initial-values">Initial:</a>
       <td>auto
      <tr>
       <th>Applies to:
-      <td><a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑨">scroll containers</a>
+      <td><a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container⑨">scroll containers</a>
      <tr>
       <th><a href="https://drafts.csswg.org/css-cascade/#inherited-property">Inherited:</a>
       <td>no
@@ -1746,34 +1748,34 @@ but this property allows the author to decide between focusing or scrolling.</p>
 but a high level description of the effect of each value is provided below.</p>
    <p>When spatial navigation is triggered,
 the behavior depends on the value of the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action⑧">spatial-navigation-action</a> on the currently focused element
-if that element is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⓪">scroll container</a>,
+if that element is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⓪">scroll container</a>,
 or of its nearest <span id="ref-for-scroll-container①①">scroll container</span> ancestor if it isn’t.</p>
    <dl>
-    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-auto">auto</dfn>
-    <dd> If there are visible focusable elements within the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①②">scroll container</a> in the direction requested,
+    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-auto">auto</dfn> 
+    <dd> If there are visible focusable elements within the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①②">scroll container</a> in the direction requested,
         the closest one becomes focused.
-        Otherwise, the <span id="ref-for-scroll-container①③">scroll container</span> is scrolled in the direction requested.
-    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-focus">focus</dfn>
+        Otherwise, the <span id="ref-for-scroll-container①③">scroll container</span> is scrolled in the direction requested. 
+    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-focus">focus</dfn> 
     <dd>
-      The focus is moved to the nearest focusable element within the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①④">scroll container</a>,
+      The focus is moved to the nearest focusable element within the <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①④">scroll container</a>,
         regardless of whether it is visible.
         If there are none,
         the scroll container is <em>not</em> scrolled,
-        and the search continues up the ancestry chain instead.
-     <p class="note" role="note"><span>Note:</span> The <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑤">scroll container</a> may be scrolled as a side effect of focusing
+        and the search continues up the ancestry chain instead. 
+     <p class="note" role="note"><span>Note:</span> The <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑤">scroll container</a> may be scrolled as a side effect of focusing
         an element which was previously not in view,
         but it will not <a data-link-type="dfn" href="#directionally-scroll-an-element" id="ref-for-directionally-scroll-an-element③">be directionally scrolled</a>.</p>
      <p class="note" role="note"><span>Note:</span> If the <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-focus" id="ref-for-valdef-spatial-navigation-action-focus④">focus</a> value is given to <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action⑨">spatial-navigation-action</a>, <a class="idl-code" data-link-type="event" href="#eventdef-navigationevent-navnotarget" id="ref-for-eventdef-navigationevent-navnotarget①">navnotarget</a> event occurs when there isn’t any visible candidate in the given direction within the viewport of
         the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③③">spatial navigation container</a> even if the container can be scrolled more.</p>
-    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-scroll">scroll</dfn>
+    <dt><dfn class="dfn-paneled css" data-dfn-for="spatial-navigation-action" data-dfn-type="value" data-export id="valdef-spatial-navigation-action-scroll">scroll</dfn> 
     <dd>
-      If the currently focused element is not itself a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑥">scroll container</a>,
-        this value on an ancestor <span id="ref-for-scroll-container①⑦">scroll container</span> has the same effect as <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-auto" id="ref-for-valdef-spatial-navigation-action-auto①">auto</a>.
-     <p>If the currently focused element is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑧">scroll container</a>,
+      If the currently focused element is not itself a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑥">scroll container</a>,
+        this value on an ancestor <span id="ref-for-scroll-container①⑦">scroll container</span> has the same effect as <a class="css" data-link-type="maybe" href="#valdef-spatial-navigation-action-auto" id="ref-for-valdef-spatial-navigation-action-auto①">auto</a>. 
+     <p>If the currently focused element is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑧">scroll container</a>,
         it is scrolled in the direction requested without changing which element is in focus,
         regardless of the presence of focusable descendants.</p>
      <p class="note" role="note"><span>Note:</span> This means that spatial navigation can be used
-        to move the focus to a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑨">scroll container</a> and to scroll it,
+        to move the focus to a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container①⑨">scroll container</a> and to scroll it,
         but not to move the focus to its descendants.
         However, if the focus is moved to a descendant by some other mean
         (such as pressing the <span class="key">Tab</span> key or using the &lt;<code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" id="ref-for-dom-focus②">focus()</a></code>> method)
@@ -1788,10 +1790,10 @@ However, cancellable events related to scrolling can cause performance problems,
 so this event was removed and the <a class="property" data-link-type="propdesc" href="#propdef-spatial-navigation-action" id="ref-for-propdef-spatial-navigation-action①⓪">spatial-navigation-action</a> property was introduced instead.</p>
    <div class="example" id="example-59a246d8">
     <a class="self-link" href="#example-59a246d8"></a> In this example, a scrollable container is specified with <code class="highlight">spatial-navigation-action: focus</code>.
-Inside the container, there is an element which is out of the view within a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scrollport" id="ref-for-scrollport⑤">scrollport</a>.
-Pressing the down arrow key moves the focus directly to it without scrolling manually.
+Inside the container, there is an element which is out of the view within a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scrollport" id="ref-for-scrollport⑤">scrollport</a>.
+Pressing the down arrow key moves the focus directly to it without scrolling manually. 
     <figure>
-      <img alt src="images/spatnav-action.png" style="width: 500px;">
+      <img alt src="images/spatnav-action.png" style="width: 500px;"> 
      <figcaption>Moving focus from "Box 2" to "Box 3" without manually scrolling</figcaption>
     </figure>
 <pre><code class="highlight"><c- p>&lt;</c-><c- f>div</c-> <c- e>class</c-><c- o>=</c-><c- s>'scroller'</c-><c- p>></c->
@@ -1827,7 +1829,7 @@ Pressing the down arrow key moves the focus directly to it without scrolling man
       <td><dfn class="dfn-paneled css" data-dfn-type="property" data-export id="propdef-spatial-navigation-function">spatial-navigation-function</dfn>
      <tr class="value">
       <th><a href="https://drafts.csswg.org/css-values/#value-defs">Value:</a>
-      <td class="prod">normal <a data-link-type="grammar" href="https://drafts.csswg.org/css-values-4/#comb-one" id="ref-for-comb-one③">|</a> grid
+      <td class="prod">normal <a data-link-type="grammar" href="https://www.w3.org/TR/css-values-4/#comb-one" id="ref-for-comb-one③">|</a> grid
      <tr>
       <th><a href="https://drafts.csswg.org/css-cascade/#initial-values">Initial:</a>
       <td>normal
@@ -1854,13 +1856,13 @@ Pressing the down arrow key moves the focus directly to it without scrolling man
 This property allows the author to indicate which navigation algorithm is reasonable for spatial navigation behavior.</p>
    <p>Its values are defined as follows:</p>
    <dl>
-    <dt><dfn class="css" data-dfn-for="spatial-navigation-function" data-dfn-type="value" data-export id="valdef-spatial-navigation-function-normal">normal<a class="self-link" href="#valdef-spatial-navigation-function-normal"></a></dfn>
+    <dt><dfn class="css" data-dfn-for="spatial-navigation-function" data-dfn-type="value" data-export id="valdef-spatial-navigation-function-normal">normal<a class="self-link" href="#valdef-spatial-navigation-function-normal"></a></dfn> 
     <dd>
-      Moves the focus with the default focus navigation algorithm defined by UA.
+      Moves the focus with the default focus navigation algorithm defined by UA. 
      <p>In general, the focus moves to the element with the closest distance calculated by <a data-link-type="dfn" href="#find-the-shortest-distance" id="ref-for-find-the-shortest-distance①">finding the shortest distance</a>.</p>
-    <dt><dfn class="css" data-dfn-for="spatial-navigation-function" data-dfn-type="value" data-export id="valdef-spatial-navigation-function-grid">grid<a class="self-link" href="#valdef-spatial-navigation-function-grid"></a></dfn>
+    <dt><dfn class="css" data-dfn-for="spatial-navigation-function" data-dfn-type="value" data-export id="valdef-spatial-navigation-function-grid">grid<a class="self-link" href="#valdef-spatial-navigation-function-grid"></a></dfn> 
     <dd>
-      Moves the focus to the element which is aligned most in the navigation direction.
+      Moves the focus to the element which is aligned most in the navigation direction. 
      <ul>
       <li data-md>
        <p>If there are more than one aligned candidates in the navigation direction,
@@ -1876,9 +1878,9 @@ In case of multiple elements with the same distance,
    </dl>
    <p class="note" role="note"><span>NOTE:</span> These values are negotiated with the users' preferences which seems natural spatial navigation behavior for their pages.</p>
    <div class="example" id="example-c86d0d36">
-    <a class="self-link" href="#example-c86d0d36"></a> This example shows how the focus moves differently by the value of <code class="highlight">spatial-navigation-function</code>.
+    <a class="self-link" href="#example-c86d0d36"></a> This example shows how the focus moves differently by the value of <code class="highlight">spatial-navigation-function</code>. 
     <figure>
-      <img alt src="images/spatnav-function.png" style="width: 500px;">
+      <img alt src="images/spatnav-function.png" style="width: 500px;"> 
      <figcaption>Moving focus from "A" to one of the candidate elements</figcaption>
     </figure>
     <p>Let the element which contains "A", "B" and "C" is the <a data-link-type="dfn" href="#spatial-navigation-containers" id="ref-for-spatial-navigation-containers③⑤">spatial navigation container</a>.</p>
@@ -1895,15 +1897,15 @@ but are hosted here until then.</p>
     <p>An element <var>e</var> <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="can be manually scrolled | can be scrolled manually | cannot be scrolled manually | cannot be manually scrolled" data-noexport id="can-be-manually-scrolled">can be manually scrolled</dfn> in a given direction <var>d</var> if:</p>
     <ul>
      <li data-md>
-      <p>The <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-3/#principal-box" id="ref-for-principal-box">principal box</a> established by <var>e</var> is a <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-3/#scroll-container" id="ref-for-scroll-container②⓪">scroll container</a>, and</p>
+      <p>The <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#principal-box" id="ref-for-principal-box">principal box</a> established by <var>e</var> is a <a data-link-type="dfn" href="https://www.w3.org/TR/css-overflow-3/#scroll-container" id="ref-for-scroll-container②⓪">scroll container</a>, and</p>
      <li data-md>
-      <p>if <var>d</var> is <code>up</code> or <code>down</code>, the computed value of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y" id="ref-for-propdef-overflow-y">overflow-y</a> property is not <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-overflow-3/#valdef-overflow-hidden" id="ref-for-valdef-overflow-hidden">hidden</a>, and</p>
+      <p>if <var>d</var> is <code>up</code> or <code>down</code>, the computed value of the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-overflow-3/#propdef-overflow-y" id="ref-for-propdef-overflow-y">overflow-y</a> property is not <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css-overflow-3/#valdef-overflow-hidden" id="ref-for-valdef-overflow-hidden">hidden</a>, and</p>
      <li data-md>
-      <p>if <var>d</var> is <code>left</code> or <code>right</code>, the computed value of the <a class="property" data-link-type="propdesc" href="https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x" id="ref-for-propdef-overflow-x">overflow-x</a> property is not <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-overflow-3/#valdef-overflow-hidden" id="ref-for-valdef-overflow-hidden①">hidden</a>, and</p>
+      <p>if <var>d</var> is <code>left</code> or <code>right</code>, the computed value of the <a class="property" data-link-type="propdesc" href="https://www.w3.org/TR/css-overflow-3/#propdef-overflow-x" id="ref-for-propdef-overflow-x">overflow-x</a> property is not <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css-overflow-3/#valdef-overflow-hidden" id="ref-for-valdef-overflow-hidden①">hidden</a>, and</p>
      <li data-md>
       <p><var>e</var> is not at the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overscroll-behavior-1/#scroll-boundary" id="ref-for-scroll-boundary">scroll boundary</a> in the direction <var>d</var></p>
      <li data-md>
-      <p><var>e</var> is not snapped to the last <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory" id="ref-for-valdef-scroll-snap-type-mandatory">mandatory</a> snap point in direction <var>d</var></p>
+      <p><var>e</var> is not snapped to the last <a class="css" data-link-type="maybe" href="https://www.w3.org/TR/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory" id="ref-for-valdef-scroll-snap-type-mandatory">mandatory</a> snap point in direction <var>d</var></p>
     </ul>
    </div>
    <div class="algorithm" data-algorithm="to directionally scroll an element">
@@ -1919,7 +1921,7 @@ Until then, we roll our own. <a href="https://github.com/w3c/csswg-drafts/issues
      <li data-md>
       <p>Let <var>y</var> be <var>e</var>’s current scroll position on the y axis.</p>
      <li data-md>
-      <p>Use the <a data-link-type="dfn" href="https://drafts.csswg.org/cssom-view-1/#scroll-an-element" id="ref-for-scroll-an-element">scroll an element</a> algorithm from <a data-link-type="biblio" href="#biblio-cssom-view-1">[CSSOM-VIEW-1]</a> on <var>e</var> to</p>
+      <p>Use the <a data-link-type="dfn" href="https://www.w3.org/TR/cssom-view/#scroll-an-element" id="ref-for-scroll-an-element">scroll an element</a> algorithm from <a data-link-type="biblio" href="#biblio-cssom-view-1">[CSSOM-VIEW-1]</a> on <var>e</var> to</p>
       <ul>
        <li data-md>
         <p>(<var>x</var>, <var>y</var> - <var>d</var>) if <var>dir</var> is <code>up</code></p>
@@ -1941,54 +1943,54 @@ Further details are provided below.</p>
 to help editors and Working Groups evaluate the risks introduced by their specifications.
 Answers are provided below.</p>
    <dl>
-    <dt>Does this specification deal with personally-identifiable information?
-    <dd>No.
-    <dt>Does this specification deal with high-value data?
-    <dd>No.
-    <dt>Does this specification introduce new state for an origin that persists across browsing sessions?
-    <dd>No.
-    <dt>Does this specification expose persistent, cross-origin state to the web?
-    <dd>No.
-    <dt>Does this specification expose any other data to an origin that it doesn’t currently have access to?
+    <dt>Does this specification deal with personally-identifiable information? 
+    <dd>No. 
+    <dt>Does this specification deal with high-value data? 
+    <dd>No. 
+    <dt>Does this specification introduce new state for an origin that persists across browsing sessions? 
+    <dd>No. 
+    <dt>Does this specification expose persistent, cross-origin state to the web? 
+    <dd>No. 
+    <dt>Does this specification expose any other data to an origin that it doesn’t currently have access to? 
     <dd>
-      Mostly, no.
+      Mostly, no. 
      <p>The one exception identified would be in the following scenario:
     if the author uses `window.navigate` while the focus is in a cross origin iframe,
     if they don’t get an event at all it means that either there was something scrollable or focusable within the iframe,
     as the only case where they’d get an event is when the search didn’t find anything at all goes up the tree.</p>
      <p>This is so limited information that it does not seem it would introduces real a security risk,
     but it is as far as the editors can tell information that the author could not get could not get otherwise.</p>
-    <dt>Does this specification enable new script execution/loading mechanisms?
-    <dd>No.
-    <dt>Does this specification allow an origin access to a user’s location?
-    <dd>No.
-    <dt>Does this specification allow an origin access to sensors on a user’s device?
-    <dd>No.
-    <dt>Does this specification allow an origin access to aspects of a user’s local computing environment?
-    <dd>No.
-    <dt>Does this specification allow an origin access to other devices?
-    <dd>No.
-    <dt>Does this specification allow an origin some measure of control over a user agent’s native UI?
+    <dt>Does this specification enable new script execution/loading mechanisms? 
+    <dd>No. 
+    <dt>Does this specification allow an origin access to a user’s location? 
+    <dd>No. 
+    <dt>Does this specification allow an origin access to sensors on a user’s device? 
+    <dd>No. 
+    <dt>Does this specification allow an origin access to aspects of a user’s local computing environment? 
+    <dd>No. 
+    <dt>Does this specification allow an origin access to other devices? 
+    <dd>No. 
+    <dt>Does this specification allow an origin some measure of control over a user agent’s native UI? 
     <dd> No control is given over the appearance of the User Agent’s UI.
     Some control is given over how the User Agent performs spatial navigation,
     which may be considered part of its user interface.
     This is intentional, to let the author tailor the behavior of spatial navigation to their pages.
     To prevent malicious the author to interefere with the users' desire to control focus and navigate the document,
     this overriding mechanism is disabled by default for cross-origin iframes.
-    See <a href="#policy-feature">§ 7 The navigation-override policy-controlled feature</a>.
-    <dt>Does this specification expose temporary identifiers to the web?
-    <dd>No.
-    <dt>Does this specification distinguish between behavior in first-party and third-party contexts?
-    <dd>No.
-    <dt>How should this specification work in the context of a user agent’s "incognito" mode?
-    <dd>No Difference.
-    <dt>Does this specification persist data to a user’s local device?
-    <dd>No.
-    <dt>Does this specification have a "Security Considerations" and "Privacy Considerations" section?
-    <dd>Yes, this is the section you are reading now.
-    <dt>Does this specification allow downgrading default security characteristics?
+    See <a href="#policy-feature">§ 7 The navigation-override policy-controlled feature</a>. 
+    <dt>Does this specification expose temporary identifiers to the web? 
+    <dd>No. 
+    <dt>Does this specification distinguish between behavior in first-party and third-party contexts? 
+    <dd>No. 
+    <dt>How should this specification work in the context of a user agent’s "incognito" mode? 
+    <dd>No Difference. 
+    <dt>Does this specification persist data to a user’s local device? 
+    <dd>No. 
+    <dt>Does this specification have a "Security Considerations" and "Privacy Considerations" section? 
+    <dd>Yes, this is the section you are reading now. 
+    <dt>Does this specification allow downgrading default security characteristics? 
     <dd>
-      It does not allow downgrading any unrelated security mechanism.
+      It does not allow downgrading any unrelated security mechanism. 
      <p>It **does** allow the author to opt into allowing
     the events needed to override the default behavior of spatial navigation
     in cross origin iframes they trust
@@ -2050,7 +2052,7 @@ Answers are provided below.</p>
 	or are set apart from the normative text with <code>class="example"</code>,
 	like this: </p>
   <div class="example" id="example-ae2b6bc0">
-   <a class="self-link" href="#example-ae2b6bc0"></a>
+   <a class="self-link" href="#example-ae2b6bc0"></a> 
    <p>This is an example of an informative example. </p>
   </div>
   <p>Informative notes begin with the word “Note” and are set apart from the
@@ -2063,14 +2065,14 @@ Answers are provided below.</p>
   <p>Conformance to this specification
 	is defined for three conformance classes: </p>
   <dl>
-   <dt>style sheet
+   <dt>style sheet 
    <dd>A <a href="http://www.w3.org/TR/CSS2/conform.html#style-sheet">CSS
-			style sheet</a>.
-   <dt>renderer
+			style sheet</a>. 
+   <dt>renderer 
    <dd>A <a href="http://www.w3.org/TR/CSS2/conform.html#user-agent">UA</a> that interprets the semantics of a style sheet and renders
-			documents that use them.
-   <dt>authoring tool
-   <dd>A <a href="http://www.w3.org/TR/CSS2/conform.html#user-agent">UA</a> that writes a style sheet.
+			documents that use them. 
+   <dt>authoring tool 
+   <dd>A <a href="http://www.w3.org/TR/CSS2/conform.html#user-agent">UA</a> that writes a style sheet. 
   </dl>
   <p>A style sheet is conformant to this specification
 	if all of its statements that use syntax defined in this module are valid
@@ -2121,7 +2123,7 @@ Answers are provided below.</p>
   <p>
    Further information on submitting testcases and implementation reports
 		can be found from on the CSS Working Group’s website at <a href="http://www.w3.org/Style/CSS/Test/">http://www.w3.org/Style/CSS/Test/</a>.
-		Questions should be directed to the <a href="http://lists.w3.org/Archives/Public/public-css-testsuite">public-css-testsuite@w3.org</a> mailing list.
+		Questions should be directed to the <a href="http://lists.w3.org/Archives/Public/public-css-testsuite">public-css-testsuite@w3.org</a> mailing list. 
 <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
   </p>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
@@ -2214,139 +2216,139 @@ Answers are provided below.</p>
    <li><a href="#dom-focusableareasearchmode-visible">"visible"</a><span>, in §5.2</span>
   </ul>
   <aside class="dfn-panel" data-for="term-for-box-fragment">
-   <a href="https://drafts.csswg.org/css-break-4/#box-fragment">https://drafts.csswg.org/css-break-4/#box-fragment</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-break-4/#box-fragment">https://www.w3.org/TR/css-break-4/#box-fragment</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-box-fragment">8.1.
+    <li><a href="#ref-for-box-fragment">8.1. 
 Glossary</a> <a href="#ref-for-box-fragment①">(2)</a>
-    <li><a href="#ref-for-box-fragment②">8.4.
+    <li><a href="#ref-for-box-fragment②">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-box-fragment③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-propdef-all">
-   <a href="https://drafts.csswg.org/css-cascade-4/#propdef-all">https://drafts.csswg.org/css-cascade-4/#propdef-all</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-cascade-4/#propdef-all">https://www.w3.org/TR/css-cascade-4/#propdef-all</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-propdef-all">5.2.
+    <li><a href="#ref-for-propdef-all">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-box">
-   <a href="https://drafts.csswg.org/css-display-3/#box">https://drafts.csswg.org/css-display-3/#box</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-display-3/#box">https://www.w3.org/TR/css-display-3/#box</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-box">8.1.
+    <li><a href="#ref-for-box">8.1. 
 Glossary</a> <a href="#ref-for-box①">(2)</a>
-    <li><a href="#ref-for-box②">8.4.
+    <li><a href="#ref-for-box②">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-principal-box">
-   <a href="https://drafts.csswg.org/css-display-3/#principal-box">https://drafts.csswg.org/css-display-3/#principal-box</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-display-3/#principal-box">https://www.w3.org/TR/css-display-3/#principal-box</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-principal-box">Appendix A. Scroll extensions</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-valdef-overflow-hidden">
-   <a href="https://drafts.csswg.org/css-overflow-3/#valdef-overflow-hidden">https://drafts.csswg.org/css-overflow-3/#valdef-overflow-hidden</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-overflow-3/#valdef-overflow-hidden">https://www.w3.org/TR/css-overflow-3/#valdef-overflow-hidden</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-valdef-overflow-hidden">Appendix A. Scroll extensions</a> <a href="#ref-for-valdef-overflow-hidden①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-propdef-overflow-x">
-   <a href="https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x">https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-overflow-3/#propdef-overflow-x">https://www.w3.org/TR/css-overflow-3/#propdef-overflow-x</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-propdef-overflow-x">Appendix A. Scroll extensions</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-propdef-overflow-y">
-   <a href="https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y">https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-overflow-3/#propdef-overflow-y">https://www.w3.org/TR/css-overflow-3/#propdef-overflow-y</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-propdef-overflow-y">Appendix A. Scroll extensions</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-scroll-container">
-   <a href="https://drafts.csswg.org/css-overflow-3/#scroll-container">https://drafts.csswg.org/css-overflow-3/#scroll-container</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-overflow-3/#scroll-container">https://www.w3.org/TR/css-overflow-3/#scroll-container</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-scroll-container">6.2.2.
+    <li><a href="#ref-for-scroll-container">6.2.2. 
 navnotarget</a> <a href="#ref-for-scroll-container①">(2)</a>
-    <li><a href="#ref-for-scroll-container②">8.1.
+    <li><a href="#ref-for-scroll-container②">8.1. 
 Glossary</a> <a href="#ref-for-scroll-container③">(2)</a>
-    <li><a href="#ref-for-scroll-container④">8.2.
+    <li><a href="#ref-for-scroll-container④">8.2. 
 Groupings of elements</a>
-    <li><a href="#ref-for-scroll-container⑤">8.3.
+    <li><a href="#ref-for-scroll-container⑤">8.3. 
 Navigation</a> <a href="#ref-for-scroll-container⑥">(2)</a> <a href="#ref-for-scroll-container⑦">(3)</a>
-    <li><a href="#ref-for-scroll-container⑧">9.1.
+    <li><a href="#ref-for-scroll-container⑧">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>
-    <li><a href="#ref-for-scroll-container⑨">9.2.
+    <li><a href="#ref-for-scroll-container⑨">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a> <a href="#ref-for-scroll-container①⓪">(2)</a> <a href="#ref-for-scroll-container①①">(3)</a> <a href="#ref-for-scroll-container①②">(4)</a> <a href="#ref-for-scroll-container①③">(5)</a> <a href="#ref-for-scroll-container①④">(6)</a> <a href="#ref-for-scroll-container①⑤">(7)</a> <a href="#ref-for-scroll-container①⑥">(8)</a> <a href="#ref-for-scroll-container①⑦">(9)</a> <a href="#ref-for-scroll-container①⑧">(10)</a> <a href="#ref-for-scroll-container①⑨">(11)</a>
     <li><a href="#ref-for-scroll-container②⓪">Appendix A. Scroll extensions</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-scrollport">
-   <a href="https://drafts.csswg.org/css-overflow-3/#scrollport">https://drafts.csswg.org/css-overflow-3/#scrollport</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-overflow-3/#scrollport">https://www.w3.org/TR/css-overflow-3/#scrollport</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-scrollport">3.
+    <li><a href="#ref-for-scrollport">3. 
 Overview</a> <a href="#ref-for-scrollport①">(2)</a> <a href="#ref-for-scrollport②">(3)</a>
-    <li><a href="#ref-for-scrollport③">5.2.
+    <li><a href="#ref-for-scrollport③">5.2. 
 Low level APIs</a>
-    <li><a href="#ref-for-scrollport④">6.2.2.
+    <li><a href="#ref-for-scrollport④">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-scrollport⑤">9.2.
+    <li><a href="#ref-for-scrollport⑤">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-relative-position">
-   <a href="https://drafts.csswg.org/css-position-3/#relative-position">https://drafts.csswg.org/css-position-3/#relative-position</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css3-positioning/#relative-position">https://www.w3.org/TR/css3-positioning/#relative-position</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-relative-position">8.4.
+    <li><a href="#ref-for-relative-position">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-valdef-scroll-snap-type-mandatory">
-   <a href="https://drafts.csswg.org/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory">https://drafts.csswg.org/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory">https://www.w3.org/TR/css-scroll-snap-1/#valdef-scroll-snap-type-mandatory</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-valdef-scroll-snap-type-mandatory">Appendix A. Scroll extensions</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-optimal-viewing-region">
-   <a href="https://drafts.csswg.org/css-scroll-snap-1/#optimal-viewing-region">https://drafts.csswg.org/css-scroll-snap-1/#optimal-viewing-region</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-scroll-snap-1/#optimal-viewing-region">https://www.w3.org/TR/css-scroll-snap-1/#optimal-viewing-region</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-optimal-viewing-region">8.1.
+    <li><a href="#ref-for-optimal-viewing-region">8.1. 
 Glossary</a> <a href="#ref-for-optimal-viewing-region①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-mult-one-plus">
-   <a href="https://drafts.csswg.org/css-values-4/#mult-one-plus">https://drafts.csswg.org/css-values-4/#mult-one-plus</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-values-4/#mult-one-plus">https://www.w3.org/TR/css-values-4/#mult-one-plus</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-mult-one-plus">8.4.
+    <li><a href="#ref-for-mult-one-plus">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-comb-one">
-   <a href="https://drafts.csswg.org/css-values-4/#comb-one">https://drafts.csswg.org/css-values-4/#comb-one</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/css-values-4/#comb-one">https://www.w3.org/TR/css-values-4/#comb-one</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-comb-one">9.1.
+    <li><a href="#ref-for-comb-one">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>
-    <li><a href="#ref-for-comb-one①">9.2.
+    <li><a href="#ref-for-comb-one①">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a> <a href="#ref-for-comb-one②">(2)</a>
-    <li><a href="#ref-for-comb-one③">9.3.
+    <li><a href="#ref-for-comb-one③">9.3. 
 Selecting the navigation algorithm: the spatial-navigation-function property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-x14">
    <a href="https://drafts.csswg.org/css2/box.html#x14">https://drafts.csswg.org/css2/box.html#x14</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-x14">8.1.
+    <li><a href="#ref-for-x14">8.1. 
 Glossary</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-painting-order">
    <a href="https://drafts.csswg.org/css2/zindex.html#painting-order">https://drafts.csswg.org/css2/zindex.html#painting-order</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-painting-order">8.4.
+    <li><a href="#ref-for-painting-order">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-painting-order①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-scroll-an-element">
-   <a href="https://drafts.csswg.org/cssom-view-1/#scroll-an-element">https://drafts.csswg.org/cssom-view-1/#scroll-an-element</a><b>Referenced in:</b>
+   <a href="https://www.w3.org/TR/cssom-view/#scroll-an-element">https://www.w3.org/TR/cssom-view/#scroll-an-element</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-scroll-an-element">Appendix A. Scroll extensions</a>
    </ul>
@@ -2354,295 +2356,295 @@ Focus Navigation Heuristics</a> <a href="#ref-for-painting-order①">(2)</a>
   <aside class="dfn-panel" data-for="term-for-element">
    <a href="https://dom.spec.whatwg.org/#element">https://dom.spec.whatwg.org/#element</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-element">5.2.
+    <li><a href="#ref-for-element">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-event">
    <a href="https://dom.spec.whatwg.org/#event">https://dom.spec.whatwg.org/#event</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-event">6.2.1.
+    <li><a href="#ref-for-event">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-event①">6.2.2.
+    <li><a href="#ref-for-event①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-eventtarget">
    <a href="https://dom.spec.whatwg.org/#eventtarget">https://dom.spec.whatwg.org/#eventtarget</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-eventtarget">6.1.
+    <li><a href="#ref-for-eventtarget">6.1. 
 Interface NavigationEvent</a> <a href="#ref-for-eventtarget①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-node">
    <a href="https://dom.spec.whatwg.org/#node">https://dom.spec.whatwg.org/#node</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-node">5.2.
+    <li><a href="#ref-for-node">5.2. 
 Low level APIs</a> <a href="#ref-for-node①">(2)</a> <a href="#ref-for-node②">(3)</a> <a href="#ref-for-node③">(4)</a> <a href="#ref-for-node④">(5)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-canceled-flag">
    <a href="https://dom.spec.whatwg.org/#canceled-flag">https://dom.spec.whatwg.org/#canceled-flag</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-canceled-flag">4.
+    <li><a href="#ref-for-canceled-flag">4. 
 Triggering Spatial Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-concept-document">
    <a href="https://dom.spec.whatwg.org/#concept-document">https://dom.spec.whatwg.org/#concept-document</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-concept-document">5.2.
+    <li><a href="#ref-for-concept-document">5.2. 
 Low level APIs</a>
-    <li><a href="#ref-for-concept-document①">8.1.
+    <li><a href="#ref-for-concept-document①">8.1. 
 Glossary</a>
-    <li><a href="#ref-for-concept-document②">8.3.
+    <li><a href="#ref-for-concept-document②">8.3. 
 Navigation</a> <a href="#ref-for-concept-document③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-document-element">
    <a href="https://dom.spec.whatwg.org/#document-element">https://dom.spec.whatwg.org/#document-element</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-document-element">8.3.
+    <li><a href="#ref-for-document-element">8.3. 
 Navigation</a> <a href="#ref-for-document-element①">(2)</a> <a href="#ref-for-document-element②">(3)</a> <a href="#ref-for-document-element③">(4)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-boundary-point-node">
    <a href="https://dom.spec.whatwg.org/#boundary-point-node">https://dom.spec.whatwg.org/#boundary-point-node</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-boundary-point-node">8.3.
+    <li><a href="#ref-for-boundary-point-node">8.3. 
 Navigation</a> <a href="#ref-for-boundary-point-node①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-concept-node-document">
    <a href="https://dom.spec.whatwg.org/#concept-node-document">https://dom.spec.whatwg.org/#concept-node-document</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-concept-node-document">6.2.1.
+    <li><a href="#ref-for-concept-node-document">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-concept-node-document①">6.2.2.
+    <li><a href="#ref-for-concept-node-document①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dom-event-preventdefault">
    <a href="https://dom.spec.whatwg.org/#dom-event-preventdefault">https://dom.spec.whatwg.org/#dom-event-preventdefault</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-event-preventdefault">3.
+    <li><a href="#ref-for-dom-event-preventdefault">3. 
 Overview</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dom-event-target">
    <a href="https://dom.spec.whatwg.org/#dom-event-target">https://dom.spec.whatwg.org/#dom-event-target</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-event-target">6.2.1.
+    <li><a href="#ref-for-dom-event-target">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-dom-event-target①">6.2.2.
+    <li><a href="#ref-for-dom-event-target①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-default-allowlist">
    <a href="https://w3c.github.io/webappsec-feature-policy/#default-allowlist">https://w3c.github.io/webappsec-feature-policy/#default-allowlist</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-default-allowlist">7.
+    <li><a href="#ref-for-default-allowlist">7. 
 The navigation-override policy-controlled feature</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-policy-controlled-feature">
    <a href="https://w3c.github.io/webappsec-feature-policy/#policy-controlled-feature">https://w3c.github.io/webappsec-feature-policy/#policy-controlled-feature</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-policy-controlled-feature">7.
+    <li><a href="#ref-for-policy-controlled-feature">7. 
 The navigation-override policy-controlled feature</a> <a href="#ref-for-policy-controlled-feature①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-window">
    <a href="https://html.spec.whatwg.org/multipage/window-object.html#window">https://html.spec.whatwg.org/multipage/window-object.html#window</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-window">5.1.
+    <li><a href="#ref-for-window">5.1. 
 Triggering Navigation Programmatically</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-active-document">
    <a href="https://html.spec.whatwg.org/multipage/browsers.html#active-document">https://html.spec.whatwg.org/multipage/browsers.html#active-document</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-active-document">6.2.1.
+    <li><a href="#ref-for-active-document">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-active-document①">6.2.2.
+    <li><a href="#ref-for-active-document①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-concept-element-disabled">
    <a href="https://html.spec.whatwg.org/multipage/semantics-other.html#concept-element-disabled">https://html.spec.whatwg.org/multipage/semantics-other.html#concept-element-disabled</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-concept-element-disabled">8.4.
+    <li><a href="#ref-for-concept-element-disabled">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-being-rendered">
    <a href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">https://html.spec.whatwg.org/multipage/rendering.html#being-rendered</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-being-rendered">8.4.
+    <li><a href="#ref-for-being-rendered">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-browsing-context">
    <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">https://html.spec.whatwg.org/multipage/browsers.html#browsing-context</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-browsing-context">8.1.
+    <li><a href="#ref-for-browsing-context">8.1. 
 Glossary</a>
-    <li><a href="#ref-for-browsing-context①">8.2.
+    <li><a href="#ref-for-browsing-context①">8.2. 
 Groupings of elements</a>
-    <li><a href="#ref-for-browsing-context②">9.1.
+    <li><a href="#ref-for-browsing-context②">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-browsing-context-container">
    <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container">https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-browsing-context-container">8.3.
+    <li><a href="#ref-for-browsing-context-container">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-currently-focused-area-of-a-top-level-browsing-context">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#currently-focused-area-of-a-top-level-browsing-context">https://html.spec.whatwg.org/multipage/interaction.html#currently-focused-area-of-a-top-level-browsing-context</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-currently-focused-area-of-a-top-level-browsing-context">8.4.
+    <li><a href="#ref-for-currently-focused-area-of-a-top-level-browsing-context">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dom-anchor">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-anchor">https://html.spec.whatwg.org/multipage/interaction.html#dom-anchor</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-anchor">8.4.
+    <li><a href="#ref-for-dom-anchor">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-dom-anchor①">(2)</a> <a href="#ref-for-dom-anchor②">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-expressly-inert">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#expressly-inert">https://html.spec.whatwg.org/multipage/interaction.html#expressly-inert</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-expressly-inert">8.4.
+    <li><a href="#ref-for-expressly-inert">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dom-focus">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus">https://html.spec.whatwg.org/multipage/interaction.html#dom-focus</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-focus">3.
+    <li><a href="#ref-for-dom-focus">3. 
 Overview</a>
-    <li><a href="#ref-for-dom-focus①">6.2.2.
+    <li><a href="#ref-for-dom-focus①">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-dom-focus②">9.2.
+    <li><a href="#ref-for-dom-focus②">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-focusable-area">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#focusable-area">https://html.spec.whatwg.org/multipage/interaction.html#focusable-area</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-focusable-area">8.1.
+    <li><a href="#ref-for-focusable-area">8.1. 
 Glossary</a> <a href="#ref-for-focusable-area①">(2)</a>
-    <li><a href="#ref-for-focusable-area②">8.4.
+    <li><a href="#ref-for-focusable-area②">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-focusing-steps">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#focusing-steps">https://html.spec.whatwg.org/multipage/interaction.html#focusing-steps</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-focusing-steps">8.3.
+    <li><a href="#ref-for-focusing-steps">8.3. 
 Navigation</a> <a href="#ref-for-focusing-steps①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-nested-browsing-context">
    <a href="https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context">https://html.spec.whatwg.org/multipage/browsers.html#nested-browsing-context</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-nested-browsing-context">8.3.
+    <li><a href="#ref-for-nested-browsing-context">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-concept-origin">
    <a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin">https://html.spec.whatwg.org/multipage/origin.html#concept-origin</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-concept-origin">6.2.1.
+    <li><a href="#ref-for-concept-origin">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-concept-origin①">6.2.2.
+    <li><a href="#ref-for-concept-origin①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-nodes-are-removed">
    <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#nodes-are-removed">https://html.spec.whatwg.org/multipage/infrastructure.html#nodes-are-removed</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-nodes-are-removed">8.4.
+    <li><a href="#ref-for-nodes-are-removed">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-sequential-focus-navigation-order">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation-order">https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation-order</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-sequential-focus-navigation-order">8.4.
+    <li><a href="#ref-for-sequential-focus-navigation-order">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-sequential-focus-navigation-starting-point">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation-starting-point">https://html.spec.whatwg.org/multipage/interaction.html#sequential-focus-navigation-starting-point</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-sequential-focus-navigation-starting-point">8.1.
+    <li><a href="#ref-for-sequential-focus-navigation-starting-point">8.1. 
 Glossary</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-attr-tabindex">
    <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex">https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-attr-tabindex">8.4.
+    <li><a href="#ref-for-attr-tabindex">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-attr-tabindex①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-the-body-element-2">
    <a href="https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2">https://html.spec.whatwg.org/multipage/dom.html#the-body-element-2</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-the-body-element-2">6.2.1.
+    <li><a href="#ref-for-the-body-element-2">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-the-body-element-2①">6.2.2.
+    <li><a href="#ref-for-the-body-element-2①">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-the-body-element-2②">8.3.
+    <li><a href="#ref-for-the-body-element-2②">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-top-level-browsing-context">
    <a href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-top-level-browsing-context">6.2.1.
+    <li><a href="#ref-for-top-level-browsing-context">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-top-level-browsing-context①">6.2.2.
+    <li><a href="#ref-for-top-level-browsing-context①">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-top-level-browsing-context②">8.2.
+    <li><a href="#ref-for-top-level-browsing-context②">8.2. 
 Groupings of elements</a>
-    <li><a href="#ref-for-top-level-browsing-context③">8.3.
+    <li><a href="#ref-for-top-level-browsing-context③">8.3. 
 Navigation</a>
-    <li><a href="#ref-for-top-level-browsing-context④">9.1.
+    <li><a href="#ref-for-top-level-browsing-context④">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-assert">
    <a href="https://infra.spec.whatwg.org/#assert">https://infra.spec.whatwg.org/#assert</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-assert">8.3.
+    <li><a href="#ref-for-assert">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-list-empty">
    <a href="https://infra.spec.whatwg.org/#list-empty">https://infra.spec.whatwg.org/#list-empty</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-list-empty">8.4.
+    <li><a href="#ref-for-list-empty">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-list-remove">
    <a href="https://infra.spec.whatwg.org/#list-remove">https://infra.spec.whatwg.org/#list-remove</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-list-remove">8.4.
+    <li><a href="#ref-for-list-remove">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-ordered-set">
    <a href="https://infra.spec.whatwg.org/#ordered-set">https://infra.spec.whatwg.org/#ordered-set</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-ordered-set">8.4.
+    <li><a href="#ref-for-ordered-set">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-ordered-set①">(2)</a>
    </ul>
   </aside>
@@ -2655,60 +2657,60 @@ Focus Navigation Heuristics</a> <a href="#ref-for-ordered-set①">(2)</a>
   <aside class="dfn-panel" data-for="term-for-keyboardevent">
    <a href="https://www.w3.org/TR/uievents/#keyboardevent">https://www.w3.org/TR/uievents/#keyboardevent</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-keyboardevent">6.2.1.
+    <li><a href="#ref-for-keyboardevent">6.2.1. 
 navbeforefocus</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-uievent">
    <a href="https://www.w3.org/TR/uievents/#uievent">https://www.w3.org/TR/uievents/#uievent</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-uievent">4.
+    <li><a href="#ref-for-uievent">4. 
 Triggering Spatial Navigation</a>
-    <li><a href="#ref-for-uievent①">6.1.
+    <li><a href="#ref-for-uievent①">6.1. 
 Interface NavigationEvent</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dictdef-uieventinit">
    <a href="https://www.w3.org/TR/uievents/#dictdef-uieventinit">https://www.w3.org/TR/uievents/#dictdef-uieventinit</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dictdef-uieventinit">6.1.
+    <li><a href="#ref-for-dictdef-uieventinit">6.1. 
 Interface NavigationEvent</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-event-target">
    <a href="https://w3c.github.io/uievents/#event-target">https://w3c.github.io/uievents/#event-target</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-event-target">6.2.1.
+    <li><a href="#ref-for-event-target">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-event-target①">6.2.2.
+    <li><a href="#ref-for-event-target①">6.2.2. 
 navnotarget</a> <a href="#ref-for-event-target②">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-dom-keyboardevent-key">
    <a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key">https://www.w3.org/TR/uievents/#dom-keyboardevent-key</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-keyboardevent-key">6.2.1.
+    <li><a href="#ref-for-dom-keyboardevent-key">6.2.1. 
 navbeforefocus</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-keydown">
    <a href="https://w3c.github.io/uievents/#keydown">https://w3c.github.io/uievents/#keydown</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-keydown">4.
+    <li><a href="#ref-for-keydown">4. 
 Triggering Spatial Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-idl-DOMString">
    <a href="https://heycam.github.io/webidl/#idl-DOMString">https://heycam.github.io/webidl/#idl-DOMString</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-DOMString">6.1.
+    <li><a href="#ref-for-idl-DOMString">6.1. 
 Interface NavigationEvent</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="term-for-Exposed">
    <a href="https://heycam.github.io/webidl/#Exposed">https://heycam.github.io/webidl/#Exposed</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-Exposed">6.1.
+    <li><a href="#ref-for-Exposed">6.1. 
 Interface NavigationEvent</a>
    </ul>
   </aside>
@@ -2990,92 +2992,92 @@ Until then, we roll our own. <a href="https://github.com/w3c/csswg-drafts/issues
   <aside class="dfn-panel" data-for="spatial-navigation">
    <b><a href="#spatial-navigation">#spatial-navigation</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-spatial-navigation">1.
+    <li><a href="#ref-for-spatial-navigation">1. 
 Introduction</a> <a href="#ref-for-spatial-navigation①">(2)</a> <a href="#ref-for-spatial-navigation②">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="at-risk">
    <b><a href="#at-risk">#at-risk</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-at-risk">5.2.
+    <li><a href="#ref-for-at-risk">5.2. 
 Low level APIs</a>
-    <li><a href="#ref-for-at-risk①">9.1.
+    <li><a href="#ref-for-at-risk①">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a>
-    <li><a href="#ref-for-at-risk②">9.2.
+    <li><a href="#ref-for-at-risk②">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="enumdef-spatialnavigationdirection">
    <b><a href="#enumdef-spatialnavigationdirection">#enumdef-spatialnavigationdirection</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-enumdef-spatialnavigationdirection">5.1.
+    <li><a href="#ref-for-enumdef-spatialnavigationdirection">5.1. 
 Triggering Navigation Programmatically</a>
-    <li><a href="#ref-for-enumdef-spatialnavigationdirection①">5.2.
+    <li><a href="#ref-for-enumdef-spatialnavigationdirection①">5.2. 
 Low level APIs</a>
-    <li><a href="#ref-for-enumdef-spatialnavigationdirection②">6.1.
+    <li><a href="#ref-for-enumdef-spatialnavigationdirection②">6.1. 
 Interface NavigationEvent</a> <a href="#ref-for-enumdef-spatialnavigationdirection③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-spatialnavigationdirection-up">
    <b><a href="#dom-spatialnavigationdirection-up">#dom-spatialnavigationdirection-up</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationdirection-up">8.4.
+    <li><a href="#ref-for-dom-spatialnavigationdirection-up">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-dom-spatialnavigationdirection-up①">(2)</a> <a href="#ref-for-dom-spatialnavigationdirection-up②">(3)</a> <a href="#ref-for-dom-spatialnavigationdirection-up③">(4)</a> <a href="#ref-for-dom-spatialnavigationdirection-up④">(5)</a> <a href="#ref-for-dom-spatialnavigationdirection-up⑤">(6)</a> <a href="#ref-for-dom-spatialnavigationdirection-up⑥">(7)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-spatialnavigationdirection-down">
    <b><a href="#dom-spatialnavigationdirection-down">#dom-spatialnavigationdirection-down</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationdirection-down">8.4.
+    <li><a href="#ref-for-dom-spatialnavigationdirection-down">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-dom-spatialnavigationdirection-down①">(2)</a> <a href="#ref-for-dom-spatialnavigationdirection-down②">(3)</a> <a href="#ref-for-dom-spatialnavigationdirection-down③">(4)</a> <a href="#ref-for-dom-spatialnavigationdirection-down④">(5)</a> <a href="#ref-for-dom-spatialnavigationdirection-down⑤">(6)</a> <a href="#ref-for-dom-spatialnavigationdirection-down⑥">(7)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-spatialnavigationdirection-left">
    <b><a href="#dom-spatialnavigationdirection-left">#dom-spatialnavigationdirection-left</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationdirection-left">8.4.
+    <li><a href="#ref-for-dom-spatialnavigationdirection-left">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-dom-spatialnavigationdirection-left①">(2)</a> <a href="#ref-for-dom-spatialnavigationdirection-left②">(3)</a> <a href="#ref-for-dom-spatialnavigationdirection-left③">(4)</a> <a href="#ref-for-dom-spatialnavigationdirection-left④">(5)</a> <a href="#ref-for-dom-spatialnavigationdirection-left⑤">(6)</a> <a href="#ref-for-dom-spatialnavigationdirection-left⑥">(7)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-spatialnavigationdirection-right">
    <b><a href="#dom-spatialnavigationdirection-right">#dom-spatialnavigationdirection-right</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationdirection-right">8.4.
+    <li><a href="#ref-for-dom-spatialnavigationdirection-right">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-dom-spatialnavigationdirection-right①">(2)</a> <a href="#ref-for-dom-spatialnavigationdirection-right②">(3)</a> <a href="#ref-for-dom-spatialnavigationdirection-right③">(4)</a> <a href="#ref-for-dom-spatialnavigationdirection-right④">(5)</a> <a href="#ref-for-dom-spatialnavigationdirection-right⑤">(6)</a> <a href="#ref-for-dom-spatialnavigationdirection-right⑥">(7)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-window-navigate">
    <b><a href="#dom-window-navigate">#dom-window-navigate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-window-navigate">5.1.
+    <li><a href="#ref-for-dom-window-navigate">5.1. 
 Triggering Navigation Programmatically</a> <a href="#ref-for-dom-window-navigate①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="enumdef-focusableareasearchmode">
    <b><a href="#enumdef-focusableareasearchmode">#enumdef-focusableareasearchmode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-enumdef-focusableareasearchmode">5.2.
+    <li><a href="#ref-for-enumdef-focusableareasearchmode">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dictdef-focusableareasoption">
    <b><a href="#dictdef-focusableareasoption">#dictdef-focusableareasoption</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dictdef-focusableareasoption">5.2.
+    <li><a href="#ref-for-dictdef-focusableareasoption">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-focusableareasoption-mode">
    <b><a href="#dom-focusableareasoption-mode">#dom-focusableareasoption-mode</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-focusableareasoption-mode">5.2.
+    <li><a href="#ref-for-dom-focusableareasoption-mode">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dictdef-spatialnavigationsearchoptions">
    <b><a href="#dictdef-spatialnavigationsearchoptions">#dictdef-spatialnavigationsearchoptions</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dictdef-spatialnavigationsearchoptions">5.2.
+    <li><a href="#ref-for-dictdef-spatialnavigationsearchoptions">5.2. 
 Low level APIs</a>
     <li><a href="#ref-for-dictdef-spatialnavigationsearchoptions①">Changes</a>
    </ul>
@@ -3083,14 +3085,14 @@ Low level APIs</a>
   <aside class="dfn-panel" data-for="dom-spatialnavigationsearchoptions-candidates">
    <b><a href="#dom-spatialnavigationsearchoptions-candidates">#dom-spatialnavigationsearchoptions-candidates</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationsearchoptions-candidates">5.2.
+    <li><a href="#ref-for-dom-spatialnavigationsearchoptions-candidates">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-spatialnavigationsearchoptions-container">
    <b><a href="#dom-spatialnavigationsearchoptions-container">#dom-spatialnavigationsearchoptions-container</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-spatialnavigationsearchoptions-container">5.2.
+    <li><a href="#ref-for-dom-spatialnavigationsearchoptions-container">5.2. 
 Low level APIs</a>
    </ul>
   </aside>
@@ -3103,7 +3105,7 @@ Low level APIs</a>
   <aside class="dfn-panel" data-for="dom-element-getspatialnavigationcontainer">
    <b><a href="#dom-element-getspatialnavigationcontainer">#dom-element-getspatialnavigationcontainer</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-element-getspatialnavigationcontainer①">5.2.
+    <li><a href="#ref-for-dom-element-getspatialnavigationcontainer①">5.2. 
 Low level APIs</a> <a href="#ref-for-dom-element-getspatialnavigationcontainer②">(2)</a> <a href="#ref-for-dom-element-getspatialnavigationcontainer③">(3)</a>
     <li><a href="#ref-for-dom-element-getspatialnavigationcontainer④">Changes</a>
    </ul>
@@ -3111,143 +3113,143 @@ Low level APIs</a> <a href="#ref-for-dom-element-getspatialnavigationcontainer�
   <aside class="dfn-panel" data-for="dom-element-focusableareas">
    <b><a href="#dom-element-focusableareas">#dom-element-focusableareas</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-element-focusableareas①">5.2.
+    <li><a href="#ref-for-dom-element-focusableareas①">5.2. 
 Low level APIs</a> <a href="#ref-for-dom-element-focusableareas②">(2)</a> <a href="#ref-for-dom-element-focusableareas③">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="navigationevent">
    <b><a href="#navigationevent">#navigationevent</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-navigationevent">4.
+    <li><a href="#ref-for-navigationevent">4. 
 Triggering Spatial Navigation</a>
-    <li><a href="#ref-for-navigationevent①">6.1.
+    <li><a href="#ref-for-navigationevent①">6.1. 
 Interface NavigationEvent</a> <a href="#ref-for-navigationevent②">(2)</a> <a href="#ref-for-navigationevent③">(3)</a>
-    <li><a href="#ref-for-navigationevent④">6.2.1.
+    <li><a href="#ref-for-navigationevent④">6.2.1. 
 navbeforefocus</a> <a href="#ref-for-navigationevent⑤">(2)</a> <a href="#ref-for-navigationevent⑥">(3)</a>
-    <li><a href="#ref-for-navigationevent⑦">6.2.2.
+    <li><a href="#ref-for-navigationevent⑦">6.2.2. 
 navnotarget</a> <a href="#ref-for-navigationevent⑧">(2)</a> <a href="#ref-for-navigationevent⑨">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-navigationevent-dir">
    <b><a href="#dom-navigationevent-dir">#dom-navigationevent-dir</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-navigationevent-dir">6.2.1.
+    <li><a href="#ref-for-dom-navigationevent-dir">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-dom-navigationevent-dir①">6.2.2.
+    <li><a href="#ref-for-dom-navigationevent-dir①">6.2.2. 
 navnotarget</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-navigationevent-relatedtarget">
    <b><a href="#dom-navigationevent-relatedtarget">#dom-navigationevent-relatedtarget</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-navigationevent-relatedtarget">6.2.1.
+    <li><a href="#ref-for-dom-navigationevent-relatedtarget">6.2.1. 
 navbeforefocus</a> <a href="#ref-for-dom-navigationevent-relatedtarget①">(2)</a>
-    <li><a href="#ref-for-dom-navigationevent-relatedtarget②">6.2.2.
+    <li><a href="#ref-for-dom-navigationevent-relatedtarget②">6.2.2. 
 navnotarget</a> <a href="#ref-for-dom-navigationevent-relatedtarget③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dictdef-navigationeventinit">
    <b><a href="#dictdef-navigationeventinit">#dictdef-navigationeventinit</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dictdef-navigationeventinit">6.1.
+    <li><a href="#ref-for-dictdef-navigationeventinit">6.1. 
 Interface NavigationEvent</a> <a href="#ref-for-dictdef-navigationeventinit①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="eventdef-navigationevent-navbeforefocus">
    <b><a href="#eventdef-navigationevent-navbeforefocus">#eventdef-navigationevent-navbeforefocus</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-eventdef-navigationevent-navbeforefocus">6.2.1.
+    <li><a href="#ref-for-eventdef-navigationevent-navbeforefocus">6.2.1. 
 navbeforefocus</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dispatches-navbeforefocus-event">
    <b><a href="#dispatches-navbeforefocus-event">#dispatches-navbeforefocus-event</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dispatches-navbeforefocus-event">8.3.
+    <li><a href="#ref-for-dispatches-navbeforefocus-event">8.3. 
 Navigation</a> <a href="#ref-for-dispatches-navbeforefocus-event①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="eventdef-navigationevent-navnotarget">
    <b><a href="#eventdef-navigationevent-navnotarget">#eventdef-navigationevent-navnotarget</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-eventdef-navigationevent-navnotarget">6.2.2.
+    <li><a href="#ref-for-eventdef-navigationevent-navnotarget">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-eventdef-navigationevent-navnotarget①">9.2.
+    <li><a href="#ref-for-eventdef-navigationevent-navnotarget①">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dispatches-navnotarget-event">
    <b><a href="#dispatches-navnotarget-event">#dispatches-navnotarget-event</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dispatches-navnotarget-event">8.3.
+    <li><a href="#ref-for-dispatches-navnotarget-event">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="navigation-override">
    <b><a href="#navigation-override">#navigation-override</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-navigation-override">6.2.1.
+    <li><a href="#ref-for-navigation-override">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-navigation-override①">6.2.2.
+    <li><a href="#ref-for-navigation-override①">6.2.2. 
 navnotarget</a>
-    <li><a href="#ref-for-navigation-override②">7.
+    <li><a href="#ref-for-navigation-override②">7. 
 The navigation-override policy-controlled feature</a> <a href="#ref-for-navigation-override③">(2)</a> <a href="#ref-for-navigation-override④">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="boundary-box">
    <b><a href="#boundary-box">#boundary-box</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-boundary-box">8.1.
+    <li><a href="#ref-for-boundary-box">8.1. 
 Glossary</a>
-    <li><a href="#ref-for-boundary-box①">8.4.
+    <li><a href="#ref-for-boundary-box①">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-boundary-box②">(2)</a> <a href="#ref-for-boundary-box③">(3)</a> <a href="#ref-for-boundary-box④">(4)</a> <a href="#ref-for-boundary-box⑤">(5)</a> <a href="#ref-for-boundary-box⑥">(6)</a> <a href="#ref-for-boundary-box⑦">(7)</a> <a href="#ref-for-boundary-box⑧">(8)</a> <a href="#ref-for-boundary-box⑨">(9)</a> <a href="#ref-for-boundary-box①⓪">(10)</a> <a href="#ref-for-boundary-box①①">(11)</a> <a href="#ref-for-boundary-box①②">(12)</a> <a href="#ref-for-boundary-box①③">(13)</a> <a href="#ref-for-boundary-box①④">(14)</a> <a href="#ref-for-boundary-box①⑤">(15)</a> <a href="#ref-for-boundary-box①⑥">(16)</a> <a href="#ref-for-boundary-box①⑦">(17)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="inside-area">
    <b><a href="#inside-area">#inside-area</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-inside-area">8.1.
+    <li><a href="#ref-for-inside-area">8.1. 
 Glossary</a>
-    <li><a href="#ref-for-inside-area①">8.4.
+    <li><a href="#ref-for-inside-area①">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-inside-area②">(2)</a> <a href="#ref-for-inside-area③">(3)</a> <a href="#ref-for-inside-area④">(4)</a> <a href="#ref-for-inside-area⑤">(5)</a> <a href="#ref-for-inside-area⑥">(6)</a> <a href="#ref-for-inside-area⑦">(7)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="search-origin">
    <b><a href="#search-origin">#search-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-search-origin">8.4.
+    <li><a href="#ref-for-search-origin">8.4. 
 Focus Navigation Heuristics</a> <a href="#ref-for-search-origin①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="spatial-navigation-starting-point">
    <b><a href="#spatial-navigation-starting-point">#spatial-navigation-starting-point</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-spatial-navigation-starting-point">8.1.
+    <li><a href="#ref-for-spatial-navigation-starting-point">8.1. 
 Glossary</a>
-    <li><a href="#ref-for-spatial-navigation-starting-point①">8.4.
+    <li><a href="#ref-for-spatial-navigation-starting-point①">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="spatial-navigation-containers">
    <b><a href="#spatial-navigation-containers">#spatial-navigation-containers</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-spatial-navigation-containers">3.
+    <li><a href="#ref-for-spatial-navigation-containers">3. 
 Overview</a> <a href="#ref-for-spatial-navigation-containers①">(2)</a> <a href="#ref-for-spatial-navigation-containers②">(3)</a> <a href="#ref-for-spatial-navigation-containers③">(4)</a> <a href="#ref-for-spatial-navigation-containers④">(5)</a> <a href="#ref-for-spatial-navigation-containers⑤">(6)</a> <a href="#ref-for-spatial-navigation-containers⑥">(7)</a> <a href="#ref-for-spatial-navigation-containers⑦">(8)</a>
-    <li><a href="#ref-for-spatial-navigation-containers⑧">5.2.
+    <li><a href="#ref-for-spatial-navigation-containers⑧">5.2. 
 Low level APIs</a> <a href="#ref-for-spatial-navigation-containers⑨">(2)</a> <a href="#ref-for-spatial-navigation-containers①⓪">(3)</a> <a href="#ref-for-spatial-navigation-containers①①">(4)</a> <a href="#ref-for-spatial-navigation-containers①②">(5)</a> <a href="#ref-for-spatial-navigation-containers①③">(6)</a> <a href="#ref-for-spatial-navigation-containers①④">(7)</a> <a href="#ref-for-spatial-navigation-containers①⑤">(8)</a> <a href="#ref-for-spatial-navigation-containers①⑥">(9)</a>
-    <li><a href="#ref-for-spatial-navigation-containers①⑦">6.2.2.
+    <li><a href="#ref-for-spatial-navigation-containers①⑦">6.2.2. 
 navnotarget</a> <a href="#ref-for-spatial-navigation-containers①⑧">(2)</a> <a href="#ref-for-spatial-navigation-containers①⑨">(3)</a> <a href="#ref-for-spatial-navigation-containers②⓪">(4)</a> <a href="#ref-for-spatial-navigation-containers②①">(5)</a> <a href="#ref-for-spatial-navigation-containers②②">(6)</a> <a href="#ref-for-spatial-navigation-containers②③">(7)</a>
-    <li><a href="#ref-for-spatial-navigation-containers②④">8.2.
+    <li><a href="#ref-for-spatial-navigation-containers②④">8.2. 
 Groupings of elements</a> <a href="#ref-for-spatial-navigation-containers②⑤">(2)</a>
-    <li><a href="#ref-for-spatial-navigation-containers②⑥">8.3.
+    <li><a href="#ref-for-spatial-navigation-containers②⑥">8.3. 
 Navigation</a> <a href="#ref-for-spatial-navigation-containers②⑦">(2)</a> <a href="#ref-for-spatial-navigation-containers②⑧">(3)</a>
-    <li><a href="#ref-for-spatial-navigation-containers②⑨">8.4.
+    <li><a href="#ref-for-spatial-navigation-containers②⑨">8.4. 
 Focus Navigation Heuristics</a>
-    <li><a href="#ref-for-spatial-navigation-containers③⓪">9.1.
+    <li><a href="#ref-for-spatial-navigation-containers③⓪">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a> <a href="#ref-for-spatial-navigation-containers③①">(2)</a> <a href="#ref-for-spatial-navigation-containers③②">(3)</a>
-    <li><a href="#ref-for-spatial-navigation-containers③③">9.2.
+    <li><a href="#ref-for-spatial-navigation-containers③③">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
-    <li><a href="#ref-for-spatial-navigation-containers③④">9.3.
+    <li><a href="#ref-for-spatial-navigation-containers③④">9.3. 
 Selecting the navigation algorithm: the spatial-navigation-function property</a> <a href="#ref-for-spatial-navigation-containers③⑤">(2)</a>
     <li><a href="#ref-for-spatial-navigation-containers③⑥">Changes</a> <a href="#ref-for-spatial-navigation-containers③⑦">(2)</a>
    </ul>
@@ -3255,23 +3257,23 @@ Selecting the navigation algorithm: the spatial-navigation-function property</a>
   <aside class="dfn-panel" data-for="spatial-navigation-steps">
    <b><a href="#spatial-navigation-steps">#spatial-navigation-steps</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-spatial-navigation-steps">4.
+    <li><a href="#ref-for-spatial-navigation-steps">4. 
 Triggering Spatial Navigation</a> <a href="#ref-for-spatial-navigation-steps①">(2)</a> <a href="#ref-for-spatial-navigation-steps②">(3)</a>
-    <li><a href="#ref-for-spatial-navigation-steps③">5.1.
+    <li><a href="#ref-for-spatial-navigation-steps③">5.1. 
 Triggering Navigation Programmatically</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="set-the-search-origin">
    <b><a href="#set-the-search-origin">#set-the-search-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-set-the-search-origin">8.3.
+    <li><a href="#ref-for-set-the-search-origin">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="update-the-search-origin">
    <b><a href="#update-the-search-origin">#update-the-search-origin</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-update-the-search-origin">8.4.
+    <li><a href="#ref-for-update-the-search-origin">8.4. 
 Focus Navigation Heuristics</a>
     <li><a href="#ref-for-update-the-search-origin①">Changes</a>
    </ul>
@@ -3279,83 +3281,83 @@ Focus Navigation Heuristics</a>
   <aside class="dfn-panel" data-for="find-focusable-areas">
    <b><a href="#find-focusable-areas">#find-focusable-areas</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-find-focusable-areas">5.2.
+    <li><a href="#ref-for-find-focusable-areas">5.2. 
 Low level APIs</a> <a href="#ref-for-find-focusable-areas①">(2)</a>
-    <li><a href="#ref-for-find-focusable-areas②">8.3.
+    <li><a href="#ref-for-find-focusable-areas②">8.3. 
 Navigation</a> <a href="#ref-for-find-focusable-areas③">(2)</a>
-    <li><a href="#ref-for-find-focusable-areas④">8.4.
+    <li><a href="#ref-for-find-focusable-areas④">8.4. 
 Focus Navigation Heuristics</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="select-the-best-candidate">
    <b><a href="#select-the-best-candidate">#select-the-best-candidate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-select-the-best-candidate">5.2.
+    <li><a href="#ref-for-select-the-best-candidate">5.2. 
 Low level APIs</a>
-    <li><a href="#ref-for-select-the-best-candidate①">6.2.1.
+    <li><a href="#ref-for-select-the-best-candidate①">6.2.1. 
 navbeforefocus</a>
-    <li><a href="#ref-for-select-the-best-candidate②">8.3.
+    <li><a href="#ref-for-select-the-best-candidate②">8.3. 
 Navigation</a> <a href="#ref-for-select-the-best-candidate③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="find-the-shortest-distance">
    <b><a href="#find-the-shortest-distance">#find-the-shortest-distance</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-find-the-shortest-distance">8.4.
+    <li><a href="#ref-for-find-the-shortest-distance">8.4. 
 Focus Navigation Heuristics</a>
-    <li><a href="#ref-for-find-the-shortest-distance①">9.3.
+    <li><a href="#ref-for-find-the-shortest-distance①">9.3. 
 Selecting the navigation algorithm: the spatial-navigation-function property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="propdef-spatial-navigation-contain">
    <b><a href="#propdef-spatial-navigation-contain">#propdef-spatial-navigation-contain</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-propdef-spatial-navigation-contain①">3.
+    <li><a href="#ref-for-propdef-spatial-navigation-contain①">3. 
 Overview</a>
-    <li><a href="#ref-for-propdef-spatial-navigation-contain②">8.2.
+    <li><a href="#ref-for-propdef-spatial-navigation-contain②">8.2. 
 Groupings of elements</a>
-    <li><a href="#ref-for-propdef-spatial-navigation-contain③">9.1.
+    <li><a href="#ref-for-propdef-spatial-navigation-contain③">9.1. 
 Creating additional spatial navigation containers: the spatial-navigation-contain property</a> <a href="#ref-for-propdef-spatial-navigation-contain④">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="propdef-spatial-navigation-action">
    <b><a href="#propdef-spatial-navigation-action">#propdef-spatial-navigation-action</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-propdef-spatial-navigation-action①">8.3.
+    <li><a href="#ref-for-propdef-spatial-navigation-action①">8.3. 
 Navigation</a> <a href="#ref-for-propdef-spatial-navigation-action②">(2)</a> <a href="#ref-for-propdef-spatial-navigation-action③">(3)</a> <a href="#ref-for-propdef-spatial-navigation-action④">(4)</a> <a href="#ref-for-propdef-spatial-navigation-action⑤">(5)</a> <a href="#ref-for-propdef-spatial-navigation-action⑥">(6)</a>
-    <li><a href="#ref-for-propdef-spatial-navigation-action⑦">9.2.
+    <li><a href="#ref-for-propdef-spatial-navigation-action⑦">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a> <a href="#ref-for-propdef-spatial-navigation-action⑧">(2)</a> <a href="#ref-for-propdef-spatial-navigation-action⑨">(3)</a> <a href="#ref-for-propdef-spatial-navigation-action①⓪">(4)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="valdef-spatial-navigation-action-auto">
    <b><a href="#valdef-spatial-navigation-action-auto">#valdef-spatial-navigation-action-auto</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-valdef-spatial-navigation-action-auto">8.3.
+    <li><a href="#ref-for-valdef-spatial-navigation-action-auto">8.3. 
 Navigation</a>
-    <li><a href="#ref-for-valdef-spatial-navigation-action-auto①">9.2.
+    <li><a href="#ref-for-valdef-spatial-navigation-action-auto①">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="valdef-spatial-navigation-action-focus">
    <b><a href="#valdef-spatial-navigation-action-focus">#valdef-spatial-navigation-action-focus</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-valdef-spatial-navigation-action-focus">8.3.
+    <li><a href="#ref-for-valdef-spatial-navigation-action-focus">8.3. 
 Navigation</a> <a href="#ref-for-valdef-spatial-navigation-action-focus①">(2)</a> <a href="#ref-for-valdef-spatial-navigation-action-focus②">(3)</a> <a href="#ref-for-valdef-spatial-navigation-action-focus③">(4)</a>
-    <li><a href="#ref-for-valdef-spatial-navigation-action-focus④">9.2.
+    <li><a href="#ref-for-valdef-spatial-navigation-action-focus④">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a> <a href="#ref-for-valdef-spatial-navigation-action-focus⑤">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="valdef-spatial-navigation-action-scroll">
    <b><a href="#valdef-spatial-navigation-action-scroll">#valdef-spatial-navigation-action-scroll</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-valdef-spatial-navigation-action-scroll">8.3.
+    <li><a href="#ref-for-valdef-spatial-navigation-action-scroll">8.3. 
 Navigation</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="propdef-spatial-navigation-function">
    <b><a href="#propdef-spatial-navigation-function">#propdef-spatial-navigation-function</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-propdef-spatial-navigation-function①">9.3.
+    <li><a href="#ref-for-propdef-spatial-navigation-function①">9.3. 
 Selecting the navigation algorithm: the spatial-navigation-function property</a>
     <li><a href="#ref-for-propdef-spatial-navigation-function②">Changes</a>
    </ul>
@@ -3363,16 +3365,16 @@ Selecting the navigation algorithm: the spatial-navigation-function property</a>
   <aside class="dfn-panel" data-for="can-be-manually-scrolled">
    <b><a href="#can-be-manually-scrolled">#can-be-manually-scrolled</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-can-be-manually-scrolled">8.3.
+    <li><a href="#ref-for-can-be-manually-scrolled">8.3. 
 Navigation</a> <a href="#ref-for-can-be-manually-scrolled①">(2)</a> <a href="#ref-for-can-be-manually-scrolled②">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="directionally-scroll-an-element">
    <b><a href="#directionally-scroll-an-element">#directionally-scroll-an-element</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-directionally-scroll-an-element">8.3.
+    <li><a href="#ref-for-directionally-scroll-an-element">8.3. 
 Navigation</a> <a href="#ref-for-directionally-scroll-an-element①">(2)</a> <a href="#ref-for-directionally-scroll-an-element②">(3)</a>
-    <li><a href="#ref-for-directionally-scroll-an-element③">9.2.
+    <li><a href="#ref-for-directionally-scroll-an-element③">9.2. 
 Controlling the interaction with scrolling: the spatial-navigation-action property</a>
    </ul>
   </aside>

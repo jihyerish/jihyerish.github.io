@@ -2,7 +2,7 @@
 Title: CSS Spatial Navigation Level 1
 Shortname: css-nav
 Level: 1
-Status: ED
+Status: WD
 Work Status: exploring
 Group: csswg
 TR: https://www.w3.org/TR/css-nav-1/
