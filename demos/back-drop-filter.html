@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Backdrop filter test</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			/*background-color: rgb(22,22,22);*/
+			/*background-color: transparent;*/
+			background-image: url(https://i.picsum.photos/id/1080/6858/4574.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 500px;
+			height: 500px;
+		}
+		.white {
+			width: 500px;
+			height: 500px;
+			background-color: green;
+		}
+		.overlay {
+			width: 500px;
+			height: 500px;
+			background-color: transparent;
+		}
+		.style{
+			width: 100px;
+			height: 100px;
+			backdrop-filter: blur(7px);
+			/*background-color: teal;*/
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="overlay">
+		<img src="image/bicycle.svg" class="style"></img>
+	</div>
+	
+
+	<!--img src="bicycle.svg" class="style"></img-->
+</body>
+</html>
