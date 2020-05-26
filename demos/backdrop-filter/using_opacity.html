@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Backdrop filter test</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			opacity: 0;
+			width: 500px;
+			height: 500px;
+		}
+		.white {
+			width: 500px;
+			height: 500px;
+			background-color: white;
+		}
+		.overlay {
+			width: 500px;
+			height: 500px;
+      opacity: 0;
+			background-color: transparent;
+		}
+		.style{
+			width: 100px;
+			height: 100px;
+      opacity: 1;
+			backdrop-filter: blur(7px);
+			/*background-color: teal;*/
+		}
+	</style>
+</head>
+<body>
+	<!--img src="bicycle.svg" class="style"></img-->
+	<div class="style"></div>
+</body>
+</html>
