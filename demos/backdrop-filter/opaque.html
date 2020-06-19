@@ -9,16 +9,24 @@
 			width: 500px;
 			height: 500px;
 		}
+		
+		.overlay {
+			width: 500px;
+			height: 500px;
+			background-color: transparent;
+		}
+		
 		.style{
 			width: 100px;
 			height: 100px;
-			backdrop-filter: blur(7px);
+			backdrop-filter: grayscale(90%);
 			background-color: rgba(200,0,200,0);
 		}
 	</style>
 </head>
 <body>
-	<!--img src="bicycle.svg" class="style"></img-->
-	<div class="style"></div>
+	<div class="overlay">
+		<div class="style"></div>
+	</div>	
 </body>
 </html>
