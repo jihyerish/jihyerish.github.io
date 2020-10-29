@@ -1,0 +1,21 @@
+html,body{margin:0;padding:0;}
+
+.foreground-div {
+  backdrop-filter: blur(10px);
+  background-color: initial;
+  position: fixed;
+  top: 0px;
+  left:0px;
+  padding:300px;
+  width: 100%;
+  height: 100%;
+}
+
+.background-div {
+  width: 100%;
+  height: 100vh;
+  position: static;
+  background-size: cover;
+  background-image: url(https://picsum.photos/id/1080/6858/4574);
+  font-size: 120px;
+}
