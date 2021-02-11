@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Focus Navigation Test</title>
+  </head>
+  <body>
+    <h1>Focus on Nested Scroll</h1>
+    <div id="container">
+      <div id="optionField">
+        <form>
+          <fieldset>
+            <legend>Option</legend>
+            <div>
+            	<span>display: </span>
+	            <select id="displayType" name=display>
+	              <option value="inline">inline</option>
+	  	      <option value="block" selected="selected">block</option>
+	            </select>
+            </div>
+            <div>
+            	<span>function: </span>
+            	<select id="functionType" name="function">
+	              <option value="scrollIntoView">scrollIntoView()</option>
+	  	      <option value="focus" selected="selected">focus()</option>
+	            </select>
+
+	            <div id="scrollIntoViewOptions">
+	              <span> with { behavior : </span>
+	              <select id="behavior" name="behavior">
+	                <option value="auto" selected="selected">auto</option>
+	                <option value="instant" >instant</option>
+	                <option value="smooth" >smooth</option>
+	              </select>
+	              <div id="inlinePositionOptions">
+		              <span> , inline : </span>
+		              <select id="inlinePosition" name="inlinePosition">
+		              	<option value="center" >center</option>
+		              	<option value="end" >end</option>
+		              	<option value="nearest" selected="selected">nearest</option>
+		                <option value="start">start</option>
+		              </select>
+		          </div>
+		          <div id="blockPositionOptions">
+		              <span> , block : </span>
+		              <select id="blockPosition" name="blockPosition">
+		                <option value="center" >center</option>
+		                <option value="end" >end</option>
+		                <option value="nearest" >nearest</option>
+		                <option value="start" selected="selected">start</option>
+		              </select>
+		          </div>
+	              <span> }</span>
+	            </div>
+
+	            <span> on </span>
+	            <select id="selectElement" name="selectElement">
+	              <option value="1" selected="selected">1</option>
+	              <option value="2">2</option>
+	              <option value="3">3</option>
+	              <option value="4">4</option>
+	              <option value="1_1">1_1</option>
+	              <option value="1_2">1_2</option>
+	              <option value="1_3">1_3</option>
+	              <option value="2_1">2_1</option>
+	              <option value="2_2">2_2</option>
+	              <option value="2_3">2_3</option>
+	              <option value="3_1">3_1</option>
+	              <option value="3_2">3_2</option>
+	              <option value="3_3">3_3</option>
+	              <option value="4_1">4_1</option>
+	              <option value="4_2">4_2</option>
+	              <option value="4_3">4_3</option>
+				</select>
+				<input type="checkbox" id="preventScroll">prevent scroll</input>
+            </div>
+          </fieldset>
+        </form>
+        <button id="manual">Action!</button>
+      </div>
+      <div id="scrollBox">
+          <div class="bigbox" id="1" tabindex=1>
+              <div class="box" id="1_1" tabindex=1>1_1</div>
+              <div class="box" id="1_2" tabindex=1>1_2</div>
+              <div class="box" id="1_3" tabindex=1>1_3</div>
+          </div>
+          <div class="bigbox" id="2" tabindex=1>
+              <div class="box" id="2_1" tabindex=1>2_1</div>
+              <div class="box" id="2_2" tabindex=1>2_2</div>
+              <div class="box" id="2_3" tabindex=1>2_3</div>
+          </div>
+          <div class="bigbox" id="3" tabindex=1>
+              <div class="box" id="3_1" tabindex=1>3_1</div>
+              <div class="box" id="3_2" tabindex=1>3_2</div>
+              <div class="box" id="3_3" tabindex=1>3_3</div>
+          </div>
+          <div class="bigbox" id="4" tabindex=1>
+              <div class="box" id="4_1" tabindex=1>4_1</div>
+              <div class="box" id="4_2" tabindex=1>4_2</div>
+              <div class="box" id="4_3" tabindex=1>4_3</div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="scroll_nested.js"></script>
+</html>

@@ -23,24 +23,24 @@
 				document.getElementById('blockPositionOptions').style.display = 'none';
 
 				scrollBox.setAttribute('class', 'inline-scrollBox');
-					
+
 				for(let i = 0; i < boxes.length; i++) {
 					boxes[i].style.display = 'inline-block';
 					boxes[i].style.margin = 'auto 1em';
 				}
-				
+
 			}
-			else {				
+			else {
 				document.getElementById('inlinePositionOptions').style.display = 'none';
 				document.getElementById('blockPositionOptions').style.display = 'inline';
-				
+
 				scrollBox.setAttribute('class', 'block-scrollBox');
-					
+
 				for(let i = 0; i < boxes.length; i++) {
 					boxes[i].style.display = 'block';
 					boxes[i].style.margin = '1em auto';
-				}				
-			}		
+				}
+			}
 		});
 	}
 
@@ -57,7 +57,7 @@
 
 	document.getElementById('manual').addEventListener('click', () => {
 		getOptions();
-		
+
 		if(method === 'scrollIntoView') {
 			document.getElementById(selectedBox).scrollIntoView({
 				behavior,
@@ -68,7 +68,7 @@
 		else {
 			if (preventScroll.checked)
 				document.getElementById(selectedBox).focus({preventScroll: true});
-			else 
+			else
 				document.getElementById(selectedBox).focus({preventScroll: false});
 		}
 	});
@@ -77,7 +77,7 @@
 		boxes = [];
 		scrollBox = document.querySelector('#scrollBox');
 		scrollBox.setAttribute('class', 'block-scrollBox');
-			
+
 		for(let i = 0; i < numBoxes; i++) {
 			boxes.push(document.createElement('div'));
 			boxes[i].appendChild(document.createTextNode(i + 1));

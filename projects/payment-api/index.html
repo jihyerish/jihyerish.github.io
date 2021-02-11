@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토스 API</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.toss.im/tds/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.toss.im/tds/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="https://static.toss.im/tds/favicon/favicon-48x48.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/table.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header sticky">
+        <h1 class="header__title">
+          toss > API
+        </h1>
+      </header>
+
+      <main class="main">
+          <section id="about-payment-api">
+            <h2 class="title">결제 API</h2>
+            <div class="description__plain">
+              <p>
+                결제 API는 사용자의 결제 데이터를 받아 처리하고 이에 따른 결과를 응답받는 API입니다.<br>
+                결제 API는 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+                  target="_blank">REST</a>
+                방식으로 설계되었습니다. 해당 API 서비스의 Base URL은 다음과 같습니다:
+                <p>
+                  https://tech-writer-assignment.herokuapp.com
+                </p>
+              </p>
+            </div>
+          </section>
+
+          <section id="payments">
+            <h3 class="title">Payments</h2>
+            <p>
+              toss를 통해 연결된 계정의 은행 계좌 또는 직불 카드로 결제를 하는 경우 사용됩니다.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>ENDPOINTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>POST /payments</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="subtitle" id="payment-object">Payment object</h3>
+            <p>
+              결제를 요청하기 위해서, Payment object를 생성해야 합니다. <br>
+              요청이 성공하려면 type, amount 정보를 필수적으로 입력해야 합니다.
+            </p>
+            <div class="content">
+              <div class="description__image">
+                <table>
+                  <thead>
+                    <tr>
+                      <th><a href="#payments">Payment object</a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <pre>
+  {
+    "type" : {
+      "card": {
+          "brand": string,
+          "number": string,
+          "expiry": string,
+          "cvc": string
+      },
+      "bank_account": {
+          "brand": string,
+          "number": string
+      }
+    }
+    "currency": string,
+    "amount": integer,
+    "description": string
+  }
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="description">
+                <h4 class="details">Fields</h4>
+                <div class="parameter-item">
+                  <p class="parameter-title mandatory">type (object)</p>
+                  <p>결제 방법. 은행 계좌 정보 혹은 직불 카드 정보를 입력.</p>
+                  <p class="parameter-title">card (object)</p>
+                  <p>결제 카드 정보</p>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">brand (string)</p>
+                    <p>카드의 브랜드<br>
+                        e.g.) "BC"
+                    </p>
+                  </div>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">number (string)</p>
+                    <p>카드 번호. '-' 혹은 공백 없이 모든 숫자를 붙여서 입력.</p>
+                  </div>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">expiry (string)</p>
+                    <p>카드 만료 연일 (MMYY)</p>
+                  </div>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">cvc (string)</p>
+                    <p>CVC</p>
+                  </div>
+                  <p class="parameter-title">bank (object)</p>
+                  <p>결제 은행 계좌 정보</p>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">brand (string)</p>
+                    <p>은행 브랜드<br>
+                      e.g.) "WOORI"
+                    </p>
+                  </div>
+                  <div class="parameter-item-sub">
+                    <p class="parameter-title">number (string)</p>
+                    <p>은행 계좌 번호. '-' 혹은 공백 없이 모든 숫자를 붙여서 입력.</p>
+                  </div>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title mandatory">amount (integer)</p>
+                  <p>결제할 금액</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title optional">currency (string)</p>
+                  <p>결제 통화. <a href="https://www.iso.org/iso-4217-currency-codes.html">ISO currency code</a>로 규정된 텍스트를
+                    입력.<br>
+                    미 기입시에는 요청 받은 서버의 locale 정보 기준으로 통화를 계산함.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title optional">description (string)</p>
+                  <p>결제에 대한 상세 정보</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="subtitle" id="create-payment">결제 정보 생성</h3>
+            <p>
+              Payment object에 필수 파라미터 값들을 담아 POST로 요청합니다.<br>
+              모든 데이터가 규격에 맞게 요청된 경우, 성공 응답을 받게 되며 성공 응답으로 요청 시
+              전달한 Payment 객체를 포함한 JSON 객체가 전달되며 HTTP STATUS CODE 
+              <code class="http-status"> 200</code>를 반환합니다.<br>
+              요청 필수 값이 누락 혹은 잘못 기입되는 경우, 에러 메세지가 JSON 객체로 전달되며 HTTP STATUS CODE 
+              <code class="http-status"> 400</code>를 반환합니다.
+            </p>
+            <div class="content">
+              <div class="description__image">
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Request body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#payments">Payment object</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="description">
+                
+              </div>
+            </div>
+            <div class="content">
+              <div class="description__image">
+                
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Response body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <pre>
+  {
+    "id": string,
+    "result": string,
+    "createdAt": string,
+    "data": object,
+    "code": string,
+    "message": string,
+  }
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="description">
+                <h4 class="details">Fields</h4>
+                <div class="parameter-item">
+                  <p class="parameter-title success">id (string)</p>
+                  <p>결제 ID. 결제 요청 성공 시 존재하는 데이터.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title always">result (string)</p>
+                  <p>결제 실행 결과. 요청 성공 에러 유무에 관계없이 항상 존재하는 데이터.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title success">createdAt (string)</p>
+                  <p>결제가 일어난 시간. 결제 요청 성공 시 존재하는 데이터.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title success">data (<a href="#payments">Payment object</a>)</p>
+                  <p>요청했을 때 보낸 결제 정보. 결제 요청 성공 시 존재하는 데이터.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title error">code (string)</p>
+                  <p>에러 코드. 결제 요청 에러 시 존재하는 데이터.</p>
+                </div>
+                <div class="parameter-item">
+                  <p class="parameter-title error">message (string)</p>
+                  <p>상세 에러 메시지. 결제 요청 에러 시 존재하는 데이터.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="subtitle" id="create-payment">Sample</h3>
+            <p><strong>예시1. 요청이 성공한 경우</strong></p>
+            <p>모든 데이터가 제대로 들어있는 경우 성공 응답을 받습니다.</p>
+            <div class="content">
+              <div class="sample">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Request</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+<pre>
+  curl -v -X POST https://tech-writer-assignment.herokuapp.com/payments \
+  -d type={
+            "card": {
+              "brand": "BC",
+              "number": "1234567890123456",
+              "expiry": "1124",
+              "cvc": "123"
+          } \
+  -d amount=20000 \
+  -d currency=krw
+  
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <pre>
+HTTP/1.1 200 OK
+{
+  "id": "pm__125xdekgaoe4t49did",
+  "result": "SUCCESS",
+  "createdAt": "2020-08-23-20T12:03:31",
+  "data": {
+    "card": {
+      "brand": "BC",
+      "number": "1234567890123456",
+      "expiry": "1124",
+      "cvc": "123"
+    },
+    "amount": 20000,
+    "currency": "krw"
+}
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p><strong>예시2. 필수 요청 값이 누락된 경우</strong></p>
+            <p>amount 값을 누락시켜 요청하는 경우 에러가 응답됩니다.</p>
+            <div class="content">
+              <div class="sample">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Request</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <pre>
+  curl -v -X POST https://tech-writer-assignment.herokuapp.com/payments \
+  -d type={
+            "card": {
+              "brand": "BC",
+              "number": "1234567890123456",
+              "expiry": "1124",
+              "cvc": "123"
+          } \
+  -d currency=krw
+  
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <pre>
+HTTP/1.1 400 Bad Request
+{
+  "result": "FAILED",
+  "code": "MISSING_PARAMETER",
+  "message": "\"amount\" 값이 누락되었습니다."
+}
+                      </pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <aside class="aside aside-left">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#about-payment-api">결제 API</a></li>
+            <li class="nav__item"><a href="#create-payment">결제 정보 생성</a></li>
+          </ul>
+        </aside>
+
+        <footer class="footer">
+          <ul class="contact__list">
+            <li class="contect__item" >
+              <a aria-label="Toss Facebook" target="_blank" href="https://www.facebook.com/toss.revolution">
+                <img
+                  src="https://static.toss.im/assets/homepage/safety/icn-facebook.svg" alt="Toss Facebook">
+              </a>
+            </li>
+            <li class="contect__item" >
+              <a aria-label="Toss blog" target="_blank" href="https://blog.toss.im"><img
+                  src="https://static.toss.im/assets/homepage/safety/icn-blog.svg" alt="Toss blog"></a>
+            </li>
+            <li class="contect__item" >
+              <a aria-label="Toss Naver Post" target="_blank" href="https://post.naver.com/tossblog"><img
+                  src="https://static.toss.im/assets/homepage/safety/icn-naver.svg" alt="Toss Naver Post"></a>
+            </li>
+            <li class="contect__item" >
+              <a aria-label="Toss Twitter" target="_blank" href="https://twitter.com/Toss_service"><img
+                  src="https://static.toss.im/assets/homepage/safety/icn-twitter.svg" alt="Toss Twitter"></a>
+            </li>
+            <li class="contect__item">
+              <a aria-label="Toss Instagram" target="_blank" href="https://www.instagram.com/toss.im/"><img
+                  src="https://static.toss.im/assets/homepage/safety/icn-instagram.svg" alt="Toss Instagram"></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+      <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

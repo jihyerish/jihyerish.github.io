@@ -44,7 +44,6 @@ img {
 }
 
 .nav__list a:link, .nav__list a:visited {
-    background-color: purple;
     border: none;
     color: #FFFFFF;
     padding: 15px 32px;

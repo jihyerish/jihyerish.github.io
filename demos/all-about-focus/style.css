@@ -78,13 +78,27 @@ button {
   padding: 10px;
 }
 
-.block-scrollBox {  
+.block-scrollBox {
   overflow-y: scroll;
 }
 
 .inline-scrollBox {
   overflow-x: scroll;
   white-space: nowrap;
+}
+
+.bigbox {
+  text-align: center;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  font-size: 100%;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em auto;
+  width: 150px;
+  height: 200px;
+  font-family: 'Saira', sans-serif;
+  background-color: lightgray;
 }
 
 .box {

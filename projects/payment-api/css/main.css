@@ -1,0 +1,340 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 18px;
+  color: #424242;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.description__image {
+  border-radius: 5px;
+}
+
+@media all and (max-width: 414px) {
+  .content {
+    flex-flow: column wrap;
+  }
+
+  .description__image {
+    width: 95%;
+  }
+
+  .description {
+    width: 95%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 0.5em;
+  }
+
+  .ref_link {
+    width: 8px;
+    margin-left: 10px;
+  }
+}
+
+@media all and (min-width: 415px) and (max-width: 768px) {
+  .content {
+    flex-flow: row;
+  }
+
+  .description__image {
+    width: 40%;
+  }
+
+  .description {
+    width: 60%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 1.5em;
+  }
+
+  .ref_link {
+    width: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 0 0;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .content {
+    flex-flow: row;
+  }
+
+  .description__image {
+    width: 40%;
+  }
+
+  .description {
+    width: 60%;
+  }
+
+  .description, .description__plain {
+    margin-inline-start: 1.5em;
+  }
+
+  .main {
+    flex: 6 0px;
+  }
+
+  .aside-left {
+    order: 1;
+  }
+
+  .main {
+    order: 2;
+  }
+
+  .footer {
+    order: 3;
+  }
+}
+
+@keyframes nav-slide {
+  from {
+    top: -100px; }
+  to {
+    top: 0px; } }
+
+.header {
+  background-color: #0049FF;
+  padding: 1.5%;
+  height: 4vh;
+  width: 100%;
+  z-index: 5;
+}
+
+.header__title {
+  color: white;
+  margin-left: 2%;
+  font-size: 1.2em !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0%;
+}
+
+.ref_link {
+  width: 15px;
+  margin-left: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #0049FF;
+}
+
+h3 {
+  font-size: 18px;
+  color: #01247e;
+}
+
+h4 {
+  font-size: 16px;
+  color: black;
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+.content {
+  display: flex;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  padding-bottom: 15px;
+}
+
+.main {
+  margin-top: 10vh !important;
+  margin-left: 20vh !important;
+  padding: 2%
+}
+
+.aside-left {
+  background: rgb(247, 247, 247);
+  border-right: 1px solid lightgray;
+  position: fixed;
+  top: 0%;
+  height: 100%;
+  width: 20vh;
+}
+
+.aside-right {
+  background: gray;
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  margin-top: 10vh !important;
+  padding-inline-start: 0px !important;
+  flex-flow: column wrap;
+}
+
+.nav__item {
+  font-size: 16px;
+  width: 100%;
+  height: 4vh;
+  margin: 0;
+}
+
+.nav__item a,
+.nav__item a:active {
+  text-decoration: none;
+}
+
+a:active:parent {
+  background-color: #0047ee6c;
+  text-decoration: none;
+}
+
+.nav__item:hover {
+  background-color: #6969696c;
+}
+
+.footer {
+  background-color: #0047ee6c;
+  text-align: center;
+  max-width: 100%;
+}
+
+.contact__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contect__item {
+  padding: 1em;
+}
+
+.contect_img {
+  width: 25px;
+}
+
+.details {
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+.parameter-item {
+  border-top: 1px solid gray;
+  font-size: 15px;
+}
+
+.parameter-item-sub {
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.parameter-title {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.parameter-item > .mandatory::after {
+  content: "REQUIRED";
+  font-size: 12px;
+  color: white;
+  background-color: #FFBA10;
+  padding: 2px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+.parameter-item > .optional::after {
+  content: "optional";
+  font-size: 12px;
+  color: white;
+  background-color: #b9b9b9;
+  padding: 2px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+.parameter-item>.always::after {
+  content: "Always";
+  font-size: 12px;
+  color: white;
+  background-color: #b9b9b9;
+  padding: 2px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+.parameter-item>.success::after {
+  content: "Success";
+  font-size: 12px;
+  color: white;
+  background-color: green;
+  padding: 2px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+.parameter-item>.error::after {
+  content: "Error";
+  font-size: 12px;
+  color: white;
+  background-color: red;
+  padding: 2px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+.http-status {
+  color: red;
+  background-color: lightblue;
+  font-size: 13px;
+}
