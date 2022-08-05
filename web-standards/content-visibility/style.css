@@ -1,12 +1,23 @@
 .wrap .randomColor {
-  content-visibility: auto;
   contain-intrinsic-size: 400px 250px;
-  
+
   flex: 1 1 400px;
   margin: 10px;
   border: 15px solid #ccc;
   height: 250px;
   box-sizing: border-box;
+}
+
+.visible {
+  content-visibility: visible;
+}
+
+.hidden {
+  content-visibility: hidden;
+}
+
+.auto {
+  content-visibility: auto;
 }
 
 .wrap {
