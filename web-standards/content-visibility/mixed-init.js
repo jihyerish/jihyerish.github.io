@@ -19,7 +19,7 @@ function createElement() {
 
 function init() {
   wrapElement = document.querySelector('.wrap');
-  var obj = new Array(4000);
+  var obj = new Array(100);
   if ('number' == typeof obj.length) {
       for (var index = 0, l = obj.length; index < l; index++) {
         var val = obj[index];

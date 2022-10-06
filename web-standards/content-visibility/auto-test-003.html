@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test content-visibility</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class='wrap'>
+      <div class='auto solidColor' id='autoContent' tabindex=1></div>
+    </div>
+    <script>
+      window.onload = () => {
+        document.getElementById('autoContent').focus();
+      }
+    </script>
+  </body>
+</html>

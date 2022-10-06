@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test content-visibility</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id='addAuto'>Add content-visibility auto element</button>
+    <button id='removeAuto'>Remove content-visibility auto element</button>
+    <br>
+    <div id='gap'></div>
+    <div class='wrap'>
+      <div class='auto solidColor' id='offscreenContent'></div>
+    </div>
+    <script>
+      const addAutoBtn = document.getElementById('addAuto');
+      const removeAutoBtn = document.getElementById('removeAuto');
+      const element = document.getElementById('offscreenContent');
+
+      addAutoBtn.onclick = () => {
+        element.classList.add("auto");
+      }
+
+      removeAutoBtn.onclick = () => {
+        element.classList.remove("auto");
+      }
+
+    </script>
+  </body>
+</html>

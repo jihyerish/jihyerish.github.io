@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test content-visibility</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class='space'></div>
+    <div class='wrap'>
+      <div class='auto solidColor' tabindex="1" id='offscreenContainer' >
+        <p>text inside container</p>
+        <div class='box' tabindex="1" id='offscreenContent'></div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        document.getElementById('offscreenContainer').focus();
+      }
+    </script>
+  </body>
+</html>

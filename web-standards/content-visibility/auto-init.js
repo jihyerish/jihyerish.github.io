@@ -12,14 +12,14 @@ function getRandomColor() {
 
 function createElement() {
     const newDiv = document.createElement('div');
-    newDiv.className = 'randomColor';
-    newDiv.style.background = getRandomColor();
+    newDiv.className = 'solidColor';
+    // newDiv.style.background = getRandomColor();
     return newDiv;
 }
 
 function init() {
   wrapElement = document.querySelector('.wrap');
-  var obj = new Array(4000);
+  var obj = new Array(100);
   if ('number' == typeof obj.length) {
       for (var index = 0, l = obj.length; index < l; index++) {
         var val = obj[index];
@@ -27,9 +27,9 @@ function init() {
       }
   }
 
-  randomElements = document.querySelectorAll(".randomColor");
+  elements = document.querySelectorAll(".solidColor");
 
-  for (let element of randomElements) {
+  for (let element of elements) {
     element.classList.add("auto");
   }
 
