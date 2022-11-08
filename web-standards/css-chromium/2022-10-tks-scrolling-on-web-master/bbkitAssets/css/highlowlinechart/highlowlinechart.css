@@ -1,0 +1,97 @@
+.hilolinechart {
+  width: 100px;
+  height: 1.13em;
+}
+
+.hilolinechart-inner-wrap {
+  position: relative;
+  margin-left: 0.267em;
+  margin-right: 0.267em;
+  height: 100%;
+}
+
+.hilolinechart-line {
+  position: absolute;
+  height: 1px;
+  z-index: 2;
+  top: 50%;
+}
+
+.hilolinechart-bar {
+  position: absolute;
+  z-index: 3;
+  height: 37%;
+  top: calc(51% + 1px);
+}
+
+.hilolinechart-point {
+  position: absolute;
+}
+
+.hilolinechart-circular-point {
+  width: 0.4em;
+  height: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.5em;
+  margin-left: -0.267em;
+  z-index: 4;
+  top: 36%;
+}
+.hilolinechart-circular-point.hilo-point-normal {
+  height: 0.534em;
+  width: 0.534em;
+  top: 30%;
+}
+
+.hilolinechart-square-point {
+  width: 0.467em;
+  height: 0.467em;
+  margin-left: -0.267em;
+  top: 30%;
+  z-index: 4;
+}
+
+.hilolinechart-triangular-point {
+  height: 0px;
+  width: 0px;
+  border-bottom: 0.55em solid;
+  border-left: 0.28em solid transparent;
+  border-right: 0.28em solid transparent;
+  top: 24%;
+  z-index: 4;
+}
+
+.hilolinechart-diamond-point {
+  width: 0.467em;
+  height: 0.467em;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-left: -0.267em;
+  top: 32%;
+  z-index: 4;
+}
+
+.hilolinechart-uptick-point {
+  width: 1px;
+  height: 40%;
+  bottom: 50%;
+  z-index: 4;
+}
+
+.hilolinechart-downtick-point {
+  width: 1px;
+  height: 37%;
+  top: calc(51% + 1px);
+  z-index: 4;
+}
+
+.hilolinechart-tick-point {
+  width: 1px;
+  height: 46%;
+  top: 27%;
+  z-index: 4;
+}
+
+.hilolinechart-hidden {
+  visibility: hidden;
+}

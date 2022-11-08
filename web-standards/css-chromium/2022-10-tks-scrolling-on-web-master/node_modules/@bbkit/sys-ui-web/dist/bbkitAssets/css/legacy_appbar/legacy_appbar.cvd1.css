@@ -1,0 +1,87 @@
+*:focus {
+  outline: none;
+}
+
+.legacy_appbar {
+  background: #870F1E;
+  color: #fbfbfb;
+  height: 19px;
+}
+.legacy_appbar .overflowpanel-contentwrapper {
+  vertical-align: baseline;
+}
+.legacy_appbar .overflowpanel-contentwrapper .stackpanel.sys-spaced > .inline {
+  margin-right: 0;
+}
+.legacy_appbar .overflowpanel-contentwrapper > .stackpanel {
+  height: 19px;
+}
+.legacy_appbar .overflowpanel-contentwrapper > .stackpanel > .dropdownbutton {
+  background-color: #870F1E;
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+  font-size: 15px;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+.legacy_appbar .overflowpanel-contentwrapper > .stackpanel > .dropdownbutton:hover {
+  background-color: #BB152E;
+}
+.legacy_appbar .overflowpanel-contentwrapper > .stackpanel > .dropdownbutton.active {
+  background-color: #730D1A;
+  box-shadow: inset 1px 0px 0px 0px rgba(0, 0, 0, 0.25), inset -1px 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+.legacy_appbar .overflowpanel-contentwrapper > .stackpanel > .dropdownbutton .button-img {
+  filter: brightness(120%) contrast(150%);
+}
+.legacy_appbar .entry {
+  padding: 1px;
+  border: none;
+}
+.legacy_appbar .entry .entry-input {
+  line-height: 1;
+  padding: 0;
+}
+.legacy_appbar .entry::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border: 1px solid #000;
+}
+.legacy_appbar .entry.focus::after {
+  border-color: #0090ff;
+  box-shadow: 0 0 0 1px #000;
+}
+.legacy_appbar .sys-component-appname {
+  margin-right: 10px;
+}
+.sys-demo-mode .legacy_appbar {
+  background-color: #00e6ff;
+  color: #000000;
+}
+.sys-demo-mode .legacy_appbar .button.sys-redmenu {
+  color: #000000;
+}
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:active:not(.disabled) {
+  background-color: #00b7cc;
+}
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:hover:not(.disabled) {
+  background-color: #84f3ff;
+}
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:focus {
+  background-color: #84f3ff;
+}
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:visited {
+  background-color: #00b7cc;
+}
+.legacy_appbar .style-sysblpui-apptitle-lp-popout-button {
+  background: center no-repeat url(../../../images/popout_white.svg);
+}
+.legacy_appbar .style-sysblpui-apptitle-lp-popout-button:hover:not(.disabled) {
+  background-color: #bb152e;
+  cursor: pointer;
+}

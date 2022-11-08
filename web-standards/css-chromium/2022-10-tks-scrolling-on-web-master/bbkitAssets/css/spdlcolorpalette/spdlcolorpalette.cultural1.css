@@ -1,0 +1,15 @@
+*:focus {
+  outline: none;
+}
+
+.style-spdl-colorpalette {
+  background-color: #282828;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.08);
+  white-space: initial;
+  padding: 6px;
+}
+.style-spdl-colorpalette.sys-flat {
+  background: none;
+}

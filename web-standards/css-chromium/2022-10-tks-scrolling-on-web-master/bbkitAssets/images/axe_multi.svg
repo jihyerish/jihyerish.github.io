@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 21 17" style="enable-background:new 0 0 21 17;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#0062DD;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0062DD;stroke:#101010;}
+	.st2{enable-background:new    ;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g id="axe-multi-dense">
+	<g id="Group" transform="translate(0.000000, 2.000000)">
+		<path id="Rectangle" class="st0" d="M1,3h15c0.6,0,1,0.4,1,1v8c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1V4C0,3.4,0.4,3,1,3z"/>
+		<path id="Rectangle_1_" class="st1" d="M2.5,0.5h17c0.6,0,1,0.4,1,1v9c0,0.6-0.4,1-1,1h-17c-0.6,0-1-0.4-1-1v-9
+			C1.5,0.9,1.9,0.5,2.5,0.5z"/>
+		<g class="st2">
+			<path class="st3" d="M7.8,8L7.4,7H5.9L5.6,8H4.5l1.4-4.5h1.7L8.9,8H7.8z M6.7,4.3L6.1,6.1h1L6.7,4.3z"/>
+			<path class="st3" d="M12.1,8l-0.9-1.6l-1,1.6H9l1.5-2.2L9,3.5h1.2L11.2,5l0.9-1.5h1.2l-1.5,2.2L13.4,8H12.1z"/>
+			<path class="st3" d="M14,8V3.5h3.3v0.9h-2.2v0.7h2.1V6h-2.1v1h2.2V8H14z"/>
+		</g>
+	</g>
+</g>
+</svg>

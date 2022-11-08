@@ -1,0 +1,134 @@
+.menulist {
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+  width: 100%;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+}
+.menulist.block {
+  display: flex;
+}
+.menulist b {
+  font-family: "BB.Medium.Proportional";
+}
+
+.menulist-header-spacer {
+  visibility: hidden;
+  height: 0;
+  padding-left: 12px;
+  padding-right: 17px;
+}
+
+.menulist-header-area,
+.menulist-footer-area {
+  display: -webkit-flex;
+}
+.menulist-header-area > .widget,
+.menulist-footer-area > .widget {
+  -webkit-flex-grow: 1;
+}
+
+.menulist-table {
+  display: table;
+  width: 100%;
+}
+
+.menulist-table-wrapper {
+  -webkit-flex: 1 1 auto;
+  min-height: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.menulist-row {
+  display: table-row;
+}
+
+.menulist-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.menulist-header {
+  cursor: default;
+}
+.menulist-header > .menulist-cell:nth-child(3) {
+  position: relative;
+}
+.menulist-header > .menulist-cell:nth-child(3) > .widget {
+  position: absolute;
+  top: 0px;
+  left: -12px;
+  width: auto;
+}
+
+.menulist-close {
+  float: right;
+}
+
+.menulist-decorators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menulist-row {
+  cursor: default;
+}
+.menulist-row > .menulist-cell:nth-child(3) {
+  width: auto;
+}
+.sys-enable-spanning-content-cells .menulist-row.first-content-cell-spans-full-width > .menulist-cell:nth-child(3) {
+  position: absolute;
+}
+
+.sys-ellipse-content .menulist-row.selectable-row > .menulist-cell:nth-last-child(5) {
+  width: 100%;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menulist-cell {
+  width: 1px;
+}
+.menulist-cell:empty {
+  width: 0px;
+}
+.menulist-cell > .close {
+  vertical-align: middle;
+}
+
+.menulist-separator {
+  cursor: default;
+  z-index: 99;
+}
+
+.menulist-check, .menulist-icon {
+  display: none;
+  visibility: hidden;
+}
+.menulist-check.visible, .menulist-icon.visible {
+  display: flex;
+}
+.menulist-check.visible.checked, .menulist-icon.visible.checked {
+  visibility: visible;
+}
+
+.menulist-icon.visible:not(noicon) {
+  visibility: visible;
+}
+
+.menulist-check {
+  box-sizing: border-box;
+}
+.menulist-check.visible {
+  visibility: visible;
+}
+
+.indented-cell {
+  width: 10px;
+}

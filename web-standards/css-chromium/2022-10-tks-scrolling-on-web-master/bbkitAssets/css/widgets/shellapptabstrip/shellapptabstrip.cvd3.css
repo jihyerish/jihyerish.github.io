@@ -1,0 +1,388 @@
+*:focus {
+  outline: none;
+}
+
+.shellapptabstrip .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before, .tabstrip-tabs::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  height: 13px;
+  display: block;
+  background-color: #a5a5a5;
+}
+
+@keyframes tabstrip-tab-slideup {
+  from {
+    top: 25px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes tabstrip-tab-slidedown {
+  from {
+    top: 0;
+  }
+  to {
+    top: 25px;
+  }
+}
+.shellapptabstrip,
+.shellapptabstrip .tabstrip-tabs {
+  height: 27px;
+}
+
+.shellapptabstrip {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+}
+
+.tabstrip-tabs::after {
+  right: 0;
+  z-index: 0;
+}
+.window-state-blur .tabstrip-tabs::after {
+  background-color: #787878;
+}
+
+/* Tabs and buttons foreground and background colors */
+.shellapptabstrip .tabstrip-tab {
+  background-color: #cdcdcd;
+  color: #414141;
+}
+.shellapptabstrip .tabstrip-tab:hover {
+  background-color: #ebebeb;
+}
+.shellapptabstrip .tabstrip-tab.selected {
+  background-color: #191919;
+  color: #d7d7d7;
+}
+
+.window-state-blur .shellapptabstrip .tabstrip-tab {
+  background-color: #424242;
+  color: #cdcdcd;
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab:hover {
+  background-color: #646464;
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab.selected {
+  background-color: #191919;
+}
+
+.shellapptabstrip .tabstrip-tab {
+  height: 27px;
+  padding-top: 5px;
+  border-bottom: none;
+}
+.shellapptabstrip .tabstrip-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 25px;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 60%, #cdcdcd 100%);
+}
+.shellapptabstrip .tabstrip-tab:hover::after {
+  background-image: linear-gradient(to right, transparent 0%, #ebebeb 40%);
+}
+.shellapptabstrip .tabstrip-tab.selected::after {
+  background-image: linear-gradient(to right, transparent 0%, #191919 40%);
+}
+.shellapptabstrip .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before {
+  left: 0;
+}
+.shellapptabstrip .tabstrip-tab.selected + .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before, .shellapptabstrip .tabstrip-tab:hover + .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before {
+  background-color: transparent;
+}
+.shellapptabstrip .tabstrip-tab.noanim {
+  animation: none !important;
+  -webkit-transition-property: none !important;
+  transform: none !important;
+}
+.shellapptabstrip .tabstrip-tab:hover .tabstrip-close {
+  background-position: center -66px;
+}
+.shellapptabstrip .tabstrip-tab:hover .tabstrip-close:hover, .shellapptabstrip .tabstrip-tab:hover .tabstrip-close:active {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-position: center -66px;
+}
+.shellapptabstrip .tabstrip-tab.newtab {
+  animation-name: tabstrip-tab-slideup;
+  animation-duration: 0.1s;
+}
+.shellapptabstrip .tabstrip-tab.closetab {
+  animation-name: tabstrip-tab-slidedown;
+  animation-duration: 0.1s;
+}
+.shellapptabstrip .tabstrip-tab.selected {
+  height: 27px;
+  padding-top: 5px;
+  margin: 0;
+}
+.shellapptabstrip .tabstrip-tab.selected .tabstrip-close {
+  background-position: center -3px;
+}
+.shellapptabstrip .tabstrip-tab.selected .tabstrip-close:hover, .shellapptabstrip .tabstrip-tab.selected .tabstrip-close:active {
+  background-color: rgba(255, 255, 255, 0.15);
+  background-position: center -24px;
+}
+.shellapptabstrip .tabstrip-tab.moving {
+  transition: left ease-in-out 0s;
+  animation-name: none;
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab:hover .tabstrip-close {
+  background-position: center -3px;
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab:hover .tabstrip-close:hover, .window-state-blur .shellapptabstrip .tabstrip-tab:hover .tabstrip-close:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.window-state-blur .shellapptabstrip .tabstrip-tab::after {
+  background-image: linear-gradient(to right, transparent 65%, #424242 100%);
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab:hover::after {
+  background-image: linear-gradient(to right, transparent 0%, #646464 35%);
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab.selected::after {
+  background-image: linear-gradient(to right, transparent 0%, #191919 35%);
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 1px;
+  height: 13px;
+  display: block;
+  background-color: #787878;
+}
+.window-state-blur .shellapptabstrip .tabstrip-tab.selected + .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before, .window-state-blur .shellapptabstrip .tabstrip-tab:hover + .tabstrip-tab:not(:first-of-type):not(.selected):not(:hover)::before {
+  background-color: transparent;
+}
+
+.shellapptabstrip .tabstrip-content-holder {
+  left: 7px;
+  right: 7px;
+}
+
+.shellapptabstrip .tabstrip-close {
+  height: 15px;
+  width: 15px;
+  right: 5px;
+  top: 6px;
+  z-index: 1;
+  background: url(/bbkitAssets/images/tabclose.svg) no-repeat center 2000px;
+  background-size: 21px 84px;
+}
+
+.shellapptabstrip .tabstrip-addtab,
+.shellapptabstrip .tabstrip-overflow-scroll {
+  box-sizing: content-box;
+  height: 27px;
+  width: 25px;
+  padding: 0px;
+  background-repeat: no-repeat;
+  position: relative;
+  background-clip: content-box;
+}
+.shellapptabstrip .tabstrip-addtab:hover, .shellapptabstrip .tabstrip-addtab:active,
+.shellapptabstrip .tabstrip-overflow-scroll:hover,
+.shellapptabstrip .tabstrip-overflow-scroll:active {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+.window-state-blur .shellapptabstrip .tabstrip-addtab:hover, .window-state-blur .shellapptabstrip .tabstrip-addtab:active,
+.window-state-blur .shellapptabstrip .tabstrip-overflow-scroll:hover,
+.window-state-blur .shellapptabstrip .tabstrip-overflow-scroll:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.shellapptabstrip .tabstrip-addtab {
+  background-position: center;
+  background-size: 20px;
+}
+.shellapptabstrip .tabstrip-addtab, .shellapptabstrip .tabstrip-addtab:hover, .shellapptabstrip .tabstrip-addtab:active {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+}
+.window-state-blur .shellapptabstrip .tabstrip-addtab, .window-state-blur .shellapptabstrip .tabstrip-addtab:hover, .window-state-blur .shellapptabstrip .tabstrip-addtab:active {
+  background-image: url(/bbkitAssets/images/tabadd.svg);
+}
+
+.shellapptabstrip .tabstrip-overflow-scroll {
+  background-size: 16px 16px;
+  background-position: center;
+}
+.shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right {
+  background-image: url(/bbkitAssets/images/taboverflow_left_black.svg);
+}
+.window-state-blur .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right {
+  background-image: url(/bbkitAssets/images/taboverflow_left.svg);
+}
+.shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left {
+  background-image: url(/bbkitAssets/images/taboverflow_right_black.svg);
+}
+.window-state-blur .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left {
+  background-image: url(/bbkitAssets/images/taboverflow_right.svg);
+}
+.shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:hover, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:active, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:hover, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.window-state-blur .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:hover, .window-state-blur .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left.disabled, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left.disabled:hover, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right.disabled, .shellapptabstrip .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right.disabled:hover {
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.tabstrip-tab .style-tab-hotspot-link {
+  margin: 0;
+  border-radius: 0;
+  min-height: 13px;
+}
+.tabstrip-tab .style-tab-hotspot-link.dropdownbutton.sys-compact {
+  padding: 0;
+  background-color: transparent;
+}
+.tabstrip-tab .style-tab-hotspot-link.style-link-group {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background: #1F2A3D;
+  color: black;
+  font-weight: bold;
+  border-color: #646464;
+}
+.tabstrip-tab .style-tab-hotspot-link.style-link-group:hover, .tabstrip-tab .style-tab-hotspot-link.style-link-group:active {
+  background: #1F2A3D;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent .button-content .button-img {
+  height: 13px;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover, .tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active {
+  border: none;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover .button-content, .tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active .button-content {
+  background-image: url(/bbkitAssets/images/link-browser-sprite.png);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover .button-content {
+  background-position: center -12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active .button-content {
+  background-position: center -38px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.style-link-group {
+  border-color: #1e1e1e;
+}
+
+.shellapptabstrip .tabstrip-overflow {
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+  padding: 3px 7px;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center 5px;
+}
+.shellapptabstrip .tabstrip-overflow:hover {
+  border-color: #8c8c8c;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center 5px, -webkit-linear-gradient(top, #bebebe, #a5a5a5);
+}
+.shellapptabstrip .tabstrip-overflow:active {
+  border-color: #646464;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center -13px, -webkit-linear-gradient(top, #8c8c8c, #787878);
+}
+.shellapptabstrip .tabstrip-overflow.hidden {
+  display: none;
+}
+
+/* OVERRIDES FOR WINDOW FULL TRANSPARENT */
+.window-effect-glass .shellapptabstrip {
+  height: 25px;
+}
+.window-effect-glass .shellapptabstrip .tabstrip-tabs {
+  height: 25px;
+  margin-left: 1px;
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-tab {
+  height: 25px;
+  margin-top: 3px;
+  background-color: rgba(52, 52, 52, 0.9);
+  border-color: rgba(26, 26, 26, 0.9);
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-tab:hover {
+  background-color: rgba(62, 62, 62, 0.9);
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-tab.selected {
+  height: 25px;
+  padding-top: 7px;
+  margin-top: 0px;
+  border-color: rgba(26, 26, 26, 0.9);
+  background-color: #1e1e1e;
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-addtab {
+  background-position: 5px 6px;
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll,
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-addtab {
+  background-color: rgba(52, 52, 52, 0.9);
+  height: 25px;
+  border-color: rgba(26, 26, 26, 0.9);
+  border-bottom-width: 1px;
+  margin-top: 3px;
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll:hover,
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-addtab:hover {
+  background-color: rgba(62, 62, 62, 0.9);
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll:active,
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-addtab:active {
+  background-color: rgba(26, 26, 26, 0.9);
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll {
+  background-image: url(/bbkitAssets/images/wft_tab_overflow_sprite.png);
+}
+.window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll.disabled, .window-effect-glass .shellapptabstrip.sys-transparent-tabstrip .tabstrip-overflow-scroll.disabled:hover {
+  background-color: rgba(52, 52, 52, 0.9);
+  border-color: rgba(26, 26, 26, 0.9);
+  opacity: 0.8;
+}
+
+/* shell.css styles -- remove once these roll out */
+.style-tabbed-mode .style-window-tabs {
+  height: 32px;
+}
+
+.style-scaling-bookmarks-bar-presenter {
+  background-color: #191919;
+}
+
+.style-window-tabs-wrapper {
+  height: 32px !important;
+}
+
+.style-tab-title {
+  padding-right: 0 !important;
+  font-size: 9px !important;
+  line-height: 20px !important;
+}
+
+.style-security-label {
+  color: inherit !important;
+  font-size: 11px !important;
+  line-height: 18px !important;
+}
+
+.window-state-blur .style-tab-title,
+.window-state-blur .style-security-label,
+.tabstrip-tab.selected .style-security-label,
+.window-effect-glass-layered .tabstrip-tab:hover .style-security-label {
+  color: #d7d7d7 !important;
+}
+
+/* end of shell.css styles */

@@ -1,0 +1,665 @@
+*:focus {
+  outline: none;
+}
+
+.radio {
+  line-height: 1.3;
+  padding-right: 8px;
+}
+.radio.sys-small {
+  font-size: 0.866666em;
+  padding-top: 0px;
+}
+.radio.sys-small.disabled {
+  color: #787878;
+}
+.radio.sys-big {
+  font-size: 1.7em;
+  line-height: 1.65;
+}
+.radio.sys-big.disabled {
+  color: #787878;
+}
+.radio.sys-big input[type=checkbox], .radio.sys-big input[type=radio] {
+  margin-bottom: 4%;
+  margin-top: 8%;
+}
+.radio.sys-big .button-img {
+  display: block;
+  margin: 0px auto;
+  padding: 3px 0px 0px 0px;
+}
+.sys-contolregion .radio, .sys-small .radio, .sys-heading .radio, .sys-footer .radio, .sys-level1 .radio, .sys-level2 .radio {
+  line-height: 1.5;
+}
+.sys-tile .radio.sys-small {
+  font-size: 0.8em;
+}
+.radio.disabled {
+  color: #787878;
+}
+.radio:focus, .radio.focus {
+  box-shadow: inset 0px 0px 0px 1px #0090ff;
+}
+.sys-controlregion .radio, .controlregion .radio {
+  font-size: 0.8em;
+  color: #d7d7d7;
+  line-height: 1.6;
+  font-size: 12px;
+}
+.sys-controlregion .radio input[type=checkbox],
+.sys-controlregion .radio input[type=radio], .controlregion .radio input[type=checkbox],
+.controlregion .radio input[type=radio] {
+  background: -webkit-linear-gradient(top, #646464, #585858);
+  box-shadow: inset 0px 1px 0px #727272;
+}
+.sys-controlregion .radio input[type=checkbox]:hover,
+.sys-controlregion .radio input[type=radio]:hover, .controlregion .radio input[type=checkbox]:hover,
+.controlregion .radio input[type=radio]:hover {
+  background: -webkit-linear-gradient(top, #7a7a7a, #6e6e6e);
+  box-shadow: inset 0px 1px 0px #8d8d8d;
+}
+.sys-controlregion .radio input[type=checkbox]:active,
+.sys-controlregion .radio input[type=radio]:active, .controlregion .radio input[type=checkbox]:active,
+.controlregion .radio input[type=radio]:active {
+  background: #484848;
+  box-shadow: inset 0px 1px 0px #3d3d3d;
+}
+.sys-controlregion .radio.disabled, .controlregion .radio.disabled {
+  color: #787878;
+}
+.sys-controlregion .radio.disabled input[type=checkbox],
+.sys-controlregion .radio.disabled input[type=radio], .controlregion .radio.disabled input[type=checkbox],
+.controlregion .radio.disabled input[type=radio] {
+  background: #414141;
+  box-shadow: none;
+}
+.sys-controlregion .radio input[type=checkbox]:checked,
+.sys-controlregion .radio input[type=radio]:checked, .controlregion .radio input[type=checkbox]:checked,
+.controlregion .radio input[type=radio]:checked {
+  box-shadow: inset 0px 1px 0px #4fa7ff, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .radio input[type=checkbox]:checked:hover,
+.sys-controlregion .radio input[type=radio]:checked:hover, .controlregion .radio input[type=checkbox]:checked:hover,
+.controlregion .radio input[type=radio]:checked:hover {
+  box-shadow: inset 0px 1px 0px #84c2ff, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .radio input[type=checkbox]:checked:active,
+.sys-controlregion .radio input[type=radio]:checked:active, .controlregion .radio input[type=checkbox]:checked:active,
+.controlregion .radio input[type=radio]:checked:active {
+  box-shadow: inset 0px 1px 0px #00578a, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .radio input[type=checkbox]:checked:disabled,
+.sys-controlregion .radio input[type=radio]:checked:disabled, .controlregion .radio input[type=checkbox]:checked:disabled,
+.controlregion .radio input[type=radio]:checked:disabled {
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .radio input[type=radio]:checked, .controlregion .radio input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #40a0ff, #2391ff);
+}
+.sys-controlregion .radio input[type=radio]:checked:hover, .controlregion .radio input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+}
+.sys-controlregion .radio input[type=radio]:checked:active, .controlregion .radio input[type=radio]:checked:active {
+  background: #006aa8;
+  border-color: #000000;
+}
+.sys-controlregion .radio input[type=radio]:checked:disabled, .controlregion .radio input[type=radio]:checked:disabled {
+  background: #333333;
+  border-color: #000000;
+}
+.sys-controlregion .radio.sys-small, .controlregion .radio.sys-small {
+  line-height: 1.67;
+}
+.radio:active, .radio.active, .radio:focus, .radio.focus {
+  background: none;
+}
+
+input[type=radio] {
+  height: 13px;
+  margin: 0px 0px 0px 4px;
+  width: 13px;
+  bottom: -1px;
+  vertical-align: baseline;
+  background: -webkit-linear-gradient(top, #565656, #4a4a4a);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.12);
+  border: solid 1px #000000;
+  border-radius: 6px;
+}
+.contolregion input[type=radio], .sys-controlregion input[type=radio], .sys-small input[type=radio], .sys-heading input[type=radio], .sys-footer input[type=radio], .sys-level1 input[type=radio], .sys-level2 input[type=radio] {
+  bottom: -2px;
+}
+input[type=radio]:hover {
+  background: -webkit-linear-gradient(top, #6c6c6c, #606060);
+  box-shadow: inset 0px 1px 0px #7f7f7f;
+}
+input[type=radio]:active, input[type=radio].active {
+  background: #3a3a3a;
+  box-shadow: none;
+}
+input[type=radio]:disabled, .disabled input[type=radio] {
+  background: #2a2a2a;
+  box-shadow: none;
+}
+input[type=radio]:checked {
+  border-color: #141414;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+input[type=radio]:checked:active {
+  box-shadow: none;
+}
+input[type=radio]:checked:disabled {
+  box-shadow: none;
+}
+input[type=radio].dirty {
+  background: #ebddbd;
+}
+input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #40a0ff, #2391ff);
+}
+input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+}
+input[type=radio]:checked:active {
+  background: #006aa8;
+  border-color: #000000;
+}
+input[type=radio]:checked:disabled {
+  background: #333333;
+  border-color: #000000;
+}
+input[type=radio]:checked::before {
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.radio-content {
+  margin-left: 8px;
+}
+.radio-content:empty {
+  margin-left: 0px;
+}
+
+.radio.sys-button, .sys-groupbutton-wrapper > .radio {
+  -webkit-justify-content: center;
+  position: relative;
+  text-align: center;
+  line-height: 1.334;
+  display: inline-flex;
+}
+.radio.sys-button.block, .sys-groupbutton-wrapper > .radio.block {
+  display: flex;
+}
+.radio.sys-button input[type=checkbox],
+.radio.sys-button input[type=radio], .sys-groupbutton-wrapper > .radio input[type=checkbox],
+.sys-groupbutton-wrapper > .radio input[type=radio] {
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  bottom: 0px;
+  height: auto;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: -webkit-fill-available;
+  width: 100%;
+}
+.radio.sys-button .checkbox-content,
+.radio.sys-button .radio-content, .sys-groupbutton-wrapper > .radio .checkbox-content,
+.sys-groupbutton-wrapper > .radio .radio-content {
+  position: relative;
+}
+.radio.sys-button, .sys-groupbutton-wrapper > .radio {
+  border: none;
+  border-radius: 0px;
+  color: #f0f0f0;
+  font-size: 0.866666em;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  border: 1px solid #000000;
+}
+.radio.sys-button input[type=checkbox],
+.radio.sys-button input[type=radio], .sys-groupbutton-wrapper > .radio input[type=checkbox],
+.sys-groupbutton-wrapper > .radio input[type=radio] {
+  font-size: inherit;
+  background: none;
+  background-color: #414141;
+  border: 1px solid #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  box-sizing: border-box;
+  color: #f0f0f0;
+  padding: 0px 6px;
+  border-radius: inherit;
+  border-right-color: transparent;
+  border: none;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  line-height: inherit;
+  margin: 0px;
+  min-height: auto;
+  padding: 0px;
+}
+.radio.sys-button input[type=checkbox]:hover,
+.radio.sys-button input[type=radio]:hover, .sys-groupbutton-wrapper > .radio input[type=checkbox]:hover,
+.sys-groupbutton-wrapper > .radio input[type=radio]:hover {
+  background-color: #505050;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+.radio.sys-button input[type=checkbox]:active, .radio.sys-button input[type=checkbox].active,
+.radio.sys-button input[type=radio]:active,
+.radio.sys-button input[type=radio].active, .sys-groupbutton-wrapper > .radio input[type=checkbox]:active, .sys-groupbutton-wrapper > .radio input[type=checkbox].active,
+.sys-groupbutton-wrapper > .radio input[type=radio]:active,
+.sys-groupbutton-wrapper > .radio input[type=radio].active {
+  background-color: #282828;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px #2b2b2b;
+}
+.radio.sys-button input[type=checkbox].focus,
+.radio.sys-button input[type=radio].focus, .sys-groupbutton-wrapper > .radio input[type=checkbox].focus,
+.sys-groupbutton-wrapper > .radio input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+}
+.radio.sys-button input[type=checkbox].focus.splitbutton-main,
+.radio.sys-button input[type=radio].focus.splitbutton-main, .sys-groupbutton-wrapper > .radio input[type=checkbox].focus.splitbutton-main,
+.sys-groupbutton-wrapper > .radio input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.radio.sys-button input[type=checkbox].disabled, .disabled .radio.sys-button input[type=checkbox],
+.radio.sys-button input[type=radio].disabled,
+.disabled .radio.sys-button input[type=radio], .sys-groupbutton-wrapper > .radio input[type=checkbox].disabled, .disabled .sys-groupbutton-wrapper > .radio input[type=checkbox],
+.sys-groupbutton-wrapper > .radio input[type=radio].disabled,
+.disabled .sys-groupbutton-wrapper > .radio input[type=radio] {
+  background-color: #232323;
+  box-shadow: none;
+  color: #787878;
+}
+.radio.sys-button input[type=checkbox].disabled .button-img, .radio.sys-button input[type=checkbox].disabled .splitbutton-img, .disabled .radio.sys-button input[type=checkbox] .button-img, .disabled .radio.sys-button input[type=checkbox] .splitbutton-img,
+.radio.sys-button input[type=radio].disabled .button-img,
+.radio.sys-button input[type=radio].disabled .splitbutton-img,
+.disabled .radio.sys-button input[type=radio] .button-img,
+.disabled .radio.sys-button input[type=radio] .splitbutton-img, .sys-groupbutton-wrapper > .radio input[type=checkbox].disabled .button-img, .sys-groupbutton-wrapper > .radio input[type=checkbox].disabled .splitbutton-img, .disabled .sys-groupbutton-wrapper > .radio input[type=checkbox] .button-img, .disabled .sys-groupbutton-wrapper > .radio input[type=checkbox] .splitbutton-img,
+.sys-groupbutton-wrapper > .radio input[type=radio].disabled .button-img,
+.sys-groupbutton-wrapper > .radio input[type=radio].disabled .splitbutton-img,
+.disabled .sys-groupbutton-wrapper > .radio input[type=radio] .button-img,
+.disabled .sys-groupbutton-wrapper > .radio input[type=radio] .splitbutton-img {
+  opacity: 0.5;
+}
+.radio.sys-button input[type=checkbox]:hover,
+.radio.sys-button input[type=radio]:hover, .sys-groupbutton-wrapper > .radio input[type=checkbox]:hover,
+.sys-groupbutton-wrapper > .radio input[type=radio]:hover {
+  border-right-color: transparent;
+}
+.radio.sys-button input[type=checkbox].focus, .radio.sys-button input[type=checkbox]:focus,
+.radio.sys-button input[type=radio].focus,
+.radio.sys-button input[type=radio]:focus, .sys-groupbutton-wrapper > .radio input[type=checkbox].focus, .sys-groupbutton-wrapper > .radio input[type=checkbox]:focus,
+.sys-groupbutton-wrapper > .radio input[type=radio].focus,
+.sys-groupbutton-wrapper > .radio input[type=radio]:focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  z-index: 0;
+}
+.radio.sys-button input[type=checkbox].focus.splitbutton-main, .radio.sys-button input[type=checkbox]:focus.splitbutton-main,
+.radio.sys-button input[type=radio].focus.splitbutton-main,
+.radio.sys-button input[type=radio]:focus.splitbutton-main, .sys-groupbutton-wrapper > .radio input[type=checkbox].focus.splitbutton-main, .sys-groupbutton-wrapper > .radio input[type=checkbox]:focus.splitbutton-main,
+.sys-groupbutton-wrapper > .radio input[type=radio].focus.splitbutton-main,
+.sys-groupbutton-wrapper > .radio input[type=radio]:focus.splitbutton-main {
+  z-index: 2;
+}
+.radio.sys-button input[type=checkbox]:checked,
+.radio.sys-button input[type=radio]:checked, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc) content-box;
+}
+.radio.sys-button input[type=checkbox]:checked:before,
+.radio.sys-button input[type=radio]:checked:before, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:before,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked:before {
+  display: none;
+}
+.radio.sys-button input[type=checkbox]:checked:hover,
+.radio.sys-button input[type=radio]:checked:hover, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:hover,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5) content-box;
+}
+.radio.sys-button input[type=checkbox]:checked.active, .radio.sys-button input[type=checkbox]:checked:active,
+.radio.sys-button input[type=radio]:checked.active,
+.radio.sys-button input[type=radio]:checked:active, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked.active, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:active,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked.active,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked:active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5) content-box;
+  border-right-color: transparent;
+  box-shadow: none;
+}
+.radio.sys-button input[type=checkbox]:checked:disabled,
+.radio.sys-button input[type=radio]:checked:disabled, .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:disabled,
+.sys-groupbutton-wrapper > .radio input[type=radio]:checked:disabled {
+  background-color: #263c53 content-box;
+}
+.radio.sys-button .checkbox-content,
+.radio.sys-button .radio-content, .sys-groupbutton-wrapper > .radio .checkbox-content,
+.sys-groupbutton-wrapper > .radio .radio-content {
+  align-self: center;
+  padding: 0px 10px;
+  margin-left: 0px;
+  pointer-events: none;
+}
+.radio.sys-button:before, .sys-groupbutton-wrapper > .radio:before {
+  border-radius: 0px;
+}
+.radio.sys-button:only-child, .sys-groupbutton-wrapper > .radio:only-child {
+  border-right-width: 0px;
+}
+.radio.sys-button:last-child:not(.focus) input[type=checkbox], .radio.sys-button:last-child:not(.focus) input[type=radio], .radio.sys-button:only-child:not(.focus) input[type=checkbox], .radio.sys-button:only-child:not(.focus) input[type=radio], .sys-groupbutton-wrapper > .radio:last-child:not(.focus) input[type=checkbox], .sys-groupbutton-wrapper > .radio:last-child:not(.focus) input[type=radio], .sys-groupbutton-wrapper > .radio:only-child:not(.focus) input[type=checkbox], .sys-groupbutton-wrapper > .radio:only-child:not(.focus) input[type=radio] {
+  border-right-color: #000000;
+}
+.radio.sys-button:focus, .radio.sys-button.focus, .sys-groupbutton-wrapper > .radio:focus, .sys-groupbutton-wrapper > .radio.focus {
+  z-index: 2;
+  border: 1px solid #0090ff;
+}
+.radio.sys-button:focus input[type=checkbox], .radio.sys-button:focus input[type=radio], .radio.sys-button.focus input[type=checkbox], .radio.sys-button.focus input[type=radio], .sys-groupbutton-wrapper > .radio:focus input[type=checkbox], .sys-groupbutton-wrapper > .radio:focus input[type=radio], .sys-groupbutton-wrapper > .radio.focus input[type=checkbox], .sys-groupbutton-wrapper > .radio.focus input[type=radio] {
+  border-color: #0090ff;
+}
+.radio.sys-button:active input[type=checkbox], .radio.sys-button:active input[type=radio], .radio.sys-button.active input[type=checkbox], .radio.sys-button.active input[type=radio], .sys-groupbutton-wrapper > .radio:active input[type=checkbox], .sys-groupbutton-wrapper > .radio:active input[type=radio], .sys-groupbutton-wrapper > .radio.active input[type=checkbox], .sys-groupbutton-wrapper > .radio.active input[type=radio] {
+  background: #282828;
+  border-right-color: transparent;
+}
+.radio.sys-button.disabled, .disabled .radio.sys-button, .sys-groupbutton-wrapper > .radio.disabled, .disabled .sys-groupbutton-wrapper > .radio {
+  color: #787878;
+}
+.radio.sys-button.disabled input[type=checkbox], .radio.sys-button.disabled input[type=radio], .disabled .radio.sys-button input[type=checkbox], .disabled .radio.sys-button input[type=radio], .sys-groupbutton-wrapper > .radio.disabled input[type=checkbox], .sys-groupbutton-wrapper > .radio.disabled input[type=radio], .disabled .sys-groupbutton-wrapper > .radio input[type=checkbox], .disabled .sys-groupbutton-wrapper > .radio input[type=radio] {
+  background-color: #232323;
+  box-shadow: none;
+}
+.radio.sys-button.disabled input[type=checkbox]:checked, .radio.sys-button.disabled input[type=radio]:checked, .disabled .radio.sys-button input[type=checkbox]:checked, .disabled .radio.sys-button input[type=radio]:checked, .sys-groupbutton-wrapper > .radio.disabled input[type=checkbox]:checked, .sys-groupbutton-wrapper > .radio.disabled input[type=radio]:checked, .disabled .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked, .disabled .sys-groupbutton-wrapper > .radio input[type=radio]:checked {
+  background: #263c53;
+}
+.controlregion .radio.sys-button, .sys-controlregion .radio.sys-button, .controlregion .sys-groupbutton-wrapper > .radio, .sys-controlregion .sys-groupbutton-wrapper > .radio {
+  font-size: 13px;
+}
+.controlregion .radio.sys-button > input[type=checkbox],
+.controlregion .radio.sys-button > input[type=radio], .sys-controlregion .radio.sys-button > input[type=checkbox],
+.sys-controlregion .radio.sys-button > input[type=radio], .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio], .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio] {
+  box-shadow: none;
+  background-color: #505050;
+}
+.controlregion .radio.sys-button > input[type=checkbox]:focus, .controlregion .radio.sys-button > input[type=checkbox].focus,
+.controlregion .radio.sys-button > input[type=radio]:focus,
+.controlregion .radio.sys-button > input[type=radio].focus, .sys-controlregion .radio.sys-button > input[type=checkbox]:focus, .sys-controlregion .radio.sys-button > input[type=checkbox].focus,
+.sys-controlregion .radio.sys-button > input[type=radio]:focus,
+.sys-controlregion .radio.sys-button > input[type=radio].focus, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  border-right-color: #0090ff;
+  z-index: 0;
+}
+.controlregion .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .controlregion .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.controlregion .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.controlregion .radio.sys-button > input[type=radio].focus.splitbutton-main, .sys-controlregion .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-controlregion .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-controlregion .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-controlregion .radio.sys-button > input[type=radio].focus.splitbutton-main, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.controlregion .radio.sys-button > input[type=checkbox]:hover,
+.controlregion .radio.sys-button > input[type=radio]:hover, .sys-controlregion .radio.sys-button > input[type=checkbox]:hover,
+.sys-controlregion .radio.sys-button > input[type=radio]:hover, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:hover,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:hover, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:hover,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:hover {
+  border-color: #000000;
+  background-color: #646464;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.12), inset 0px 1px 0px rgba(255, 255, 255, 0.18);
+}
+.controlregion .radio.sys-button > input[type=checkbox].active, .controlregion .radio.sys-button > input[type=checkbox]:active,
+.controlregion .radio.sys-button > input[type=radio].active,
+.controlregion .radio.sys-button > input[type=radio]:active, .sys-controlregion .radio.sys-button > input[type=checkbox].active, .sys-controlregion .radio.sys-button > input[type=checkbox]:active,
+.sys-controlregion .radio.sys-button > input[type=radio].active,
+.sys-controlregion .radio.sys-button > input[type=radio]:active, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].active, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:active,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].active,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:active, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].active, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox]:active,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].active,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio]:active {
+  border-color: #000000;
+  background-color: #3d3d3d;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.12), inset 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+.controlregion .radio.sys-button > input[type=checkbox].focus,
+.controlregion .radio.sys-button > input[type=radio].focus, .sys-controlregion .radio.sys-button > input[type=checkbox].focus,
+.sys-controlregion .radio.sys-button > input[type=radio].focus, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 1px #000000;
+}
+.controlregion .radio.sys-button > input[type=checkbox].toggled,
+.controlregion .radio.sys-button > input[type=radio].toggled, .sys-controlregion .radio.sys-button > input[type=checkbox].toggled,
+.sys-controlregion .radio.sys-button > input[type=radio].toggled, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc);
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.12), 0px 1px 0px rgba(255, 255, 255, 0.13);
+}
+.controlregion .radio.sys-button > input[type=checkbox].toggled:hover:not(.disabled),
+.controlregion .radio.sys-button > input[type=radio].toggled:hover:not(.disabled), .sys-controlregion .radio.sys-button > input[type=checkbox].toggled:hover:not(.disabled),
+.sys-controlregion .radio.sys-button > input[type=radio].toggled:hover:not(.disabled), .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled:hover:not(.disabled),
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled:hover:not(.disabled), .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled:hover:not(.disabled),
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled:hover:not(.disabled) {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5);
+}
+.controlregion .radio.sys-button > input[type=checkbox].toggled:active:not(.disabled), .controlregion .radio.sys-button > input[type=checkbox].toggled.active,
+.controlregion .radio.sys-button > input[type=radio].toggled:active:not(.disabled),
+.controlregion .radio.sys-button > input[type=radio].toggled.active, .sys-controlregion .radio.sys-button > input[type=checkbox].toggled:active:not(.disabled), .sys-controlregion .radio.sys-button > input[type=checkbox].toggled.active,
+.sys-controlregion .radio.sys-button > input[type=radio].toggled:active:not(.disabled),
+.sys-controlregion .radio.sys-button > input[type=radio].toggled.active, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled:active:not(.disabled), .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled.active,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled:active:not(.disabled),
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled.active, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled:active:not(.disabled), .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].toggled.active,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled:active:not(.disabled),
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].toggled.active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5);
+}
+.controlregion .radio.sys-button > input[type=checkbox].disabled,
+.controlregion .radio.sys-button > input[type=radio].disabled, .sys-controlregion .radio.sys-button > input[type=checkbox].disabled,
+.sys-controlregion .radio.sys-button > input[type=radio].disabled, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].disabled,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].disabled, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].disabled,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].disabled {
+  background-color: #3b3b3b;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.08), inset 0px 1px 0px rgba(255, 255, 255, 0.04);
+  border-color: #000000;
+}
+.controlregion .radio.sys-button > input[type=checkbox].disabled .label,
+.controlregion .radio.sys-button > input[type=radio].disabled .label, .sys-controlregion .radio.sys-button > input[type=checkbox].disabled .label,
+.sys-controlregion .radio.sys-button > input[type=radio].disabled .label, .controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].disabled .label,
+.controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].disabled .label, .sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=checkbox].disabled .label,
+.sys-controlregion .sys-groupbutton-wrapper > .radio > input[type=radio].disabled .label {
+  color: #8c8c8c;
+}
+.sys-level1 .radio.sys-button, .sys-level2 .radio.sys-button, .sys-heading .radio.sys-button, .sys-footer .radio.sys-button, .sys-level1 .sys-groupbutton-wrapper > .radio, .sys-level2 .sys-groupbutton-wrapper > .radio, .sys-heading .sys-groupbutton-wrapper > .radio, .sys-footer .sys-groupbutton-wrapper > .radio {
+  font-size: 12px;
+  min-height: 1.58333em;
+}
+.sys-level1 .radio.sys-button > input[type=checkbox],
+.sys-level1 .radio.sys-button > input[type=radio], .sys-level2 .radio.sys-button > input[type=checkbox],
+.sys-level2 .radio.sys-button > input[type=radio], .sys-heading .radio.sys-button > input[type=checkbox],
+.sys-heading .radio.sys-button > input[type=radio], .sys-footer .radio.sys-button > input[type=checkbox],
+.sys-footer .radio.sys-button > input[type=radio], .sys-level1 .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.sys-level1 .sys-groupbutton-wrapper > .radio > input[type=radio], .sys-level2 .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.sys-level2 .sys-groupbutton-wrapper > .radio > input[type=radio], .sys-heading .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.sys-heading .sys-groupbutton-wrapper > .radio > input[type=radio], .sys-footer .sys-groupbutton-wrapper > .radio > input[type=checkbox],
+.sys-footer .sys-groupbutton-wrapper > .radio > input[type=radio] {
+  box-shadow: none;
+}
+.sys-level1 .radio.sys-button > input[type=checkbox]:focus, .sys-level1 .radio.sys-button > input[type=checkbox].focus,
+.sys-level1 .radio.sys-button > input[type=radio]:focus,
+.sys-level1 .radio.sys-button > input[type=radio].focus, .sys-level2 .radio.sys-button > input[type=checkbox]:focus, .sys-level2 .radio.sys-button > input[type=checkbox].focus,
+.sys-level2 .radio.sys-button > input[type=radio]:focus,
+.sys-level2 .radio.sys-button > input[type=radio].focus, .sys-heading .radio.sys-button > input[type=checkbox]:focus, .sys-heading .radio.sys-button > input[type=checkbox].focus,
+.sys-heading .radio.sys-button > input[type=radio]:focus,
+.sys-heading .radio.sys-button > input[type=radio].focus, .sys-footer .radio.sys-button > input[type=checkbox]:focus, .sys-footer .radio.sys-button > input[type=checkbox].focus,
+.sys-footer .radio.sys-button > input[type=radio]:focus,
+.sys-footer .radio.sys-button > input[type=radio].focus, .sys-level1 .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .sys-level1 .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-level1 .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.sys-level1 .sys-groupbutton-wrapper > .radio > input[type=radio].focus, .sys-level2 .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .sys-level2 .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-level2 .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.sys-level2 .sys-groupbutton-wrapper > .radio > input[type=radio].focus, .sys-heading .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .sys-heading .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-heading .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.sys-heading .sys-groupbutton-wrapper > .radio > input[type=radio].focus, .sys-footer .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus, .sys-footer .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus,
+.sys-footer .sys-groupbutton-wrapper > .radio > input[type=radio]:focus,
+.sys-footer .sys-groupbutton-wrapper > .radio > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  border-right-color: #0090ff;
+  z-index: 0;
+}
+.sys-level1 .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-level1 .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-level1 .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-level1 .radio.sys-button > input[type=radio].focus.splitbutton-main, .sys-level2 .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-level2 .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-level2 .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-level2 .radio.sys-button > input[type=radio].focus.splitbutton-main, .sys-heading .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-heading .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-heading .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-heading .radio.sys-button > input[type=radio].focus.splitbutton-main, .sys-footer .radio.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-footer .radio.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-footer .radio.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-footer .radio.sys-button > input[type=radio].focus.splitbutton-main, .sys-level1 .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .sys-level1 .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.sys-level1 .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.sys-level1 .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main, .sys-level2 .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .sys-level2 .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.sys-level2 .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.sys-level2 .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main, .sys-heading .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .sys-heading .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.sys-heading .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.sys-heading .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main, .sys-footer .sys-groupbutton-wrapper > .radio > input[type=checkbox]:focus.splitbutton-main, .sys-footer .sys-groupbutton-wrapper > .radio > input[type=checkbox].focus.splitbutton-main,
+.sys-footer .sys-groupbutton-wrapper > .radio > input[type=radio]:focus.splitbutton-main,
+.sys-footer .sys-groupbutton-wrapper > .radio > input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.sys-heading .radio.sys-button, .sys-heading .sys-groupbutton-wrapper > .radio {
+  margin: 0;
+}
+.sys-heading .radio.sys-button input[type=checkbox],
+.sys-heading .radio.sys-button input[type=radio], .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox],
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio] {
+  border-radius: 0px;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+  background: -webkit-linear-gradient(top, #232323, #202020);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+.sys-heading .radio.sys-button input[type=checkbox]:hover,
+.sys-heading .radio.sys-button input[type=radio]:hover, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:hover,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:hover {
+  background: -webkit-linear-gradient(top, #383838, #292929);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+.sys-heading .radio.sys-button input[type=checkbox]:active,
+.sys-heading .radio.sys-button input[type=radio]:active, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:active,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:active {
+  background: -webkit-linear-gradient(top, #282828, #2b2b2b);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.sys-heading .radio.sys-button input[type=checkbox]:checked,
+.sys-heading .radio.sys-button input[type=radio]:checked, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc);
+}
+.sys-heading .radio.sys-button input[type=checkbox]:checked:before,
+.sys-heading .radio.sys-button input[type=radio]:checked:before, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:before,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked:before {
+  display: none;
+}
+.sys-heading .radio.sys-button input[type=checkbox]:checked:hover,
+.sys-heading .radio.sys-button input[type=radio]:checked:hover, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:hover,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5);
+}
+.sys-heading .radio.sys-button input[type=checkbox]:checked.active, .sys-heading .radio.sys-button input[type=checkbox]:checked:active,
+.sys-heading .radio.sys-button input[type=radio]:checked.active,
+.sys-heading .radio.sys-button input[type=radio]:checked:active, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked.active, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:active,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked.active,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked:active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5);
+  border-right-color: transparent;
+  box-shadow: none;
+}
+.sys-heading .radio.sys-button input[type=checkbox]:checked:disabled,
+.sys-heading .radio.sys-button input[type=radio]:checked:disabled, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:checked:disabled,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:checked:disabled {
+  background-color: #263c53;
+}
+.sys-heading .radio.sys-button input[type=checkbox]:focus,
+.sys-heading .radio.sys-button input[type=radio]:focus, .sys-heading .sys-groupbutton-wrapper > .radio input[type=checkbox]:focus,
+.sys-heading .sys-groupbutton-wrapper > .radio input[type=radio]:focus {
+  border: none;
+  box-shadow: inset 0px 0px 0px 1px #0090ff, inset 0px 0px 0px 2px #000000;
+}
+.radio.sys-button.sys-small, .sys-groupbutton-wrapper > .radio.sys-small {
+  line-height: 1.35;
+  min-height: 1.46153em;
+}
+.radio.sys-button.sys-big, .sys-groupbutton-wrapper > .radio.sys-big {
+  min-height: 3.7em;
+  min-height: 2.924em;
+  line-height: normal;
+}
+.radio.sys-button.sys-big input[type=checkbox],
+.radio.sys-button.sys-big input[type=radio], .sys-groupbutton-wrapper > .radio.sys-big input[type=checkbox],
+.sys-groupbutton-wrapper > .radio.sys-big input[type=radio] {
+  margin-top: 0px;
+}
+.sys-groupbutton-wrapper.sys-small > .radio {
+  font-size: 1em;
+  min-height: 1.46153em;
+}
+.radio.sys-big, .sys-groupbutton-wrapper.sys-big > .radio {
+  min-height: 3.7em;
+  min-height: 2.924em;
+  line-height: normal;
+}
+.radio.sys-big input[type=checkbox],
+.radio.sys-big input[type=radio], .sys-groupbutton-wrapper.sys-big > .radio input[type=checkbox],
+.sys-groupbutton-wrapper.sys-big > .radio input[type=radio] {
+  margin-top: 0px;
+}
+
+.sys-check .radio.checked {
+  color: #fbfbfb;
+}
+.sys-check input[type=radio] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.sys-check input[type=radio]::before {
+  content: none;
+}
+.sys-check input[type=radio]:checked {
+  background: url(/bbkitAssets/images/checkmark_login.png) center center;
+}
+.sys-check:not(.disabled) .radio-content:hover::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  right: 2px;
+  bottom: 0px;
+  box-shadow: inset 0px 0px 0px 1px #fbfbfb;
+}
+
+.sys-groupbutton-wrapper > .radio + .radio {
+  border-left-width: 0;
+}
+.sys-groupbutton-wrapper > .radio + .radio.focus {
+  box-shadow: -1px 0 0 0 #0090ff;
+}

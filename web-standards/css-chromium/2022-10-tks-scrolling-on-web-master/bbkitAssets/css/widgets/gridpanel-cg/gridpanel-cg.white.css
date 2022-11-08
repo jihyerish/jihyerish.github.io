@@ -1,0 +1,9 @@
+*:focus {
+  outline: none;
+}
+
+.gridpanel-cg.sys-spw-container {
+  margin: 1px 0;
+  font-size: 0.923em;
+  background-color: rgba(190, 190, 190, 0.7);
+}

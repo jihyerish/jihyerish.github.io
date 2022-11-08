@@ -1,0 +1,13 @@
+*:focus {
+  outline: none;
+}
+
+.pill-inner {
+  background: #4e4e4e;
+}
+.pill > .pill-inner:hover:not(.disabled) {
+  background: #666666;
+}
+.pill > .pill-inner:active:not(.disabled) {
+  background: #404040;
+}

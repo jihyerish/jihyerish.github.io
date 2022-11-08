@@ -1,0 +1,36 @@
+.textarea {
+  cursor: text;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.textarea.disabled {
+  cursor: default;
+}
+
+.textarea-expand {
+  position: relative;
+}
+
+.textarea-text {
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  resize: none;
+}
+.textarea-text.disabled {
+  -webkit-user-select: none;
+}
+
+.textarea-pre {
+  display: block;
+  visibility: hidden;
+}
+
+.app-wrapper-zoomed-out .textarea-pre,
+.app-wrapper-zoomed-out .textarea-text {
+  padding: 2px 0 2px 0;
+}

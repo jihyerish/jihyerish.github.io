@@ -1,0 +1,25 @@
+.style-sysblpui-app-content-scroll {
+  overflow: auto;
+}
+
+.style-sysblpui-app-content-scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.style-sysblpui-app-content-scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.style-sysblpui-app-content-clip {
+  overflow: hidden;
+}
+
+.sysblpui-app-content-insetcontent {
+  margin: 5px;
+}
+
+.sysblpui-app-content-lpframe-insetcontent {
+  margin: 5px 0 0 0;
+}

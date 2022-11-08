@@ -1,0 +1,57 @@
+*:focus {
+  outline: none;
+}
+
+.stackpanel {
+  /**** just in case someone is using this style already  ***/
+}
+.stackpanel.sys-group {
+  border: 1px solid #000000;
+  background: #1e1e1e;
+  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.2);
+  padding: 0.8em;
+}
+.stackpanel.sys-group > .separator.horz {
+  margin-left: -0.8em;
+  margin-right: -0.8em;
+}
+.stackpanel.sys-group > .sys-group-header {
+  background: #1e1e1e;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 1px solid #111111;
+  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.2);
+  margin: -0.8em -0.8em 0 -0.8em;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+}
+.stackpanel.sys-group > .sys-group-content {
+  padding-top: 0.8em;
+}
+.stackpanel.sys-group .sys-group-listing {
+  background: #1e1e1e;
+  margin: -0.8em 0px -0.8em -0.8em;
+  padding: 0.8em 0px;
+}
+.stackpanel.sys-group .sys-group-detail {
+  padding-left: 0.8em;
+}
+.stackpanel.sys-group-pod {
+  border-right: 1px solid #484848;
+  box-shadow: inset 1px 0px rgba(255, 255, 255, 0.05);
+}
+.stackpanel.sys-group-pod:last-child {
+  border-right: none;
+}
+.stackpanel.sys-group-pod .sys-group-header {
+  margin: -0.6em -0.6em 0 -0.6em;
+}
+.stackpanel.sys-frame, .stackpanel.sys-frame-noborder-darker {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.stackpanel.sys-mainbody {
+  padding: 0px;
+}
+.stackpanel.sys-maincontent {
+  padding: 0px;
+}

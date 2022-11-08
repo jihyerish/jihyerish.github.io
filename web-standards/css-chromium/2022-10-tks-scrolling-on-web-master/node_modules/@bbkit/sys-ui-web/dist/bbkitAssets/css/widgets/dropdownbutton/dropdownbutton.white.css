@@ -1,0 +1,466 @@
+*:focus {
+  outline: none;
+}
+
+.dropdownbutton.sys-small .button-content {
+  font-size: inherit;
+}
+.dropdownbutton.sys-compact {
+  padding-left: 2px;
+  padding-right: 10px;
+}
+.dropdownbutton.sys-compact:after {
+  width: 10px;
+}
+.dropdownbutton.sys-compact.sys-flat {
+  padding-right: 10px;
+}
+.dropdownbutton.sys-noarrow {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+.dropdownbutton.sys-noarrow.sys-compact {
+  padding: 0px 2px;
+}
+.lpad #window-chrome-bar .dropdownbutton, .lpad-alternate #window-chrome-bar .dropdownbutton, .lpad-alert #window-chrome-bar .dropdownbutton, .lpad-locked #window-chrome-bar .dropdownbutton {
+  padding-left: 4px;
+  padding-right: 24px;
+  border-width: 0px 0px 0px 1px;
+  border-color: transparent;
+}
+.lpad #window-chrome-bar .dropdownbutton.button-nocontent, .lpad-alternate #window-chrome-bar .dropdownbutton.button-nocontent, .lpad-alert #window-chrome-bar .dropdownbutton.button-nocontent, .lpad-locked #window-chrome-bar .dropdownbutton.button-nocontent {
+  border-left-width: 0px;
+  padding-left: 0px;
+  padding-right: 15px; /*width of the triangle image*/
+}
+.lpad #window-chrome-bar .dropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal.png) center center no-repeat;
+}
+.lpad #window-chrome-bar .dropdownbutton:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.lpad #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .lpad #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton:hover:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_normal.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton:hover:not(.disabled), .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alert #window-chrome-bar .dropdownbutton:hover:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_hover.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .lpad-alert #window-chrome-bar .dropdownbutton.active:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_pressed.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_hover.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .lpad-alternate #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_pressed.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_normal.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_hover.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_pressed.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_normal.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton:hover:not(.disabled) {
+  background: #9d9d9d;
+}
+.lpad-locked #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_hover.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .lpad-locked #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_pressed.png);
+}
+.dropdownbutton.sys-whats-new:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black.svg);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal.png) center center no-repeat;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:hover:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton:active:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_left.png) center center no-repeat;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_left.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_normal_left.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled), .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_hover_left.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_pressed_left.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_hover_left.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_pressed_left.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_normal_left.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_hover_left.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_pressed_left.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_normal_left.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled) {
+  background: #9d9d9d;
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_hover_left.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_pressed_left.png);
+}
+.dropdownbutton .dropdown-anchor-left.sys-whats-new:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_left.svg);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_left.png) center center no-repeat;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_left.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:hover:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left:active:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-left.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_left.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_right.png) center center no-repeat;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_right.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_normal_right.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled), .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_hover_right.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_pressed_right.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_hover_right.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_pressed_right.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_normal_right.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_hover_right.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_pressed_right.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_normal_right.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled) {
+  background: #9d9d9d;
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_hover_right.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_pressed_right.png);
+}
+.dropdownbutton .dropdown-anchor-right.sys-whats-new:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_right.svg);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_right.png) center center no-repeat;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_right.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:hover:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right:active:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-right.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_right.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_top.png) center center no-repeat;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+.lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_top.png);
+}
+.window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .window-state-blur .lpad #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_normal_top.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled), .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_hover_top.png);
+}
+.lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .window-state-blur .lpad-alert #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alert_pressed_top.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_hover_top.png);
+}
+.lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_active_pressed_top.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_normal_top.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_hover_top.png);
+}
+.window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .window-state-blur #window-chrome-bar .lpad-alternate #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_alternate_inactive_pressed_top.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_normal_top.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled) {
+  background: #9d9d9d;
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_hover_top.png);
+}
+.lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .lpad-locked #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_pressed_top.png);
+}
+.dropdownbutton .dropdown-anchor-up.sys-whats-new:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_top.svg);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_active_normal_top.png) center center no-repeat;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled) {
+  color: #000000;
+  border-left-color: #000000;
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+.lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_inactive_normal_top.png);
+}
+.window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:hover:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up:active:not(.disabled):after, .window-state-blur .lpad.sys-demo-mode #window-chrome-bar .dropdownbutton .dropdown-anchor-up.active:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_hot_top.png);
+}
+
+.dropdownbutton {
+  padding-right: 17px;
+}
+.dropdownbutton:after {
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  width: 15px;
+  border-width: 0px;
+  background: url(/bbkitAssets/images/dropdown_arrow.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_disabled.svg);
+}
+.dropdownbutton.style-fave-bar-button:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black.svg);
+}
+.table-cell-slot .dropdownbutton.style-fave-button::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black.svg);
+}
+.dropdownbutton.sys-small .button-content {
+  font-size: inherit;
+}
+.dropdownbutton.dropdown-anchor-left:after {
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  width: 15px;
+  border-width: 0px;
+  background: url(/bbkitAssets/images/dropdown_arrow_left.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-left.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_disabled_left.svg);
+}
+.dropdownbutton.dropdown-anchor-left.style-fave-bar-button:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_left.svg);
+}
+.dropdownbutton.dropdown-anchor-right:after {
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  width: 15px;
+  border-width: 0px;
+  background: url(/bbkitAssets/images/dropdown_arrow_right.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-right.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_disabled_right.svg);
+}
+.dropdownbutton.dropdown-anchor-right.style-fave-bar-button:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_right.svg);
+}
+.dropdownbutton.dropdown-anchor-up:after {
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  width: 15px;
+  border-width: 0px;
+  background: url(/bbkitAssets/images/dropdown_arrow_top.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-up.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_disabled_top.svg);
+}
+.dropdownbutton.dropdown-anchor-up.style-fave-bar-button:after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_black_top.svg);
+}
+
+.dropdownbutton:after {
+  background: url(/bbkitAssets/images/dropdown_arrow_white.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow.svg);
+}
+.dropdownbutton.dropdown-anchor-left:after {
+  background: url(/bbkitAssets/images/dropdown_arrow_white_left.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-left.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_left.svg);
+}
+.dropdownbutton.dropdown-anchor-right:after {
+  background: url(/bbkitAssets/images/dropdown_arrow_white_right.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-right.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_right.svg);
+}
+.dropdownbutton.dropdown-anchor-up:after {
+  background: url(/bbkitAssets/images/dropdown_arrow_white_top.svg) center center no-repeat;
+  background-size: 6px;
+}
+.dropdownbutton.dropdown-anchor-up.disabled::after {
+  background-image: url(/bbkitAssets/images/dropdown_arrow_top.svg);
+}

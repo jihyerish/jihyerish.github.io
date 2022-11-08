@@ -1,0 +1,72 @@
+.button {
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  -webkit-align-items: stretch;
+  -webkit-justify-content: center;
+  font: inherit;
+  overflow: hidden;
+  display: inline-flex;
+}
+.button.block {
+  display: flex;
+}
+.button .label {
+  white-space: nowrap;
+}
+.button.sys-clickable-container:after {
+  pointer-events: none;
+}
+
+.zoom-overlay .button .button-img {
+  height: auto;
+}
+
+.button-content {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.button-content.stretch {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.button-content.stretch > .widget {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.button-content.stretch > .label {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+.sys-clickable-container .button-content {
+  flex: 1 1 auto;
+}
+.sys-clickable-container .button-content > .widget {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.button-img {
+  position: relative;
+  vertical-align: text-bottom;
+  -webkit-user-drag: none;
+}
+
+.sys-groupbutton-wrapper > .button,
+.button.sys-button {
+  -webkit-justify-content: center;
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+}
+.sys-groupbutton-wrapper > .button.block,
+.button.sys-button.block {
+  display: flex;
+}

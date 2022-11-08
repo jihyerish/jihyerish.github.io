@@ -1,0 +1,38 @@
+.chart-collection {
+  width: 100%;
+  display: -webkit-flex;
+  -webkit-flex-flow: row;
+}
+.chart-collection .side-panel {
+  height: 100%;
+  -webkit-flex: 1 0 auto;
+}
+.chart-collection .chart-area {
+  width: 944px;
+  margin: 0;
+  padding: 0;
+}
+.chart-collection .chart-area .chart-holder {
+  border-bottom: 1px solid #4d4d4d;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  opacity: 0;
+  height: 190px;
+  overflow: none;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+.chart-collection .chart-area .chart-holder.visible {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+.chart-collection .chart-area .chart-holder.animout {
+  height: 0px;
+  opacity: 0;
+  -webkit-transition-property: height, opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}

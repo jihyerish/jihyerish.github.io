@@ -1,0 +1,66 @@
+.partitionpanel-child-wrapper {
+  position: absolute;
+  overflow: hidden;
+  cursor: inherit;
+}
+
+.partitionpanel-stretch {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.partitionpanel-child-wrapper-left::after,
+.partitionpanel-child-wrapper-left-hover::after {
+  border-left: 1px solid #0090ff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.partitionpanel-child-wrapper-top::after,
+.partitionpanel-child-wrapper-top-hover::after {
+  border-top: 1px solid #0090ff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.partitionpanel-child-wrapper-right::after,
+.partitionpanel-child-wrapper-right-hover::after {
+  border-right: 1px solid #0090ff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.partitionpanel-child-wrapper-bottom::after,
+.partitionpanel-child-wrapper-bottom-hover::after {
+  border-bottom: 1px solid #0090ff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.partitionpanel-child-content {
+  overflow: hidden;
+  cursor: inherit;
+}
+
+.partitionpanel {
+  overflow: hidden;
+}

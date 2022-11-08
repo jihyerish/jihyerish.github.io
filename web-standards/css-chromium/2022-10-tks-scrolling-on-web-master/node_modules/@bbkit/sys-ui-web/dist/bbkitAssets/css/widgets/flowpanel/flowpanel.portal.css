@@ -1,0 +1,13 @@
+*:focus {
+  outline: none;
+}
+
+.flowpanel.sys-mnemonic-box {
+  background-color: #262626;
+  color: #bebebe;
+  font-family: "BB.AvenirDemi";
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 100;
+}

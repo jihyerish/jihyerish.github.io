@@ -1,0 +1,296 @@
+.theme-white *:focus {
+  outline: none;
+}
+.theme-white .stackpanel {
+  /**** just in case someone is using this style already  ***/
+}
+.theme-white .stackpanel.sys-border {
+  border: 1px solid #787878;
+}
+.theme-white .stackpanel.sys-group {
+  background: #cdcdcd;
+  padding: 0.25em;
+}
+.theme-white .stackpanel.sys-group > .separator.horz {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+.theme-white .stackpanel.sys-group > .sys-group-header {
+  background: #d7d7d7;
+  border-bottom: 1px solid #111111;
+  margin: -0.25em -0.25em 0px -0.25em;
+  padding: 0.125em 0.25em 0.25em 0.25em;
+}
+.theme-white .stackpanel.sys-group > .sys-group-content {
+  padding-top: 0.25em;
+}
+.theme-white .stackpanel.sys-group .sys-group-listing {
+  background: #d7d7d7;
+  border-right: 1px solid #111111;
+  margin: -0.25em 0px -0.25em -0.25em;
+  padding: 0.25em 0px;
+}
+.theme-white .stackpanel.sys-group .sys-group-detail {
+  padding-left: 0.6em;
+}
+.theme-white .stackpanel.sys-group-pod {
+  background-color: #e1e1e1;
+  border-radius: 0px;
+  padding: 10px;
+}
+.theme-white .stackpanel.sys-frame, .theme-white .stackpanel.sys-frame-noborder-darker {
+  background: #d7d7d7;
+}
+.theme-white .stackpanel.sys-small {
+  font-size: 0.866666em;
+  line-height: 1.5;
+}
+.sys-tile .theme-white .stackpanel.sys-small {
+  font-size: 0.8em;
+}
+.theme-white .stackpanel.sys-level1 {
+  background-color: #e1e1e1;
+  color: #232323;
+  font-size: 0.866666em;
+  padding: 0px 0px 1px;
+}
+.tabpanel .theme-white .stackpanel.sys-level1 {
+  margin: -3px -6px -2px;
+}
+.tabpanel.sys-compact .theme-white .stackpanel.sys-level1 {
+  margin: 0;
+}
+.theme-white .stackpanel.sys-level2 {
+  background-color: #e1e1e1;
+  color: #232323;
+  font-size: 0.866666em;
+  padding: 0px 0px 1px;
+}
+.tabpanel .theme-white .stackpanel.sys-level2 {
+  margin: -2px 0px -2px 0px;
+}
+.tabpanel.sys-compact .theme-white .stackpanel.sys-level2 {
+  margin: 0;
+}
+.theme-white .stackpanel.sys-footer {
+  background-color: #e1e1e1;
+  color: #232323;
+  font-size: 0.866666em;
+}
+.theme-white .stackpanel.sys-heading {
+  background-image: -webkit-linear-gradient(top, #232323, #202020);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.06);
+  color: #232323;
+  font-size: 0.866666em;
+}
+.theme-white .stackpanel.sys-alert-high {
+  background: #ff415c;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #000000;
+  color: #fbfbfb;
+}
+.theme-white .stackpanel.sys-chat-alert-high {
+  background: #ff415c;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #000000;
+  color: #fbfbfb;
+}
+.theme-white .stackpanel.sys-notification-alert {
+  background-color: #ff7486;
+  padding: 10px;
+}
+.theme-white .stackpanel.sys-blast-card {
+  background: #fbfbfb;
+  border: 1px solid #cdcdcd;
+  box-shadow: inset 3px 0px #c31834;
+}
+.theme-white .stackpanel.sys-chat-blast-card {
+  background: #fbfbfb;
+  border: 1px solid #cdcdcd;
+  box-shadow: inset 3px 0px #c31834;
+}
+.theme-white .stackpanel.sys-blast-item {
+  background: #fbfbfb;
+}
+.theme-white .stackpanel.sys-mouseover-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  height: 100%;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  clip-path: polygon(0 90%, 50% 75%, 90% 30%, 100% 10%, 100% 100%, 0 100%);
+}
+.theme-white .stackpanel.sys-mouseover-menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #bebebe;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.theme-white .stackpanel.sys-expander-group {
+  background: #e1e1e1;
+}
+.theme-white .stackpanel.sys-action-footer {
+  padding: 8px;
+}
+.theme-white .stackpanel.sys-crop-box {
+  border: 2px solid #d64d22;
+}
+.theme-white .stackpanel.sys-crop-source {
+  border: 2px solid #a5a5a5;
+}
+.theme-white .stackpanel.sys-mainbody {
+  padding: 5px;
+}
+.theme-white .stackpanel.sys-maincontent {
+  padding: 5px;
+}
+.theme-white .stackpanel.sys-maincontent > .inline {
+  margin-right: 0.6em;
+}
+.theme-white .stackpanel.sys-maincontent > .inline:last-child {
+  margin-right: initial;
+}
+.theme-white .stackpanel.sys-maincontent > .block {
+  margin-bottom: 0.6em;
+}
+.theme-white .stackpanel.sys-maincontent > .block:last-child {
+  margin-bottom: initial;
+}
+.theme-white .stackpanel.sys-maincontent > .separator.horz {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+.theme-white .stackpanel.sys-maincontent > .separator.vert {
+  margin-bottom: -0.25em;
+  margin-top: -0.25em;
+}
+.theme-white .stackpanel.sys-bigspaced {
+  padding-top: 4px;
+  padding-left: 4px;
+}
+.theme-white .stackpanel.sys-bigspaced > .stackpanel-child {
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+.theme-white .stackpanel.sys-bigspaced-inner > .stackpanel-child {
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+.theme-white .stackpanel.sys-bigspaced-inner > .stackpanel-child:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.theme-white .stackpanel.sys-spaced-outer {
+  padding: 10px;
+}
+.theme-white .stackpanel.sys-bigspaced-outer {
+  padding: 0.6em;
+}
+.theme-white .stackpanel.sys-spaced-column > .stackpanel-child {
+  margin-right: 0.6em;
+}
+.theme-white .stackpanel.sys-spaced-column > .stackpanel-child:last-child {
+  margin-right: initial;
+}
+.theme-white .stackpanel.sys-spaced-horz > .stackpanel-child {
+  margin-right: 4px;
+}
+.theme-white .stackpanel.sys-spaced-horz > .stackpanel-child:last-child {
+  margin-right: 0px;
+}
+.theme-white .stackpanel.sys-spaced-vert > .stackpanel-child {
+  margin-top: 8px;
+}
+.theme-white .stackpanel.sys-spaced-vert > .stackpanel-child:first-child {
+  margin-top: 0px;
+}
+.theme-white .stackpanel.sys-actionbar-bottom {
+  padding-top: 12px;
+}
+.theme-white .stackpanel.sys-actionbar-bottom > .stackpanel-child {
+  margin-right: 8px;
+}
+.theme-white .stackpanel.sys-actionbar-bottom > .stackpanel-child:last-child, .theme-white .stackpanel.sys-actionbar-bottom > .stackpanel-child:only-child {
+  margin-right: 0px;
+}
+.theme-white .stackpanel.sys-spaced > .separator {
+  margin-left: 1px;
+}
+.controlregion .theme-white .stackpanel.sys-spaced > .separator {
+  margin-left: 0px;
+}
+.theme-white .stackpanel.sys-spaced > .inline {
+  margin-right: 8px;
+}
+.controlregion .theme-white .stackpanel.sys-spaced > .inline {
+  margin-right: 5px;
+}
+.theme-white .stackpanel.sys-spaced > .inline:last-child {
+  margin-right: initial;
+}
+.theme-white .stackpanel.sys-spaced > .block {
+  margin-bottom: 8px;
+}
+.controlregion .theme-white .stackpanel.sys-spaced > .block {
+  margin-bottom: 4px;
+}
+.theme-white .stackpanel.sys-spaced > .block:last-child {
+  margin-bottom: initial;
+}
+.theme-white .dialog .stackpanel, .theme-white .popup .stackpanel {
+  /**** just in case someone is using this style already  ***/
+}
+.theme-white .dialog .stackpanel.sys-group, .theme-white .popup .stackpanel.sys-group {
+  border: 1px solid #000000;
+  background: #e1e1e1;
+  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.2);
+  padding: 0.8em;
+}
+.theme-white .dialog .stackpanel.sys-group > .separator.horz, .theme-white .popup .stackpanel.sys-group > .separator.horz {
+  margin-left: -0.8em;
+  margin-right: -0.8em;
+}
+.theme-white .dialog .stackpanel.sys-group > .sys-group-header, .theme-white .popup .stackpanel.sys-group > .sys-group-header {
+  background: #e1e1e1;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 1px solid #111111;
+  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.2);
+  margin: -0.8em -0.8em 0 -0.8em;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+}
+.theme-white .dialog .stackpanel.sys-group > .sys-group-content, .theme-white .popup .stackpanel.sys-group > .sys-group-content {
+  padding-top: 0.8em;
+}
+.theme-white .dialog .stackpanel.sys-group .sys-group-listing, .theme-white .popup .stackpanel.sys-group .sys-group-listing {
+  background: #e1e1e1;
+  margin: -0.8em 0px -0.8em -0.8em;
+  padding: 0.8em 0px;
+}
+.theme-white .dialog .stackpanel.sys-group .sys-group-detail, .theme-white .popup .stackpanel.sys-group .sys-group-detail {
+  padding-left: 0.8em;
+}
+.theme-white .dialog .stackpanel.sys-group-pod, .theme-white .popup .stackpanel.sys-group-pod {
+  border-right: 1px solid #484848;
+  box-shadow: inset 1px 0px rgba(255, 255, 255, 0.05);
+}
+.theme-white .dialog .stackpanel.sys-group-pod:last-child, .theme-white .popup .stackpanel.sys-group-pod:last-child {
+  border-right: none;
+}
+.theme-white .dialog .stackpanel.sys-group-pod .sys-group-header, .theme-white .popup .stackpanel.sys-group-pod .sys-group-header {
+  margin: -0.6em -0.6em 0 -0.6em;
+}
+.theme-white .dialog .stackpanel.sys-frame, .theme-white .dialog .stackpanel.sys-frame-noborder-darker, .theme-white .popup .stackpanel.sys-frame, .theme-white .popup .stackpanel.sys-frame-noborder-darker {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}

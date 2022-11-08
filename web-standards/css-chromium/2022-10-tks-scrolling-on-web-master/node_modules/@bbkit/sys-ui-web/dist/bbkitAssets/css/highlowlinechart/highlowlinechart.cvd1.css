@@ -1,0 +1,70 @@
+*:focus {
+  outline: none;
+}
+
+.hilolinechart-point-border {
+  border: 1px solid #000000;
+}
+
+.triangle-hilo-orange {
+  border-bottom-color: #fa5a28;
+}
+
+.hilo-marketup {
+  background-color: #40B7FF;
+}
+
+.hilo-low-over-close {
+  background-color: #40B7FF;
+}
+
+.hilo-current-over-close {
+  background-color: #0074D1;
+}
+
+.hilo-marketdown {
+  background-color: #E67E7E;
+}
+
+.hilo-current-below-close {
+  background-color: #E67E7E;
+}
+
+.hilo-high-below-close {
+  background-color: #CD4B4B;
+}
+
+.hilolinechart-line {
+  background-color: #bebebe;
+}
+
+.triangle-hilo-white {
+  border-bottom-color: #fbfbfb;
+}
+
+.triangle-hilo-point {
+  border-bottom-color: #fbfbfb;
+}
+
+.triangle-hilo-blue {
+  border-bottom-color: #63b2ff;
+}
+
+.hilolinechart.sys-market-inverse .hilo-marketup {
+  background-color: #E67E7E;
+}
+.hilolinechart.sys-market-inverse .hilo-low-over-close {
+  background-color: #E67E7E;
+}
+.hilolinechart.sys-market-inverse .hilo-current-over-close {
+  background-color: #CD4B4B;
+}
+.hilolinechart.sys-market-inverse .hilo-marketdown {
+  background-color: #40B7FF;
+}
+.hilolinechart.sys-market-inverse .hilo-current-below-close {
+  background-color: #40B7FF;
+}
+.hilolinechart.sys-market-inverse .hilo-high-below-close {
+  background-color: #0074D1;
+}

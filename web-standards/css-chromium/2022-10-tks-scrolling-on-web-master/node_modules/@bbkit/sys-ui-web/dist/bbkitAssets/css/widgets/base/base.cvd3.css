@@ -1,0 +1,97 @@
+*:focus {
+  outline: none;
+}
+
+.drag-ghost {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -2;
+}
+
+.sys-drag-source {
+  background-color: transparent;
+}
+.sys-drag-source:after {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  border: 1px solid #414141;
+}
+
+.sys-dragging {
+  position: relative;
+}
+.sys-dragging:after {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  border: 1px solid #fbfbfb;
+}
+
+.sys-drop-top:after {
+  box-sizing: border-box;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  background-color: #fbfbfb;
+  content: "";
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  right: 0px;
+}
+
+.sys-drop-bottom:after {
+  box-sizing: border-box;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  background-color: #fbfbfb;
+  content: "";
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  right: 0px;
+}
+
+.sys-drop-left {
+  position: relative;
+}
+.sys-drop-left:after {
+  box-sizing: border-box;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  background-color: #fbfbfb;
+  content: "";
+  width: 5px;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: -5px;
+}
+
+.sys-drop-right:after {
+  box-sizing: border-box;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  background-color: #fbfbfb;
+  content: "";
+  width: 5px;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  right: -5px;
+}

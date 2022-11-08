@@ -1,0 +1,67 @@
+.apptcalendar {
+  position: relative;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: stretch;
+  margin: 10px 10px 10px 10px;
+  display: inline-flex;
+}
+.apptcalendar.block {
+  display: flex;
+}
+
+.apptcalendar-intervalcell-container {
+  height: 60px;
+  -webkit-flex: 1 0 1px;
+  margin-top: 18px;
+}
+.apptcalendar-intervalcell-container:last-child .apptcalendar-apptcell:last-child {
+  border-right-style: solid;
+}
+
+.apptcalendar-intervalcell {
+  position: relative;
+  height: 30px;
+}
+
+.apptcalendar-apptcell {
+  position: absolute;
+  height: 100%;
+}
+.apptcalendar-apptcell.free {
+  border: solid 1px #4a4a4a;
+  border-right-style: hidden;
+}
+.apptcalendar-apptcell.busy {
+  background-color: #6b6b6b;
+  border: solid 1px #6b6b6b;
+  border-right-style: hidden;
+}
+.apptcalendar-apptcell.tentative {
+  background-color: #3a3a3a;
+  border: solid 1px #3a3a3a;
+  border-right-style: hidden;
+}
+.apptcalendar-apptcell.client {
+  background-color: #238600;
+  border: solid 1px #238600;
+  border-right-style: hidden;
+}
+
+.apptcalendar-interval-title {
+  position: relative;
+  padding-top: 3px;
+  height: 30px;
+  font-size: 10px;
+  color: #909090;
+}
+
+.apptcalendar-current-time {
+  width: 2px;
+  height: 50px;
+  background-color: #4f8cfd;
+  -webkit-flex: 1 0 1px;
+  position: absolute;
+  z-index: 1;
+}

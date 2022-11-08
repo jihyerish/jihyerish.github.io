@@ -1,0 +1,43 @@
+.listbox {
+  overflow: auto;
+  display: block;
+  overflow-anchor: none;
+  cursor: auto;
+}
+.listbox.inline {
+  display: inline-block;
+}
+.listbox.sizetocontent {
+  overflow: initial;
+}
+.listbox.sizetocontent > .listbox-container-wrapper,
+.listbox.sizetocontent > .listbox-container-wrapper > .listbox-container {
+  height: 100%;
+}
+.listbox > .listbox-container-wrapper {
+  position: relative;
+}
+.listbox > .listbox-container-wrapper > .listbox-container .listbox-item {
+  position: relative;
+}
+.listbox.listbox-empty-content {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.listbox.listbox-empty > .listbox-container-wrapper {
+  display: none;
+}
+.listbox.listbox-empty > .listbox-empty-content {
+  display: inline-block;
+}
+.listbox.splitterpanel-child {
+  overflow: auto;
+}
+
+@media screen {
+  .listbox.sys-richtext-container > .listbox-container-wrapper {
+    position: absolute;
+    width: 100%;
+  }
+}

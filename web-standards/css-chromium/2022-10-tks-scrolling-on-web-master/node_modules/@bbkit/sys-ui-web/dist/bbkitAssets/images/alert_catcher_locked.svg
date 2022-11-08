@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 11 17">
+  <g id="icons">
+    <path fill="#D7D7D7" d="M10,11v-0.5C10,9.7,9.3,9,8.5,9S7,9.7,7,10.5V11H6v3h5v-3H10z M8,10.5C8,10.2,8.2,10,8.5,10S9,10.2,9,10.5 V11H8V10.5z"/>
+    <path fill="#D7D7D7" d="M0,2v12h5v-3H1v-1h5V9H1V8h4h4h1V2H0z M5,7H1V6h4V7z M9,5H1V4h8V5z"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+.custom-color-picker {
+  -webkit-flex-direction: row;
+  display: -webkit-flex;
+}
+.sys-compact .custom-color-picker {
+  padding: 0px;
+}
+
+.customcolor-hue {
+  margin-left: 8px;
+  position: relative;
+  height: 164px;
+  width: 15px;
+  background: -webkit-linear-gradient(top, #ff0000 0%, #ffff00 16%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 84%, #ff0000 100%);
+}
+
+.customcolor-wheel-under {
+  background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 0%, rgb(255, 0, 0) 100%);
+  cursor: crosshair;
+  margin: 2px;
+}
+
+.customcolor-wheel {
+  position: relative;
+  height: 162px;
+  width: 162px;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.customcolor-hue-picker {
+  cursor: -webkit-grab;
+  cursor: default;
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0px;
+  right: -1px;
+}
+.customcolor-hue-picker::before {
+  background: url(../../..//bbkitAssets/images/slider_handle.png) left top no-repeat;
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  right: -11px;
+  top: -5px;
+}
+
+.customcolor-hsv-picker {
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: crosshair;
+}
+.disabled .customcolor-hsv-picker {
+  cursor: default;
+}
+
+.customcolor-swatch {
+  background: #ff0000;
+  margin-left: 15px;
+}

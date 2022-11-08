@@ -1,0 +1,7 @@
+.dropdownbutton:after {
+  content: "";
+  position: absolute;
+}
+.dropdownbutton.sys-noarrow:after {
+  display: none;
+}

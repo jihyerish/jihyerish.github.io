@@ -1,0 +1,12 @@
+.sparkline.sparkline-clickable {
+  cursor: pointer;
+}
+.sparkline.sparkline-clickable:hover {
+  background: rgba(85, 85, 85, 0.6);
+}
+.sparkline.disabled.sparkline-clickable {
+  cursor: default;
+}
+.sparkline.disabled.sparkline-clickable:hover {
+  background: initial;
+}

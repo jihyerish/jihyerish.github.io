@@ -1,0 +1,342 @@
+*:focus {
+  outline: none;
+}
+
+.titledropdownbutton {
+  border-left: 1px solid transparent;
+  padding-left: 4px;
+  padding-right: 19px;
+}
+.titledropdownbutton .label {
+  line-height: 12px;
+}
+.titledropdownbutton:after {
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.titledropdownbutton:hover:not(.disabled) {
+  border-left-color: #000000;
+}
+.titledropdownbutton.button-nocontent {
+  border-left: none;
+  border-right: none;
+  padding-left: 0px;
+  padding-right: 15px; /*width of the triangle image*/
+}
+.titledropdownbutton.sys-noarrow {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  padding: 0px 4px;
+}
+.titledropdownbutton.sys-noarrow:after {
+  display: none;
+}
+.titledropdownbutton.sys-noarrow:hover:not(.disabled) {
+  border-color: #000000;
+}
+.lpad .titledropdownbutton.sys-noarrow, .lpad-alert .titledropdownbutton.sys-noarrow, .lpad-alternate .titledropdownbutton.sys-noarrow, .lpad-locked .titledropdownbutton.sys-noarrow {
+  border: none;
+}
+.panel-window .titledropdownbutton.sys-noarrow {
+  border-left: 1px solid #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
+  border-radius: 0 0 0 5px;
+}
+.titledropdownbutton.sys-option {
+  padding-left: 15px;
+}
+.titledropdownbutton.sys-option:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 13px;
+  background: url(/bbkitAssets/images/chrome_hamburger_active_normal.png) center center no-repeat;
+}
+.sys-demo-mode .titledropdownbutton.sys-option:before {
+  background: url(/bbkitAssets/images/chrome_hamburger_active_normal.png) center center no-repeat;
+}
+.style-tabbed-mode .titledropdownbutton.sys-option {
+  padding: 3px 8px 0 20px;
+  height: 25px;
+  border: none;
+}
+.style-tabbed-mode .titledropdownbutton.sys-option:before {
+  margin-left: 5px;
+  background-size: cover;
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.svg);
+}
+.style-tabbed-mode .titledropdownbutton.sys-option:focus {
+  box-shadow: unset;
+}
+.window-state-blur.style-tabbed-mode .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_blur.svg);
+}
+.lpad .titledropdownbutton.sys-option:before, .lpad-alert .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.window-state-blur .lpad .titledropdownbutton.sys-option:before, .window-state-blur .lpad-alert .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_blur.png);
+}
+.sys-demo-mode.window-state-blur .lpad .titledropdownbutton.sys-option:before, .sys-demo-mode.window-state-blur .lpad-alert .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.lpad .titledropdownbutton.sys-option:hover:not(.disabled):before, .lpad .titledropdownbutton.sys-option:active:not(.disabled):before, .lpad-alert .titledropdownbutton.sys-option:hover:not(.disabled):before, .lpad-alert .titledropdownbutton.sys-option:active:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.window-state-blur .lpad .titledropdownbutton.sys-option:hover:not(.disabled):before, .window-state-blur .lpad .titledropdownbutton.sys-option:active:not(.disabled):before, .window-state-blur .lpad-alert .titledropdownbutton.sys-option:hover:not(.disabled):before, .window-state-blur .lpad-alert .titledropdownbutton.sys-option:active:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_blur.png);
+}
+.sys-demo-mode.window-state-blur .lpad .titledropdownbutton.sys-option:hover:not(.disabled):before, .sys-demo-mode.window-state-blur .lpad .titledropdownbutton.sys-option:active:not(.disabled):before, .sys-demo-mode.window-state-blur .lpad-alert .titledropdownbutton.sys-option:hover:not(.disabled):before, .sys-demo-mode.window-state-blur .lpad-alert .titledropdownbutton.sys-option:active:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked_blur.png);
+}
+.sys-demo-mode.window-state-blur .lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked.png);
+}
+.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked_hover.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked_hover.png);
+}
+.sys-demo-mode.window-state-blur .lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton.sys-option.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked_hover.png);
+}
+.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled), .lpad-locked .titledropdownbutton.sys-option:active:not(.disabled), .lpad-locked .titledropdownbutton.sys-option.active {
+  color: #bebebe;
+}
+.lpad-alternate .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.titledropdownbutton.sys-option.sys-whats-new:before, .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .titledropdownbutton.sys-option.sys-whats-new.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png) !important;
+}
+.window-state-blur .titledropdownbutton.sys-option.sys-whats-new:before, .window-state-blur .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .window-state-blur .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .window-state-blur .titledropdownbutton.sys-option.sys-whats-new.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png) !important;
+}
+.style-tabbed-mode .titledropdownbutton.sys-option.sys-whats-new:before, .style-tabbed-mode .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .style-tabbed-mode .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .style-tabbed-mode .titledropdownbutton.sys-option.sys-whats-new.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.svg) !important;
+}
+.style-tabbed-mode .titledropdownbutton.sys-whats-new, .lpad .titledropdownbutton.sys-whats-new, .lpad-locked .titledropdownbutton.sys-whats-new, .lpad-alert .titledropdownbutton.sys-whats-new, .lpad-alternate .titledropdownbutton.sys-whats-new, .lpad-accessibility-mode .titledropdownbutton.sys-whats-new {
+  background: #ffe100;
+  color: black;
+}
+.style-tabbed-mode .titledropdownbutton.sys-whats-new:hover:not(.disabled), .lpad .titledropdownbutton.sys-whats-new:hover:not(.disabled), .lpad-locked .titledropdownbutton.sys-whats-new:hover:not(.disabled), .lpad-alert .titledropdownbutton.sys-whats-new:hover:not(.disabled), .lpad-alternate .titledropdownbutton.sys-whats-new:hover:not(.disabled), .lpad-accessibility-mode .titledropdownbutton.sys-whats-new:hover:not(.disabled) {
+  background: #ffed66;
+  color: black;
+}
+.titledropdownbutton.sys-collapsed {
+  padding: 0px 0px 0px 13px;
+}
+.titledropdownbutton.sys-collapsed .label {
+  display: none;
+}
+.lpad .titledropdownbutton:after, .lpad-alert .titledropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png) center center no-repeat;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+}
+.lpad .titledropdownbutton:hover:not(.disabled):after, .lpad-alert .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.lpad .titledropdownbutton.active, .lpad .titledropdownbutton:active:not(.disabled), .lpad-alert .titledropdownbutton.active, .lpad-alert .titledropdownbutton:active:not(.disabled) {
+  border-left-color: #000000;
+  border-right-color: #000000;
+}
+.lpad .titledropdownbutton.active:after, .lpad .titledropdownbutton:active:not(.disabled):after, .lpad-alert .titledropdownbutton.active:after, .lpad-alert .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.window-state-blur .lpad .titledropdownbutton:after, .window-state-blur .lpad-alert .titledropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_blur.png);
+}
+.window-state-blur .lpad .titledropdownbutton:hover:not(.disabled):after, .window-state-blur .lpad-alert .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_blur.png);
+}
+.window-state-blur .lpad .titledropdownbutton.active:after, .window-state-blur .lpad .titledropdownbutton:active:not(.disabled):after, .window-state-blur .lpad-alert .titledropdownbutton.active:after, .window-state-blur .lpad-alert .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_blur.png);
+}
+.lpad-alternate .titledropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png) center center no-repeat;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+}
+.lpad-alternate .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.lpad-alternate .titledropdownbutton.active, .lpad-alternate .titledropdownbutton:active:not(.disabled) {
+  border-left-color: #000000;
+  border-right-color: #000000;
+}
+.lpad-alternate .titledropdownbutton.active:after, .lpad-alternate .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.window-state-blur .lpad-alternate .titledropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.window-state-blur .lpad-alternate .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.window-state-blur .lpad-alternate .titledropdownbutton.active:after, .window-state-blur .lpad-alternate .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.lpad-locked .titledropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png) center center no-repeat;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+}
+.lpad-locked .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_mouseover.png);
+}
+.lpad-locked .titledropdownbutton.active, .lpad-locked .titledropdownbutton:active:not(.disabled) {
+  border-left-color: #000000;
+  border-right-color: #000000;
+}
+.lpad-locked .titledropdownbutton.active:after, .lpad-locked .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_mouseover.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_blur.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_mouseover.png);
+}
+.window-state-blur .lpad-locked .titledropdownbutton.active:after, .window-state-blur .lpad-locked .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked_mouseover.png);
+}
+.sys-demo-mode .titledropdownbutton:after {
+  background: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png) center center no-repeat;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+}
+.sys-demo-mode .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png);
+}
+.sys-demo-mode .titledropdownbutton.active, .sys-demo-mode .titledropdownbutton:active:not(.disabled) {
+  border-left-color: #000000;
+  border-right-color: #000000;
+}
+.sys-demo-mode .titledropdownbutton.active:after, .sys-demo-mode .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png);
+}
+.window-state-blur .sys-demo-mode .titledropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png);
+}
+.window-state-blur .sys-demo-mode .titledropdownbutton:hover:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png);
+}
+.window-state-blur .sys-demo-mode .titledropdownbutton.active:after, .window-state-blur .sys-demo-mode .titledropdownbutton:active:not(.disabled):after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_locked.png);
+}
+.lpad-accessibility-mode .titledropdownbutton, .panel-window .titledropdownbutton {
+  -webkit-align-self: center;
+  align-self: center;
+  padding-left: 20px;
+}
+.lpad-accessibility-mode .titledropdownbutton.sys-hotspot, .panel-window .titledropdownbutton.sys-hotspot {
+  height: 20px;
+}
+.lpad-accessibility-mode .titledropdownbutton.button-nocontent, .panel-window .titledropdownbutton.button-nocontent {
+  padding-left: 0px;
+  padding-right: 20px;
+  height: 22px;
+}
+.lpad-accessibility-mode .titledropdownbutton:after, .panel-window .titledropdownbutton:after {
+  width: 20px;
+}
+.lpad-accessibility-mode .titledropdownbutton.sys-option:before, .panel-window .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png);
+  content: "";
+  width: 18px;
+}
+.lpad-accessibility-mode .titledropdownbutton.sys-option:hover:not(.disabled):before, .lpad-accessibility-mode .titledropdownbutton.sys-option:active:not(.disabled):before, .panel-window .titledropdownbutton.sys-option:hover:not(.disabled):before, .panel-window .titledropdownbutton.sys-option:active:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png);
+}
+.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option:before, .window-state-blur .panel-window .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_blur.png);
+}
+.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option:not(.disabled).active:before, .window-state-blur .panel-window .titledropdownbutton.sys-option:not(.disabled).active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_blur.png);
+}
+.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option:hover:not(.disabled):before, .window-state-blur .panel-window .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_blur.png);
+}
+.sys-demo-mode.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option:before, .sys-demo-mode.window-state-blur .panel-window .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode.png);
+}
+.sys-demo-mode.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option:hover:not(.disabled):before, .sys-demo-mode.window-state-blur .panel-window .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png);
+}
+.lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:before, .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new.active:before, .panel-window .titledropdownbutton.sys-option.sys-whats-new:before, .panel-window .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .panel-window .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .panel-window .titledropdownbutton.sys-option.sys-whats-new.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png) !important;
+}
+.window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:before, .window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .window-state-blur .lpad-accessibility-mode .titledropdownbutton.sys-option.sys-whats-new.active:before, .window-state-blur .panel-window .titledropdownbutton.sys-option.sys-whats-new:before, .window-state-blur .panel-window .titledropdownbutton.sys-option.sys-whats-new:hover:not(.disabled):before, .window-state-blur .panel-window .titledropdownbutton.sys-option.sys-whats-new:active:not(.disabled):before, .window-state-blur .panel-window .titledropdownbutton.sys-option.sys-whats-new.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png) !important;
+}
+.window-state-blur .lpad-accessibility-mode.lpad-alternate .titledropdownbutton:after, .lpad-accessibility-mode.lpad-alternate .titledropdownbutton:after {
+  background-image: url(/bbkitAssets/images/chrome_dropdown_arrow_black.png);
+}
+.window-state-blur .lpad-accessibility-mode.lpad-alternate .titledropdownbutton.sys-noarrow:after, .lpad-accessibility-mode.lpad-alternate .titledropdownbutton.sys-noarrow:after {
+  display: none;
+}
+.window-state-blur .lpad-accessibility-mode.lpad-alternate .titledropdownbutton.sys-option:before, .lpad-accessibility-mode.lpad-alternate .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_black.png);
+}
+.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked.png);
+}
+.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_hover.png);
+}
+.window-state-blur .lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_blur.png);
+}
+.window-state-blur .lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option.active:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_hover.png);
+}
+.window-state-blur .lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_hover.png);
+}
+.sys-demo-mode.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked.png);
+}
+.sys-demo-mode.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_hover.png);
+}
+.window-state-blur .sys-demo-mode.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked.png);
+}
+.window-state-blur .sys-demo-mode.lpad-accessibility-mode.lpad-locked .titledropdownbutton.sys-option:hover:not(.disabled):before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_accessibility_mode_locked_hover.png);
+}
+.window-state-blur .sys-demo-mode .titledropdownbutton.sys-option:before, .window-state-blur .lpad-alert.sys-demo-mode .titledropdownbutton.sys-option:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_black.png);
+}
+.window-state-blur .sys-demo-mode .titledropdownbutton:before {
+  background-image: url(/bbkitAssets/images/chrome_hamburger_locked.png);
+}
+.panel-window .titledropdownbutton {
+  align-self: flex-start;
+}

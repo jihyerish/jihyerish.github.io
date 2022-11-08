@@ -1,0 +1,80 @@
+.collapser {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.collapser .collapser-bin {
+  bottom: 0;
+  left: 0;
+  /* position: absolute; */
+  top: 0;
+  display: -webkit-flex;
+  -webkit-flex-direction: "row";
+  -webkit-justify-content: "flex-start";
+  -webkit-align-items: "stretch";
+}
+.collapser .collapser-bin .collapser-overflow-button {
+  display: none;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.collapser .collapser-bin .collapser-overflow-button.visible {
+  /*uh oh... we need some way to turn this on and off */
+  display: block;
+}
+.collapser .collapser-bin .collapser-overflow-button.visible.selected .collapser-overflow {
+  visibility: visible;
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow-button-spacer {
+  height: flex(1);
+  -webkit-flex: 1 0 auto;
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow-button-content {
+  padding: 0;
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow-button-content-default {
+  text-align: center;
+  vertical-align: middle;
+  width: 10px;
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  visibility: collapse;
+  z-index: 99;
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow.vertical {
+  /*TODO implement*/
+}
+.collapser .collapser-bin .collapser-overflow-button .collapser-overflow.visible {
+  visibility: visible;
+}
+
+/* Moved these outside so we can use them in popup */
+.collapser-item {
+  box-sizing: content-box;
+  height: 100%;
+  /*TODO display?*/
+}
+.collapser-item.separator {
+  box-sizing: border-box;
+  padding: 1px 3px 1px 3px;
+}
+
+.collapser-separator {
+  background-color: rgb(70, 70, 70);
+  height: 100%;
+  width: 1px;
+}
+
+/* CUSTOM CLASS for popup */
+.collapser-overflow-popup {
+  box-sizing: border-box;
+  font-size: 10px;
+  height: 54px;
+  padding: 2px;
+  z-index: 99;
+}

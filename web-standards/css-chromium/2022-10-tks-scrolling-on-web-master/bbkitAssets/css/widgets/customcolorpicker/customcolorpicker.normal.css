@@ -1,0 +1,77 @@
+*:focus {
+  outline: none;
+}
+
+.colorpalette {
+  background-color: #282828;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.08);
+  white-space: initial;
+}
+.colorpalette.sys-flat {
+  background: none;
+}
+
+.colorpicker-input-area {
+  border-bottom: 1px solid #191919;
+  box-shadow: 0px 1px 0px 0px #323232;
+  height: 37px;
+  padding: 8px 10px 5px;
+}
+.sys-flat .colorpicker-input-area {
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+.sys-compact .colorpicker-input-area {
+  padding: 0px;
+}
+
+.custom-color-picker {
+  padding: 10px;
+}
+.sys-compact .custom-color-picker {
+  padding: 0px;
+}
+
+.customcolor-hue {
+  border: 1px solid #1a1a1a;
+  box-shadow: 0px 1px #383838;
+}
+
+.customcolor-wheel {
+  border: 1px solid #1a1a1a;
+  box-shadow: 0px 1px #383838;
+}
+
+.customcolor-hue-picker {
+  border-bottom: 1px solid #000;
+}
+.customcolor-hue-picker::before {
+  background: url(../../..//bbkitAssets/images/slider_handle.png) left top no-repeat;
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  right: -11px;
+  top: -5px;
+}
+
+.customcolor-hsv-picker {
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 0px 1px #000;
+  border-radius: 5px;
+  content: "";
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+
+.customcolor-swatch {
+  border: 1px solid #000;
+  box-shadow: 0px 0px 0px 1px #fff;
+  height: 33px;
+  width: 33px;
+}

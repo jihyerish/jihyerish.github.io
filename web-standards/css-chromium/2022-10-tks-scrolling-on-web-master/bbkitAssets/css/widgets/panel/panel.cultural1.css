@@ -1,0 +1,12 @@
+*:focus {
+  outline: none;
+}
+
+.panel {
+  background: none;
+}
+.panel:focus {
+  outline: 1px solid #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  outline-offset: -1px;
+}

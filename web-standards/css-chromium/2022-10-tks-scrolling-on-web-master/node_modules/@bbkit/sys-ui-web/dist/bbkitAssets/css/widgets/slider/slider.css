@@ -1,0 +1,13 @@
+.slider {
+  -webkit-align-items: center;
+  align-items: center;
+  display: inline-flex;
+}
+.slider.block {
+  display: flex;
+}
+
+.slider-range {
+  -webkit-flex: 1 0 0;
+  min-width: 0;
+}

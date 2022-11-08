@@ -1,0 +1,42 @@
+.sys-pilledentry, .pilledentry {
+  font-family: inherit;
+  overflow: hidden;
+  display: inline-flex;
+}
+.sys-pilledentry.block, .pilledentry.block {
+  display: flex;
+}
+.sys-pilledentry .pill-closeicon, .pilledentry .pill-closeicon {
+  padding-left: 1px;
+}
+
+.sys-pilledentry .segment {
+  margin: 0px;
+  min-width: 5px;
+}
+.sys-pilledentry .segment:first-child {
+  margin-left: 2px;
+  min-width: 5px;
+}
+.sys-pilledentry .segment.pill {
+  padding: 1px;
+}
+.sys-pilledentry .segment:last-child.label {
+  margin-right: 1px;
+}
+
+.sys-pilledentry .segmentedentry {
+  border: none;
+}
+.sys-pilledentry .segmentedentry:focus, .sys-pilledentry .segmentedentry.focus {
+  border: none;
+  box-shadow: none;
+}
+
+.sys-pilledentry .segmentedentry {
+  padding: 0px;
+}
+
+.sys-pilledentry .sys-pilledentry-container {
+  padding-right: 16px;
+}

@@ -1,0 +1,63 @@
+*:focus {
+  outline: none;
+}
+
+.splitterpanel {
+  border: 2px solid #505050;
+}
+.splitterpanel.sys-selected {
+  border-color: #646464;
+}
+.splitterpanel.sys-maincontent, .splitterpanel.sys-mainbody {
+  margin: 5px;
+}
+.splitterpanel.sys-noborder, .splitterpanel.noborder {
+  border: none;
+  padding: none;
+}
+
+.splitterpanel-bar {
+  background-color: #505050;
+}
+.splitterpanel-bar.sys-hidden, .splitterpanel-bar.hidden {
+  background-color: transparent;
+  height: 0px;
+  width: 0px;
+}
+.splitterpanel-bar.splitterpanel-child-vert {
+  cursor: n-resize;
+  height: 2px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.disabled .splitterpanel-bar.splitterpanel-child-vert {
+  cursor: default;
+}
+.splitterpanel-bar.splitterpanel-child-horz {
+  cursor: e-resize;
+  width: 2px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+.disabled .splitterpanel-bar.splitterpanel-child-horz {
+  cursor: default;
+}
+.splitterpanel:not(.disabled) > .splitterpanel-bar:hover {
+  background-color: #787878;
+}
+.splitterpanel:not(.disabled) > .splitterpanel-bar:active {
+  background-color: #bebebe;
+}
+
+.splitterpanel-child-horz > .splitterpanel-bar-span {
+  bottom: 0px;
+  top: 0px;
+  left: -4px;
+  right: -4px;
+}
+.splitterpanel-child-vert > .splitterpanel-bar-span {
+  bottom: -4px;
+  top: -4px;
+  left: 0px;
+  right: 0px;
+}

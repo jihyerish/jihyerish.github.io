@@ -1,0 +1,50 @@
+*:focus {
+  outline: none;
+}
+
+.legacy_appbar {
+  background: #870F1E;
+  color: #fbfbfb;
+  height: 19px;
+}
+
+.legacy_appbar .entry {
+  border-radius: 0px;
+}
+
+.legacy_appbar .entry.focus {
+  border-color: #0090ff;
+}
+
+.legacy_appbar .entry-input {
+  line-height: 1;
+}
+
+.legacy_appbar .sys-component-appname {
+  margin-right: 10px;
+}
+
+.sys-demo-mode .legacy_appbar {
+  background-color: #00e6ff;
+  color: #000000;
+}
+
+.sys-demo-mode .legacy_appbar .button.sys-redmenu {
+  color: #000000;
+}
+
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:active:not(.disabled) {
+  background-color: #00b7cc;
+}
+
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:hover:not(.disabled) {
+  background-color: #84f3ff;
+}
+
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:focus {
+  background-color: #84f3ff;
+}
+
+.sys-demo-mode .legacy_appbar .button.sys-redmenu:visited {
+  background-color: #00b7cc;
+}

@@ -1,0 +1,258 @@
+*:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "BB.AvenirNext";
+  src: url("../../../fonts/AvenirNextMForBBG-Demi.ttf") format("truetype");
+}
+.style-sysblpui-apptitle {
+  background-color: #1e1e1e;
+  border: 1px solid #000000;
+  padding-left: 8px;
+}
+
+.style-sysblpui-apptitle-func,
+.style-sysblpui-apptitle-text {
+  font-family: "BB.AvenirNext";
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  height: 21px;
+}
+
+.style-sysblpui-apptitle-separator {
+  background: #000000;
+}
+
+.style-sysblpui-apptitle .dropdownbutton.sys-noarrow {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.style-sysblpui-apptitle-settings-dropdown {
+  background: center 6px no-repeat url(../../../images/settings_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-settings-dropdown:focus, .style-sysblpui-apptitle-settings-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-settings-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/settings_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-settings-dropdown:active, .style-sysblpui-apptitle-settings-dropdown.active {
+  background: center 6px no-repeat url(../../../images/settings_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-settings-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/settings_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-export-dropdown {
+  background: center 6px no-repeat url(../../../images/export_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-export-dropdown:focus, .style-sysblpui-apptitle-export-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-export-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/export_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-export-dropdown:active, .style-sysblpui-apptitle-export-dropdown.active {
+  background: center 6px no-repeat url(../../../images/export_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-export-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/export_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-help-dropdown {
+  background: center 6px no-repeat url(../../../images/help_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-help-dropdown:focus, .style-sysblpui-apptitle-help-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-help-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/help_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-help-dropdown:active, .style-sysblpui-apptitle-help-dropdown.active {
+  background: center 6px no-repeat url(../../../images/help_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-help-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/help_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-no-notes-dropdown {
+  background: center 6px no-repeat url(../../../images/no-notes_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-no-notes-dropdown:focus, .style-sysblpui-apptitle-no-notes-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-no-notes-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/no-notes_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-no-notes-dropdown:active, .style-sysblpui-apptitle-no-notes-dropdown.active {
+  background: center 6px no-repeat url(../../../images/no-notes_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-no-notes-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/no-notes_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-existing-notes-dropdown {
+  background: center 6px no-repeat url(../../../images/existing-notes_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-existing-notes-dropdown:focus, .style-sysblpui-apptitle-existing-notes-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-existing-notes-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/existing-notes_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-existing-notes-dropdown:active, .style-sysblpui-apptitle-existing-notes-dropdown.active {
+  background: center 6px no-repeat url(../../../images/existing-notes_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-existing-notes-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/existing-notes_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-new-notes-dropdown {
+  background: center 6px no-repeat url(../../../images/new-notes_icon.png);
+  width: 27px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 6px 0 0;
+  padding-bottom: 0;
+}
+.style-sysblpui-apptitle-new-notes-dropdown:focus, .style-sysblpui-apptitle-new-notes-dropdown.focus {
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-new-notes-dropdown:hover {
+  background: center 6px no-repeat url(../../../images/new-notes_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-new-notes-dropdown:active, .style-sysblpui-apptitle-new-notes-dropdown.active {
+  background: center 6px no-repeat url(../../../images/new-notes_icon_hover.png), #282828;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-new-notes-dropdown.disabled {
+  background: center 6px no-repeat url(../../../images/new-notes_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-new-notes-dropdown {
+  background-color: #fff399;
+  box-shadow: inset 1px 0px 0px 0px #282828, inset -1px 0px 0px 0px #282828;
+}
+.style-sysblpui-apptitle-new-notes-dropdown:hover {
+  background-color: #fff9cc;
+}
+.style-sysblpui-apptitle-new-notes-dropdown:active {
+  background-color: #ffe733;
+}
+.style-sysblpui-apptitle-new-notes-dropdown.disabled {
+  background-color: #887800;
+}
+
+.style-sysblpui-apptitle-settings-dropdown.style-hasmultiple {
+  background: center no-repeat url(../../../images/settings_dd_icon.png);
+}
+.style-sysblpui-apptitle-settings-dropdown.style-hasmultiple:hover {
+  background: center no-repeat url(../../../images/settings_dd_icon_hover.png), #373737;
+}
+.style-sysblpui-apptitle-settings-dropdown.style-hasmultiple:active, .style-sysblpui-apptitle-settings-dropdown.style-hasmultiple.active {
+  background: center no-repeat url(../../../images/settings_dd_icon_hover.png), #232323;
+}
+.style-sysblpui-apptitle-settings-dropdown.style-hasmultiple.disabled {
+  background: center no-repeat url(../../../images/settings_dd_icon_disabled.png);
+}
+
+.style-sysblpui-apptitle-popout {
+  background: center 6px no-repeat url(../../../images/popout_icon_disabled.png);
+}
+.style-sysblpui-apptitle-popout.style-enabled {
+  background: center 6px no-repeat url(../../../images/popout_icon.png);
+}
+.style-sysblpui-apptitle-popout.style-enabled:hover {
+  background: center 6px no-repeat url(../../../images/popout_icon_hover.png), #373737;
+  box-shadow: none;
+}
+.style-sysblpui-apptitle-popout.style-enabled.active, .style-sysblpui-apptitle-popout.style-enabled:active {
+  background: center 6px no-repeat url(../../../images/popout_icon_hover.png), #232323;
+  box-shadow: none;
+}
+
+.style-sysblpui-apptitle-favorites {
+  background: url(../../../images/favorites-icon-sprite.png) no-repeat 0 -3px;
+  opacity: 0.6;
+}
+.style-sysblpui-apptitle-favorites.style-enabled {
+  background: url(../../../images/favorites-icon-sprite.png) no-repeat 0 -24px;
+  opacity: 1;
+}
+
+.style-sysblpui-apptitle-feedback {
+  background: center no-repeat url(../../../images/star.png);
+}
+
+.style-sysblpui-apptitle-feedback.style-enabled {
+  background-image: url(../../../images/feedback-icon.png);
+}
+
+.style-sysblpui-apptitle-feedback.style-enabled:hover:not(.disabled) {
+  background-image: url(../../../images/feedback-hover-icon.png);
+}
+
+.style-sysblpui-notification-box {
+  border: 1px solid black;
+  background-color: #202020;
+}
+
+.style-sysblpui-notification-content {
+  color: white;
+  font-size: 12px;
+}
+
+.style-sysblpui-notification-close {
+  color: #7e7e7e;
+}

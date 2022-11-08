@@ -1,0 +1,19 @@
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 12 17" xml:space="preserve">
+<path fill="#8AF59E" d="M2,2h3v2H2v3H0V4V2H2z M2,9H0v3v2h2h3v-2H2V9z M10,12H7v2h3h2v-2V9h-2V12z M10,2H7v2h3v3h2V4V2H10z">
+    <animate 
+    dur="1.7s" 
+    values="transparent; transparent; #8AF59E; #8AF59E" 
+    keyTimes="0; 0.4; 0.4; 1" 
+    attributeName="fill" 
+    repeatCount="indefinite"/>
+</path>
+<path fill="#00FF3C" d="M0,2h5v5H0V2z M7,2v5h5V2H7z M7,14h5V9H7V14z M0,14h5V9H0V14z">
+	<animate 
+    dur="1.7s" 
+    values="#00FF3C; #00FF3C; transparent; transparent" 
+    keyTimes="0; 0.5; 0.5; 1" 
+    attributeName="fill" 
+    repeatCount="indefinite"/>
+</path>
+</svg>

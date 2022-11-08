@@ -1,0 +1,106 @@
+*:focus {
+  outline: none;
+}
+
+.calendar table {
+  border-spacing: 0px;
+  width: 100%;
+}
+.calendar > table > tbody > tr:nth-child(2) > td {
+  padding: 4px 8px;
+}
+.calendar > table > tbody > tr:nth-child(2) > td > table {
+  border-spacing: 2px;
+}
+
+.calendar-header {
+  color: #fbfbfb;
+  height: 22px;
+  font-size: 0.8em;
+}
+.calendar-header > td {
+  border-bottom: 1px solid #000000;
+  box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+  height: 22px;
+  padding: 0px;
+}
+.calendar-header > td > table {
+  height: 100%;
+}
+
+.prev-year {
+  height: 13px;
+  width: 12px;
+}
+
+.prev-month {
+  height: 13px;
+  width: 15px;
+}
+.prev-month:before {
+  border-right-color: #ebebeb;
+  left: 6px;
+  top: 7px;
+}
+.calendar:not(.disabled) .prev-month:hover {
+  background: #373737;
+}
+
+.next-month {
+  height: 13px;
+  width: 15px;
+}
+.next-month:before {
+  border-left-color: #ebebeb;
+  top: 7px;
+  right: 6px;
+}
+.calendar:not(.disabled) .next-month:hover {
+  background: #373737;
+}
+
+.next-year {
+  height: 13px;
+  width: 12px;
+  content: url(/bbkitAssets/images/nextMonth.png);
+}
+
+.header-date {
+  text-align: center;
+  padding: 0 8px;
+}
+
+.calendar-dayofweek-cell {
+  color: #a5a5a5;
+  font-size: 0.866666em;
+  text-align: center;
+}
+
+.date-cell {
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 0.866666em;
+  padding: 0 2px;
+}
+.calendar:not(.disabled) .date-cell:hover {
+  background-color: #373737;
+}
+.date-cell.today-cell {
+  background-color: #373737;
+  border: 1px #191919;
+}
+.date-cell.selected-cell {
+  background: #113c66;
+  color: #fbfbfb;
+}
+
+.weekend-cell {
+  color: silver;
+}
+.calendar:not(.disabled) .weekend-cell:hover {
+  color: #fbfbfb;
+}
+
+.out-of-range {
+  color: #787878;
+}

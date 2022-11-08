@@ -1,0 +1,26 @@
+.flowpanel {
+  position: static;
+}
+.flowpanel.sys-groupbutton-wrapper {
+  display: inline-flex;
+}
+.flowpanel.sys-groupbutton-wrapper.block {
+  display: flex;
+}
+.flowpanel.draggable {
+  position: relative;
+}
+.flowpanel.sys-dragging {
+  position: relative;
+}
+.flowpanel.deprecated {
+  position: relative;
+}
+
+.flowchild-horz {
+  vertical-align: top;
+}
+
+.flowchild-horz.sys-inline {
+  vertical-align: baseline;
+}

@@ -1,0 +1,10 @@
+*:focus {
+  outline: none;
+}
+
+.style-colorpicker, .colorpicker {
+  -webkit-justify-content: space-between;
+  background-color: #383838;
+  box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.8);
+  padding: 12px;
+}

@@ -1,0 +1,32 @@
+.splitbutton {
+  display: inline-flex;
+}
+.splitbutton.block {
+  display: flex;
+}
+
+.splitbutton-main, .splitbutton-arrow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+}
+
+.splitbutton-main {
+  -webkit-flex: 1 1 auto;
+  -webkit-align-items: center;
+  min-width: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  display: -webkit-flex;
+}
+
+.splitbutton-arrow {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  display: inline-block;
+}
+
+.splitbutton-img {
+  position: relative;
+  vertical-align: top;
+}

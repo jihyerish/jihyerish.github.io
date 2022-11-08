@@ -1,0 +1,21 @@
+.overlay {
+  position: absolute;
+  z-index: 10;
+}
+
+.overlay-child {
+  display: block;
+}
+
+#window-main {
+  border: 0px;
+  border-radius: 0px;
+}
+
+.window-chrome {
+  display: none;
+}
+
+#app-body {
+  top: 0px;
+}

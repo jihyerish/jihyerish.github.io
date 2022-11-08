@@ -1,0 +1,58 @@
+*:focus {
+  outline: none;
+}
+
+.stackpanel.sys-level2 .dateentry {
+  font-size: 1em;
+}
+.stackpanel.sys-level2 .dateentry .entry {
+  font-size: 1em;
+}
+.dateentry .entry {
+  margin: 0px;
+  width: 95px;
+}
+.dateentry .button {
+  border-left: 0px;
+  font-size: 1em;
+  line-height: 1.3;
+  margin: 0px;
+  padding: 0px;
+  width: 16px;
+}
+.dateentry .button.focus, .dateentry .button:focus {
+  box-shadow: inset 0px 0px 1px 0px #0090ff, -1px 0px 0px 0px #0090ff, inset 0px 0px 0px 1px #000000;
+}
+.dateentry.invalid, .dateentry.sys-invalid {
+  box-shadow: 0px 0px 0px 1px #e81b38;
+}
+.dateentry.invalid .entry,
+.dateentry.invalid .entry.sys-invalid, .dateentry.sys-invalid .entry,
+.dateentry.sys-invalid .entry.sys-invalid {
+  border-color: #000000;
+  box-shadow: none;
+}
+.dateentry.sys-historical-date .entry {
+  background-color: #d7d7d7;
+}
+.dateentry.sys-small {
+  font-size: 0.866666em;
+}
+.dateentry.sys-small .entry {
+  font-size: inherit;
+  line-height: 1.45;
+}
+.dateentry.sys-small .button-img {
+  margin-bottom: auto;
+  vertical-align: middle;
+}
+.dateentry.sys-big .button-img {
+  margin-top: 98%;
+}
+.dateentry .button-img {
+  height: auto;
+  margin-right: 0px;
+}
+.sys-small .dateentry .entry {
+  line-height: 1.25;
+}

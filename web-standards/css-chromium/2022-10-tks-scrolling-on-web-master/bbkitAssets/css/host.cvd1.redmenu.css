@@ -1,0 +1,18 @@
+*:focus {
+  outline: none;
+}
+
+#window-frame,
+.borderless #window-frame {
+  background-color: #8b1021;
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  color: #fbfbfb;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+.sys-demo-mode #window-frame,
+.sys-demo-mode .borderless #window-frame {
+  background-color: #00e6ff;
+  color: #000000;
+}

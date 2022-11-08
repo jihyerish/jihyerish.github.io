@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 8 17" overflow="visible" xml:space="preserve">
+<g>
+	<rect x="-2" y="3" fill="none" width="12" height="12"/>
+	<path fill="#FFE100" d="M1.4,10h5.2C7.5,9.3,8,8.2,8,7c0-2.2-1.8-4-4-4S0,4.8,0,7C0,8.2,0.5,9.3,1.4,10z"/>
+	<polygon fill="#FFE100" points="2,13 6,13 5,14 3,14 	"/>
+	<path fill="#FFE100" d="M2,11v1h4v-1H2z"/>
+</g>
+<path d="M2.8,8V7c0-0.7,0.5-1.2,1.2-1.2S5.2,6.3,5.2,7v1H6V7c0-1.1-0.9-2-2-2S2,5.9,2,7v1H2.8z"/>
+</svg>

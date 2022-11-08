@@ -1,0 +1,10 @@
+.gridpanel-child {
+  position: absolute;
+}
+.gridpanel-child.position-overwrite, .gridpanel-child.widget.draggable, .gridpanel-child.widget.sys-draggable, .gridpanel-child.widget.sys-dragging {
+  position: absolute;
+}
+
+.gridpanel-outer {
+  overflow: hidden;
+}

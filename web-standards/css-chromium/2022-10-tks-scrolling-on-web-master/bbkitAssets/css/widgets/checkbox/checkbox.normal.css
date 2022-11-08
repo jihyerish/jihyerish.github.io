@@ -1,0 +1,1110 @@
+*:focus {
+  outline: none;
+}
+
+.checkbox-content {
+  margin-left: 8px;
+}
+.checkbox-content:empty {
+  margin-left: 0px;
+}
+
+input[type=checkbox] {
+  height: 13px;
+  margin: 0px 0px 0px 4px;
+  width: 13px;
+  bottom: -1px;
+  vertical-align: baseline;
+  background: -webkit-linear-gradient(top, #565656, #4a4a4a);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.12);
+  border: solid 1px #000000;
+  border-radius: 2px;
+}
+.contolregion input[type=checkbox], .sys-controlregion input[type=checkbox], .sys-small input[type=checkbox], .sys-heading input[type=checkbox], .sys-footer input[type=checkbox], .sys-level1 input[type=checkbox], .sys-level2 input[type=checkbox] {
+  bottom: -2px;
+}
+input[type=checkbox]:hover {
+  background: -webkit-linear-gradient(top, #6c6c6c, #606060);
+  box-shadow: inset 0px 1px 0px #7f7f7f;
+}
+input[type=checkbox]:active, input[type=checkbox].active {
+  background: #3a3a3a;
+  box-shadow: none;
+}
+input[type=checkbox]:disabled, .disabled input[type=checkbox] {
+  background: #2a2a2a;
+  box-shadow: none;
+}
+input[type=checkbox]:checked {
+  border-color: #141414;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+input[type=checkbox]:checked:active {
+  box-shadow: none;
+}
+input[type=checkbox]:checked:disabled {
+  box-shadow: none;
+}
+input[type=checkbox].dirty {
+  background: #ebddbd;
+}
+.disabled input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, #2a2a2a;
+}
+input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(top, #40a0ff, #2391ff);
+}
+input[type=checkbox]:checked:hover {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+}
+input[type=checkbox]:checked:active {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, #006aa8;
+  border-color: #000000;
+}
+input[type=checkbox]:checked:disabled, input[type=checkbox]:checked:disabled:hover, input[type=checkbox]:checked:disabled:active {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, #333333;
+  border-color: #000000;
+}
+input[type=checkbox] .checkbox:active:before, input[type=checkbox] .checkbox.active:before,
+input[type=checkbox] .checkbox:focus:before, input[type=checkbox] .checkbox:before {
+  display: none;
+}
+
+.sys-controlregion .checkbox, .sys-controlregion.checkbox,
+.controlregion .checkbox,
+.controlregion.checkbox {
+  color: #d7d7d7;
+  line-height: 1.6;
+  font-size: 12px;
+}
+.sys-controlregion .checkbox input[type=checkbox],
+.sys-controlregion .checkbox input[type=radio], .sys-controlregion.checkbox input[type=checkbox],
+.sys-controlregion.checkbox input[type=radio],
+.controlregion .checkbox input[type=checkbox],
+.controlregion .checkbox input[type=radio],
+.controlregion.checkbox input[type=checkbox],
+.controlregion.checkbox input[type=radio] {
+  background: -webkit-linear-gradient(top, #646464, #585858);
+  box-shadow: inset 0px 1px 0px #727272;
+}
+.sys-controlregion .checkbox input[type=checkbox]:hover,
+.sys-controlregion .checkbox input[type=radio]:hover, .sys-controlregion.checkbox input[type=checkbox]:hover,
+.sys-controlregion.checkbox input[type=radio]:hover,
+.controlregion .checkbox input[type=checkbox]:hover,
+.controlregion .checkbox input[type=radio]:hover,
+.controlregion.checkbox input[type=checkbox]:hover,
+.controlregion.checkbox input[type=radio]:hover {
+  background: -webkit-linear-gradient(top, #7a7a7a, #6e6e6e);
+  box-shadow: inset 0px 1px 0px #8d8d8d;
+}
+.sys-controlregion .checkbox input[type=checkbox]:active,
+.sys-controlregion .checkbox input[type=radio]:active, .sys-controlregion.checkbox input[type=checkbox]:active,
+.sys-controlregion.checkbox input[type=radio]:active,
+.controlregion .checkbox input[type=checkbox]:active,
+.controlregion .checkbox input[type=radio]:active,
+.controlregion.checkbox input[type=checkbox]:active,
+.controlregion.checkbox input[type=radio]:active {
+  background: #484848;
+  box-shadow: inset 0px 1px 0px #3d3d3d;
+}
+.sys-controlregion .checkbox.disabled, .sys-controlregion.checkbox.disabled,
+.controlregion .checkbox.disabled,
+.controlregion.checkbox.disabled {
+  color: #787878;
+}
+.sys-controlregion .checkbox.disabled input[type=checkbox],
+.sys-controlregion .checkbox.disabled input[type=radio], .sys-controlregion.checkbox.disabled input[type=checkbox],
+.sys-controlregion.checkbox.disabled input[type=radio],
+.controlregion .checkbox.disabled input[type=checkbox],
+.controlregion .checkbox.disabled input[type=radio],
+.controlregion.checkbox.disabled input[type=checkbox],
+.controlregion.checkbox.disabled input[type=radio] {
+  background: #414141;
+  box-shadow: none;
+}
+.sys-controlregion .checkbox input[type=checkbox]:checked,
+.sys-controlregion .checkbox input[type=radio]:checked, .sys-controlregion.checkbox input[type=checkbox]:checked,
+.sys-controlregion.checkbox input[type=radio]:checked,
+.controlregion .checkbox input[type=checkbox]:checked,
+.controlregion .checkbox input[type=radio]:checked,
+.controlregion.checkbox input[type=checkbox]:checked,
+.controlregion.checkbox input[type=radio]:checked {
+  box-shadow: inset 0px 1px 0px #4fa7ff, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .checkbox input[type=checkbox]:checked:hover,
+.sys-controlregion .checkbox input[type=radio]:checked:hover, .sys-controlregion.checkbox input[type=checkbox]:checked:hover,
+.sys-controlregion.checkbox input[type=radio]:checked:hover,
+.controlregion .checkbox input[type=checkbox]:checked:hover,
+.controlregion .checkbox input[type=radio]:checked:hover,
+.controlregion.checkbox input[type=checkbox]:checked:hover,
+.controlregion.checkbox input[type=radio]:checked:hover {
+  box-shadow: inset 0px 1px 0px #84c2ff, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .checkbox input[type=checkbox]:checked:active,
+.sys-controlregion .checkbox input[type=radio]:checked:active, .sys-controlregion.checkbox input[type=checkbox]:checked:active,
+.sys-controlregion.checkbox input[type=radio]:checked:active,
+.controlregion .checkbox input[type=checkbox]:checked:active,
+.controlregion .checkbox input[type=radio]:checked:active,
+.controlregion.checkbox input[type=checkbox]:checked:active,
+.controlregion.checkbox input[type=radio]:checked:active {
+  box-shadow: inset 0px 1px 0px #00578a, 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion .checkbox input[type=checkbox]:checked:disabled,
+.sys-controlregion .checkbox input[type=radio]:checked:disabled, .sys-controlregion.checkbox input[type=checkbox]:checked:disabled,
+.sys-controlregion.checkbox input[type=radio]:checked:disabled,
+.controlregion .checkbox input[type=checkbox]:checked:disabled,
+.controlregion .checkbox input[type=radio]:checked:disabled,
+.controlregion.checkbox input[type=checkbox]:checked:disabled,
+.controlregion.checkbox input[type=radio]:checked:disabled {
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.14);
+}
+.sys-controlregion input[type=checkbox]:checked,
+.controlregion input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(top, #40a0ff, #2391ff);
+}
+.sys-controlregion input[type=checkbox]:checked:hover,
+.controlregion input[type=checkbox]:checked:hover {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+}
+.sys-controlregion input[type=checkbox]:checked:active,
+.controlregion input[type=checkbox]:checked:active {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, #006aa8;
+  border-color: #000000;
+}
+.sys-controlregion input[type=checkbox]:checked:disabled, .sys-controlregion input[type=checkbox]:checked:disabled:hover, .sys-controlregion input[type=checkbox]:checked:disabled:active,
+.controlregion input[type=checkbox]:checked:disabled,
+.controlregion input[type=checkbox]:checked:disabled:hover,
+.controlregion input[type=checkbox]:checked:disabled:active {
+  background: url(/bbkitAssets/images/checkbox_check.png) center center no-repeat, #333333;
+  border-color: #000000;
+}
+
+.sys-key.checkbox,
+.sys-cross.checkbox {
+  padding-right: 0px;
+}
+.sys-key.checkbox:focus:before, .sys-key.checkbox.focus:before, .sys-key.checkbox:active:not(:disabled):before, .sys-key.checkbox.active:before,
+.sys-cross.checkbox:focus:before,
+.sys-cross.checkbox.focus:before,
+.sys-cross.checkbox:active:not(:disabled):before,
+.sys-cross.checkbox.active:before {
+  display: none;
+}
+.sys-key input[type=checkbox],
+.sys-cross input[type=checkbox] {
+  -webkit-appearance: none;
+  bakground-size: 15px 15px;
+  box-shadow: none;
+  border: none;
+  height: 13px;
+  width: 13px;
+  pointer-events: all;
+  margin: 0px 0px 0px 4px;
+}
+.sys-key input[type=checkbox]:hover:not(:disabled),
+.sys-cross input[type=checkbox]:hover:not(:disabled) {
+  -webkit-appearance: none;
+}
+
+.sys-key input[type=checkbox] {
+  background: url(/bbkitAssets/images/widgets/key_unselected.png) right center no-repeat;
+}
+.sys-key input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/widgets/key_selected.png) right center no-repeat;
+}
+.sys-key input[type=checkbox]:checked:disabled {
+  background: url(/bbkitAssets/images/widgets/key_selected.png) right center no-repeat;
+}
+.sys-key input[type=checkbox]:hover:not(:disabled) {
+  box-shadow: none;
+}
+
+.sys-cross input[type=checkbox] {
+  background: url(/bbkitAssets/images/widgets/x_normal.png) center center no-repeat;
+  border: 1px solid transparent;
+}
+.sys-cross input[type=checkbox]:hover:not(:disabled) {
+  background: url(/bbkitAssets/images/widgets/x_normal.png) center center no-repeat, -webkit-linear-gradient(top, #686868, #363636);
+  border-color: #000000;
+  box-shadow: inset 0px 0px 1px rgb(101, 101, 101), inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 1px rgba(255, 255, 255, 0.08);
+}
+.sys-cross input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/widgets/x_state.png) center center no-repeat, -webkit-linear-gradient(top, #4da4fb, #257cd3);
+  border-color: #000000;
+}
+.sys-cross input[type=checkbox]:checked:before {
+  display: none;
+}
+
+.sys-expander-horizontal.checkbox, .checkbox.sys-expander-horizontal-button, .sys-expander-button.checkbox, .sys-expander.checkbox {
+  line-height: 1.3;
+}
+.sys-expander-horizontal.checkbox .checkbox-content, .checkbox.sys-expander-horizontal-button .checkbox-content, .sys-expander-button.checkbox .checkbox-content, .sys-expander.checkbox .checkbox-content {
+  padding-right: 2px;
+}
+.sys-controlregion .sys-expander-horizontal.checkbox, .sys-controlregion .checkbox.sys-expander-horizontal-button, .sys-controlregion .sys-expander-button.checkbox, .sys-controlregion .sys-expander.checkbox, .controlregion .sys-expander-horizontal.checkbox, .controlregion .checkbox.sys-expander-horizontal-button, .controlregion .sys-expander-button.checkbox, .controlregion .sys-expander.checkbox {
+  font-size: 0.8em;
+}
+.sys-controlregion .sys-expander-horizontal.checkbox:hover:not(:disabled) input[type=checkbox], .sys-controlregion .checkbox.sys-expander-horizontal-button:hover:not(:disabled) input[type=checkbox], .sys-controlregion .sys-expander-button.checkbox:hover:not(:disabled) input[type=checkbox], .sys-controlregion .sys-expander.checkbox:hover:not(:disabled) input[type=checkbox], .controlregion .sys-expander-horizontal.checkbox:hover:not(:disabled) input[type=checkbox], .controlregion .checkbox.sys-expander-horizontal-button:hover:not(:disabled) input[type=checkbox], .controlregion .sys-expander-button.checkbox:hover:not(:disabled) input[type=checkbox], .controlregion .sys-expander.checkbox:hover:not(:disabled) input[type=checkbox] {
+  box-shadow: none;
+}
+.sys-big.sys-expander-horizontal.checkbox input[type=checkbox], .sys-big.checkbox.sys-expander-horizontal-button input[type=checkbox], .sys-big.sys-expander-button.checkbox input[type=checkbox], .sys-big.sys-expander.checkbox input[type=checkbox] {
+  font-size: 1em;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.sys-small.sys-expander-horizontal.checkbox input[type=checkbox], .sys-small.checkbox.sys-expander-horizontal-button input[type=checkbox], .sys-small.sys-expander-button.checkbox input[type=checkbox], .sys-small.sys-expander.checkbox input[type=checkbox] {
+  font-size: 1em;
+  line-height: 1em;
+}
+.sys-expander-horizontal.checkbox:active:not(.disabled), .checkbox.sys-expander-horizontal-button:active:not(.disabled), .sys-expander-button.checkbox:active:not(.disabled), .sys-expander.checkbox:active:not(.disabled), .sys-expander-horizontal.checkbox:focus, .checkbox.sys-expander-horizontal-button:focus, .sys-expander-button.checkbox:focus, .sys-expander.checkbox:focus, .focus.sys-expander-horizontal.checkbox, .focus.checkbox.sys-expander-horizontal-button, .focus.sys-expander-button.checkbox, .focus.sys-expander.checkbox {
+  background: none;
+}
+
+.sys-expander input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  background-size: inherit;
+  border: none;
+  box-shadow: none;
+  height: 1.334em;
+  margin: 0px 2px;
+  opacity: 0.5;
+  min-width: 10px;
+  top: 0px;
+}
+.sys-expander input[type=checkbox]:active, .sys-expander input[type=checkbox]:hover {
+  border: none;
+  opacity: 1;
+}
+.sys-expander input[type=checkbox]:checked {
+  -webkit-transform: rotate(180deg);
+  border: none;
+}
+.sys-expander input[type=checkbox]:checked:before {
+  display: none;
+}
+.sys-expander input[type=checkbox]:checked:active, .sys-expander input[type=checkbox]:checked:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-expander input[type=checkbox]:disabled, .sys-expander input[type=checkbox]:disabled:active, .sys-expander input[type=checkbox]:disabled:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+.sys-controlregion .sys-expander input[type=checkbox], .controlregion .sys-expander input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander input[type=checkbox]:checked, .controlregion .sys-expander input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander input[type=checkbox]:checked:active:not(:disabled), .sys-controlregion .sys-expander input[type=checkbox]:checked:hover:not(:disabled), .controlregion .sys-expander input[type=checkbox]:checked:active:not(:disabled), .controlregion .sys-expander input[type=checkbox]:checked:hover:not(:disabled) {
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander input[type=checkbox]:active, .sys-controlregion .sys-expander input[type=checkbox]:hover, .controlregion .sys-expander input[type=checkbox]:active, .controlregion .sys-expander input[type=checkbox]:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-controlregion .sys-expander input[type=checkbox]:disabled, .controlregion .sys-expander input[type=checkbox]:disabled {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+
+.sys-expander-button, .sys-expander-horizontal-button.checkbox {
+  font-size: 0.866666em;
+}
+.sys-expander-button.checkbox, .checkbox.sys-expander-horizontal-button {
+  background-color: #414141;
+  border: 1px solid #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  box-sizing: border-box;
+  color: #f0f0f0;
+  padding: 0px 6px;
+}
+.sys-expander-button.checkbox:hover, .checkbox.sys-expander-horizontal-button:hover {
+  background-color: #505050;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+.sys-expander-button.checkbox:active, .checkbox.sys-expander-horizontal-button:active, .sys-expander-button.checkbox.active, .checkbox.active.sys-expander-horizontal-button {
+  background-color: #282828;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px #2b2b2b;
+}
+.sys-expander-button.checkbox.focus, .checkbox.focus.sys-expander-horizontal-button {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+}
+.sys-expander-button.checkbox.focus.splitbutton-main, .checkbox.focus.splitbutton-main.sys-expander-horizontal-button {
+  z-index: 2;
+}
+.sys-expander-button.checkbox.disabled, .checkbox.disabled.sys-expander-horizontal-button, .disabled .sys-expander-button.checkbox, .disabled .checkbox.sys-expander-horizontal-button {
+  background-color: #232323;
+  box-shadow: none;
+  color: #787878;
+}
+.sys-expander-button.checkbox.disabled .button-img, .checkbox.disabled.sys-expander-horizontal-button .button-img, .sys-expander-button.checkbox.disabled .splitbutton-img, .checkbox.disabled.sys-expander-horizontal-button .splitbutton-img, .disabled .sys-expander-button.checkbox .button-img, .disabled .checkbox.sys-expander-horizontal-button .button-img, .disabled .sys-expander-button.checkbox .splitbutton-img, .disabled .checkbox.sys-expander-horizontal-button .splitbutton-img {
+  opacity: 0.5;
+}
+.sys-expander-button.checkbox.disabled, .checkbox.disabled.sys-expander-horizontal-button {
+  box-shadow: none;
+}
+.sys-expander-button .checkbox-content, .sys-expander-horizontal-button.checkbox .checkbox-content {
+  padding-right: 0;
+}
+.sys-expander-button input[type=checkbox], .sys-expander-horizontal-button.checkbox input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  background-size: inherit;
+  border: none;
+  box-shadow: none;
+  height: 1.334em;
+  margin: 0px 2px;
+  opacity: 0.5;
+  min-width: 10px;
+  top: 0px;
+  opacity: 1;
+}
+.sys-expander-button input[type=checkbox]:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .sys-expander-button input[type=checkbox]:hover, .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover {
+  border: none;
+  opacity: 1;
+}
+.sys-expander-button input[type=checkbox]:checked, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked {
+  -webkit-transform: rotate(180deg);
+  border: none;
+}
+.sys-expander-button input[type=checkbox]:checked:before, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:before {
+  display: none;
+}
+.sys-expander-button input[type=checkbox]:checked:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active, .sys-expander-button input[type=checkbox]:checked:hover, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-expander-button input[type=checkbox]:disabled, .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .sys-expander-button input[type=checkbox]:disabled:active, .sys-expander-button input[type=checkbox]:disabled:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+.sys-controlregion .sys-expander-button input[type=checkbox], .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox], .controlregion .sys-expander-button input[type=checkbox], .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-button input[type=checkbox]:checked, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked, .controlregion .sys-expander-button input[type=checkbox]:checked, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-button input[type=checkbox]:checked:active:not(:disabled), .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active:not(:disabled), .sys-controlregion .sys-expander-button input[type=checkbox]:checked:hover:not(:disabled), .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover:not(:disabled), .controlregion .sys-expander-button input[type=checkbox]:checked:active:not(:disabled), .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active:not(:disabled), .controlregion .sys-expander-button input[type=checkbox]:checked:hover:not(:disabled), .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover:not(:disabled) {
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-button input[type=checkbox]:active, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .sys-controlregion .sys-expander-button input[type=checkbox]:hover, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover, .controlregion .sys-expander-button input[type=checkbox]:active, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .controlregion .sys-expander-button input[type=checkbox]:hover, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-controlregion .sys-expander-button input[type=checkbox]:disabled, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .controlregion .sys-expander-button input[type=checkbox]:disabled, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+.sys-expander-button input[type=checkbox]:checked:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active {
+  background: url(/bbkitAssets/images/expander_arrow_up.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-expander-button input[type=checkbox]:disabled, .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .sys-expander-button input[type=checkbox]:disabled:active, .sys-expander-button input[type=checkbox]:disabled:hover {
+  opacity: 0.5;
+}
+
+.sys-expander-horizontal input[type=checkbox], .sys-expander-horizontal-button.checkbox input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  background-size: inherit;
+  border: none;
+  box-shadow: none;
+  height: 1.334em;
+  margin: 0px 2px;
+  opacity: 0.5;
+  min-width: 10px;
+  top: 0px;
+}
+.sys-expander-horizontal input[type=checkbox]:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .sys-expander-horizontal input[type=checkbox]:hover, .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover {
+  border: none;
+  opacity: 1;
+}
+.sys-expander-horizontal input[type=checkbox]:checked, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked {
+  -webkit-transform: rotate(180deg);
+  border: none;
+}
+.sys-expander-horizontal input[type=checkbox]:checked:before, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:before {
+  display: none;
+}
+.sys-expander-horizontal input[type=checkbox]:checked:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active, .sys-expander-horizontal input[type=checkbox]:checked:hover, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-expander-horizontal input[type=checkbox]:disabled, .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .sys-expander-horizontal input[type=checkbox]:disabled:active, .sys-expander-horizontal input[type=checkbox]:disabled:hover {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+.sys-controlregion .sys-expander-horizontal input[type=checkbox], .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox], .controlregion .sys-expander-horizontal input[type=checkbox], .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox] {
+  -webkit-order: 1;
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-horizontal input[type=checkbox]:checked, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked, .controlregion .sys-expander-horizontal input[type=checkbox]:checked, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-horizontal input[type=checkbox]:checked:active:not(:disabled), .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active:not(:disabled), .sys-controlregion .sys-expander-horizontal input[type=checkbox]:checked:hover:not(:disabled), .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover:not(:disabled), .controlregion .sys-expander-horizontal input[type=checkbox]:checked:active:not(:disabled), .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:active:not(:disabled), .controlregion .sys-expander-horizontal input[type=checkbox]:checked:hover:not(:disabled), .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover:not(:disabled) {
+  box-shadow: none;
+}
+.sys-controlregion .sys-expander-horizontal input[type=checkbox]:active, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .sys-controlregion .sys-expander-horizontal input[type=checkbox]:hover, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover, .controlregion .sys-expander-horizontal input[type=checkbox]:active, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:active, .controlregion .sys-expander-horizontal input[type=checkbox]:hover, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:hover {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-controlregion .sys-expander-horizontal input[type=checkbox]:disabled, .sys-controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .controlregion .sys-expander-horizontal input[type=checkbox]:disabled, .controlregion .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+  border-color: transparent;
+  opacity: 0.5;
+}
+.sys-expander-horizontal input[type=checkbox]:checked, .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked {
+  -webkit-transform: rotate(180deg);
+}
+.sys-expander-horizontal input[type=checkbox]:checked:hover:not(:disabled), .sys-expander-horizontal-button.checkbox input[type=checkbox]:checked:hover:not(:disabled) {
+  background: url(/bbkitAssets/images/expander_arrow_right.png) center center no-repeat;
+}
+
+.sys-expander-horizontal-button.checkbox input[type=checkbox] {
+  top: 0px;
+  opacity: 1;
+}
+.sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled, .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled:active, .sys-expander-horizontal-button.checkbox input[type=checkbox]:disabled:hover {
+  opacity: 0.5;
+}
+
+.sys-treenode {
+  padding-right: 0px;
+}
+.sys-treenode input[type=checkbox] {
+  -webkit-appearance: none;
+  background: url(/bbkitAssets/images/triangle-closed.png) center center no-repeat;
+  border: none;
+  box-shadow: none;
+  opacity: 0.5;
+  width: 13px;
+  margin: 0px 0px 0px 4px;
+}
+.sys-treenode input[type=checkbox]:hover:not(:disabled) {
+  border: none;
+  opacity: 1;
+}
+.sys-treenode input[type=checkbox]:checked {
+  background: url(/bbkitAssets/images/triangle-open.png) center center no-repeat;
+  border: none;
+  box-shadow: none;
+}
+.sys-treenode input[type=checkbox]:checked:before {
+  display: none;
+}
+.sys-treenode input[type=checkbox]:checked:hover:not(:disabled) {
+  box-shadow: none;
+  opacity: 1;
+}
+.sys-treenode input[type=checkbox]:checked:disabled, .sys-treenode input[type=checkbox]:checked:disabled:hover, .sys-treenode input[type=checkbox]:checked:disabled:active {
+  background: url(/bbkitAssets/images/triangle-open.png) center center no-repeat;
+}
+.sys-treenode.sys-blademode input[type=checkbox] {
+  right: 0px;
+  top: 5px;
+}
+
+.containstext.checkbox {
+  padding-right: 8px;
+}
+
+.sys-groupbutton-wrapper > .checkbox + .checkbox {
+  border-left-width: 0;
+}
+.sys-groupbutton-wrapper > .checkbox + .checkbox.focus {
+  border-left-width: 0;
+  box-shadow: -1px 0 0 0 #0090ff;
+}
+
+.checkbox {
+  line-height: 1.3;
+}
+.checkbox.sys-small {
+  font-size: 0.866666em;
+  padding-top: 0px;
+}
+.checkbox.sys-small.disabled {
+  color: #787878;
+}
+.checkbox.sys-big {
+  font-size: 1.7em;
+  line-height: 1.65;
+}
+.checkbox.sys-big.disabled {
+  color: #787878;
+}
+.checkbox.sys-big input[type=checkbox], .checkbox.sys-big input[type=radio] {
+  margin-bottom: 4%;
+  margin-top: 8%;
+}
+.checkbox.sys-big .button-img {
+  display: block;
+  margin: 0px auto;
+  padding: 3px 0px 0px 0px;
+}
+.sys-contolregion .checkbox, .sys-small .checkbox, .sys-heading .checkbox, .sys-footer .checkbox, .sys-level1 .checkbox, .sys-level2 .checkbox {
+  line-height: 1.5;
+}
+.sys-tile .checkbox.sys-small {
+  font-size: 0.8em;
+}
+.checkbox.disabled {
+  color: #787878;
+}
+.checkbox:focus, .checkbox.focus {
+  box-shadow: inset 0px 0px 0px 1px #0090ff;
+}
+.checkbox:active, .checkbox.active, .checkbox:focus, .checkbox.focus {
+  background: none;
+}
+
+.checkbox.sys-button, .sys-groupbutton-wrapper > .checkbox {
+  -webkit-justify-content: center;
+  position: relative;
+  text-align: center;
+  line-height: 1.334;
+  display: inline-flex;
+}
+.checkbox.sys-button.block, .sys-groupbutton-wrapper > .checkbox.block {
+  display: flex;
+}
+.checkbox.sys-button input[type=checkbox],
+.checkbox.sys-button input[type=radio], .sys-groupbutton-wrapper > .checkbox input[type=checkbox],
+.sys-groupbutton-wrapper > .checkbox input[type=radio] {
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  bottom: 0px;
+  height: auto;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: -webkit-fill-available;
+  width: 100%;
+}
+.checkbox.sys-button .checkbox-content,
+.checkbox.sys-button .radio-content, .sys-groupbutton-wrapper > .checkbox .checkbox-content,
+.sys-groupbutton-wrapper > .checkbox .radio-content {
+  position: relative;
+}
+.checkbox.sys-button, .sys-groupbutton-wrapper > .checkbox {
+  border: none;
+  border-radius: 0px;
+  color: #f0f0f0;
+  font-size: 0.866666em;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  border: 1px solid #000000;
+}
+.checkbox.sys-button input[type=checkbox],
+.checkbox.sys-button input[type=radio], .sys-groupbutton-wrapper > .checkbox input[type=checkbox],
+.sys-groupbutton-wrapper > .checkbox input[type=radio] {
+  font-size: inherit;
+  background: none;
+  background-color: #414141;
+  border: 1px solid #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  box-sizing: border-box;
+  color: #f0f0f0;
+  padding: 0px 6px;
+  border-radius: inherit;
+  border-right-color: transparent;
+  border: none;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  line-height: inherit;
+  margin: 0px;
+  min-height: auto;
+  padding: 0px;
+}
+.checkbox.sys-button input[type=checkbox]:hover,
+.checkbox.sys-button input[type=radio]:hover, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:hover,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:hover {
+  background-color: #505050;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+}
+.checkbox.sys-button input[type=checkbox]:active, .checkbox.sys-button input[type=checkbox].active,
+.checkbox.sys-button input[type=radio]:active,
+.checkbox.sys-button input[type=radio].active, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:active, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].active,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:active,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].active {
+  background-color: #282828;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px #2b2b2b;
+}
+.checkbox.sys-button input[type=checkbox].focus,
+.checkbox.sys-button input[type=radio].focus, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].focus,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+}
+.checkbox.sys-button input[type=checkbox].focus.splitbutton-main,
+.checkbox.sys-button input[type=radio].focus.splitbutton-main, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].focus.splitbutton-main,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.checkbox.sys-button input[type=checkbox].disabled, .disabled .checkbox.sys-button input[type=checkbox],
+.checkbox.sys-button input[type=radio].disabled,
+.disabled .checkbox.sys-button input[type=radio], .sys-groupbutton-wrapper > .checkbox input[type=checkbox].disabled, .disabled .sys-groupbutton-wrapper > .checkbox input[type=checkbox],
+.sys-groupbutton-wrapper > .checkbox input[type=radio].disabled,
+.disabled .sys-groupbutton-wrapper > .checkbox input[type=radio] {
+  background-color: #232323;
+  box-shadow: none;
+  color: #787878;
+}
+.checkbox.sys-button input[type=checkbox].disabled .button-img, .checkbox.sys-button input[type=checkbox].disabled .splitbutton-img, .disabled .checkbox.sys-button input[type=checkbox] .button-img, .disabled .checkbox.sys-button input[type=checkbox] .splitbutton-img,
+.checkbox.sys-button input[type=radio].disabled .button-img,
+.checkbox.sys-button input[type=radio].disabled .splitbutton-img,
+.disabled .checkbox.sys-button input[type=radio] .button-img,
+.disabled .checkbox.sys-button input[type=radio] .splitbutton-img, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].disabled .button-img, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].disabled .splitbutton-img, .disabled .sys-groupbutton-wrapper > .checkbox input[type=checkbox] .button-img, .disabled .sys-groupbutton-wrapper > .checkbox input[type=checkbox] .splitbutton-img,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].disabled .button-img,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].disabled .splitbutton-img,
+.disabled .sys-groupbutton-wrapper > .checkbox input[type=radio] .button-img,
+.disabled .sys-groupbutton-wrapper > .checkbox input[type=radio] .splitbutton-img {
+  opacity: 0.5;
+}
+.checkbox.sys-button input[type=checkbox]:hover,
+.checkbox.sys-button input[type=radio]:hover, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:hover,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:hover {
+  border-right-color: transparent;
+}
+.checkbox.sys-button input[type=checkbox].focus, .checkbox.sys-button input[type=checkbox]:focus,
+.checkbox.sys-button input[type=radio].focus,
+.checkbox.sys-button input[type=radio]:focus, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].focus, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:focus,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].focus,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  z-index: 0;
+}
+.checkbox.sys-button input[type=checkbox].focus.splitbutton-main, .checkbox.sys-button input[type=checkbox]:focus.splitbutton-main,
+.checkbox.sys-button input[type=radio].focus.splitbutton-main,
+.checkbox.sys-button input[type=radio]:focus.splitbutton-main, .sys-groupbutton-wrapper > .checkbox input[type=checkbox].focus.splitbutton-main, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:focus.splitbutton-main,
+.sys-groupbutton-wrapper > .checkbox input[type=radio].focus.splitbutton-main,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:focus.splitbutton-main {
+  z-index: 2;
+}
+.checkbox.sys-button input[type=checkbox]:checked,
+.checkbox.sys-button input[type=radio]:checked, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc) content-box;
+}
+.checkbox.sys-button input[type=checkbox]:checked:before,
+.checkbox.sys-button input[type=radio]:checked:before, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:before,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:before {
+  display: none;
+}
+.checkbox.sys-button input[type=checkbox]:checked:hover,
+.checkbox.sys-button input[type=radio]:checked:hover, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:hover,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5) content-box;
+}
+.checkbox.sys-button input[type=checkbox]:checked.active, .checkbox.sys-button input[type=checkbox]:checked:active,
+.checkbox.sys-button input[type=radio]:checked.active,
+.checkbox.sys-button input[type=radio]:checked:active, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked.active, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:active,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked.active,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5) content-box;
+  border-right-color: transparent;
+  box-shadow: none;
+}
+.checkbox.sys-button input[type=checkbox]:checked:disabled,
+.checkbox.sys-button input[type=radio]:checked:disabled, .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:disabled,
+.sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:disabled {
+  background-color: #263c53 content-box;
+}
+.checkbox.sys-button .checkbox-content,
+.checkbox.sys-button .radio-content, .sys-groupbutton-wrapper > .checkbox .checkbox-content,
+.sys-groupbutton-wrapper > .checkbox .radio-content {
+  align-self: center;
+  padding: 0px 10px;
+  margin-left: 0px;
+  pointer-events: none;
+}
+.checkbox.sys-button:before, .sys-groupbutton-wrapper > .checkbox:before {
+  border-radius: 0px;
+}
+.checkbox.sys-button:only-child, .sys-groupbutton-wrapper > .checkbox:only-child {
+  border-right-width: 0px;
+}
+.checkbox.sys-button:last-child:not(.focus) input[type=checkbox], .checkbox.sys-button:last-child:not(.focus) input[type=radio], .checkbox.sys-button:only-child:not(.focus) input[type=checkbox], .checkbox.sys-button:only-child:not(.focus) input[type=radio], .sys-groupbutton-wrapper > .checkbox:last-child:not(.focus) input[type=checkbox], .sys-groupbutton-wrapper > .checkbox:last-child:not(.focus) input[type=radio], .sys-groupbutton-wrapper > .checkbox:only-child:not(.focus) input[type=checkbox], .sys-groupbutton-wrapper > .checkbox:only-child:not(.focus) input[type=radio] {
+  border-right-color: #000000;
+}
+.checkbox.sys-button:focus, .checkbox.sys-button.focus, .sys-groupbutton-wrapper > .checkbox:focus, .sys-groupbutton-wrapper > .checkbox.focus {
+  z-index: 2;
+  border: 1px solid #0090ff;
+}
+.checkbox.sys-button:focus input[type=checkbox], .checkbox.sys-button:focus input[type=radio], .checkbox.sys-button.focus input[type=checkbox], .checkbox.sys-button.focus input[type=radio], .sys-groupbutton-wrapper > .checkbox:focus input[type=checkbox], .sys-groupbutton-wrapper > .checkbox:focus input[type=radio], .sys-groupbutton-wrapper > .checkbox.focus input[type=checkbox], .sys-groupbutton-wrapper > .checkbox.focus input[type=radio] {
+  border-color: #0090ff;
+}
+.checkbox.sys-button:active input[type=checkbox], .checkbox.sys-button:active input[type=radio], .checkbox.sys-button.active input[type=checkbox], .checkbox.sys-button.active input[type=radio], .sys-groupbutton-wrapper > .checkbox:active input[type=checkbox], .sys-groupbutton-wrapper > .checkbox:active input[type=radio], .sys-groupbutton-wrapper > .checkbox.active input[type=checkbox], .sys-groupbutton-wrapper > .checkbox.active input[type=radio] {
+  background: #282828;
+  border-right-color: transparent;
+}
+.checkbox.sys-button.disabled, .disabled .checkbox.sys-button, .sys-groupbutton-wrapper > .checkbox.disabled, .disabled .sys-groupbutton-wrapper > .checkbox {
+  color: #787878;
+}
+.checkbox.sys-button.disabled input[type=checkbox], .checkbox.sys-button.disabled input[type=radio], .disabled .checkbox.sys-button input[type=checkbox], .disabled .checkbox.sys-button input[type=radio], .sys-groupbutton-wrapper > .checkbox.disabled input[type=checkbox], .sys-groupbutton-wrapper > .checkbox.disabled input[type=radio], .disabled .sys-groupbutton-wrapper > .checkbox input[type=checkbox], .disabled .sys-groupbutton-wrapper > .checkbox input[type=radio] {
+  background-color: #232323;
+  box-shadow: none;
+}
+.checkbox.sys-button.disabled input[type=checkbox]:checked, .checkbox.sys-button.disabled input[type=radio]:checked, .disabled .checkbox.sys-button input[type=checkbox]:checked, .disabled .checkbox.sys-button input[type=radio]:checked, .sys-groupbutton-wrapper > .checkbox.disabled input[type=checkbox]:checked, .sys-groupbutton-wrapper > .checkbox.disabled input[type=radio]:checked, .disabled .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked, .disabled .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked {
+  background: #263c53;
+}
+.controlregion .checkbox.sys-button, .sys-controlregion .checkbox.sys-button, .controlregion .sys-groupbutton-wrapper > .checkbox, .sys-controlregion .sys-groupbutton-wrapper > .checkbox {
+  font-size: 13px;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox],
+.controlregion .checkbox.sys-button > input[type=radio], .sys-controlregion .checkbox.sys-button > input[type=checkbox],
+.sys-controlregion .checkbox.sys-button > input[type=radio], .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio], .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio] {
+  box-shadow: none;
+  background-color: #505050;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox]:focus, .controlregion .checkbox.sys-button > input[type=checkbox].focus,
+.controlregion .checkbox.sys-button > input[type=radio]:focus,
+.controlregion .checkbox.sys-button > input[type=radio].focus, .sys-controlregion .checkbox.sys-button > input[type=checkbox]:focus, .sys-controlregion .checkbox.sys-button > input[type=checkbox].focus,
+.sys-controlregion .checkbox.sys-button > input[type=radio]:focus,
+.sys-controlregion .checkbox.sys-button > input[type=radio].focus, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  border-right-color: #0090ff;
+  z-index: 0;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .controlregion .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.controlregion .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.controlregion .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .sys-controlregion .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-controlregion .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-controlregion .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-controlregion .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox]:hover,
+.controlregion .checkbox.sys-button > input[type=radio]:hover, .sys-controlregion .checkbox.sys-button > input[type=checkbox]:hover,
+.sys-controlregion .checkbox.sys-button > input[type=radio]:hover, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:hover,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:hover, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:hover,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:hover {
+  border-color: #000000;
+  background-color: #646464;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.12), inset 0px 1px 0px rgba(255, 255, 255, 0.18);
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].active, .controlregion .checkbox.sys-button > input[type=checkbox]:active,
+.controlregion .checkbox.sys-button > input[type=radio].active,
+.controlregion .checkbox.sys-button > input[type=radio]:active, .sys-controlregion .checkbox.sys-button > input[type=checkbox].active, .sys-controlregion .checkbox.sys-button > input[type=checkbox]:active,
+.sys-controlregion .checkbox.sys-button > input[type=radio].active,
+.sys-controlregion .checkbox.sys-button > input[type=radio]:active, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].active, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:active,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].active,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:active, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].active, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:active,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].active,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio]:active {
+  border-color: #000000;
+  background-color: #3d3d3d;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.12), inset 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].focus,
+.controlregion .checkbox.sys-button > input[type=radio].focus, .sys-controlregion .checkbox.sys-button > input[type=checkbox].focus,
+.sys-controlregion .checkbox.sys-button > input[type=radio].focus, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 1px #000000;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].toggled,
+.controlregion .checkbox.sys-button > input[type=radio].toggled, .sys-controlregion .checkbox.sys-button > input[type=checkbox].toggled,
+.sys-controlregion .checkbox.sys-button > input[type=radio].toggled, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc);
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.12), 0px 1px 0px rgba(255, 255, 255, 0.13);
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].toggled:hover:not(.disabled),
+.controlregion .checkbox.sys-button > input[type=radio].toggled:hover:not(.disabled), .sys-controlregion .checkbox.sys-button > input[type=checkbox].toggled:hover:not(.disabled),
+.sys-controlregion .checkbox.sys-button > input[type=radio].toggled:hover:not(.disabled), .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled:hover:not(.disabled),
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled:hover:not(.disabled), .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled:hover:not(.disabled),
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled:hover:not(.disabled) {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5);
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].toggled:active:not(.disabled), .controlregion .checkbox.sys-button > input[type=checkbox].toggled.active,
+.controlregion .checkbox.sys-button > input[type=radio].toggled:active:not(.disabled),
+.controlregion .checkbox.sys-button > input[type=radio].toggled.active, .sys-controlregion .checkbox.sys-button > input[type=checkbox].toggled:active:not(.disabled), .sys-controlregion .checkbox.sys-button > input[type=checkbox].toggled.active,
+.sys-controlregion .checkbox.sys-button > input[type=radio].toggled:active:not(.disabled),
+.sys-controlregion .checkbox.sys-button > input[type=radio].toggled.active, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled:active:not(.disabled), .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled.active,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled:active:not(.disabled),
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled.active, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled:active:not(.disabled), .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].toggled.active,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled:active:not(.disabled),
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].toggled.active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5);
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].disabled,
+.controlregion .checkbox.sys-button > input[type=radio].disabled, .sys-controlregion .checkbox.sys-button > input[type=checkbox].disabled,
+.sys-controlregion .checkbox.sys-button > input[type=radio].disabled, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].disabled,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].disabled, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].disabled,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].disabled {
+  background-color: #3b3b3b;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.08), inset 0px 1px 0px rgba(255, 255, 255, 0.04);
+  border-color: #000000;
+}
+.controlregion .checkbox.sys-button > input[type=checkbox].disabled .label,
+.controlregion .checkbox.sys-button > input[type=radio].disabled .label, .sys-controlregion .checkbox.sys-button > input[type=checkbox].disabled .label,
+.sys-controlregion .checkbox.sys-button > input[type=radio].disabled .label, .controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].disabled .label,
+.controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].disabled .label, .sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].disabled .label,
+.sys-controlregion .sys-groupbutton-wrapper > .checkbox > input[type=radio].disabled .label {
+  color: #8c8c8c;
+}
+.sys-level1 .checkbox.sys-button, .sys-level2 .checkbox.sys-button, .sys-heading .checkbox.sys-button, .sys-footer .checkbox.sys-button, .sys-level1 .sys-groupbutton-wrapper > .checkbox, .sys-level2 .sys-groupbutton-wrapper > .checkbox, .sys-heading .sys-groupbutton-wrapper > .checkbox, .sys-footer .sys-groupbutton-wrapper > .checkbox {
+  font-size: 12px;
+  min-height: 1.58333em;
+}
+.sys-level1 .checkbox.sys-button > input[type=checkbox],
+.sys-level1 .checkbox.sys-button > input[type=radio], .sys-level2 .checkbox.sys-button > input[type=checkbox],
+.sys-level2 .checkbox.sys-button > input[type=radio], .sys-heading .checkbox.sys-button > input[type=checkbox],
+.sys-heading .checkbox.sys-button > input[type=radio], .sys-footer .checkbox.sys-button > input[type=checkbox],
+.sys-footer .checkbox.sys-button > input[type=radio], .sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=radio], .sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=radio], .sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=radio], .sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=checkbox],
+.sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=radio] {
+  box-shadow: none;
+}
+.sys-level1 .checkbox.sys-button > input[type=checkbox]:focus, .sys-level1 .checkbox.sys-button > input[type=checkbox].focus,
+.sys-level1 .checkbox.sys-button > input[type=radio]:focus,
+.sys-level1 .checkbox.sys-button > input[type=radio].focus, .sys-level2 .checkbox.sys-button > input[type=checkbox]:focus, .sys-level2 .checkbox.sys-button > input[type=checkbox].focus,
+.sys-level2 .checkbox.sys-button > input[type=radio]:focus,
+.sys-level2 .checkbox.sys-button > input[type=radio].focus, .sys-heading .checkbox.sys-button > input[type=checkbox]:focus, .sys-heading .checkbox.sys-button > input[type=checkbox].focus,
+.sys-heading .checkbox.sys-button > input[type=radio]:focus,
+.sys-heading .checkbox.sys-button > input[type=radio].focus, .sys-footer .checkbox.sys-button > input[type=checkbox]:focus, .sys-footer .checkbox.sys-button > input[type=checkbox].focus,
+.sys-footer .checkbox.sys-button > input[type=radio]:focus,
+.sys-footer .checkbox.sys-button > input[type=radio].focus, .sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus, .sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus, .sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus, .sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus, .sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus,
+.sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus,
+.sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus {
+  border-color: #0090ff;
+  box-shadow: inset 0px 0px 0px 1px #000000;
+  z-index: 1;
+  border-right-color: #0090ff;
+  z-index: 0;
+}
+.sys-level1 .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-level1 .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-level1 .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-level1 .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .sys-level2 .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-level2 .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-level2 .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-level2 .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .sys-heading .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-heading .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-heading .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-heading .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .sys-footer .checkbox.sys-button > input[type=checkbox]:focus.splitbutton-main, .sys-footer .checkbox.sys-button > input[type=checkbox].focus.splitbutton-main,
+.sys-footer .checkbox.sys-button > input[type=radio]:focus.splitbutton-main,
+.sys-footer .checkbox.sys-button > input[type=radio].focus.splitbutton-main, .sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.sys-level1 .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main, .sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.sys-level2 .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main, .sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.sys-heading .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main, .sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=checkbox]:focus.splitbutton-main, .sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=checkbox].focus.splitbutton-main,
+.sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=radio]:focus.splitbutton-main,
+.sys-footer .sys-groupbutton-wrapper > .checkbox > input[type=radio].focus.splitbutton-main {
+  z-index: 2;
+}
+.sys-heading .checkbox.sys-button, .sys-heading .sys-groupbutton-wrapper > .checkbox {
+  margin: 0;
+}
+.sys-heading .checkbox.sys-button input[type=checkbox],
+.sys-heading .checkbox.sys-button input[type=radio], .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox],
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio] {
+  border-radius: 0px;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+  background: -webkit-linear-gradient(top, #232323, #202020);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:hover,
+.sys-heading .checkbox.sys-button input[type=radio]:hover, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:hover,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:hover {
+  background: -webkit-linear-gradient(top, #383838, #292929);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.06);
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:active,
+.sys-heading .checkbox.sys-button input[type=radio]:active, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:active,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:active {
+  background: -webkit-linear-gradient(top, #282828, #2b2b2b);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:checked,
+.sys-heading .checkbox.sys-button input[type=radio]:checked, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked {
+  background: -webkit-linear-gradient(top, #0755a5, #0661bc);
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:checked:before,
+.sys-heading .checkbox.sys-button input[type=radio]:checked:before, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:before,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:before {
+  display: none;
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:checked:hover,
+.sys-heading .checkbox.sys-button input[type=radio]:checked:hover, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:hover,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:hover {
+  background: -webkit-linear-gradient(top, #3a7fc5, #3a97f5);
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:checked.active, .sys-heading .checkbox.sys-button input[type=checkbox]:checked:active,
+.sys-heading .checkbox.sys-button input[type=radio]:checked.active,
+.sys-heading .checkbox.sys-button input[type=radio]:checked:active, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked.active, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:active,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked.active,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:active {
+  background: -webkit-linear-gradient(top, #0661bc, #0755a5);
+  border-right-color: transparent;
+  box-shadow: none;
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:checked:disabled,
+.sys-heading .checkbox.sys-button input[type=radio]:checked:disabled, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:checked:disabled,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:checked:disabled {
+  background-color: #263c53;
+}
+.sys-heading .checkbox.sys-button input[type=checkbox]:focus,
+.sys-heading .checkbox.sys-button input[type=radio]:focus, .sys-heading .sys-groupbutton-wrapper > .checkbox input[type=checkbox]:focus,
+.sys-heading .sys-groupbutton-wrapper > .checkbox input[type=radio]:focus {
+  border: none;
+  box-shadow: inset 0px 0px 0px 1px #0090ff, inset 0px 0px 0px 2px #000000;
+}
+.checkbox.sys-button.sys-small, .sys-groupbutton-wrapper > .checkbox.sys-small {
+  line-height: 1.35;
+  min-height: 1.46153em;
+}
+.checkbox.sys-button.sys-big, .sys-groupbutton-wrapper > .checkbox.sys-big {
+  min-height: 3.7em;
+  min-height: 2.924em;
+  line-height: normal;
+}
+.checkbox.sys-button.sys-big input[type=checkbox],
+.checkbox.sys-button.sys-big input[type=radio], .sys-groupbutton-wrapper > .checkbox.sys-big input[type=checkbox],
+.sys-groupbutton-wrapper > .checkbox.sys-big input[type=radio] {
+  margin-top: 0px;
+}
+.sys-groupbutton-wrapper.sys-small > .checkbox {
+  font-size: 1em;
+  min-height: 1.46153em;
+}
+.checkbox.sys-big, .sys-groupbutton-wrapper.sys-big > .checkbox {
+  min-height: 3.7em;
+  min-height: 2.924em;
+  line-height: normal;
+}
+.checkbox.sys-big input[type=checkbox],
+.checkbox.sys-big input[type=radio], .sys-groupbutton-wrapper.sys-big > .checkbox input[type=checkbox],
+.sys-groupbutton-wrapper.sys-big > .checkbox input[type=radio] {
+  margin-top: 0px;
+}
+
+.sys-settings-toggle-button {
+  height: 1.3em;
+}
+.sys-settings-toggle-button input[type=checkbox] {
+  display: none;
+}
+.sys-settings-toggle-button:hover .checkbox-image {
+  background: -webkit-linear-gradient(top, #6c6c6c, #606060);
+}
+.sys-settings-toggle-button:hover input[type=checkbox]:checked + .checkbox-image {
+  background: -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+}
+.sys-settings-toggle-button:active .checkbox-image {
+  background: #3a3a3a;
+}
+.sys-settings-toggle-button:active input[type=checkbox]:checked + .checkbox-image {
+  background: #006aa8;
+}
+.sys-settings-toggle-button .checkbox-image {
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  background: -webkit-linear-gradient(top, #565656, #4a4a4a);
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  vertical-align: 1px;
+}
+.sys-settings-toggle-button .checkbox-image::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 2px;
+  background-color: #fbfbfb;
+  background-size: 7px;
+  box-shadow: none;
+  border-radius: 50%;
+  border: none;
+  cursor: default;
+}
+.sys-settings-toggle-button .checkbox-content {
+  display: inline-block;
+  margin-left: 10px;
+}
+.sys-settings-toggle-button input[type=checkbox]:checked + .checkbox-image {
+  background: -webkit-linear-gradient(top, #40a0ff, #2391ff);
+}
+.sys-settings-toggle-button input[type=checkbox]:checked + .checkbox-image::before {
+  transform: translateX(100%);
+  background: url(/bbkitAssets/images/checkbox_check.png) no-repeat center;
+  background-color: #fbfbfb;
+}
+.sys-settings-toggle-button.disabled {
+  pointer-events: none;
+}
+.sys-settings-toggle-button.disabled input[type=checkbox]:checked + .checkbox-image,
+.sys-settings-toggle-button.disabled .checkbox-image {
+  background: #333333;
+}
+.sys-settings-toggle-button.disabled input[type=checkbox]:checked + .checkbox-image::before,
+.sys-settings-toggle-button.disabled .checkbox-image::before {
+  background-color: #787878;
+}
+.sys-settings-toggle-button.disabled .checkbox-content {
+  color: #787878;
+}

@@ -1,0 +1,6 @@
+.autocompleteentry .autocomplete-btn {
+  border-radius: 0px;
+  cursor: default;
+  position: absolute;
+  z-index: 1;
+}

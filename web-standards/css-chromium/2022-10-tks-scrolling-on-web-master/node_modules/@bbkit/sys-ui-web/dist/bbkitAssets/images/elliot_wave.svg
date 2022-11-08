@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 12 17">
+  <style type="text/css">
+    .st0{fill:#D7D7D7;}
+  </style>
+  <g id="icons">
+    <path class="st0" d="M0,3h3.8v1H1v1h2.8v1H1v1h2.8v1H0V3z"/>
+    <path class="st0" d="M8.8,13L8,9.6L7.1,13H5.9L4.5,8h1.2l0.9,3.6l1-3.6h0.8l1,3.6L10.3,8h1.2l-1.4,5C10.1,13,8.8,13,8.8,13z"/>
+  </g>
+</svg>

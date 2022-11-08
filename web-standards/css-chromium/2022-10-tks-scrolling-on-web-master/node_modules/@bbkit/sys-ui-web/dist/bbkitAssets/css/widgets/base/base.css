@@ -1,0 +1,403 @@
+@keyframes keyframe-fg-permission-required {
+  0% {
+    background-color: rgba(200, 99, 253, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 99, 253, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 99, 253, 0.2);
+  }
+}
+@keyframes keyframe-bg-permission-required {
+  0% {
+    background-color: rgba(200, 99, 254, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 99, 254, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 99, 254, 0.2);
+  }
+}
+@keyframes keyframe-fg-deprecated {
+  0% {
+    background-color: rgba(200, 100, 253, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 100, 253, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 100, 253, 0.2);
+  }
+}
+@keyframes keyframe-bg-deprecated {
+  0% {
+    background-color: rgba(200, 100, 254, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 100, 254, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 100, 254, 0.2);
+  }
+}
+@keyframes keyframe-fg-invalid {
+  0% {
+    background-color: rgba(200, 101, 253, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 101, 253, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 101, 253, 0.2);
+  }
+}
+@keyframes keyframe-bg-invalid {
+  0% {
+    background-color: rgba(200, 101, 254, 0.2);
+  }
+  50% {
+    background-color: rgba(200, 101, 254, 0.9);
+  }
+  100% {
+    background-color: rgba(200, 101, 254, 0.2);
+  }
+}
+.new-palette .fg-permission-required,
+.old-palette .themescope.new-palette .fg-permission-required {
+  color: rgb(200, 99, 253);
+  -webkit-animation: keyframe-fg-permission-required 1500ms step-start 0s infinite;
+}
+
+.new-palette .bg-permission-required,
+.old-palette .themescope.new-palette .bg-permission-required {
+  color: rgb(200, 99, 254);
+  -webkit-animation: keyframe-bg-permission-required 1500ms step-start 0s infinite;
+}
+
+.new-palette .widget.fg-deprecated,
+.old-palette .themescope.new-palette .widget.fg-deprecated {
+  color: rgb(200, 100, 253);
+  -webkit-animation: keyframe-fg-deprecated 1500ms step-start 0s infinite;
+}
+
+.new-palette .bg-deprecated,
+.old-palette .themescope.new-palette .bg-deprecated {
+  color: rgb(200, 100, 254);
+  -webkit-animation: keyframe-bg-deprecated 1500ms step-start 0s infinite;
+}
+
+.new-palette .widget.fg-invalid,
+.new-palette .table-label.fg-invalid,
+.new-palette .table-cell-layer.fg-invalid {
+  color: rgb(200, 101, 253);
+  -webkit-animation: keyframe-fg-invalid 1500ms step-start 0s infinite;
+}
+
+.new-palette .widget.bg-invalid,
+.new-palette .table-label.bg-invalid,
+.new-palette .table-cell-layer.bg-invalid {
+  color: rgb(200, 101, 254);
+  -webkit-animation: keyframe-bg-invalid 1500ms step-start 0s infinite;
+}
+
+.old-palette .themescope.new-palette .custom-color .bg-permission-required,
+.old-palette .themescope.new-palette .custom-color .fg-permission-required,
+.new-palette .custom-color .bg-permission-required,
+.new-palette .custom-color .fg-permission-required,
+.old-palette .bg-permission-required,
+.old-palette .fg-permission-required {
+  -webkit-animation: none;
+}
+
+.old-palette .widget.fg-deprecated,
+.old-palette .widget.bg-deprecated {
+  -webkit-animation: none;
+}
+
+.widget {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.userwidget > .widget {
+  vertical-align: top;
+}
+
+.deprecated:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid rgba(255, 255, 55, 0.5);
+  content: "";
+  z-index: 1000;
+}
+.deprecated:hover:before {
+  border-color: rgba(255, 255, 55, 0.8);
+}
+.deprecated:hover:after {
+  position: absolute;
+  pointer-events: none;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  padding: 2px;
+  font-size: 12px;
+  color: rgba(255, 255, 55, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  content: attr(data-deprecation-message);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 1001;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.selectable {
+  -webkit-user-select: text;
+  cursor: text;
+}
+
+.disabled .selectable, .disabled.selectable {
+  cursor: default;
+}
+
+.notselectable {
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+.hideoverflow {
+  overflow: hidden;
+}
+
+/***************************
+            Layout
+****************************/
+/* Widgets should override this to make themselves "block"-like
+ * For example StackPanel is display -webkit-flex, so if a container
+ * wants a child, that happens to be a StackPanel, to be block-like
+ * then it sets the "block" class and StackPanel defines a
+ * ".stackpanel.block { display : -webkit-flex; }" and
+ * ".stackpanel.inline { display : -webkit-inline-flex; }"
+ * to accomplish the same thing.  Most widgets can use these defaults
+ * and be fine.
+ */
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+/***************************
+       Custom Widgets
+****************************/
+.custom-child {
+  width: 100%;
+  height: 100%;
+}
+
+.userwidget.sizingmode-parent > .widget {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+.userwidget.sizingmode-legacy, .userwidget.sizingmode-content {
+  display: inline-flex;
+}
+.userwidget.sizingmode-legacy.block, .userwidget.sizingmode-content.block {
+  display: flex;
+}
+.userwidget.sizingmode-legacy > .widget, .userwidget.sizingmode-content > .widget {
+  min-width: 0;
+  min-height: 0;
+}
+.userwidget.sizingmode-legacy > .widget {
+  -webkit-flex: 1 0 0;
+}
+.userwidget.sizingmode-content > .widget {
+  -webkit-flex: 1 0 auto;
+}
+
+:host(.userwidget) {
+  font-size: 10px;
+}
+
+:host(.userwidget.sizingmode-parent) > #shadow-root-main > .widget {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+:host(.userwidget.sizingmode-legacy) {
+  display: inline-flex;
+}
+:host(.userwidget.sizingmode-legacy).block {
+  display: flex;
+}
+:host(.userwidget.sizingmode-legacy) > #shadow-root-main > .widget {
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex: 1 0 0;
+}
+
+.scrolldir-horizontal {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.scrolldir-vertical {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrolldir-both {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.overflow-hidden:not(.scroll) {
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.layer-purple {
+  position: absolute;
+  background: rgba(139, 46, 151, 0.5);
+  border: 2px solid white;
+  z-index: 9999;
+  color: white;
+  font-weight: bold;
+}
+
+.layer-inspector-highlight {
+  position: absolute;
+  background: rgba(170, 229, 170, 0.5);
+  color: white;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: left;
+  z-index: 1000;
+}
+
+@-webkit-keyframes demo {
+  0% {
+    outline: Red solid;
+    outline-width: 3px;
+  }
+  27% {
+    outline: Black solid;
+    outline-width: 3px;
+  }
+  33% {
+    outline: Red solid;
+    outline-width: 3px;
+  }
+  60% {
+    outline: Black solid;
+    outline-width: 3px;
+  }
+  66% {
+    outline: Red solid;
+    outline-width: 3px;
+  }
+  100% {
+    outline: Black solid;
+    outline-width: 3px;
+  }
+}
+.layer-inspector-warning {
+  position: absolute;
+  overflow: initial;
+  -webkit-animation-name: demo;
+  -moz-animation-name: demo;
+  -webkit-animation-duration: 400ms;
+  -moz-animation-duration: 400ms;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  outline: solid;
+  outline-width: 0px;
+  pointer-events: none;
+  z-index: 9999;
+  color: white;
+  font-weight: bold;
+}
+
+.layer-reach-stopsign {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/bbkitAssets/images/stop_resizing.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.layer-reach-minwidth-arrow-left {
+  position: absolute;
+  border-width: 0px 5px 14px 8px;
+  border-style: solid;
+  border-color: transparent;
+  height: -webkit-calc(50% - 4px);
+  width: -webkit-calc(50% - 19px);
+  border-image: url(/bbkitAssets/images/stop_resizing_arrow.png) 0 5 14 8 fill stretch repeat;
+}
+
+.layer-reach-minwidth-arrow-right {
+  position: absolute;
+  border-width: 0px 5px 14px 8px;
+  border-style: solid;
+  border-color: transparent;
+  top: -webkit-calc(50% - 10px);
+  height: -webkit-calc(50% + 6px);
+  left: -webkit-calc(50% + 6px);
+  width: -webkit-calc(50% - 19px);
+  border-image: url(/bbkitAssets/images/stop_resizing_arrow.png) 0 5 14 8 fill stretch repeat;
+  -webkit-transform: rotate(180deg);
+}
+
+.layer-reach-minheight-arrow-top {
+  position: absolute;
+  border-width: 20px 0px 0px 20px;
+  border-style: solid;
+  border-color: transparent;
+  height: -webkit-calc(50% - 25px);
+  left: -webkit-calc(50% - 10px);
+  border-image: url(/bbkitAssets/images/stop_resizing_arrow_top.png) 14 20 5 20 fill stretch repeat;
+}
+
+.layer-reach-minheight-arrow-bottom {
+  position: absolute;
+  border-width: 20px 0px 0px 20px;
+  border-style: solid;
+  border-color: transparent;
+  height: -webkit-calc(50% - 25px);
+  top: -webkit-calc(50% + 6px);
+  left: 10px;
+  width: -webkit-calc(50% - 19px);
+  border-image: url(/bbkitAssets/images/stop_resizing_arrow_top.png) 14 20 5 20 fill stretch repeat;
+  -webkit-transform: rotate(180deg);
+}

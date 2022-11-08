@@ -1,0 +1,29 @@
+*:focus {
+  outline: none;
+}
+
+.color-swatch {
+  border: 1px solid #000000;
+  box-shadow: 0px 1px #373737;
+  margin: 2px 3px;
+}
+
+.color-swatch:hover:not(.disabled) {
+  outline: 1px solid #787878;
+}
+
+.color-swatch-invalid-color {
+  background-image: linear-gradient(top, red, green);
+}
+
+.style-selected-color-swatch {
+  outline: 1px solid #fbfbfb;
+}
+
+.spdl-none-color-swatch {
+  color: #a5a5a5;
+  font-size: 0.8em;
+  line-height: 1;
+  text-align: center;
+  width: 38px;
+}

@@ -1,0 +1,859 @@
+.table {
+  display: inline-block;
+  cursor: default;
+  overflow: hidden;
+  position: relative;
+  rubberbandable: text-with-tab;
+}
+
+.table-widget-factory-elem-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.table-preview-factory {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.table-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.table-preview-line > .table-viewport {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.table-shadow-dom {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.table-partition-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-flex: 1;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  overflow: hidden;
+}
+.chromium-98-plus .table-partition-container {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-pane {
+  position: relative;
+  -webkit-flex: 1;
+}
+
+.table-pane-border {
+  position: absolute;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.chromium-98-plus .table-pane-border {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-vertical-spacer {
+  display: none;
+  -webkit-flex: none;
+  position: relative;
+  width: 5px;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(left, #555555 0%, #4b4b4b 50%, #545454 100%);
+  box-shadow: inset -1px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+.table-vertical-scroller-container {
+  display: none;
+  -webkit-flex: none;
+  position: relative;
+  width: var(--table-scrollbar-size, 10px);
+}
+
+.table-vertical-scroller-container > .blipbar {
+  position: absolute;
+  top: var(--table-scrollbar-button-size, 18px);
+  left: 0;
+  bottom: var(--table-scrollbar-button-size, 18px);
+  right: 0;
+  z-index: 0;
+}
+
+.horizontal-scrollbar-visible .blipbar {
+  bottom: calc(var(--table-scrollbar-size, 10px) + var(--table-scrollbar-button-size, 18px));
+}
+
+.table-vertical-scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.table-vertical-scroller.scroll::-webkit-scrollbar-track {
+  display: none;
+}
+.table-vertical-scroller.scroll::-webkit-scrollbar {
+  width: var(--table-scrollbar-size, 10px);
+  height: var(--table-scrollbar-size, 10px);
+  background: none;
+}
+.table-vertical-scroller.scroll::-webkit-scrollbar-button:vertical {
+  width: var(--table-scrollbar-size, 10px);
+  height: var(--table-scrollbar-button-size, 18px);
+}
+
+.table.table-focus-ring:not(.table-blurred)::after {
+  border: 1px solid #0090ff;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.table-blip-thumb-debugger-elem {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: green;
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.table-horizontal-scroller {
+  display: none;
+  -webkit-flex: none;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: var(--table-scrollbar-size, 10px);
+  -webkit-order: 4;
+  z-index: 4;
+}
+.table-horizontal-scroller.scroll::-webkit-scrollbar {
+  width: var(--table-scrollbar-size, 10px);
+  height: var(--table-scrollbar-size, 10px);
+  background: none;
+}
+.table-horizontal-scroller.scroll::-webkit-scrollbar-button:horizontal {
+  width: var(--table-scrollbar-button-size, 18px);
+  height: var(--table-scrollbar-size, 10px);
+}
+
+.table-vertical-scroller-content, .table-horizontal-scroller-content {
+  position: relative;
+  width: 1px;
+  height: 1px;
+}
+
+.table-vertical-scroller-content {
+  width: calc(var(--table-scrollbar-size, 10px) + 1);
+}
+
+.table-col-renderer {
+  position: absolute;
+  display: -webkit-flex;
+  top: 0px;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+}
+.chromium-98-plus .table-col-renderer {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-row-region-container {
+  position: relative;
+  -webkit-flex: 1;
+  min-width: 0px;
+  overflow: hidden;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-flex-direction: column;
+}
+.chromium-98-plus .table-row-region-container {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-row-region {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-flex-direction: row;
+  -webkit-flex: 1;
+}
+.chromium-98-plus .table-row-region {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-title-row-region {
+  -webkit-order: 0;
+  z-index: 3;
+}
+
+.table-top-row-region {
+  -webkit-order: 1;
+  z-index: 2;
+}
+
+.table-scroll-row-region {
+  -webkit-order: 2;
+  z-index: 0;
+}
+
+.table-bottom-row-region {
+  -webkit-order: 3;
+  z-index: 1;
+}
+
+.table-col-region {
+  overflow: hidden;
+}
+.chromium-98-plus .table-col-region {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-spanning-col-region {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.table-left-col-region {
+  position: relative;
+  -webkit-order: 0;
+  -webkit-flex: 1;
+  z-index: 2;
+}
+
+.table-scroll-col-region {
+  position: relative;
+  -webkit-order: 1;
+  -webkit-flex: 1;
+  z-index: 0;
+}
+
+.table-right-col-region {
+  position: relative;
+  -webkit-order: 2;
+  -webkit-flex: 1;
+  z-index: 1;
+}
+
+.table-viewport {
+  box-sizing: border-box;
+  overflow: hidden;
+  pointer-events: none;
+}
+.chromium-98-plus .table-viewport {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-viewport-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.chromium-98-plus .table-viewport-layer {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-dom-viewport-layer {
+  bottom: 0;
+  right: 0;
+}
+
+.table-canvas-viewport-layer {
+  height: auto;
+  width: auto;
+}
+
+.table-bottom-viewport-layer.table-dom-viewport-layer {
+  z-index: 0;
+}
+
+.table-bottom-viewport-layer.table-canvas-viewport-layer {
+  z-index: 1;
+}
+
+.table-main-viewport-layer.table-dom-viewport-layer {
+  z-index: 2;
+}
+
+.table-main-viewport-layer.table-canvas-viewport-layer {
+  z-index: 3;
+}
+
+.table-top-viewport-layer.table-dom-viewport-layer {
+  z-index: 4;
+}
+
+.table-top-viewport-layer.table-canvas-viewport-layer {
+  z-index: 5;
+}
+
+.table-row-layer {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  z-index: 0;
+  overflow: hidden;
+}
+.chromium-98-plus .table-row-layer {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-cell-layer {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -bb-rubberband-empty-text: " ";
+  -bb-rubberband-group-delimiter: " ";
+}
+.chromium-98-plus .table-cell-layer {
+  overflow: initial;
+  bb-simple-overflow-clip: auto;
+}
+
+.table-cell-slot {
+  pointer-events: initial;
+  contain: layout size;
+}
+
+.table-cell-layer-complex-layout-mode {
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+}
+.table-cell-layer-complex-layout-mode > .table-cell-slot {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+.table-cell-layer-complex-layout-mode > .table-cell-slot-center {
+  -webkit-flex: 1 1 0px;
+  min-width: 0;
+}
+.table-main-viewport-layer .table-cell-layer-complex-layout-mode {
+  pointer-events: initial;
+}
+
+.table-overlay-layer {
+  pointer-events: initial;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.table-perf-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  white-space: pre-wrap;
+  display: none;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.table-widget-width-measure-mode {
+  width: auto !important;
+  right: initial !important;
+  position: absolute !important;
+  display: inline-block !important;
+  contain: none !important;
+}
+.table-widget-width-measure-mode.table-cell-slot > .widget {
+  position: relative !important;
+}
+.table-widget-width-measure-mode.table-cell-slot > .widget:not(.sys-table-keep-original-layout) {
+  width: auto !important;
+  right: initial !important;
+  display: inline-block !important;
+}
+
+.table-widget-height-measure-mode {
+  height: auto !important;
+  bottom: initial !important;
+  position: absolute !important;
+  display: inline-block !important;
+  contain: none !important;
+}
+.table-widget-height-measure-mode.table-cell-slot > .widget {
+  position: relative !important;
+}
+.table-widget-height-measure-mode.table-cell-slot > .widget:not(.sys-table-keep-original-layout) {
+  height: auto !important;
+  bottom: initial !important;
+  display: inline-block !important;
+}
+
+.table-cell-slot > .widget {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout) {
+  margin: 0;
+  min-height: initial;
+  max-height: initial;
+  min-width: initial;
+  max-width: initial;
+  width: 100%;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout):not(.sys-table-multiline-layout), .table-cell-slot > .widget:not(.sys-table-keep-original-layout):not(.sys-table-multiline-layout) .widget {
+  height: 100%;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout), .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget, .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button), .table-cell-slot > .widget:not(.sys-table-keep-original-layout).widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button) {
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 0;
+  border-radius: 0;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout):first-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget:first-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button):first-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout).widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button):first-child {
+  margin-left: 0;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout):last-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget:last-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout) .widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button):last-child, .table-cell-slot > .widget:not(.sys-table-keep-original-layout).widget > div:not(.hilolinechart-inner-wrap):not(.entry-clear-button):last-child {
+  margin-right: 0;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout) .splitbutton > div, .table-cell-slot > .widget:not(.sys-table-keep-original-layout).splitbutton > div {
+  height: auto;
+}
+.table-cell-slot > .widget:not(.sys-table-keep-original-layout) .overflowpanel, .table-cell-slot > .widget:not(.sys-table-keep-original-layout).overflowpanel {
+  line-height: 0;
+}
+
+.table-cell-slot > .widget.sys-table-keep-original-layout {
+  line-height: initial;
+}
+
+.table-row-expander-widget {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.table-label {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table-label-container {
+  position: relative;
+  display: inline;
+}
+
+.table-label-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.table-label-pre-text, .table-label-post-text {
+  position: static;
+  display: inline-block;
+  z-index: 1;
+}
+.table-label-pre-text.deprecated, .table-label-post-text.deprecated {
+  position: relative;
+}
+
+.table-label-pre-text {
+  float: left;
+}
+.table-label-pre-text.table-label-inline-text {
+  padding: 0;
+  float: none;
+}
+
+.table-label-post-text {
+  float: right;
+}
+.table-label-post-text.table-label-inline-text {
+  padding: 0;
+  float: none;
+}
+
+.table-radix-label {
+  z-index: 1;
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+  -webkit-flex-direction: row;
+}
+
+.table-radix-pre-area, .table-radix-post-area {
+  overflow: hidden;
+}
+
+.table-label.table-radix-pre-area {
+  padding-right: 0;
+  min-width: min-content;
+}
+.table-label.table-radix-post-area {
+  padding-left: 0;
+}
+
+.table-radix-measurer {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.table-box {
+  display: block;
+  pointer-events: none;
+  border-width: 1px;
+}
+
+.table-box-edge {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  background-clip: content-box;
+}
+.table-box-edges-interactive > .table-box-edge {
+  pointer-events: initial;
+}
+
+.table-box-edge-top, .table-box-edge-bottom {
+  left: 0;
+  right: 0;
+}
+.table-box-edges-interactive > .table-box-edge-top, .table-box-edges-interactive > .table-box-edge-bottom {
+  cursor: ns-resize;
+}
+.disabled .table-box-edges-interactive > .table-box-edge-top, .disabled .table-box-edges-interactive > .table-box-edge-bottom {
+  cursor: default;
+}
+
+.table-box-edge-left, .table-box-edge-right {
+  top: 0;
+  bottom: 0;
+}
+.table-box-edges-interactive > .table-box-edge-left, .table-box-edges-interactive > .table-box-edge-right {
+  cursor: ew-resize;
+}
+.disabled .table-box-edges-interactive > .table-box-edge-left, .disabled .table-box-edges-interactive > .table-box-edge-right {
+  cursor: default;
+}
+
+.table-box-edges-visible > .table-box-edge {
+  opacity: 1;
+}
+
+.table-box-corner {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  width: 3px;
+  height: 3px;
+  border: 1px solid black;
+  background: white;
+}
+.table-box-corners-interactive > .table-box-corner {
+  pointer-events: initial;
+}
+
+.table-box-corners-visible > .table-box-corner {
+  display: initial;
+}
+
+.table-box-corner-top-left {
+  top: -1px;
+  left: -1px;
+}
+.table-box-corners-interactive > .table-box-corner-top-left {
+  cursor: crosshair;
+}
+.disabled .table-box-corners-interactive > .table-box-corner-top-left {
+  cursor: default;
+}
+
+.table-box-corner-top-right {
+  top: -1px;
+  right: -1px;
+}
+.table-box-corners-interactive > .table-box-corner-top-right {
+  cursor: crosshair;
+}
+.disabled .table-box-corners-interactive > .table-box-corner-top-right {
+  cursor: default;
+}
+
+.table-box-corner-bottom-left {
+  bottom: -1px;
+  left: -1px;
+}
+.table-box-corners-interactive > .table-box-corner-bottom-left {
+  cursor: crosshair;
+}
+.disabled .table-box-corners-interactive > .table-box-corner-bottom-left {
+  cursor: default;
+}
+
+.table-box-corner-bottom-right {
+  bottom: -1px;
+  right: -1px;
+}
+.table-box-corners-interactive > .table-box-corner-bottom-right {
+  cursor: crosshair;
+}
+.disabled .table-box-corners-interactive > .table-box-corner-bottom-right {
+  cursor: default;
+}
+
+.table-col-resize-disabled .table-box-class-colresizer {
+  display: none;
+}
+
+.table-row-resize-disabled .table-box-class-rowresizer {
+  display: none;
+}
+
+.table-blurred .table-box-class-focusbox {
+  display: none;
+}
+
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 1.2em;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1.5em;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-code-block-one-line, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-code-block-one-line {
+  line-height: 1.4em;
+  padding-top: 0.1em;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 1.2em;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 1;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 1.2;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 1.2;
+}
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 1.2em;
+}
+
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 1.1em;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1.4em;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 1.1em;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 0.9;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 1.1;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 1.1;
+}
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 1.1em;
+}
+
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 1em;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1.3em;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 1em;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 0.8;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 1;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 1;
+}
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 1em;
+}
+
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 0.9em;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1.2em;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 0.9em;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 0.7;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 0.9;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 0.9;
+}
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 0.9em;
+}
+
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 0.8em;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1.1em;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 0.8em;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 0.6;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 0.8;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 0.8;
+}
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 0.8em;
+}
+
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label {
+  line-height: 0.7em;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).label.sys-small, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .label.sys-small {
+  line-height: 1em;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).button .label, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .button .label {
+  line-height: 0.7em;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).entry, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .entry {
+  line-height: 0.5;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).checkbox, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .checkbox, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).radio, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .radio {
+  line-height: 0.7;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).combobox2 input, .table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout) .combobox2 input {
+  line-height: 0.7;
+}
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot .widget:not(.sys-table-keep-original-layout).progressbar {
+  line-height: 0.7em;
+}
+
+.table-default-body-row-height-19 .table-body-row-region .table-cell-slot {
+  line-height: 1.2em;
+}
+
+.table-default-body-row-height-17 .table-body-row-region .table-cell-slot {
+  line-height: 1.1em;
+}
+
+.table-default-body-row-height-15 .table-body-row-region .table-cell-slot {
+  line-height: 1em;
+}
+
+.table-default-body-row-height-14 .table-body-row-region .table-cell-slot {
+  line-height: 0.9em;
+}
+
+.table-default-body-row-height-13 .table-body-row-region .table-cell-slot {
+  line-height: 0.8em;
+}
+
+.table-default-body-row-height-12 .table-body-row-region .table-cell-slot {
+  line-height: 0.7em;
+}
+
+.table-default-body-row-height-19 .table-label.table-index-cell {
+  line-height: 1.5em;
+}
+
+.table-default-body-row-height-17 .table-label.table-index-cell {
+  line-height: 1.4em;
+}
+
+.table-default-body-row-height-15 .table-label.table-index-cell {
+  line-height: 1.3em;
+}
+
+.table-default-body-row-height-14 .table-label.table-index-cell {
+  line-height: 1.2em;
+}
+
+.table-default-body-row-height-13 .table-label.table-index-cell {
+  line-height: 1.1em;
+}
+
+.table-default-body-row-height-12 .table-label.table-index-cell {
+  line-height: 1em;
+}

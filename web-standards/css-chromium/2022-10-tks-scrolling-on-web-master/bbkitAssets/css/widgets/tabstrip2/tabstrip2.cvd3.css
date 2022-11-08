@@ -1,0 +1,319 @@
+*:focus {
+  outline: none;
+}
+
+.tabstrip2 {
+  height: 29px;
+}
+
+.tabstrip2 .tabstrip-tabs {
+  height: 29px;
+}
+
+@-webkit-keyframes tabstrip-tab-slideup {
+  from {
+    top: 29px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes tabstrip-tab-slidedown {
+  from {
+    top: 0;
+  }
+  to {
+    top: 29px;
+  }
+}
+.tabstrip2 .tabstrip-tab {
+  height: 25px;
+  padding-top: 4px;
+  margin: 4px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: #bebebe;
+}
+.tabstrip2 .tabstrip-tab.noanim {
+  -webkit-animation: none !important;
+  -webkit-transition-property: none !important;
+  -webkit-transform: none !important;
+}
+.tabstrip2 .tabstrip-tab:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.tabstrip2 .tabstrip-tab:hover .tabstrip-close {
+  background-position: center -66px;
+}
+.tabstrip2 .tabstrip-tab:hover .tabstrip-close:hover {
+  background-color: #424242;
+  background-position: center -24px;
+}
+.tabstrip2 .tabstrip-tab:hover .tabstrip-close:active {
+  background-color: #242424;
+  background-position: center -45px;
+}
+.tabstrip2 .tabstrip-tab.newtab {
+  -webkit-animation-name: tabstrip-tab-slideup;
+  -webkit-animation-duration: 0.1s;
+}
+.tabstrip2 .tabstrip-tab.closetab {
+  -webkit-animation-name: tabstrip-tab-slidedown;
+  -webkit-animation-duration: 0.1s;
+}
+.tabstrip2 .tabstrip-tab.selected {
+  height: 29px;
+  padding-top: 8px;
+  margin: 0;
+  background-color: #191919;
+  border: 1px solid transparent;
+  border-bottom: none;
+  box-shadow: inset 0px 2px 0 #d7d7d7;
+}
+.tabstrip2 .tabstrip-tab.selected .tabstrip-close {
+  background-position: center -3px;
+}
+.tabstrip2 .tabstrip-tab.selected .tabstrip-close:hover {
+  background-color: #373737;
+  background-position: center -24px;
+}
+.tabstrip2 .tabstrip-tab.selected .tabstrip-close:active {
+  background-color: #191919;
+  background-position: center -45px;
+}
+.tabstrip2 .tabstrip-tab.moving {
+  -webkit-transition: left ease-in-out 0s;
+  -webkit-animation-name: none;
+}
+.window-state-blur .tabstrip2 .tabstrip-tab {
+  background-color: rgba(0, 0, 0, 0.39);
+  color: #bebebe;
+}
+.window-state-blur .tabstrip2 .tabstrip-tab:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.window-state-blur .tabstrip2 .tabstrip-tab:hover .tabstrip-close {
+  background-position: center -3px;
+}
+.window-state-blur .tabstrip2 .tabstrip-tab.selected {
+  background-color: #191919;
+  box-shadow: inset 0px 2px 0 #646464;
+  color: #d7d7d7;
+}
+.window-state-blur .tabstrip2 .tabstrip-tab.selected:hover {
+  color: #d7d7d7;
+}
+
+.tabstrip2 .tabstrip-content-holder {
+  left: 7px;
+  right: 24px;
+}
+
+.tabstrip2 .tabstrip-close {
+  height: 15px;
+  width: 15px;
+  right: 4px;
+  background: url(/bbkitAssets/images/tabclose.svg) no-repeat center 2000px;
+  background-size: 21px 84px;
+}
+
+.tabstrip2 .tabstrip-addtab,
+.tabstrip2 .tabstrip-overflow-scroll {
+  height: 20px;
+  width: 20px;
+  margin-top: 6px;
+  background-repeat: no-repeat;
+}
+.tabstrip2 .tabstrip-addtab:hover,
+.tabstrip2 .tabstrip-overflow-scroll:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.tabstrip2 .tabstrip-addtab:active,
+.tabstrip2 .tabstrip-overflow-scroll:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.window-state-blur .tabstrip2 .tabstrip-addtab:hover,
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabstrip2 .tabstrip-addtab {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+  background-position: center;
+  background-size: 12px;
+  margin-left: 2px;
+}
+.tabstrip2 .tabstrip-addtab:hover {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+}
+.tabstrip2 .tabstrip-addtab:active {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+}
+.window-state-blur .tabstrip2 .tabstrip-addtab {
+  background-image: url(/bbkitAssets/images/tabadd.svg);
+}
+.window-state-blur .tabstrip2 .tabstrip-addtab:hover {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+}
+.window-state-blur .tabstrip2 .tabstrip-addtab:active {
+  background-image: url(/bbkitAssets/images/tabadd_black.svg);
+}
+
+.tabstrip2 .tabstrip-overflow-scroll {
+  background-size: 7px 10px;
+  background-position: center;
+}
+.tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right {
+  background-image: url(/bbkitAssets/images/taboverflow_left_black.svg);
+  margin-left: 2px;
+}
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right {
+  background-image: url(/bbkitAssets/images/taboverflow_left.svg);
+}
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:hover, .window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:active {
+  background-image: url(/bbkitAssets/images/taboverflow_left_black.svg);
+}
+.tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left {
+  background-image: url(/bbkitAssets/images/taboverflow_right_black.svg);
+  margin-right: 2px;
+  margin-left: 1px;
+}
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left {
+  background-image: url(/bbkitAssets/images/taboverflow_right.svg);
+}
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:hover, .window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:active {
+  background-image: url(/bbkitAssets/images/taboverflow_right_black.svg);
+}
+.tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:hover, .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:active, .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left:hover, .window-state-blur .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left.disabled, .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-left.disabled:hover, .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right.disabled, .tabstrip2 .tabstrip-overflow-scroll.tabstrip-overflow-scroll-right.disabled:hover {
+  background-color: transparent;
+  opacity: 0.4;
+}
+
+.tabstrip-tab .style-tab-hotspot-link {
+  margin: 0;
+  border-radius: 0;
+  min-height: 13px;
+}
+.tabstrip-tab .style-tab-hotspot-link.dropdownbutton.sys-compact {
+  padding: 0;
+  background-color: transparent;
+}
+.tabstrip-tab .style-tab-hotspot-link.style-link-group {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background: #1F2A3D;
+  color: black;
+  font-weight: bold;
+  border-color: #646464;
+}
+.tabstrip-tab .style-tab-hotspot-link.style-link-group:hover, .tabstrip-tab .style-tab-hotspot-link.style-link-group:active {
+  background: #1F2A3D;
+  box-shadow: none;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent .button-content .button-img {
+  height: 13px;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover, .tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active {
+  box-shadow: none;
+  border: none;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover .button-content, .tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active .button-content {
+  background-image: url(/bbkitAssets/images/link-browser-sprite.png);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:hover .button-content {
+  background-position: center -12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.btn-imagepresent:active .button-content {
+  background-position: center -38px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.tabstrip-tab.selected .style-tab-hotspot-link.style-link-group {
+  border-color: #1e1e1e;
+}
+
+.tabstrip2 .tabstrip-overflow {
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+  padding: 3px 7px;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center 5px;
+}
+.tabstrip2 .tabstrip-overflow:hover {
+  border-color: #8c8c8c;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center 5px, -webkit-linear-gradient(top, #bebebe, #a5a5a5);
+}
+.tabstrip2 .tabstrip-overflow:active {
+  border-color: #646464;
+  background: url(/bbkitAssets/images/taboverflow.png) no-repeat center -13px, -webkit-linear-gradient(top, #8c8c8c, #787878);
+}
+.tabstrip2 .tabstrip-overflow.hidden {
+  display: none;
+}
+
+/* OVERRIDES FOR WINDOW FULL TRANSPARENT */
+.window-effect-glass .tabstrip2 {
+  height: 29px;
+}
+.window-effect-glass .tabstrip2 .tabstrip-tabs {
+  height: 29px;
+  margin-left: 1px;
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-tab {
+  height: 25px;
+  margin-top: 3px;
+  background-color: rgba(52, 52, 52, 0.9);
+  border-color: rgba(26, 26, 26, 0.9);
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-tab:hover {
+  background-color: rgba(62, 62, 62, 0.9);
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-tab.selected {
+  height: 29px;
+  padding-top: 7px;
+  margin-top: 0px;
+  border-color: rgba(26, 26, 26, 0.9);
+  background-color: #1e1e1e;
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-addtab {
+  background-position: 5px 6px;
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll,
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-addtab {
+  background-color: rgba(52, 52, 52, 0.9);
+  height: 25px;
+  border-color: rgba(26, 26, 26, 0.9);
+  border-bottom-width: 1px;
+  margin-top: 3px;
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll:hover,
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-addtab:hover {
+  background-color: rgba(62, 62, 62, 0.9);
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll:active,
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-addtab:active {
+  background-color: rgba(26, 26, 26, 0.9);
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll {
+  background-image: url(/bbkitAssets/images/wft_tab_overflow_sprite.png);
+}
+.window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll.disabled, .window-effect-glass .tabstrip2.sys-transparent-tabstrip .tabstrip-overflow-scroll.disabled:hover {
+  background-color: rgba(52, 52, 52, 0.9);
+  border-color: rgba(26, 26, 26, 0.9);
+  opacity: 0.8;
+}

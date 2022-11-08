@@ -1,0 +1,13 @@
+.slider-bar {
+  position: relative;
+  height: 50px;
+  width: 300px;
+}
+
+.slider-bar-impl {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

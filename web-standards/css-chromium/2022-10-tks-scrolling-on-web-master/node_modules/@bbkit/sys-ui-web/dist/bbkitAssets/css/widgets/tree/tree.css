@@ -1,0 +1,22 @@
+.tree-expander-none {
+  display: inline-block;
+}
+
+.tree-expander-closed {
+  display: inline-block;
+}
+
+.tree-expander-open {
+  display: inline-block;
+}
+
+.tree-child::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: top;
+}
+.tree-child:last-child::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: top;
+}

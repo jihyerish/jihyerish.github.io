@@ -1,0 +1,126 @@
+*:focus {
+  outline: none;
+}
+
+.frame {
+  /**** just in case someone is using this style already  ***/
+}
+.frame.sys-border {
+  border: 1px solid #646464;
+}
+.frame.sys-group {
+  background: #282828;
+  padding: 0.25em;
+}
+.frame.sys-group > .separator.horz {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+.frame.sys-group > .sys-group-header {
+  background: #232323;
+  border-bottom: 1px solid #111111;
+  margin: -0.25em -0.25em 0px -0.25em;
+  padding: 0.125em 0.25em 0.25em 0.25em;
+}
+.frame.sys-group > .sys-group-content {
+  padding-top: 0.25em;
+}
+.frame.sys-group .sys-group-listing {
+  background: #232323;
+  border-right: 1px solid #111111;
+  margin: -0.25em 0px -0.25em -0.25em;
+  padding: 0.25em 0px;
+}
+.frame.sys-group .sys-group-detail {
+  padding-left: 0.6em;
+}
+.frame.sys-group-pod {
+  background-color: #1e1e1e;
+  border-radius: 0px;
+  padding: 10px;
+}
+.frame.sys-frame, .frame.sys-frame-noborder-darker {
+  background: #232323;
+}
+.frame.sys-maincontent {
+  margin: 5px;
+}
+.frame.sys-tile {
+  background-color: #1e1e1e;
+  box-shadow: inset 0px 1px 0px #414141;
+}
+.frame.sys-tile.sys-outlier-negative {
+  box-shadow: inset 0px 0px 0px 3px #FF001E;
+}
+.frame.sys-tile.sys-outlier-negative > .frame-header {
+  background-color: #FF001E;
+  color: #fbfbfb;
+}
+.frame.sys-tile.sys-outlier-positive {
+  box-shadow: inset 0px 0px 0px 3px #00FF3C;
+}
+.frame.sys-tile.sys-outlier-positive > .frame-header {
+  background-color: #00FF3C;
+  color: #000000;
+}
+.frame.sys-tile.sys-outlier-neutral-high {
+  box-shadow: inset 0px 0px 0px 3px #3383FF;
+}
+.frame.sys-tile.sys-outlier-neutral-high > .frame-header {
+  background-color: #3383FF;
+  color: #fbfbfb;
+}
+.frame.sys-tile.sys-outlier-neutral-low {
+  box-shadow: inset 0px 0px 0px 3px #FF5B00;
+}
+.frame.sys-tile.sys-outlier-neutral-low > .frame-header {
+  background-color: #FF5B00;
+  color: #fbfbfb;
+}
+.frame.sys-tile .sys-tile-chart {
+  border-top: 1px solid #505050;
+  border-bottom: 1px solid #505050;
+}
+
+.frame-header {
+  background: -webkit-linear-gradient(top, #232323, #202020);
+  box-shadow: 0px 1px 0px #2C2C2C inset;
+  color: #fbfbfb;
+  padding: 3px 8px;
+}
+.sys-compact > .frame-header {
+  padding: 0;
+}
+.sys-tile > .frame-header {
+  background: none;
+  box-shadow: none;
+  padding: 0.167em 0.25em;
+  /* Once sys-tile-no-padding is being used, replace the padding above with:
+  padding: 0;
+  height: 19px;
+  // references to sys-tile-no-padding should be removed from charts-caap/rplus
+  // once these properties finish rolling out. */
+  color: #fbfbfb;
+  font-size: 12px;
+}
+.sys-tile > .frame-header .sys-tile-title-alert {
+  width: 17px;
+  height: 17px;
+  background-color: #ffe100;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.sys-tile.sys-tile-no-padding > .frame-header {
+  padding: 0;
+  height: 19px;
+}
+
+.frame-content {
+  padding: 3px 8px;
+}
+.sys-compact > .frame-content {
+  padding: 0;
+}
+.sys-tile > .frame-content {
+  padding: 0 0.2em;
+}

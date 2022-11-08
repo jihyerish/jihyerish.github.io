@@ -1,0 +1,487 @@
+*:focus {
+  outline: none;
+}
+
+/* menulist shared */
+.menulist.sys-navigator {
+  background-color: #1e1e1e;
+  border: 0px;
+  box-shadow: none;
+  color: #bebebe;
+}
+.menulist .button,
+.menulist .entry,
+.menulist .sys-groupbutton-wrapper .checkbox,
+.menulist .sys-groupbutton-wrapper .radio {
+  font-size: 1em;
+}
+.menulist .button,
+.menulist .entry,
+.menulist .pill,
+.menulist .checkbutton,
+.menulist .radio {
+  font-size: 1em;
+}
+.menulist .sys-link {
+  color: #a5a5a5;
+}
+.menulist .menulist-selected {
+  background-color: #1e1e1e;
+  border-bottom-color: #454545;
+  color: #fbfbfb;
+}
+.menulist:not(.disabled) .menulist-selected:hover {
+  background-color: #1e1e1e;
+}
+
+.menulist-table {
+  padding: 12px 0px;
+}
+.menulist-no-content .menulist-table {
+  padding: 0;
+}
+
+.menulist-no-content {
+  padding: 0px;
+}
+
+.menulist-sub, .menulist-twisty {
+  padding-right: 10px;
+  border-top: 3px solid transparent;
+  border-left: 4px solid #d7d7d7;
+  border-right: none;
+  border-bottom: 3px solid transparent;
+}
+.disabled .menulist-sub, .disabled .menulist-twisty {
+  border-left-color: #787878;
+}
+
+.menulist-twisty {
+  border-left-color: #a5a5a5;
+  border-width: 4px 0px 4px 4px;
+  padding-right: 0px;
+  margin-left: 10px;
+}
+.expanded .menulist-twisty {
+  -webkit-transform: rotateZ(90deg);
+}
+.menulist:not(.disabled) .menulist-twisty:hover {
+  border-left-color: #fbfbfb;
+}
+.highlight .menulist-twisty {
+  border-left-color: #fbfbfb;
+}
+.child-level .menulist-twisty {
+  margin-left: 0px;
+}
+
+.menulist-header-area,
+.menulist-footer-area {
+  font-size: 0.8em;
+  padding: 6px 10px;
+}
+
+.menulist-footer-area {
+  border-top: 1px solid #000;
+  box-shadow: inset 0px 1px #232323;
+}
+
+.menulist-decorators {
+  min-width: 30px;
+}
+.menulist-decorators.compact, .menulist.sys-compact .menulist-decorators {
+  min-width: 12px;
+}
+.sys-dropdown-menulist .menulist-header .menulist-decorators {
+  min-width: 24px;
+}
+.sys-navigator .menulist-decorators:not(.normal-width) {
+  min-width: 10px;
+}
+.sys-navigator .menulist-decorators.small-indent {
+  min-width: 10px;
+}
+.sys-navigator .menulist-decorators.no-indent {
+  min-width: 0px;
+}
+
+.menulist-row, .menulist-header-spacer {
+  font-size: 0.866666em;
+}
+
+.menulist-row {
+  padding-right: 12px;
+}
+.menulist-row.postcontent {
+  text-align: right;
+}
+.menulist-row.sub {
+  padding-right: 21px;
+}
+.menulist-row.sub:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  border-top: 3px solid transparent;
+  border-left: 4px solid #000000;
+  border-right: none;
+  border-bottom: 3px solid transparent;
+}
+.menulist-row.nocontent {
+  padding-right: 0px;
+}
+.menulist-row.nocontent.sub {
+  padding-right: 21px;
+}
+.menulist-row > .precontent, .menulist-row > .content, .menulist-row > .postcontent {
+  padding-right: 12px;
+}
+.menulist-row > .precontent {
+  color: #d7d7d7;
+}
+.menulist-row > .postcontent {
+  color: #a5a5a5;
+}
+.menulist-row > .linkicon {
+  padding-right: 5px;
+}
+.menulist-row > .linkicon > .button {
+  visibility: hidden;
+}
+
+.expandable-row {
+  color: #fbfbfb;
+}
+
+.selectable-row.emphasis {
+  background: #925b17;
+}
+.selectable-row.selected {
+  background: #1F2A3D;
+}
+.sys-navigator .selectable-row.selected {
+  background-color: #1F2A3D;
+  color: #fbfbfb;
+}
+.sys-navigator .selectable-row.selected.menulist-row > .postcontent {
+  color: #a5a5a5;
+}
+.menulist:not(.disabled) .selectable-row:hover, .selectable-row.hover {
+  background-color: #373737;
+}
+.menulist:not(.disabled) .selectable-row:hover.selected, .sys-navigator .menulist:not(.disabled) .selectable-row:hover.selected, .selectable-row.hover.selected, .sys-navigator .selectable-row.hover.selected {
+  background-color: #1F2A3D;
+}
+.sys-navigator .menulist:not(.disabled) .selectable-row:hover, .sys-navigator .selectable-row.hover {
+  background-color: #2e2e2e;
+}
+.menulist:not(.disabled) .selectable-row:hover .menulist-cell.linkicon > .button, .selectable-row.hover .menulist-cell.linkicon > .button {
+  visibility: visible;
+}
+.selectable-row.disabled, .selectable-row:disabled, menulist.disabled .selectable-row {
+  cursor: default;
+  color: #787878;
+}
+.sys-navigator .selectable-row.disabled, .sys-navigator .selectable-row:disabled, .sys-navigator menulist.disabled .selectable-row {
+  color: #646464;
+}
+
+.menulist-close {
+  margin-right: 5px;
+  display: -webkit-flex;
+}
+
+.menulist-header {
+  color: #fbfbfb;
+  font-size: 0.8em;
+}
+.sys-navigator .menulist-header {
+  font-family: "BB.Proportional";
+}
+
+.menulist-separator {
+  position: relative;
+}
+.menulist:not(.disabled) .menulist-separator:hover, .menulist:not(.disabled) .menulist-separator.hover {
+  background: transparent;
+}
+.menulist-separator > .menulist-cell {
+  position: relative;
+}
+.menulist-separator > .menulist-cell::after {
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 1px #232323;
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  width: 100%;
+}
+.sys-navigator .menulist-separator > .menulist-cell {
+  box-shadow: none;
+}
+
+.menulist-separator-line {
+  position: absolute;
+  width: 100%;
+}
+
+.menulist-cell .label {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.menulist-check,
+.menulist-icon,
+.menulist-radio {
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+}
+
+.menulist-icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+  margin-top: 0px;
+  width: 100%;
+}
+.disabled .menulist-icon {
+  opacity: 0.5;
+}
+
+.menulist-radio {
+  border-radius: 6px;
+  border: 1px solid #000000;
+  position: relative;
+  height: 13px;
+  margin: 0px 0px 0px 4px;
+  width: 13px;
+  bottom: -1px;
+  vertical-align: baseline;
+  bottom: 0px;
+  height: 0.85em;
+  width: 0.85em;
+  background: -webkit-linear-gradient(top, #565656, #4a4a4a);
+  box-shadow: inset 0px 1px 0px #646464, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.contolregion .menulist-radio, .sys-controlregion .menulist-radio, .sys-small .menulist-radio, .sys-heading .menulist-radio, .sys-footer .menulist-radio, .sys-level1 .menulist-radio, .sys-level2 .menulist-radio {
+  bottom: -2px;
+}
+.menulist-radio:hover {
+  background: -webkit-linear-gradient(top, #6c6c6c, #606060);
+  box-shadow: inset 0px 1px 0px #7f7f7f, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-radio:active, .menulist-radio.active {
+  background: #3a3a3a;
+  box-shadow: inset 0px 1px 0px #2f2f2f, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.disabled .menulist-radio {
+  background: #2a2a2a;
+  box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-radio.visible {
+  background: -webkit-linear-gradient(top, #40a0ff, #2391ff);
+  box-shadow: inset 0px 1px 0px #4fa7ff, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-radio.visible::before {
+  border: 1px solid #000000;
+  background-color: #000000;
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: 0.23em;
+  height: 0.23em;
+  left: 0.23em;
+  top: 0.23em;
+}
+.menulist-radio.visible:hover {
+  background: -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+  box-shadow: inset 0px 1px 0px #84c2ff, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-radio.visible:active {
+  background: #006aa8;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px #00578a, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.disabled .menulist-radio.visible {
+  background: #333333;
+  border-color: #000000;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.disabled .menulist-radio {
+  opacity: 0.5;
+}
+
+.menulist-check {
+  border: 1px solid #000000;
+  border-radius: 2px;
+  height: 13px;
+  padding: 0px;
+}
+.menulist-check.visible {
+  background: -webkit-linear-gradient(top, #565656, #4a4a4a);
+  box-shadow: inset 0px 1px 0px #646464, 0px 1px 0px rgba(255, 255, 255, 0.1);
+  width: 13px;
+}
+.menulist-check.visible:hover {
+  background: -webkit-linear-gradient(top, #6c6c6c, #606060);
+  box-shadow: inset 0px 1px 0px #7f7f7f, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-check.visible:active, .menulist-check.visible.active {
+  background: #3a3a3a;
+  box-shadow: inset 0px 1px 0px #2f2f2f, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.disabled .menulist-check.visible {
+  background: #2a2a2a;
+  box-shadow: inset 0px 1px 0px #333333, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-check.visible.checked {
+  background: url(../resources/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(top, #40a0ff, #2391ff);
+  border-color: #141414;
+  box-shadow: inset 0px 1px 0px #4fa7ff, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-check.visible.checked:hover {
+  background: url(../resources/images/checkbox_check.png) center center no-repeat, -webkit-linear-gradient(bottom, #7abdff, #5dafff);
+  box-shadow: inset 0px 1px 0px #84c2ff, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.menulist-check.visible.checked:active {
+  background: url(../resources/images/checkbox_check.png) center center no-repeat, #006aa8;
+  border-color: #000000;
+  box-shadow: inset 0px 1px 0px #00578a, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.disabled .menulist-check.visible.checked {
+  background: url(../resources/images/checkbox_check.png) center center no-repeat, #333333;
+  border-color: #000000;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.menulist-item-precontent {
+  font-weight: bold;
+}
+
+.menulist-item-postcontent {
+  color: #a5a5a5;
+}
+
+.sys-redmenu:not(.disabled) .selectable-row:hover, .sys-redmenu:not(.disabled) .selectable-row.hover, .sys-redmenu:not(.disabled) .selectable-row:hover.selected {
+  background-color: #6d0510;
+}
+.sys-redmenu:not(.disabled) .selectable-row:hover .menulist-cell, .sys-redmenu:not(.disabled) .selectable-row.hover .menulist-cell, .sys-redmenu:not(.disabled) .selectable-row:hover.selected .menulist-cell {
+  box-shadow: none;
+}
+.sys-redmenu .selectable-row.selected {
+  background-color: transparent;
+  box-shadow: none;
+}
+.sys-redmenu .menulist-check.visible {
+  border: 1px solid #fbfbfb;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.sys-redmenu .menulist-check.visible, .sys-redmenu .menulist-check:hover, .sys-redmenu .menulist-check:active, .sys-redmenu .menulist-check.checked, .disabled .sys-redmenu .menulist-check {
+  background: transparent;
+}
+.sys-redmenu .menulist-check.visible.checked {
+  border-color: #fbfbfb;
+  background: url(../resources/images/checkmark.png) center center no-repeat;
+  box-shadow: none;
+}
+.sys-redmenu .disabled .menulist-check,
+.sys-redmenu .disabled .menulist-check.checked {
+  border-color: #787878;
+  box-shadow: none;
+}
+.sys-redmenu .menulist-radio {
+  background-color: transparent;
+}
+.sys-redmenu .menulist-radio.visible {
+  width: 28px;
+}
+.sys-redmenu .menulist-separator {
+  box-shadow: none;
+}
+.sys-redmenu .menulist-separator > .menulist-cell::after {
+  border-bottom: 1px solid #5a0a15;
+}
+.sys-demo-mode .sys-redmenu {
+  background-color: #00e6ff;
+  color: #000000;
+}
+.sys-demo-mode .sys-redmenu .menulist-check.visible {
+  border: 1px solid #000000;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.sys-demo-mode .sys-redmenu .menulist-check.visible.checked {
+  border-color: #000000;
+  background: url(../resources/images/checkbox_check.png) center center no-repeat;
+}
+.sys-demo-mode .sys-redmenu:not(.disabled) .selectable-row:hover, .sys-demo-mode .sys-redmenu:not(.disabled) .selectable-row.hover, .sys-demo-mode .sys-redmenu:not(.disabled) .selectable-row:hover.selected {
+  background-color: #84f3ff;
+  color: #000000;
+}
+.sys-demo-mode .sys-redmenu .menulist-sub, .sys-demo-mode .sys-redmenu .menulist-twisty {
+  border-left: 4px solid #333;
+}
+.sys-demo-mode .sys-redmenu .menulist-separator {
+  box-shadow: none;
+}
+.sys-demo-mode .sys-redmenu .menulist-separator > .menulist-cell::after {
+  border-bottom: 1px solid #21aaba;
+}
+.sys-demo-mode .sys-redmenu .sys-output {
+  color: #333;
+}
+
+.menulist-row {
+  line-height: 1.417;
+  padding-right: 22px;
+}
+.menulist-row .label {
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.menulist-header .label {
+  line-height: 1.6;
+}
+.menulist-header > .menulist-cell:nth-child(3) {
+  height: 1.584em;
+}
+.menulist-header > .menulist-cell:nth-child(3) > .button .label {
+  line-height: 1.417;
+}
+
+.menulist-separator {
+  height: 19px;
+}
+
+.menulist-check.visible {
+  border: solid 1px #000000;
+  width: 13px;
+}
+
+.menulist-icon {
+  height: 1.491em;
+}
+
+.selectable-row.whats-new {
+  background-color: #ffe100;
+  color: #000000;
+}
+.menulist:not(.disabled) .selectable-row.whats-new:hover, .menulist:not(.disabled) .selectable-row.whats-new.hover {
+  background-color: #ffed66;
+}
+.selectable-row.whats-new .menulist-sub, .selectable-row.whats-new .menulist-twisty {
+  border-left-color: #000000;
+}
+
+.sys-redmenu .selectable-row.selected .menulist-cell {
+  box-shadow: none;
+}
+.sys-redmenu .menulist-separator > .menulist-cell::after {
+  box-shadow: none;
+  border-bottom-color: #5a0a15;
+}

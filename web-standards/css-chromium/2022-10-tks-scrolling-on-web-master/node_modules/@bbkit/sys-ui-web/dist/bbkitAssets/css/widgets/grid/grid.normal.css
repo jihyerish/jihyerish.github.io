@@ -1,0 +1,9 @@
+*:focus {
+  outline: none;
+}
+
+.grid-cell .button {
+  border-radius: 0;
+  height: 17px;
+  font-size: 12px;
+}

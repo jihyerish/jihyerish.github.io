@@ -1,0 +1,17 @@
+*:focus {
+  outline: none;
+}
+
+.tabpanelstrip-tab {
+  background: #414141;
+  border-color: transparent;
+}
+.tabpanelstrip-tab.tabpanelstrip-selected {
+  background: #646464;
+}
+.tabpanelstrip:not(.disabled) .tabpanelstrip-tab.tabpanelstrip-selected:hover {
+  background: #646464;
+}
+.tabpanelstrip:not(.disabled) .tabpanelstrip-tab:hover {
+  background: #505050;
+}

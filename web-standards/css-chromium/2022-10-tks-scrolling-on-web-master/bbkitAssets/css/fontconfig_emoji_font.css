@@ -1,0 +1,246 @@
+/* Copied from ssh://devgit/uiinf/jsblp repo "jsblp/css/fontconfig.css"
+   c076570d2997202b32cb466d7b3eda670503049e*/
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Arial");
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Arial Unicode MS");
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Bloomberg Prop Unicode N"), local("Bloomberg Prop Unicode K"), local("Bloomberg Prop Unicode I");
+  unicode-range: U+0000-20E2, U+20E4-2193, U+21A0-2219, U+2713-2713, U+FE70-FEFF, U+FB50-FDFF, U+E000-E0FF;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Bloomberg Fixed Unicode N"), local("Bloomberg Fixed Unicode K"), local("Bloomberg Fixed Unicode I");
+  unicode-range: U+e0c0-e0c9;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("MS Gothic");
+  unicode-range: U+2400-24c1, U+24c3-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3029, U+3031-303C, U+303E-3130, U+f000-fe0e, u+fe10-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Gulim");
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: local("Arial");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: local("Arial Unicode MS");
+  font-weight: 500;
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: url("../resources/fonts/Bloomberg-PropU_N-Medium.ttf") format("truetype"), local("Arial");
+  unicode-range: U+0590-05ff, U+fe70-feff, U+fb50-fdff, U+0750-077f, U+0600-06ff, U+e000-e0ff, U+0700-2219, U+0000-058f, U+2713-2713;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: local("MS Gothic");
+  font-weight: 500;
+  unicode-range: U+2400-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3130, U+f000-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.Medium.Proportional";
+  src: local("Gulim");
+  font-weight: 500;
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("Arial");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("Arial Unicode MS");
+  font-weight: 700;
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("Bloomberg Prop Unicode B Bold");
+  unicode-range: U+0000-058f, U+0590-05ff, U+fe70-feff, U+fb50-fdff, U+0750-077f, U+0600-06ff, U+e000-e0ff, U+0700-20E2, U+20E4-2193, U+21A0-2219, U+2713-2713;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("MS Gothic");
+  font-weight: 700;
+  unicode-range: U+2400-24c1, U+24c3-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3029, U+3031-303C, U+303E-3130, U+f000-fe0e, u+fe10-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.Bold.Proportional";
+  src: local("Gulim");
+  font-weight: 700;
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.Proportional";
+  src: local("Bloomberg Fixed Unicode N");
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("Arial");
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("Arial Unicode MS");
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: url("../resources/fonts/Bloomberg-Sans-PropU_N.ttf") format("truetype"), local("Bloomberg Prop Unicode N"), local("Bloomberg Prop Unicode K"), local("Bloomberg Prop Unicode I");
+  unicode-range: U+0000-20E2, U+20E4-2193, U+21A0-2219, U+2713-2713, U+FE70-FEFF, U+FB50-FDFF, U+E000-E0FF;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("Bloomberg Fixed Unicode N"), local("Bloomberg Fixed Unicode K"), local("Bloomberg Fixed Unicode I");
+  unicode-range: U+e0c0-e0c9;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("MS Gothic");
+  unicode-range: U+2400-24c1, U+24c3-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3029, U+3031-303C, U+303E-3130, U+f000-fe0e, u+fe10-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.Sans";
+  src: local("Gulim");
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: local("Arial");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: local("Arial Unicode MS");
+  font-weight: 500;
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: url("../resources/fonts/Bloomberg-Sans-PropU_N-Medium.ttf") format("truetype"), local("Arial");
+  unicode-range: U+0590-05ff, U+fe70-feff, U+fb50-fdff, U+0750-077f, U+0600-06ff, U+e000-e0ff, U+0700-2219, U+0000-058f, U+2713-2713;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: local("MS Gothic");
+  font-weight: 500;
+  unicode-range: U+2400-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3130, U+f000-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.Medium.Sans";
+  src: local("Gulim");
+  font-weight: 500;
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Lucida Console");
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Arial Unicode MS");
+  unicode-range: U+2070-208e;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Arial");
+  unicode-range: U+2000-200a, U+0218-021b, U+2212-2212;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("JoyPixels"), url("../resources/fonts/JoyPixels.ttf") format("opentype"), local("Segoe UI Symbol");
+  unicode-range: U+23, U+2A, U+30-39, U+20E3, U+200D, U+FE0F, U+203C, U+2049, U+2139, U+2194-2199, U+21A9-21AA, U+2934-2935, U+2B05-2B55, U+3030, U+303D, U+3297, U+3299, U+2300-27BF, U+1F004-1F64F, U+1F680-1F6F9, U+1F910-1F9FF, U+26000-26FFF, U+E0062-E007F;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Bloomberg Fixed Unicode N"), local("Bloomberg Fixed Unicode K"), local("Bloomberg Fixed Unicode I");
+  unicode-range: U+0000-058f, U+0590-05ff, U+fe70-feff, U+fb50-fdff, U+0750-077f, U+0600-06ff, U+e000-e0ff, U+0700-20E2, U+20E4-2193, U+21A0-2219, U+2713-2713;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Bloomberg Fixed Unicode K");
+  unicode-range: U+0020;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("MS Gothic");
+  unicode-range: U+2400-24c1, U+24c3-24e9, U+25cb-25cb, U+25ce-25d1, U+3000-3029, U+3031-303C, U+303E-3130, U+f000-fe0e, u+fe10-ffff, U+3400-dfff, U+2605-2606;
+}
+@font-face {
+  font-family: "BB.FixedWidth";
+  src: local("Gulim");
+  unicode-range: U+3131-318e, U+ac00-d790;
+}
+@font-face {
+  font-family: "BB.Crix";
+  src: local("Bloomberg Prop Crix Unicode A");
+}
+@font-face {
+  font-family: "BB.Crix";
+  src: local("Bloomberg Fixed Unicode N"), local("Bloomberg Fixed Unicode K"), local("Bloomberg Fixed Unicode I");
+  unicode-range: U+e0c0-e0c9;
+}
+@font-face {
+  font-family: "BB.AvenirRegular";
+  src: url("../resources/fonts/AvenirNextMForBBG-Regular.woff2") format("woff2"), local("Arial");
+}
+@font-face {
+  font-family: "BB.AvenirDemi";
+  src: url("../resources/fonts/AvenirNextMForBBG-Demi.woff2") format("woff2"), local("Arial Bold");
+}
+@font-face {
+  font-family: "BB.AvenirMedium";
+  src: url("../resources/fonts/AvenirNextMForBBG-Medium.woff2") format("woff2"), local("Arial");
+}
+@font-face {
+  font-family: "BB.AvenirLight";
+  src: url("../resources/fonts/AvenirNextMForBBG-Light.woff2") format("woff2"), local("Arial");
+}
+@font-face {
+  font-family: "BB.AvenirBold";
+  src: url("../resources/fonts/AvenirNextMForBBG-Bold.woff2") format("woff2"), local("Arial Bold");
+}
+@font-face {
+  font-family: "BB.AvenirItalic";
+  src: url("../resources/fonts/AvenirNextMForBBG-Italic.woff2") format("woff2"), local("Arial");
+}

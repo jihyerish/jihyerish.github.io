@@ -1,0 +1,54 @@
+*:focus {
+  outline: none;
+}
+
+a, a:visited {
+  color: #2b8eff;
+  text-decoration: none;
+}
+a:hover, a:visited:hover {
+  color: #2b8eff;
+  cursor: pointer;
+}
+a:active, a:visited:active {
+  color: #2b8eff;
+}
+.disabled a, a.disabled, .disabled a:visited, a:visited.disabled {
+  color: #2b8eff;
+  cursor: default;
+}
+
+b {
+  font-family: "BB.Bold.Proportional";
+  font-weight: normal;
+}
+
+.emojione {
+  width: 1.231em;
+  height: 1.231em;
+  vertical-align: bottom;
+  -webkit-user-drag: none;
+}
+.sys-hero-emoji .emojione {
+  font-size: 1.625em;
+  vertical-align: text-top;
+}
+
+.sys-character-picker-element a, .sys-character-picker-line a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+.sys-character-picker-element a .emojione, .sys-character-picker-line a .emojione {
+  width: 18px;
+  height: 18px;
+  padding-top: 5px;
+}
+.sys-character-picker-element:not(.disabled) a:hover, .sys-character-picker-line:not(.disabled) a:hover {
+  background-color: #bebebe;
+}
+
+.sys-character-picker-line a:first-of-type {
+  margin-left: 9px;
+}

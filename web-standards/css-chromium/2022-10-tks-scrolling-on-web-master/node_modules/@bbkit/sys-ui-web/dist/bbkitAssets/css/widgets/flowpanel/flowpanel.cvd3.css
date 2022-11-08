@@ -1,0 +1,225 @@
+*:focus {
+  outline: none;
+}
+
+.flowpanel {
+  /**** just in case someone is using this style already  ***/
+}
+.flowpanel.sys-border {
+  border: 1px solid #646464;
+}
+.flowpanel.sys-group {
+  background: #282828;
+  padding: 0.25em;
+}
+.flowpanel.sys-group > .separator.horz {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+.flowpanel.sys-group > .sys-group-header {
+  background: #232323;
+  border-bottom: 1px solid #111111;
+  margin: -0.25em -0.25em 0px -0.25em;
+  padding: 0.125em 0.25em 0.25em 0.25em;
+}
+.flowpanel.sys-group > .sys-group-content {
+  padding-top: 0.25em;
+}
+.flowpanel.sys-group .sys-group-listing {
+  background: #232323;
+  border-right: 1px solid #111111;
+  margin: -0.25em 0px -0.25em -0.25em;
+  padding: 0.25em 0px;
+}
+.flowpanel.sys-group .sys-group-detail {
+  padding-left: 0.6em;
+}
+.flowpanel.sys-group-pod {
+  background-color: #1e1e1e;
+  border-radius: 0px;
+  padding: 10px;
+}
+.flowpanel.sys-frame, .flowpanel.sys-frame-noborder-darker {
+  background: #232323;
+}
+.flowpanel.sys-small {
+  font-size: 0.866666em;
+  line-height: 1.5;
+}
+.sys-tile .flowpanel.sys-small {
+  font-size: 0.8em;
+}
+.flowpanel.sys-level1 {
+  background-color: #1e1e1e;
+  color: #d7d7d7;
+  font-size: 0.866666em;
+  padding: 0px 0px 1px;
+}
+.tabpanel .flowpanel.sys-level1 {
+  margin: -3px -6px -2px;
+}
+.tabpanel.sys-compact .flowpanel.sys-level1 {
+  margin: 0;
+}
+.flowpanel.sys-level2 {
+  background-color: #1e1e1e;
+  color: #d7d7d7;
+  font-size: 0.866666em;
+  padding: 0px 0px 1px;
+}
+.tabpanel .flowpanel.sys-level2 {
+  margin: -2px 0px -2px 0px;
+}
+.tabpanel.sys-compact .flowpanel.sys-level2 {
+  margin: 0;
+}
+.flowpanel.sys-footer {
+  background-color: #1e1e1e;
+  color: #d7d7d7;
+  font-size: 0.866666em;
+}
+.flowpanel.sys-heading {
+  background-image: -webkit-linear-gradient(top, #232323, #202020);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.06);
+  color: #d7d7d7;
+  font-size: 0.866666em;
+}
+.flowpanel.sys-alert-high {
+  background: #FA5A28;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  color: #fbfbfb;
+}
+.flowpanel.sys-chat-alert-high {
+  background: #FA5A28;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  color: #fbfbfb;
+}
+.flowpanel.sys-notification-alert {
+  background-color: #FA5A28;
+  padding: 10px;
+}
+.flowpanel.sys-blast-card {
+  background: #191919;
+  border: 1px solid #000000;
+  box-shadow: inset 3px 0px #FD9B7D;
+}
+.flowpanel.sys-chat-blast-card {
+  background: #191919;
+  border: 1px solid #000000;
+  box-shadow: inset 3px 0px #FD9B7D;
+}
+.flowpanel.sys-blast-item {
+  background: #191919;
+}
+.flowpanel.sys-expander-group {
+  background: #1e1e1e;
+}
+.flowpanel.sys-action-footer {
+  padding: 8px;
+}
+.flowpanel.sys-crop-box {
+  border: 2px solid #C99283;
+}
+.flowpanel.sys-crop-source {
+  border: 2px solid #414141;
+}
+.flowpanel.sys-maincontent {
+  padding: 5px;
+}
+.flowpanel.sys-maincontent > .flowchild-horz {
+  margin-right: 0.6em;
+}
+.flowpanel.sys-maincontent > .flowchild-horz:last-child {
+  margin-right: initial;
+}
+.flowpanel.sys-maincontent > .flowchild-vert {
+  margin-bottom: 0.6em;
+}
+.flowpanel.sys-maincontent > .flowchild-vert:last-child {
+  margin-bottom: initial;
+}
+.flowpanel.sys-maincontent > .separator.horz {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+.flowpanel.sys-maincontent > .separator.vert {
+  margin-bottom: -0.25em;
+  margin-top: -0.25em;
+}
+.flowpanel.sys-maincontent > .stackpanel > .splitterpanel.sys-extend, .flowpanel.sys-maincontent > .flowpanel > .splitterpanel.sys-extend {
+  margin: -0.25em;
+}
+.flowpanel.sys-mainbody {
+  padding: 5px;
+}
+.flowpanel.sys-bigspaced {
+  padding-top: 8px;
+  padding-left: 8px;
+}
+.flowpanel.sys-bigspaced > .flowchild-horz {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.flowpanel.sys-bigspaced > .flowchild-vert {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.flowpanel.sys-bigspaced-inner > .flowchild-horz {
+  margin-right: 8px;
+}
+.flowpanel.sys-bigspaced-inner > .flowchild-horz:last-child {
+  margin-right: 0;
+}
+.flowpanel.sys-bigspaced-inner > .flowchild-vert {
+  margin-bottom: 8px;
+}
+.flowpanel.sys-bigspaced-inner > .flowchild-vert:last-child {
+  margin-bottom: 0;
+}
+.flowpanel.sys-spaced-outer {
+  padding: 10px;
+}
+.flowpanel.sys-bigspaced-outer {
+  padding: 0.6em;
+}
+.flowpanel.sys-spaced-column > .flowchild-horz {
+  margin-right: 0.6em;
+}
+.flowpanel.sys-spaced-column > .flowchild-horz::last-child {
+  margin-right: inherit;
+}
+.flowpanel.sys-spaced-horz > .flowchild-horz {
+  margin-right: 4px;
+}
+.flowpanel.sys-spaced-horz > .flowchild-horz:last-child {
+  margin-right: 0px;
+}
+.flowpanel.sys-spaced-vert > .flowchild-vert {
+  margin-top: 8px;
+}
+.flowpanel.sys-spaced-vert > .flowchild-vert:first-child {
+  margin-top: 0px;
+}
+.flowpanel.sys-actionbar-bottom {
+  padding-top: 12px;
+}
+.flowpanel.sys-actionbar-bottom > .flowchild-vert, .flowpanel.sys-actionbar-bottom > .flowchild-horz {
+  margin-right: 8px;
+}
+.flowpanel.sys-actionbar-bottom > .flowchild-vert:last-child, .flowpanel.sys-actionbar-bottom > .flowchild-vert:only-child, .flowpanel.sys-actionbar-bottom > .flowchild-horz:last-child, .flowpanel.sys-actionbar-bottom > .flowchild-horz:only-child {
+  margin-right: 0px;
+}
+.flowpanel.sys-spaced > .flowchild-horz {
+  margin-right: 8px;
+}
+.flowpanel.sys-spaced > .flowchild-horz:last-child {
+  margin-right: inherit;
+}
+.flowpanel.sys-spaced > .flowchild-vert {
+  margin-bottom: 8px;
+}
+.flowpanel.sys-spaced > .flowchild-vert:last-child {
+  margin-bottom: inherit;
+}

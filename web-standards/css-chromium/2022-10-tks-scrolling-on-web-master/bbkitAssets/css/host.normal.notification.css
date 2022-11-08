@@ -1,0 +1,125 @@
+*:focus {
+  outline: none;
+}
+
+#window-frame {
+  border: 2px solid #d7d7d7;
+}
+.window-state-blur #window-frame {
+  border-color: #828282;
+}
+#window-frame.local-script {
+  border: 2px solid #FF0000;
+}
+.embedded #window-frame {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+.borderless #window-frame, .maximized #window-frame {
+  border: 0px;
+  border-radius: 0;
+  margin: 0;
+}
+
+#window-chrome-bar {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.sys-window-chrome {
+  background: -webkit-linear-gradient(top, #cecece, #bdbdbc);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  color: #000000;
+  height: 15px;
+  line-height: 15px;
+  width: 100%;
+}
+.window-state-blur .sys-window-chrome {
+  background: #a5a5a5;
+  color: #000000;
+}
+
+.leftMenu {
+  background: url(/bbkitAssets/images/window-menu.png) no-repeat 0 0, -webkit-linear-gradient(top, rgb(155, 155, 155), rgb(144, 144, 144));
+  border-right: 1px solid rgb(119, 119, 119);
+  width: 14px;
+  left: 0;
+  top: -2px;
+  bottom: 0;
+}
+.leftMenu:hover:not(.disabled) {
+  background: url(/bbkitAssets/images/window-menu.png) no-repeat 0 0, -webkit-linear-gradient(top, rgb(204, 204, 204), rgb(182, 182, 182));
+}
+.leftMenu:active:not(.disabled) {
+  background: url(/bbkitAssets/images/window-menu.png) no-repeat 0 0, -webkit-linear-gradient(top, rgb(164, 164, 164), rgb(168, 168, 168));
+}
+
+#app-body .style-window-options {
+  background: #ADADAD;
+  color: #000 !important;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+#app-body .style-window-options .style-window-options-item {
+  padding: 2px 5px;
+  background: #ADADAD;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+#app-body .style-window-options .style-window-options-item:hover:not(.disabled) {
+  background: #575757;
+  color: #fff !important;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  display: block;
+}
+
+.style-window-options-item .button-text {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  font-size: 10px !important;
+  color: #000 !important;
+}
+
+.sys-right-menu {
+  right: 0;
+}
+.window-state-blur .sys-right-menu {
+  background: none;
+}
+
+.window-nonresizable .sys-right-menu {
+  border-left: 1px solid #777;
+}
+.window-nonresizable.window-state-blur .sys-right-menu {
+  border-left: 1px solid #828282;
+}
+
+#tooltip {
+  border: 2px solid #333333;
+  border-radius: 3px;
+  background: black;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #F09000;
+}
+
+#tooltip::before {
+  content: ".";
+  width: 0;
+  height: 0;
+  top: -10px;
+  color: transparent;
+  border-bottom: 10px solid #333333;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}

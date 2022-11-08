@@ -1,0 +1,220 @@
+*:focus {
+  outline: none;
+}
+
+.titlebutton.style-close {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.style-close:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+}
+.titlebutton.style-close:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.style-close {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+}
+.window-state-blur .titlebutton.style-close:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+}
+.window-state-blur .titlebutton.style-close:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_close_black.png);
+}
+.titlebutton.style-close.focus {
+  box-shadow: none;
+}
+.titlebutton.style-minimize {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.style-minimize:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+}
+.titlebutton.style-minimize:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.style-minimize {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+}
+.window-state-blur .titlebutton.style-minimize:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+}
+.window-state-blur .titlebutton.style-minimize:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_minimize_black.png);
+}
+.titlebutton.style-minimize.focus {
+  box-shadow: none;
+}
+.titlebutton.style-maximize {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.style-maximize:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+}
+.titlebutton.style-maximize:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.style-maximize {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+}
+.window-state-blur .titlebutton.style-maximize:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+}
+.window-state-blur .titlebutton.style-maximize:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_maximize_black.png);
+}
+.titlebutton.style-maximize.focus {
+  box-shadow: none;
+}
+.titlebutton.style-restore {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.style-restore:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+}
+.titlebutton.style-restore:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.style-restore {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+}
+.window-state-blur .titlebutton.style-restore:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+}
+.window-state-blur .titlebutton.style-restore:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_restore_black.png);
+}
+.titlebutton.style-restore.focus {
+  box-shadow: none;
+}
+.titlebutton.sys-chrome-share {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.sys-chrome-share:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+}
+.titlebutton.sys-chrome-share:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.sys-chrome-share {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-share:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-share:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_share_black.png);
+}
+.titlebutton.sys-chrome-share.focus {
+  box-shadow: none;
+}
+.titlebutton.sys-chrome-link {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.sys-chrome-link:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+}
+.titlebutton.sys-chrome-link:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.sys-chrome-link {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-link:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-link:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_link_black.png);
+}
+.titlebutton.sys-chrome-link.focus {
+  box-shadow: none;
+}
+.titlebutton.sys-chrome-knurling {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.sys-chrome-knurling:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+}
+.titlebutton.sys-chrome-knurling:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.sys-chrome-knurling {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-knurling:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-knurling:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_knurling_black.png);
+}
+.titlebutton.sys-chrome-knurling.focus {
+  box-shadow: none;
+}
+.titlebutton.sys-chrome-move {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.sys-chrome-move:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+}
+.titlebutton.sys-chrome-move:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.sys-chrome-move {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-move:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-move:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_move_black.png);
+}
+.titlebutton.sys-chrome-move.focus {
+  box-shadow: none;
+}
+.titlebutton.sys-chrome-logoff {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titlebutton.sys-chrome-logoff:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+}
+.titlebutton.sys-chrome-logoff:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+  box-shadow: none;
+}
+.window-state-blur .titlebutton.sys-chrome-logoff {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-logoff:hover:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+}
+.window-state-blur .titlebutton.sys-chrome-logoff:active:not(.disabled) {
+  background-image: url(/bbkitAssets/images/chrome_logoff_black.png);
+}
+.titlebutton.sys-chrome-logoff.focus {
+  box-shadow: none;
+}
