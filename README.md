@@ -16,6 +16,7 @@ Demos created by Jihye Hong (@jihyerish)
 * Observers in the Web Demos
   * [MutationObserver](https://jihyerish.github.io/demos/observers-sample/mutation-observer)
   * [IntersectionObserver](https://jihyerish.github.io/demos/bservers-sample/intersection-observer)
+* [Others](https://jihyerish.github.io/web-standards)
 
 ## Media
 * [Media Session Demos](https://jihyerish.github.io/demos/media-session-demo/mymediaplayer)
