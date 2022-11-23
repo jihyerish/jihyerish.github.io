@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0">
-<g id="icons">
-	<rect x="10" y="3" fill="#787878" width="2" height="3"/>
-	<rect x="10" y="7" fill="#787878" width="2" height="3"/>
-	<rect x="10" y="11" fill="#787878" width="2" height="3"/>
-	<path fill="#787878" d="M0,2v12h9V2H0z M8,10H1V8h7V10z M8,7H1V5h7V7z"/>
-</g>
-</svg>

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: lightblue;
+}
+
+.left {
+  flex: 0.25;
+  background-color: lightgray;
+}
+
+.right {
+  flex: 5;
+  background-color: gray;
+  position: relative;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chat-body {
+  background-color: lightgreen;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+ul, li {
+  font-size: 28px;
+}
