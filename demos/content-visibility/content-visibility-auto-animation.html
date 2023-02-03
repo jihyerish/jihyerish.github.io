@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<div style="border: solid; content-visibility: auto">Lorem ipsum</div>
+<script>
+var target = document.querySelector("div");
+document.body.append(target.clientHeight);
+
+/*
+outer requestAnimationFrame : to update the frame => sub tree is visible
+
+requestAnimationFrame(() => requestAnimationFrame(() => {
+  document.body.append(document.createElement("br"), target.clientHeight);
+}));
+*/
+
+requestAnimationFrame(() => requestAnimationFrame(() => {
+    console.log(`1: ${target.clientHeight}\n`);
+  document.body.append(document.createElement("br"), target.clientHeight);
+  console.log(`2: ${target.clientHeight}\n`);
+}));
+
+</script>
