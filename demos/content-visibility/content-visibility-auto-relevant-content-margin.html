@@ -27,7 +27,7 @@
     const div = document.getElementById("target");
 
     div.addEventListener("contentvisibilityautostatechange", (e) => {
-        console.log(`target is relevant: ${!e.skipped}`)
+        console.log(`target is relevant: ${!e.skipped} | target size: ${div.clientWidth} x ${div.clientHeight}`)
     });
 
 </script>
