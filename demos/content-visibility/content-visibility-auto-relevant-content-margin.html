@@ -24,11 +24,10 @@
   </div>
 </div>
 <script>
-    let div = document.getElementById("target");
+    const div = document.getElementById("target");
 
-    div.addEventListener("contentvisibilityautostatechange", 
-        function(e) {
-                console.log(`state change: ${e.skipped}`);
+    div.addEventListener("contentvisibilityautostatechange", (e) => {
+        console.log(`state change: ${e.skipped}`)
     });
 
 </script>
