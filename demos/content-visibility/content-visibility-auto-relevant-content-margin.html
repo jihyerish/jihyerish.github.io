@@ -10,15 +10,6 @@
     padding-bottom: 10px;
 }
 
-.outer2 {
-    position: absolute;
-    left: -1px;
-    background: black;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    border: 1px solid slateblue;
-}
-
 .inner {
     content-visibility: auto;
     contain-intrinsic-size: 50px 50px;
@@ -29,8 +20,16 @@
 </style>
 
 <div class="outer">
-  <div class="inner">  
+  <div class="inner" id="target">  
   </div>
 </div>
+<script>
+    let div = document.getElementById("target");
 
+    div.addEventListener("contentvisibilityautostatechange", 
+        function(e) {
+                console.log(`state change: ${e.skipped}`);
+    });
+
+</script>
 </html>
