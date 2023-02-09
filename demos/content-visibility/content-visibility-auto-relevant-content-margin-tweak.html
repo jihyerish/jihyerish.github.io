@@ -1,0 +1,61 @@
+
+<!doctype html>
+<meta charset="utf8">
+<style>
+.outer {
+    position: absolute;
+    left: -1px;
+    background: black;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.inner {
+    content-visibility: auto;
+    contain-intrinsic-size: 50px 50px;
+    background: red;
+}
+
+.onscreen {
+  contain: none;
+}
+.offscreen {
+  contain: size;
+}
+</style>
+
+<div class="outer">
+  <div class="inner" id="target">  
+  </div>
+</div>
+<script>
+    const div = document.getElementById("target");
+
+    div.addEventListener("contentvisibilityautostatechange", (e) => {
+        console.log(`target is relevant: ${!e.skipped} | target size: ${div.clientWidth} x ${div.clientHeight}`)
+    });
+
+    function observed(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("onscreen");
+                entry.target.classList.remove("offscreen");
+            }
+            else {
+                entry.target.classList.add("offscreen");
+                entry.target.classList.remove("onscreen");
+            }
+        });
+    }
+
+    let observer;
+    function observeTarget(example) {
+        observer = new IntersectionObserver(observed, { threshold: 0 });
+        observer.observe(example);
+    }
+    function initialize() {
+        observeTarget(target);
+    }
+    onload = initialize;  
+</script>
+</html>
