@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <style>
+    body {
+      content: "foo";
+      background-color: green;
+    }
+    il {
+      display: inline-block;
+      padding: 5px;
+    }
+    ::target-text {
+      background-color: blue;
+      color: white;
+    }
+    body::after {
+      content: "goo";
+      background-color: red;
+    }
+  </style>
+  <h1>Test</h1>
+  <h3>Testing about getComputedStyle</h3>
+  <script>
+    const bodyElmStyle = getComputedStyle(document.body);
+    const pseudoAfterElmStyle = getComputedStyle(document.body, "::after");
+    const pseudoTargetTextElmStyle = getComputedStyle(document.body, "::target-text");    
+
+    console.log(bodyElmStyle.content);
+    console.log(bodyElmStyle.backgroundColor);
+        
+    console.log(pseudoAfterElmStyle.content);
+    console.log(pseudoAfterElmStyle.backgroundColor);
+
+    console.log(pseudoTargetTextElmStyle.content);
+    console.log(pseudoTargetTextElmStyle.backgroundColor);
+  </script>
+</body>
+</html>
