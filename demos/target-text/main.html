@@ -20,7 +20,7 @@
     }
 
     :target { 
-      color : white;
+      color: white;
     }
 
     body::after {
@@ -34,7 +34,7 @@
     const bodyElmStyle = getComputedStyle(document.body);
     const pseudoAfterElmStyle = getComputedStyle(document.body, "::after");
     const pseudoTargetTextElmStyle = getComputedStyle(document.body, "::target-text");
-    const target = getComputedStyle(document.body, "::target-text");
+    const targetStyle = getComputedStyle(document.body, ":target");
 
     console.log(bodyElmStyle.content);
     console.log(bodyElmStyle.backgroundColor);
@@ -44,6 +44,9 @@
 
     console.log(pseudoTargetTextElmStyle.content);
     console.log(pseudoTargetTextElmStyle.backgroundColor);
+
+    console.log(targetStyle.content);
+    console.log(targetStyle.color);
   </script>
 </body>
 </html>
