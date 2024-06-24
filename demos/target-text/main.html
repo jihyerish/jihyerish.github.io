@@ -15,21 +15,37 @@
       display: inline-block;
       padding: 5px;
     }
+
     ::target-text {
       background-color: blue;
     }
 
-    :target { 
+    ::target-text:target { 
       color: white;
     }
 
+    :target {
+      color: yellow;
+    }
+
     body::after {
-      content: "goo";
+      content: "Fin.";
       background-color: red;
     }
   </style>
   <h1>Test</h1>
   <h3>Testing about getComputedStyle</h3>
+  <h4 id="one">…</h4>
+  <p id="two">…</p>
+  <div id="three">…</div>
+  <a id="four">…</a>
+  <em id="five">…</em>
+
+  <a href="#one">First</a>
+  <a href="#two">Second</a>
+  <a href="#three">Third</a>
+  <a href="#four">Fourth</a>
+  <a href="#five">Fifth</a>
   <script>
     const bodyElmStyle = getComputedStyle(document.body);
     const pseudoAfterElmStyle = getComputedStyle(document.body, "::after");
