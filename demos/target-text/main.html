@@ -7,62 +7,47 @@
 </head>
 <body>
   <style>
-    body {
-      content: "foo";
-      background-color: green;
-    }
+    
     il {
       display: inline-block;
       padding: 5px;
     }
 
-    ::target-text {
-      background-color: blue;
-    }
-
-    ::target-text:target { 
+    :target::target-text { 
       color: white;
+      background-color: red;
     }
 
     :target {
-      color: yellow;
+      color: blue;
     }
 
-    body::after {
-      content: "Fin.";
-      background-color: red;
-    }
   </style>
-  <h1>Test</h1>
-  <h3>Testing about getComputedStyle</h3>
+  <h3>Testing about getComputedStyle for ::target-text</h3>
   <h4 id="one">…</h4>
   <p id="two">…</p>
   <div id="three">…</div>
   <a id="four">…</a>
   <em id="five">…</em>
 
+  <br>
   <a href="#one">First</a>
   <a href="#two">Second</a>
   <a href="#three">Third</a>
   <a href="#four">Fourth</a>
   <a href="#five">Fifth</a>
+
+  <p id="discription"></p>
   <script>
-    const bodyElmStyle = getComputedStyle(document.body);
-    const pseudoAfterElmStyle = getComputedStyle(document.body, "::after");
     const pseudoTargetTextElmStyle = getComputedStyle(document.body, "::target-text");
-    const targetStyle = getComputedStyle(document.body, ":target");
+    let discription = document.getElementById("discription");
 
-    console.log(bodyElmStyle.content);
-    console.log(bodyElmStyle.backgroundColor);
-        
-    console.log(pseudoAfterElmStyle.content);
-    console.log(pseudoAfterElmStyle.backgroundColor);
+    window.location.hash = "#:~:text=testing";
+    document.addEventListener("DOMContentLoaded", function(event) {
 
-    console.log(pseudoTargetTextElmStyle.content);
-    console.log(pseudoTargetTextElmStyle.backgroundColor);
-
-    console.log(targetStyle.content);
-    console.log(targetStyle.color);
+      discription.innerText = `Color of the target-text element: ${pseudoTargetTextElmStyle.backgroundColor}`; 
+    });
+    
   </script>
 </body>
 </html>
