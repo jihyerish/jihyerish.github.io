@@ -40,13 +40,13 @@
   <p id="discription"></p>
   <script>
     const pseudoTargetTextElmStyle = getComputedStyle(document.body, "::target-text");
-    //let pseudoTargetElmStyle = getComputedStyle(document.body.querySelector(":target"), "::target-text");
     let discription = document.getElementById("discription");
 
     window.location.hash = "#:~:text=testing";
-    document.addEventListener("DOMContentLoaded", function(event) {
+
+    window.onload = (event) => {
       discription.innerText = `Color of the target-text element: ${pseudoTargetTextElmStyle.color}`; 
-    });
+    };
   </script>
 </body>
 </html>
