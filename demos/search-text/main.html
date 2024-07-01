@@ -12,7 +12,7 @@
     }
     ::search-text {
         color: red;
-        background-color: #ef0fff;
+        background-color: pink;
     }
     ::search-text:current {
         color: blue;
@@ -28,6 +28,16 @@
     <p>the fox jumps over the dog
     <p style="color: yellow; background: magenta;">the fox jumps over the dog
     <p style="color: blue; background: lightgreen;">the fox jumps over the dog
+
+    <p id="discription"></p>
+    <script>
+      const searchTextElmStyle = getComputedStyle(document.body, "::search-text");
+      let discription = document.getElementById("discription");
+
+      window.onload = (event) => {
+        discription.innerText = `BackgroundColor of the search-text element: ${searchTextElmStyle.backgroundColor}`; 
+      };
+    </script>
 </body>
 </html>
     

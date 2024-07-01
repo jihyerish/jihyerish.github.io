@@ -13,9 +13,14 @@
       padding: 5px;
     }
 
-    ::target-text { 
+    :target::target-text { 
       color: red;
       background-color: pink;
+    }
+
+    :target {
+      color: blue;
+      background-color: skyblue;
     }
 
   </style>
@@ -35,7 +40,7 @@
 
   <p id="discription"></p>
   <script>
-    const pseudoTargetTextElmStyle = getComputedStyle(document.body, "::target-text");
+    const pseudoTargetTextElmStyle = getComputedStyle(document.body, ":target::target-text");
     let discription = document.getElementById("discription");
 
     window.location.hash = "#:~:text=testing";
