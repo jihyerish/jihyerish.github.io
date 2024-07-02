@@ -7,7 +7,8 @@ The getComputedStyle(elt, pseudoElt) method must run these steps:
     (1. Parse pseudoElt as a "pseudo-element-selector", and let type be the result)
     1. Parse pseudoElt as a "pseudo-compound-selector", and let type be the result.
     2. If type is failure, or is an ::slotted() or ::part() pseudo-element, let obj be null.
-    3. Otherwise let obj be the given pseudo-element of elt.
+    3. Otherwise let obj be the given pseudoElt of elt.
+       
     NOTE: CSS2 pseudo-elements should match both the double and single-colon versions. That is, both :before and ::before should match above.
 
 5. Let decls be an empty list of CSS declarations.
