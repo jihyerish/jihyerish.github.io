@@ -1,0 +1,45 @@
+<div>
+  <button id="loadBtn">Load Dictionary</button>
+  <button id="verifyBtn">Verify Dictionary</button>
+</div>
+
+<ul id="status"></ul>
+
+<script>
+async function loadDictionary() {
+  const statusEl = document.getElementById("status");
+  statusEl.innerHTML = "<li>Loading...</li>";
+
+  try {
+    const res = await fetch("/mydict.json");
+    const data = await res.json();
+    const { language, words } = data;
+
+    statusEl.innerHTML = "";
+    for (const word of words) {
+      document.dictionary.add(word, language);
+      statusEl.innerHTML += `<li>Added: <b>${word}</b> (${language})</li>`;
+      console.log(`[Dictionary API] Added "${word}" for ${language}`);
+    }
+  } catch (err) {
+    console.error("Error loading dictionary:", err);
+    statusEl.innerHTML = `<li style="color:red;">Error: ${err}</li>`;
+  }
+}
+
+function verifyDictionary() {
+  const statusEl = document.getElementById("status");
+  const items = statusEl.querySelectorAll("li");
+  items.forEach((li) => {
+    const text = li.textContent.match(/Added: (.+) \((.+)\)/);
+    if (text) {
+      const [ , word, lang ] = text;
+      const exists = document.dictionary.has(word, lang);
+      li.innerHTML += exists ? " ✅" : " ❌";
+    }
+  });
+}
+
+document.getElementById("loadBtn").onclick = loadDictionary;
+document.getElementById("verifyBtn").onclick = verifyDictionary;
+</script>
