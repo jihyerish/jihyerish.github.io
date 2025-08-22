@@ -20,3 +20,6 @@ Demos created by Jihye Hong (@jihyerish)
 
 ## Media
 * [Media Session Demos](https://jihyerish.github.io/demos/media-session-demo/mymediaplayer)
+
+## JS API
+* [Dictionary API](https://jihyerish.github.io/demos/document-local-dictionary/)
