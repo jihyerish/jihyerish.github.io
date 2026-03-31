@@ -1,0 +1,108 @@
+/* bold */
+@font-face {
+   font-family: 'Roboto Bold';
+   font-style: normal;
+   src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+/* Regular */
+@font-face {
+   font-family: 'Roboto Regular';
+   font-style: normal;
+   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* light */
+@font-face {
+   font-family: 'Roboto Light';
+   font-style: normal;
+   src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+:root {
+  --heading-color: #121629;
+  --font-color:#fffffe;
+  --bg-color: #232946;
+  --shadow-color: #0d0d0d;
+  --highlight-color: #b8c1ec;
+}
+
+[data-theme="light"] {
+  --heading-color: #078080;
+  --font-color: #232323;
+  --bg-color: #f8f5f2;
+  --shadow-color: #121629;
+  --highlight-color: #272343;
+}
+
+#map-canvas {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   -webkit-perspective: 500px;
+   z-index: -10px;
+}
+
+.gm-style{
+   position: relative;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   z-index: -10px;
+}
+
+.hotPlaceInfo_container{
+   width: 150px;
+   height: 100%;
+   margin:0 0;
+   padding:0 0;
+   color: var(--font-color);
+   -webkit-transform: translateX(-8px) ;
+}
+
+.cover-image:hover::after {
+  content: url(pin.png);
+  width: 25px;
+  position: absolute;
+  left: 25%;
+  top: -10%;
+  margin: 0px;
+}
+
+.continentInfo {
+   position: absolute;
+   bottom: -35px;
+   width: 100%;
+   font-family:'Roboto Bold';
+   font-size: 22px;
+   text-shadow: 1px 1px 1px var(--shadow-color);
+   white-space: nowrap;
+   overflow-x:visible;
+   text-align:center;
+}
+
+.countryInfo {
+   position: absolute;
+   bottom: -35px;
+   width: 100%;
+   font-family:'Roboto Regular';
+   font-size: 22px;
+   text-shadow: 1px 1px 1px var(--shadow-color);
+   display:block;
+   text-align:center;
+}
+
+.cityInfo {
+   position: absolute;
+   bottom: -35px;
+   width: 100%;
+   font-family:'Roboto Light';
+   font-size: 22px;
+   text-shadow: 1px 1px 1px var(--shadow-color);
+   display:block;
+   text-align:center;
+}

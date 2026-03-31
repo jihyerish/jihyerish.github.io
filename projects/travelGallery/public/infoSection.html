@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Travel Gallery - Setting Section</title>
+        <link rel="icon" href="../src/images/etc/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <script type="text/javascript" src="../src/famous/lib/require.js"></script>
+
+        <!-- theme -->
+        <link rel="stylesheet" href="../src/theme/theme_style.css" />
+        <script src="../src/theme/theme.js"></script>
+
+        <!-- menu -->
+        <link rel="stylesheet" href="../src/menu/menu_vertical.css" />
+        <script src="../src/menu/menu.js"></script>
+
+        <!-- setting -->
+        <link rel="stylesheet" href="../src/info/info_style.css" />
+        <script type="text/javascript">require(['../src/infoView']);</script>
+    </head>
+    <body>
+        <nav>
+          <div class="title">Guide</div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" checked id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </nav>
+        <div class="menu_container menu_hide" id="menu_layout">
+          <img class="menu_btn" src="../src/menu/menu_plain.svg" />
+          <div class="menu" id="home_menu">
+            <img class="menu_item" id="home_btn" src="../src/menu/icon_home.png"/>
+            <span class="menu_text">Home</span>
+          </div>
+          <div class="menu" id="map_menu">
+            <img class="menu_item" id="map_btn" src="../src/menu/icon_map.png"/>
+            <span class="menu_text">Map</span>
+          </div>
+          <div class="menu" id="info_menu">
+            <img class="menu_item" id="info_btn" src="../src/menu/icon_info.png"/>
+            <span class="menu_text">Info</span>
+          </div>
+        </div>
+        <main>
+          <section id="Gallery Selection">
+            <h2 class="subtitle">Cover Mode</h2>
+            <div class="description__plain">
+              <img class="single_image" src="../src/info/coverMode.png"></img>
+              <ul>
+                <li><span>The favorite album covers are shown.</span></li>
+                <li><span>Click one of the cover image to see what is the album is about.</span></li>
+                <li><span>Click the selected cover image one more again to open the album.
+              </ul>
+            </div>
+            <h2 class="subtitle">Map Mode</h2>
+            <div class="description__plain">
+              <img class="single_image" src="../src/info/mapMode.png"></img>
+              <ul>
+                <li><span>All album covers are shown above the map.</span></li>
+                <li><span>The albums display depending on the scale of the map (country level, city level)</span></li>
+                <li><span>Click one of the cover image to open the album.
+              </ul>
+            </div>
+          </section>
+
+          <section id="Theme">
+            <h2 class="subtitle">Gallery theme</h2>
+            <div class="description__plain">
+              <img class="two_image" src="../src/info/lightMode.png"></img>
+              <img class="two_image" src="../src/info/darkMode.png"></img>
+              <ul>
+                <li><span>Switch theme to light mode or dark mode</span></li>
+              </ul>
+            </div>
+          </section>
+       </main>
+   </div>
+</html>

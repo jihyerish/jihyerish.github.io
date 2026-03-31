@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Gallery</title>
+    <link rel="icon" href="../src/images/etc/favicon.ico"/>
+
+    <!-- shims for backwards compatibility -->
+    <script type="text/javascript" src="../src/famous/lib/require.js"></script>
+    <script type="text/javascript" src="../src/famous/lib/functionPrototypeBind.js"></script>
+    <script type="text/javascript" src="../src/famous/lib/classList.js"></script>
+    <script type="text/javascript" src="../src/famous/lib/requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="../src/famous/lib/famous.js"></script>
+
+    <!-- famous -->
+    <link rel="stylesheet" type="text/css" href="../src/famous/famous.css" />
+    <link rel="stylesheet" type="text/css" href="../src/famous/famous_styles.css" />
+
+    <!-- theme -->
+    <link rel="stylesheet" href="../src/theme/theme_style.css" />
+    <script src="../src/theme/theme.js"></script>
+
+    <!-- menu -->
+    <link rel="stylesheet" href="../src/menu/menu_vertical.css" />
+    <script src="../src/menu/menu.js"></script>
+
+    <!-- home -->
+    <link rel="stylesheet" type="text/css" href="../src/album_style.css" />
+    <script type="text/javascript">require(['../src/homeView']);  </script>
+  </head>
+
+    <body>
+      <div class="loading-panel">
+        <div class="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <nav>
+        <div class="selected-info"></div>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" checked id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+      </nav>
+      <div class="menu_container menu_hide" id="menu_layout">
+        <img class="menu_btn" src="../src/menu/menu_plain.svg" />
+        <div class="menu" id="home_menu">
+          <img class="menu_item" id="home_btn" src="../src/menu/icon_home.png"/>
+          <span class="menu_text">Home</span>
+        </div>
+        <div class="menu" id="map_menu">
+          <img class="menu_item" id="map_btn" src="../src/menu/icon_map.png"/>
+          <span class="menu_text">Map</span>          
+        </div>
+        <div class="menu" id="info_menu">
+          <img class="menu_item" id="info_btn" src="../src/menu/icon_info.png"/>
+          <span class="menu_text">Info</span>
+        </div>
+        <!--TODO: time line view-->
+        <!--div class="gallery_menu">
+          <div id="menu_gallery" class="menu_item"><img src="../src/menu/icon_people.png" /></div>
+        </!--div-->
+      </div>
+    </body>
+    </html>

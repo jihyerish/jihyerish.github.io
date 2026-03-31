@@ -1,0 +1,14 @@
+{
+  "name": "travelgallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/homeView.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jihye Hong <jihyerish@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "famous": "^0.7.1"
+  }
+}

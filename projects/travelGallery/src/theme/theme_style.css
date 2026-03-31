@@ -1,0 +1,75 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 10px;
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 10px;
+  font-size: 1rem;
+  z-index: 99999;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 44px;
+  position: relative;
+  width: 80px;
+  margin-right: 10px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 36px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 36px;
+}
+
+input:checked + .slider {
+  background-color: #5c3e83;
+}
+
+input + .slider {
+  background-color: #f45d48;
+}
+
+input:checked + .slider:before {
+  transform: translateX(36px);
+  content: url('day.png');
+}
+
+input + .slider:before {
+  content: url('night.png');
+}
+
+.slider.round {
+  border-radius: 36px;
+  box-shadow: 0 4px 5px 0 rgb(100, 100, 100), 0 4px 8px 0 rgb(100, 100, 100);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  box-shadow: 0 2px 3px 0 rgb(32, 32, 32), 0 2px 4px 0 rgb(32, 32, 32);
+}

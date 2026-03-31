@@ -1,0 +1,62 @@
+/* Regular */
+@font-face {
+    font-family: 'Roboto Regular';
+    font-style: normal;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+:root {
+  --heading-color: #121629;
+  --font-color:#fffffe;
+  --bg-color: #232946;
+  --shadow-color: #0d0d0d;
+  --highlight-color: #b8c1ec;
+}
+
+[data-theme="light"] {
+  --heading-color: #078080;
+  --font-color: #232323;
+  --bg-color: #f8f5f2;
+  --shadow-color: #121629;
+  --highlight-color: #272343;
+}
+
+body {
+    background: var(--bg-color);
+    margin: 0;
+    font-family:'Roboto Regular';
+}
+
+nav {
+    background-color: var(--heading-color);
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--font-color);
+    width: 100vw;
+    height: 4.5vh;
+    padding: 20px 0px;
+    z-index: 99999;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+    width: 95vw;
+    color: var(--font-color);
+}
+
+.single_image, .two_image {
+  box-shadow: 0 2px 4px 0 var(--shadow-color), 0 6px 20px 0 var(--shadow-color);
+}
+
+.single_image {
+  width: 50vw;
+}
+
+.two_image {
+  width: 25vw;
+}

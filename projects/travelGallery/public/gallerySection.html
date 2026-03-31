@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Travel Gallery - Time Section</title>
+        <link rel="icon" href="../src/images/etc/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <!-- shims for backwards compatibility -->
+        <script type="text/javascript" src="../src/famous/lib/functionPrototypeBind.js"></script>
+        <script type="text/javascript" src="../src/famous/lib/classList.js"></script>
+        <script type="text/javascript" src="../src/famous/lib/requestAnimationFrame.js"></script>
+
+        <!-- module loader -->
+        <script type="text/javascript" src="../src/famous/lib/require.js"></script>
+
+        <!-- famous -->
+        <link rel="stylesheet" type="text/css" href="../src/famous/famous.css" />
+        <link rel="stylesheet" type="text/css" href="../src/famous/famous_styles.css" />
+        <script type="text/javascript" src="../src/famous/lib/famous.js"></script>
+
+        <!-- theme -->
+        <link rel="stylesheet" href="../src/theme/theme_style.css" />
+        <script src="../src/theme/theme.js"></script>
+
+        <!-- menu -->
+        <link rel="stylesheet" href="../src/menu/menu_vertical.css" />
+        <script src="../src/menu/menu.js"></script>
+
+        <!-- gallery -->
+        <link rel="stylesheet" href="../src/gallery_style.css" />
+        <script type="text/javascript">require(['../src/galleryView']);</script>
+    </head>
+    <body>
+        <div class="loading-panel">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <nav>
+          <div class="album_info"></div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" checked id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </nav>
+        <div class="menu_container menu_hide" id="menu_layout">
+          <img class="menu_btn" src="../src/menu/menu_plain.svg" />
+          <div class="menu" id="home_menu">
+            <img class="menu_item" id="home_btn" src="../src/menu/icon_home.png"/>
+            <span class="menu_text">Home</span>
+          </div>
+          <div class="menu" id="map_menu">
+            <img class="menu_item" id="map_btn" src="../src/menu/icon_map.png"/>
+            <span class="menu_text">Map</span>          
+          </div>
+          <div class="menu" id="info_menu">
+            <img class="menu_item" id="info_btn" src="../src/menu/icon_info.png"/>
+            <span class="menu_text">Info</span>
+          </div>
+          <!--TODO: time line view-->
+          <!--div class="gallery_menu">
+            <div id="menu_gallery" class="menu_item"><img src="../src/menu/icon_people.png" /></div>
+          </!--div-->
+        </div>
+    </body>
+</html>
