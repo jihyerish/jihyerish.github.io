@@ -61,7 +61,6 @@ define(function(require, exports, module) {
   const myMapView = new MapView();
 
   Engine.on('all-images-loaded', function() {
-    console.log('image loading is done');
   });
 
   // when loading the map is finished in the first time
@@ -207,7 +206,6 @@ define(function(require, exports, module) {
   function getMapZoomLevel(map, mapView) {
     const zoomLevel = map.getZoom();
 
-    console.log('Zoom: ' + zoomLevel);
     mapCanvas.style.webkitTransform = 'translateZ(-10px)';
 
     return zoomLevel;
@@ -223,7 +221,7 @@ define(function(require, exports, module) {
     const geocoder = new google.maps.Geocoder();
     let LatLng = {};
     geocoder.geocode({'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
+      if (status === google.maps.GeocoderStatus.OK) {
         LatLng[0] = results[0].geometry.location.lat();
         LatLng[1] = results[0].geometry.location.lng();
       }
@@ -299,11 +297,11 @@ define(function(require, exports, module) {
 	 * @param {google.maps.Point} point1, point2
 	 * @return distance
 	 */
-  function distancePoints(point1_lat, point1_lng, point2_lat, point2_lng) {
-    const lat1 = point1_lat * Math.PI/180;
-    const lat2 = point2_lat * Math.PI/180;
-    const lon1 = point1_lng * Math.PI/180;
-    const lon2 = point2_lng * Math.PI/180;
+  function distancePoints(point1, point2) {
+    const lat1 = point1.lat * Math.PI/180;
+    const lat2 = point2.lat * Math.PI/180;
+    const lon1 = point1.lng * Math.PI/180;
+    const lon2 = point2.lng * Math.PI/180;
 
     const d = Math.acos(Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lon2-lon1));
     return d;
@@ -415,7 +413,7 @@ define(function(require, exports, module) {
     const mapZoomLevel = getMapZoomLevel(map, mapView);
     mapCanvas.style.zIndex = -10;
 
-    for (var i=0, relativePoint, tmpEffect; i < mapView.albumNum; i++) {
+    for (let i=0, relativePoint, tmpEffect; i < mapView.albumNum; i++) {
       tmpEffect = {duration: 600+mapView.hotPlace[i].grouplatlng[0]*5, curve: 'easeOutBounce'};
 
       if (mapView.hotPlace[i].latlng === mapView.hotPlace[i].grouplatlng) {
@@ -446,7 +444,7 @@ define(function(require, exports, module) {
     const editImgCnt = 0;
     mapCanvas.style.zIndex = -10;
 
-    for (var i=0, relativePoint, tmpEffect; i < mapView.albumNum; i++) {
+    for (let i=0, relativePoint, tmpEffect; i < mapView.albumNum; i++) {
       tmpEffect = {
         method: 'Snap',
         period: 1000 + mapView.hotPlace[i].grouplatlng[0]*7,
@@ -495,23 +493,23 @@ define(function(require, exports, module) {
     let k = 1; // num of items in tmp
 
     // Define groups
-    if ((currentZoom == 3)||(currentZoom == 4)) {
+    if ((currentZoom === 3)||(currentZoom === 4)) {
       mapView.Grouplevel = 1;
-      if (currentZoom == 3)
+      if (currentZoom === 3)
         map.setCenter(new google.maps.LatLng(10.377359601358178, 32.71171875000007));
-      else if (currentZoom == 4)
+      else if (currentZoom === 4)
         map.setCenter(new google.maps.LatLng(29.207578556055388, -27.053906249999933));
-    } else if ((currentZoom == 5)||(currentZoom == 6)) {
+    } else if ((currentZoom === 5)||(currentZoom === 6)) {
       mapView.Grouplevel = 2;
-      if (currentZoom == 5)
+      if (currentZoom === 5)
         map.setCenter(new google.maps.LatLng(44.196205650090825, 19.879687500000063));
-      else if (currentZoom == 6)
+      else if (currentZoom === 6)
         map.setCenter(new google.maps.LatLng(50.67924746630975, 7.377246093750065));
     } else {
       mapView.Grouplevel = 3;
-      if (currentZoom == 7)
+      if (currentZoom === 7)
         map.setCenter(new google.maps.LatLng(49.90013595531545, 7.113574218750065));
-      else if (currentZoom == 8)
+      else if (currentZoom === 8)
         map.setCenter(new google.maps.LatLng(48.255970240867065, 3.070605468750065));
     }
     // console.log("currentzoom : " + currentZoom + "group level : " + mapView.Grouplevel);
@@ -525,11 +523,11 @@ define(function(require, exports, module) {
         mapView.hotPlace[i].setContent('');
 
         for (let j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.continent == tmp[j].information.continent) {
+          if (mapView.hotPlace[i].information.continent === tmp[j].information.continent) {
             match++;
           }
         }
-        if (match == 0) {
+        if (match === 0) {
           tmp.push(mapView.hotPlace[i]);
           k++;
         } else {
@@ -539,7 +537,7 @@ define(function(require, exports, module) {
 
       for (let i = 0; i < mapView.albumNum; i++) {
         for (let j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.continent == tmp[j].information.continent) {
+          if (mapView.hotPlace[i].information.continent === tmp[j].information.continent) {
             mapView.hotPlace[i].grouplatlng = tmp[j].latlng;
           }
         }
@@ -554,12 +552,12 @@ define(function(require, exports, module) {
         mapView.hotPlace[i].setContent('');
 
         for (let j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.country == tmp[j].information.country) {
+          if (mapView.hotPlace[i].information.country === tmp[j].information.country) {
             match++;
           }
         }
 
-        if (match == 0) {
+        if (match === 0) {
           tmp.push(mapView.hotPlace[i]);
           k++;
         } else {
@@ -567,9 +565,9 @@ define(function(require, exports, module) {
         }
       }
 
-      for (var i = 0; i < mapView.albumNum; i++) {
-        for (var j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.country == tmp[j].information.country) {
+      for (let i = 0; i < mapView.albumNum; i++) {
+        for (let j = 0; j < k; j++) {
+          if (mapView.hotPlace[i].information.country === tmp[j].information.country) {
             mapView.hotPlace[i].grouplatlng = tmp[j].latlng;
           }
         }
@@ -577,18 +575,18 @@ define(function(require, exports, module) {
       mapView.hotplaceNum = k;
     } else if (mapView.Grouplevel == 3) { // when grouping by city
       let match = 0;
-      for (var i = 0; i < mapView.albumNum; i++) {
+      for (let i = 0; i < mapView.albumNum; i++) {
         mapView.hotPlace[i].setProperties({visibility: 'visible'});
         mapView.hotPlace[i].coverInfo = createCoverInfoComponent(AlbumData.getInfo(i).city, 'city');
         mapView.hotPlace[i].setContent('');
 
-        for (var j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.city == tmp[j].information.city) {
+        for (let j = 0; j < k; j++) {
+          if (mapView.hotPlace[i].information.city === tmp[j].information.city) {
             match++;
           }
         }
 
-        if (match == 0) {
+        if (match === 0) {
           tmp.push(mapView.hotPlace[i]);
           k++;
         } else {
@@ -596,9 +594,9 @@ define(function(require, exports, module) {
         }
       }
 
-      for (var i = 0; i < mapView.albumNum; i++) {
-        for (var j = 0; j < k; j++) {
-          if (mapView.hotPlace[i].information.city == tmp[j].information.city) {
+      for (let i = 0; i < mapView.albumNum; i++) {
+        for (let j = 0; j < k; j++) {
+          if (mapView.hotPlace[i].information.city === tmp[j].information.city) {
             mapView.hotPlace[i].grouplatlng = tmp[j].latlng;
           }
         }

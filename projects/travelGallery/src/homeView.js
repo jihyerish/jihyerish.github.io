@@ -187,22 +187,19 @@ define(function(require) {
     // console.log("width : "+window.innerWidth+", height : "+window.innerHeight);
     for (let i = 0, tmp; i < albumNum; i++) {
       tmp = new Array(3);
-      if (i % 4 == 0) {
+      if (i % 4 === 0) {
         // multiply 5 because of z-axis value
         tmp[0] = Random.integer(-window.innerWidth / 2 + paddingW * 3, -paddingW * 2);
         tmp[1] = Random.integer(-window.innerHeight / 2 + paddingH * 3, paddingH * 2);
-      } else if (i % 4 == 1) {
-        // console.log("width : "+window.innerWidth+", height : "+window.innerHeight);
+      } else if (i % 4 === 1) {
         // multiply 5 because of z-axis value
         tmp[0] = Random.integer(-paddingW * 2, window.innerWidth / 2 - paddingW * 3);
         tmp[1] = Random.integer(-window.innerHeight / 2 + paddingH * 3, -paddingH * 2);
-      } else if (i % 4 == 2) {
-        // console.log("width : "+window.innerWidth+", height : "+window.innerHeight);
+      } else if (i % 4 === 2) {
         // multiply 5 because of z-axis value
         tmp[0] = Random.integer(paddingW * 2, window.innerWidth / 2 - paddingW * 3);
         tmp[1] = Random.integer(-paddingH * 2, window.innerHeight / 2 - paddingH * 3);
-      } else if (i % 4 == 3) {
-        // console.log("width : "+window.innerWidth+", height : "+window.innerHeight);
+      } else if (i % 4 === 3) {
         // multiply 5 because of z-axis value
         tmp[0] = Random.integer(-window.innerWidth / 2 + paddingW * 3, paddingW * 2);
         tmp[1] = Random.integer(paddingH * 2, window.innerHeight / 2 - paddingH * 3);
@@ -329,9 +326,7 @@ define(function(require) {
           }
 
           TransInfos[i].zDegrees -= (zTransInterval * TransInfos[i].zToggle);
-          console.log('img1\'s z position : ' + (TransInfos[i].zDegrees) + ', min z position : ' + minSurfaceZvalue);
           TransInfos[i].yDegrees = TransInfos[i].yDegrees + yTransInterval * (-TransInfos[i].yToggle);
-          console.log('img1\'s y position : ' + (TransInfos[i].yDegrees + randomPosition[i][1]));
 
           albumCovers[i].modifier.setTransform(
               Transform.multiply(albumCovers[i].modifier.getFinalTransform(),
@@ -351,9 +346,7 @@ define(function(require) {
           }
 
           TransInfos[i].zDegrees += (zTransInterval * TransInfos[i].zToggle);
-          console.log('img1\'s z position : ' + (TransInfos[i].zDegrees) + ', min z position : ' + minSurfaceZvalue);
           TransInfos[i].yDegrees = TransInfos[i].yDegrees + yTransInterval * (TransInfos[i].yToggle);
-          console.log('img1\'s y position : ' + (TransInfos[i].yDegrees + randomPosition[i][1]));
 
           albumCovers[i].modifier.setTransform(
               Transform.multiply(albumCovers[i].modifier.getFinalTransform(),
@@ -362,7 +355,7 @@ define(function(require) {
           albumCovers[i].modifier.setOpacity(getOpacityValue(TransInfos[i].zDegrees));
         }
       } else if (event.which == KeyCodes['LEFT_ARROW']) {
-        for (i = 0; i < albumNum; i++) {
+        for (let i = 0; i < albumNum; i++) {
           TransInfos[i].zDegrees += zTransInterval;
           let opacityValueForSurface = getOpacityValue(TransInfos[i].zDegrees);
           if (opacityValueForSurface > 1) {
@@ -375,7 +368,7 @@ define(function(require) {
                   Transform.translate(0, 0, zTransInterval)));
         }
       } else if (event.which == KeyCodes['RIGHT_ARROW']) {
-        for (i = 0; i < albumNum; i++) {
+        for (let i = 0; i < albumNum; i++) {
           TransInfos[i].zDegrees -= zTransInterval;
           let opacityValueForSurface = getOpacityValue(TransInfos[i].zDegrees);
 
@@ -451,7 +444,7 @@ define(function(require) {
         if (this.classList.includes('selected-cover')) {
           selectedSurfaceClick(AlbumData.getInfo(indexNum).city);
         } else {
-          for (i = 0; i < albumNum; i++) {
+          for (let i = 0; i < albumNum; i++) {
             if (i === indexNum) {
               albumCovers[i].addClass('selected-cover');
             } else {
