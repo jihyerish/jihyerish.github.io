@@ -3,6 +3,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  scroll-padding-top: 56px; /* offset for sticky nav (~49px) */
 }
 
 nav, footer {
@@ -258,4 +259,67 @@ img {
 
 .contect_img {
   width: 25px;
+}
+
+/* ─── Readability & spacing ─── */
+
+body {
+  line-height: 1.75;
+}
+
+section {
+  padding: 2em 1em;
+  border-bottom: 1px solid #ebebeb;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+.title {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-block-end: 1em;
+  padding-block-end: 0.4em;
+  border-bottom: 2px solid #d291bc;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #5a3d5c;
+  margin-block-end: 0.5em;
+}
+
+/* Spacing between job blocks in work experience */
+.description__plain > h3.subtitle {
+  margin-block-start: 2em;
+}
+
+.description__plain > h3.subtitle:first-child {
+  margin-block-start: 0;
+}
+
+/* Company / date line under each job heading */
+.description__plain > p {
+  color: #777;
+  font-size: 0.9em;
+  margin: 0.15em 0 0.6em;
+}
+
+p {
+  margin-block: 0.6em;
+}
+
+ul {
+  margin-block: 0.5em;
+  padding-inline-start: 1.5em;
+}
+
+li {
+  margin-block-end: 0.5em;
+}
+
+.link {
+  margin-block-start: 1em;
 }
