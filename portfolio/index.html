@@ -2,346 +2,119 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jihye Hong</title>
-    <link rel="icon" href="img/favicon.ico"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jihye Hong — software engineer and web platform contributor.">
+    <title>Jihye Hong — Software Engineer</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <style>
+      .project-links { display:flex; gap:14px; margin-top:18px!important; }
+      .project-links a { color:var(--plum); font-size:.8rem; font-weight:600; text-decoration:none; border-bottom:1px solid var(--pink); }
+      .archive { padding-top:115px; padding-bottom:115px; }
+      .archive-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+      .archive-grid article { border-top:2px solid var(--pink); padding-top:17px; }
+      .archive-kind { font:500 10px "DM Mono",monospace; color:var(--plum); letter-spacing:.08em; margin:0; }
+      .archive h3 { font-size:1.35rem; letter-spacing:-.04em; margin:9px 0 18px; }
+      .archive ul { list-style:none; padding:0; margin:0; }
+      .archive li { border-bottom:1px solid var(--line); padding:10px 0; }
+      .archive li a { display:block; color:var(--ink); font-size:.86rem; font-weight:600; line-height:1.35; text-decoration:none; }
+      .archive li a:hover { color:var(--plum); }
+      .archive li span { display:block; font-size:.76rem; font-weight:400; color:var(--muted); margin-top:2px; }
+      .hero-stats { grid-template-columns:repeat(2,1fr); max-width:560px; }
+      @media (max-width:700px) { .archive { padding-top:75px; padding-bottom:75px; } .archive-grid { grid-template-columns:1fr; gap:34px; } }
+    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="header__inner">
-          <h1 class="header__title">
-            Jihye Hong
-          </h1>
-        </div>
-      </header>
-
-      <nav id="drawer" class="nav sticky">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#about">About</a></li>
-          <li class="nav__item"><a href="#education">Education</a></li>
-          <li class="nav__item"><a href="#experience">Work Experience</a></li>
-          <li class="nav__item"><a href="#project">Project</a></li>
-          <li class="nav__item"><a href="#publication">Others</a></li>
-          <li class="nav__item"><a href="#skills">Skills</a></li>
-        </ul>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-ko="본문으로 건너뛰기">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="Jihye Hong home">JH<span>.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#work" data-en="Work" data-ko="경력">Work</a>
+        <a href="#projects" data-en="Selected work" data-ko="주요 프로젝트">Selected work</a>
+        <a href="#links" data-en="Archive" data-ko="아카이브">Archive</a>
       </nav>
+      <button class="language-toggle" type="button" aria-label="Switch language"><span>KO</span><i aria-hidden="true"></i><span>EN</span></button>
+    </header>
 
-      <main>
-          <section id="about">
-            <h2 class="title">About</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span>Born: 28th Jan, 1989</span></li>
-                <li><span>Nationality: South Korea</span></li>
-              </ul>
-              <p>Software engineer with 10+ years of experience across software engineering, web standards, and product strategy, with a track record of defining, building, and launching large-scale products across engineering and investment management.</p>
-              <p>Strong at translating technical insight into product strategy, assessing the business value of emerging technologies, and driving adoption of innovative web solutions.</p>
-            </div>
-          </section>
+    <main id="main">
+      <section class="hero section-shell">
+        <p class="eyebrow" data-en="Software Engineer · Web Platform" data-ko="소프트웨어 엔지니어 · 웹 플랫폼">Software Engineer · Web Platform</p>
+        <div class="hero-grid">
+          <h1 data-en="I turn the web’s <em>rough edges</em> into useful products." data-ko="웹의 <em>거친 경계</em>를 유용한 제품으로 만듭니다.">I turn the web’s <em>rough edges</em> into useful products.</h1>
+          <div class="hero-note">
+            <p data-en="Jihye Hong is a product-minded engineer with 10+ years across browser engines, web standards, and technology strategy — defining, building, and launching products at scale." data-ko="지혜 홍은 브라우저 엔진, 웹 표준, 기술 전략을 넘나들며 10년 이상 대규모 제품을 정의하고, 개발하고, 출시해 온 제품 중심 엔지니어입니다.">Jihye Hong is a product-minded engineer with 10+ years across browser engines, web standards, and technology strategy — defining, building, and launching products at scale.</p>
+            <a class="text-link" href="mailto:jihyerish@gmail.com" data-en="Start a conversation ↗" data-ko="대화 시작하기 ↗">Start a conversation ↗</a>
+          </div>
+        </div>
+        <div class="hero-stats" aria-label="Career highlights">
+          <div><strong>10<span>+</span></strong><small data-en="years building for the web" data-ko="웹을 만들어 온 시간">years building for the web</small></div>
+          <div><strong>3</strong><small data-en="web specifications edited" data-ko="편집자로 참여한 웹 명세">web specifications edited</small></div>
+        </div>
+      </section>
 
-          <section id="education">
-            <h2 class="title">Education</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span>M.S. Computer Science (AI &amp; Media Lab), KAIST (South Korea), 2011 - 2013</span></li>
-                <li><span>B.S. Computer Science, Summa Cum Laude, Ewha Womans University (South Korea), 2007 - 2011</span></li>
-              </ul>
-            </div>
-          </section>
+      <section class="statement section-shell">
+        <p class="section-label">01 / <span data-en="Approach" data-ko="접근 방식">Approach</span></p>
+        <p class="statement-copy" data-en="The best technical work changes what is possible <em>and</em> makes that possibility legible to people." data-ko="좋은 기술은 가능성의 경계를 넓히고, 동시에 그 가능성을 <em>사람들이 이해하고 쓸 수 있게</em> 만듭니다.">The best technical work changes what is possible <em>and</em> makes that possibility legible to people.</p>
+      </section>
 
-          <section id="experience">
-            <h2 class="title">Work Experience</h2>
-            <div class="description__plain">
-              <h3 class="subtitle">Senior Software Engineer (Product-Focused Engineering Leadership)</h3>
-              <p>Igalia | Remote, London, Seoul | Aug 2022 – Sep 2025</p>
-              <ul>
-                <li class="description__item"><span>Product owner for the Dictionary API web platform feature (2025): proposed and designed an implementation allowing developers to customize browser-integrated dictionaries; built a demo and implemented the feature in Google Chrome (C++, JavaScript)</span></li>
-                <li class="description__item"><span>Product owner for the CSS Search Highlight web platform feature (2024): proposed a web standard enabling authors to style highlights for in-page keyword search results; contributed to standardization; the feature is now implemented in Google Chrome</span></li>
-                <li class="description__item"><span>Contributor to Interop 2023: helped improve selected interoperability test pass rates from 48% to 95%; implemented related changes in Mozilla Firefox and Google Chrome (C++)</span></li>
-              </ul>
+      <section id="work" class="section-shell experience">
+        <div class="section-heading"><p class="section-label">02 / <span data-en="Experience" data-ko="경력">Experience</span></p><h2 data-en="From standards to strategy." data-ko="표준에서 전략까지.">From standards to strategy.</h2></div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta"><span>2022 — 2025</span><span>Remote · London · Seoul</span></div>
+            <div><h3>Igalia</h3><p class="role" data-en="Senior Software Engineer · Product-Focused Engineering Leadership" data-ko="시니어 소프트웨어 엔지니어 · 제품 중심 엔지니어링 리더십">Senior Software Engineer · Product-Focused Engineering Leadership</p><ul><li data-en="Owned Dictionary API and CSS Search Highlight proposals, design, explainers, demos, and Chromium implementations." data-ko="Dictionary API와 CSS Search Highlight의 제안, 설계, explainer, 데모 및 Chromium 구현을 주도했습니다.">Owned Dictionary API and CSS Search Highlight proposals, design, explainers, demos, and Chromium implementations.</li><li data-en="Improved Bloomberg Browser scrolling by simplifying a complex UI JavaScript DOM hierarchy; implemented content-visibility: auto in Mozilla Gecko." data-ko="복잡한 UI JavaScript DOM 계층을 개선해 Bloomberg Browser의 스크롤 성능을 높였고, Mozilla Gecko에 content-visibility: auto를 구현했습니다.">Improved Bloomberg Browser scrolling by simplifying a complex UI JavaScript DOM hierarchy; implemented content-visibility: auto in Mozilla Gecko.</li><li data-en="Contributed to Interop 2023 and browser-engine work across Gecko and Chromium." data-ko="Interop 2023 및 Gecko·Chromium 브라우저 엔진 작업에 기여했습니다.">Contributed to Interop 2023 and browser-engine work across Gecko and Chromium.</li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-meta"><span>2021 — 2022</span><span>Seoul</span></div>
+            <div><h3>Samsung Venture Investment</h3><p class="role" data-en="Investment Manager · Technology &amp; Product Strategy" data-ko="투자 매니저 · 기술 및 제품 전략">Investment Manager · Technology &amp; Product Strategy</p><ul><li data-en="Evaluated quantum computing, AR/VR, AI music, and sensor hardware opportunities against Samsung’s long-term innovation roadmap." data-ko="양자 컴퓨팅, AR/VR, AI 음악, 센서 하드웨어 분야의 기회를 삼성의 중장기 혁신 로드맵 관점에서 평가했습니다.">Evaluated quantum computing, AR/VR, AI music, and sensor hardware opportunities against Samsung’s long-term innovation roadmap.</li><li data-en="Led technical and financial diligence, valuation, and strategic collaboration planning for QC Ware ($2M, 4.7x projected), DoubleMe (KRW 1.5B, 7.5x projected), Elfys (€2M, 2.6x projected), and STRA (KRW 500M)." data-ko="QC Ware($2M, 예상 4.7배), DoubleMe(15억 원, 예상 7.5배), Elfys(€2M, 예상 2.6배), STRA(5억 원)의 기술·재무 실사, 가치평가, 전략적 협업 계획을 이끌었습니다.">Led technical and financial diligence, valuation, and strategic collaboration planning for QC Ware ($2M, 4.7x projected), DoubleMe (KRW 1.5B, 7.5x projected), Elfys (€2M, 2.6x projected), and STRA (KRW 500M).</li></ul></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-meta"><span>2013 — 2021</span><span>Seoul</span></div>
+            <div><h3>LG Electronics</h3><p class="role" data-en="Software Engineer · Product-Led Development" data-ko="소프트웨어 엔지니어 · 제품 주도 개발">Software Engineer · Product-Led Development</p><ul><li data-en="Proposed and edited W3C CSS Spatial Navigation and CSS Round Display specifications; contributed to WHATWG HTML." data-ko="W3C CSS Spatial Navigation·CSS Round Display 명세를 제안하고 편집했으며 WHATWG HTML 표준에도 기여했습니다.">Proposed and edited W3C CSS Spatial Navigation and CSS Round Display specifications; contributed to WHATWG HTML.</li><li data-en="Improved webOS Smart TV performance with a WebGL-based animation approach, saving 0.2 seconds of load time." data-ko="WebGL 기반 애니메이션 방식으로 webOS Smart TV 성능을 개선해 로딩 시간을 0.2초 단축했습니다.">Improved webOS Smart TV performance with a WebGL-based animation approach, saving 0.2 seconds of load time.</li></ul></div>
+          </article>
+        </div>
+      </section>
 
-              <h3 class="subtitle">Investment Manager (Technology &amp; Product Strategy)</h3>
-              <p>Samsung Venture Investment Corp. | Seoul | Apr 2021 – May 2022</p>
-              <ul>
-                <li class="description__item"><span>Analyzed emerging ICT technology trends across quantum computing, AR, AI, and sensor hardware; conducted technical and financial due diligence on startups</span></li>
-                <li class="description__item"><span>Executed investments: QC Ware ($2M, projected 4.7x return), DoubleMe (KRW 1.5B, projected 7.5x return), Elfys (EUR 2M, projected 2.6x return), STRA (KRW 500M)</span></li>
-              </ul>
+      <section id="projects" class="section-shell projects">
+        <div class="section-heading"><p class="section-label">03 / <span data-en="Selected work" data-ko="주요 프로젝트">Selected work</span></p><h2 data-en="Making the platform move forward." data-ko="플랫폼을 한 걸음 앞으로.">Making the platform move forward.</h2></div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-no">01</div><div><p class="project-type" data-en="PERSONAL PROJECT · 2026—PRESENT" data-ko="개인 프로젝트 · 2026—현재">PERSONAL PROJECT · 2026—PRESENT</p><h3>Routine Builder</h3><p data-en="An AI-powered daily planning and review application. I designed the flow around check-ins, saved records, AI reviews, and planning for the next day — then iterated on the product through an AI-assisted development workflow." data-ko="AI 기반 일일 계획 및 리뷰 웹 애플리케이션입니다. 체크인, 기록 저장, AI 리뷰, 다음날 계획 수립을 중심으로 사용자 흐름을 설계하고 AI-assisted 개발 방식으로 반복 구현했습니다.">An AI-powered daily planning and review application. I designed the flow around check-ins, saved records, AI reviews, and planning for the next day — then iterated on the product through an AI-assisted development workflow.</p><p class="project-links"><a href="https://routine-builder-beta.vercel.app/" target="_blank" rel="noreferrer" data-en="Live demo ↗" data-ko="라이브 데모 ↗">Live demo ↗</a></p></div><span class="tag">AI · Product Design · Web App</span></article>
+          <article class="project-card featured"><div class="project-no">02</div><div><p class="project-type" data-en="WEB PLATFORM · 2025" data-ko="웹 플랫폼 · 2025">WEB PLATFORM · 2025</p><h3>Dictionary API</h3><p data-en="A browser platform feature that lets developers customize integrated dictionaries — from proposal and demo to Chrome implementation in C++ and JavaScript." data-ko="개발자가 브라우저 내장 사전을 맞춤화할 수 있는 플랫폼 기능입니다. 제안과 데모부터 C++·JavaScript 기반 Chrome 구현까지 이끌었습니다.">A browser platform feature that lets developers customize integrated dictionaries — from proposal and demo to Chrome implementation in C++ and JavaScript.</p><p class="project-links"><a href="https://github.com/Igalia/explainers/blob/main/spell-check-custom-dictionary/README.md" target="_blank" rel="noreferrer">Explainer ↗</a><a href="https://chromium-review.googlesource.com/c/chromium/src/+/6680469" target="_blank" rel="noreferrer" data-en="Chromium patch ↗" data-ko="Chromium 패치 ↗">Chromium patch ↗</a></p></div><span class="tag">C++ · JavaScript · Chrome</span></article>
+          <article class="project-card image-card"><img src="img/spatial-navigation.png" alt="CSS Spatial Navigation illustration"><div><p class="project-type">W3C · 2020—21</p><h3>CSS Spatial Navigation</h3><p data-en="A directional focus-navigation model for the web, designed around how people use TVs and remote controls." data-ko="TV와 리모컨 사용 경험에 맞춰 설계한 웹의 방향키 포커스 이동 모델입니다.">A directional focus-navigation model for the web, designed around how people use TVs and remote controls.</p><p class="project-links"><a href="https://www.w3.org/TR/css-nav-1/" target="_blank" rel="noreferrer" data-en="Specification ↗" data-ko="명세 ↗">Specification ↗</a><a href="https://wicg.github.io/spatial-navigation/tests/ux/result.html" target="_blank" rel="noreferrer" data-en="UX prototypes ↗" data-ko="UX 프로토타입 ↗">UX prototypes ↗</a></p></div></article>
+          <article class="project-card"><div class="project-no">04</div><div><p class="project-type">WEB PLATFORM · 2024</p><h3>CSS Search Highlight</h3><p data-en="A proposed standard that gives authors control over in-page search-result highlights — now implemented in Google Chrome." data-ko="페이지 내 검색 결과의 강조 표시를 작성자가 제어할 수 있게 한 표준 제안이며, 현재 Google Chrome에 구현되어 있습니다.">A proposed standard that gives authors control over in-page search-result highlights — now implemented in Google Chrome.</p><p class="project-links"><a href="https://github.com/Igalia/explainers/blob/main/css/find-in-page/README.md" target="_blank" rel="noreferrer">Explainer ↗</a><a href="https://drafts.csswg.org/css-pseudo-4/#selectordef-search-text" target="_blank" rel="noreferrer" data-en="Draft specification ↗" data-ko="초안 명세 ↗">Draft specification ↗</a></p></div><span class="tag">CSS · Standards · Chrome</span></article>
+          <article class="project-card image-card"><img src="img/travelgallery.png" alt="Travel Gallery interface"><div><p class="project-type" data-en="PERSONAL PROJECT" data-ko="개인 프로젝트">PERSONAL PROJECT</p><h3>Travel Gallery</h3><p data-en="A Smart TV and PC photo gallery, powered by a high-performance WebGL animation library." data-ko="고성능 WebGL 애니메이션 라이브러리로 만든 Smart TV와 PC용 사진 갤러리입니다.">A Smart TV and PC photo gallery, powered by a high-performance WebGL animation library.</p><a href="https://jihyerish.github.io/projects/travelGallery/public/index.html" target="_blank" rel="noreferrer" class="text-link" data-en="View demo ↗" data-ko="데모 보기 ↗">View demo ↗</a></div></article>
+        </div>
+      </section>
 
-              <h3 class="subtitle">Software Engineer (Product-Led Development)</h3>
-              <p>LG Electronics | Seoul | Feb 2013 – Mar 2021</p>
-              <ul>
-                <li class="description__item"><span>Proposed W3C CSS Spatial Navigation standard and served as specification editor (2020–2021); designed a directional-key focus navigation algorithm for Smart TV UIs</span></li>
-                <li class="description__item"><span>Contributor to the WHATWG HTML standard (2020): proposed focus API improvement accepted as a standard feature</span></li>
-                <li class="description__item"><span>Proposed W3C CSS Round Display standard and served as specification editor (2018–2019)</span></li>
-                <li class="description__item"><span>webOS Smart TV performance improvement: replaced CSS Animation with WebGL-based approach, reducing load time by 0.2 seconds (2017)</span></li>
-                <li class="description__item"><span>Published biweekly internal web technology newsletter for executives and engineering teams; delivered HTML5/CSS3 training and developer mentoring</span></li>
-              </ul>
-            </div>
-          </section>
+      <section id="credentials" class="section-shell credentials">
+        <div class="section-heading"><p class="section-label">04 / <span data-en="Credentials" data-ko="연구 · 역량">Credentials</span></p><h2 data-en="A practice grounded in research." data-ko="연구로 단단해진 실무.">A practice grounded in research.</h2></div>
+        <div class="credentials-grid">
+          <div><h3 data-en="Education" data-ko="학력">Education</h3><p><strong>M.S. Computer Science</strong><br><span data-en="KAIST, AI &amp; Media Lab · 2011—13" data-ko="KAIST, AI &amp; Media Lab · 2011—13">KAIST, AI &amp; Media Lab · 2011—13</span></p><p><strong>B.S. Computer Science, Summa Cum Laude</strong><br><span data-en="Ewha Womans University · 2007—11" data-ko="이화여자대학교 · 2007—11">Ewha Womans University · 2007—11</span></p></div>
+          <div><h3 data-en="Published &amp; spoken" data-ko="출판 · 발표">Published &amp; spoken</h3><ul class="compact-list"><li>Signage Service Platform <span>· TTA Journal, 2017</span></li><li>Efficient 3D Content Authoring <span>· VSMM, 2012</span></li><li>AR Paint <span>· ICEC, 2012</span></li><li data-en="Women Tech Maker Seoul · 2019" data-ko="Women Tech Maker Seoul · 2019">Women Tech Maker Seoul · 2019</li><li data-en="W3C TPAC Breakout · 2018" data-ko="W3C TPAC Breakout · 2018">W3C TPAC Breakout · 2018</li></ul></div>
+          <div><h3 data-en="Tools &amp; languages" data-ko="기술 · 언어">Tools &amp; languages</h3><p class="skill-list">HTML · CSS · JavaScript · C++ · WebGL · OpenCV</p><p data-en="Product strategy · Market analysis · Specification writing · Stakeholder alignment" data-ko="제품 전략 · 시장 분석 · 명세 작성 · 이해관계자 조율">Product strategy · Market analysis · Specification writing · Stakeholder alignment</p><p data-en="Korean (native) · English (fluent)" data-ko="한국어 (모국어) · 영어 (유창함)">Korean (native) · English (fluent)</p></div>
+        </div>
+      </section>
 
-          <section id="project">
-            <h2 class="title">Project</h2>
+      <section id="links" class="section-shell archive">
+        <div class="section-heading"><p class="section-label">05 / <span data-en="Archive" data-ko="아카이브">Archive</span></p><h2 data-en="Standards, research, and conversations." data-ko="표준, 연구, 그리고 대화.">Standards, research, and conversations.</h2></div>
+        <div class="archive-grid">
+          <article><p class="archive-kind" data-en="SPECIFICATIONS &amp; DEMOS" data-ko="명세 · 데모">SPECIFICATIONS &amp; DEMOS</p><h3 data-en="Web platform work" data-ko="웹 플랫폼 작업">Web platform work</h3><ul><li><a href="https://www.w3.org/TR/css-nav-1/" target="_blank" rel="noreferrer">CSS Spatial Navigation <span data-en="Specification" data-ko="명세">Specification</span> ↗</a></li><li><a href="https://wicg.github.io/spatial-navigation/demo/" target="_blank" rel="noreferrer">Spatial Navigation <span>Demo</span> ↗</a></li><li><a href="https://www.npmjs.com/package/spatial-navigation-polyfill" target="_blank" rel="noreferrer">Spatial Navigation <span>Polyfill</span> ↗</a></li><li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" target="_blank" rel="noreferrer">Element.focus() preventScroll <span>WHATWG</span> ↗</a></li><li><a href="https://www.w3.org/TR/motion-1/" target="_blank" rel="noreferrer">CSS Motion Path <span>Specification</span> ↗</a></li><li><a href="https://googlechrome.github.io/samples/css-motion-path/" target="_blank" rel="noreferrer">CSS Motion Path <span>Demo</span> ↗</a></li><li><a href="https://www.w3.org/TR/css-round-display-1/" target="_blank" rel="noreferrer">CSS Round Display <span>Specification</span> ↗</a></li><li><a href="https://jihyerish.github.io/jhRoundDisplay/demo/index.html" target="_blank" rel="noreferrer">CSS Round Display <span>Demo</span> ↗</a></li></ul></article>
+          <article><p class="archive-kind" data-en="IMPLEMENTATION RECORD" data-ko="구현 기록">IMPLEMENTATION RECORD</p><h3 data-en="Engine contributions" data-ko="브라우저 엔진 기여">Engine contributions</h3><ul><li><a href="https://phabricator.services.mozilla.com/D159693" target="_blank" rel="noreferrer">content-visibility: auto <span data-en="Mozilla Gecko merged patch" data-ko="Mozilla Gecko 병합 패치">Mozilla Gecko merged patch</span> ↗</a></li><li><a href="https://chromium-review.googlesource.com/c/chromium/src/+/6680469" target="_blank" rel="noreferrer">Dictionary API <span data-en="Chromium submitted patch" data-ko="Chromium 제출 패치">Chromium submitted patch</span> ↗</a></li><li><a href="https://wicg.github.io/spatial-navigation/tests/ux/result.html" target="_blank" rel="noreferrer">Spatial Navigation <span data-en="UX prototype cases" data-ko="UX 프로토타입 사례">UX prototype cases</span> ↗</a></li><li><a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/" target="_blank" rel="noreferrer">viewport-fit <span data-en="WebKit reference" data-ko="WebKit 참고 자료">WebKit reference</span> ↗</a></li></ul></article>
+          <article><p class="archive-kind" data-en="PUBLICATIONS &amp; PATENTS" data-ko="논문 · 특허">PUBLICATIONS &amp; PATENTS</p><h3 data-en="Published work" data-ko="출판 작업">Published work</h3><ul><li><a href="http://www.koreascience.or.kr/article/JAKO201764656421482.page" target="_blank" rel="noreferrer">Signage Service Platform <span>TTA Journal, 2017</span> ↗</a></li><li><a href="https://ieeexplore.ieee.org/document/6365912" target="_blank" rel="noreferrer">Efficient 3D Content Authoring <span>VSMM, 2012</span> ↗</a></li><li><a href="https://link.springer.com/chapter/10.1007%2F978-3-642-33542-6_11" target="_blank" rel="noreferrer">AR Paint <span>ICEC, 2012</span> ↗</a></li><li><a href="https://patents.google.com/patent/KR101603266B1/en" target="_blank" rel="noreferrer">Watch type terminal <span>KR101603266B1</span> ↗</a></li><li><a href="https://patents.google.com/patent/KR20170027435A/en?oq=KR20170027435A" target="_blank" rel="noreferrer">Electronic device control <span>KR20170027435A</span> ↗</a></li></ul></article>
+          <article><p class="archive-kind" data-en="TALKS &amp; WRITING" data-ko="강연 · 글">TALKS &amp; WRITING</p><h3 data-en="Sharing the web" data-ko="웹을 나누는 일">Sharing the web</h3><ul><li><a href="https://docs.google.com/presentation/d/1B1Riw1kV4lBdoFv8XFgVRQ47t0zvmX2eLJaB18TUG20/" target="_blank" rel="noreferrer">Challenge the Web Standard <span>Women Tech Maker Seoul, 2019</span> ↗</a></li><li><a href="https://jihyerish.github.io/talks/spatial-navigation-tpac2018-breakoutsession.pdf" target="_blank" rel="noreferrer">Spatial Navigation in the Web <span>W3C TPAC slides, 2018</span> ↗</a></li><li><a href="https://www.w3.org/wiki/TPAC/2018/SessionIdeas#Spatial_Navigation" target="_blank" rel="noreferrer">Spatial Navigation in the Web <span>W3C TPAC session</span> ↗</a></li><li><a href="https://onsman.com/w3c-working-groups-future-web/" target="_blank" rel="noreferrer">Introducing CSS Round Display <span>Google Developer Meetup, 2016</span> ↗</a></li></ul></article>
+        </div>
+      </section>
 
-            <div class="content">
-              <div class="description">
-                <h3 class="subtitle">Dictionary API Web Platform Feature (Igalia, 2025)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Proposed and designed an implementation allowing developers to customize browser-integrated dictionaries</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Built a demo and implemented the feature in Google Chrome (C++, JavaScript)</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description">
-                <h3 class="subtitle">CSS Search Highlight Web Platform Feature (Igalia, 2024)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Proposed a web standard feature enabling authors to style highlights for in-page keyword search results</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Built a demo and analyzed real-world use cases to design the most broadly usable implementation approach</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Contributed to standardization; the feature is now implemented in Google Chrome</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description">
-                <h3 class="subtitle">Interop 2023 (Igalia)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Joined Interop 2023, a cross-vendor project among Google, Apple, and Mozilla to align implementation of web technologies across browsers</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Helped improve selected interoperability test pass rates from 48% to 95%</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Implemented related changes in Mozilla Firefox and Google Chrome (C++)</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description">
-                <h3 class="subtitle">Routine Builder (Personal Project, Mar 2026 – Present)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Planned and developed an AI-powered daily planning and review web application</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Designed user flows around routine management: daily check-ins, record saving, AI reviews, and next-day planning</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Used an AI-assisted development workflow to structure features, define screen flows, and iterate on implementation</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://github.com/jihyerish/routine-builder" target="_blank">GitHub</a></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description__image">
-                <img src="img/spatial-navigation.png"></img>
-              </div>
-              <div class="description">
-                <h3 class="subtitle">W3C CSS Spatial Navigation Specification (LGE, 2020 – 2021)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Incubated and initiated the Spatial Navigation specification and progressed it to an official specification</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Researched how to move the focus (the selection indicator which marks the object in the web page with which the user
-                    wants to interact) on the web page with four-directional key input device. (e.g. remote control)</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Addressed  issues related to the spec in the CSS Working Group meetings, WICG(Web Incubation Community Group) meetings</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Implemented a JS library to support CSS Spatial Navigation and released as open source</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://www.w3.org/TR/css-nav-1/" target="_blank">Spec</a></span>
-                  <span><a href="https://wicg.github.io/spatial-navigation/demo/" target="_blank">Demo</a></span>
-                  <span><a href="https://www.npmjs.com/package/spatial-navigation-polyfill" target="_blank">Released Polyfill</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="content">
-              <div class="description__image">
-                <img src="img/element-focus-preventscroll.png"></img>
-              </div>
-              <div class="description">
-                <h3 class="subtitle">Contributed to WHATWG HTML Specification (LGE, 2020)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Proposed to add 'preventScroll' option to Element.focus()</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Currently, this feature is supported in the latest version of Chrome, Firefox, and Edge browser</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-focus" target="_blank">Spec</a></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description__image">
-                <img src="img/motion-path.svg"></img>
-              </div>
-              <div class="description">
-                <h3 class="subtitle">W3C CSS Motion Path Specification (LGE, Apr 2016)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Added the new features to the CSS Motion Path Specification as a co-editor</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Contributed to test suits of the spec</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://www.w3.org/TR/motion-1/" target="_blank">Spec</a></span>
-                  <span><a href="https://googlechrome.github.io/samples/css-motion-path/" target="_blank">Demo</a></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="description__image">
-                <img src="img/cssrounddisplay-weatherapp.jpg"></img>
-              </div>
-              <div class="description">
-                <h3 class="subtitle">W3C CSS Round Display specification (LGE, Jun 2015 - Dec 2016)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Proposed and edited CSS Round Display Specification as a co-editor</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Implemented the polyfill about the spec, and several demos</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://www.w3.org/TR/css-round-display-1/" target="_blank">Spec</a></span>
-                  <span><a href="https://jihyerish.github.io/jhRoundDisplay/demo/index.html" target="_blank">Demo</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="content">
-              <div class="description__image">
-                <img src="img/travelgallery.png"></img>
-              </div>
-              <div class="description">
-                <h3 class="subtitle">Travel Gallery (Personal Project)</h3>
-                <ul>
-                  <li class="description__item">
-                    <span>Implemented a JavaScript library for high-performance web animations using WebGL</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Built a photo gallery web application for Smart TV and PC using the library</span>
-                  </li>
-                  <li class="description__item">
-                    <span>Features: city-based photo album structure, animated thumbnail view, Google Maps-based hierarchical navigation (continent &gt; country &gt; city)</span>
-                  </li>
-                </ul>
-                <div class="link">
-                  <span><a href="https://jihyerish.github.io/projects/travelGallery/public/index.html" target="_blank">Demo</a></span>
-                </div>
-              </div>
-            </div>
-
-          </section>
-
-          <section id="publication">
-            <h2 class="title">Publication</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span>Signage Service Platform (TTA Journal, 2017)</span>
-                  <a href="http://www.koreascience.or.kr/article/JAKO201764656421482.page" target="_blank">
-                    <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-                <li><span>Efficient 3D content authoring framework based on mobile AR (VSMM, 2012)</span>
-                  <a href="https://ieeexplore.ieee.org/document/6365912" target="_blank">
-                    <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-                <li><span>AR Paint (ICEC, 2012)</span>
-                  <a href="https://link.springer.com/chapter/10.1007%2F978-3-642-33542-6_11" target="_blank">
-                    <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="patent">
-            <h2 class="title">Patent</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span>Watch type terminal and operating method thereof (KR101603266B1)</span>
-                  <a href="https://patents.google.com/patent/KR101603266B1/en" target="_blank">
-                    <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-                <li><span>Electronic device and method for controlling the same (KR20170027435A)</span>
-                  <a href="https://patents.google.com/patent/KR20170027435A/en?oq=KR20170027435A" target="_blank">
-                    <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section id="talks">
-            <h2 class="title">Talks</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span>Women Tech Maker Seoul (2019) - "Challenge the Web Standard"</span>
-                  <a href="https://docs.google.com/presentation/d/1B1Riw1kV4lBdoFv8XFgVRQ47t0zvmX2eLJaB18TUG20/" target="_blank"><img class="ref_link" src="img/foreign.svg"/></a>
-                </li>
-                <li><span>W3C TPAC Breakout Session, Lyon (2018) - "Spatial Navigation in the Web"</span>
-                  <a href="https://jihyerish.github.io/talks/spatial-navigation-tpac2018-breakoutsession.pdf" target="_blank">
-                  <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-                <li><span>Google Developer Meetup, Sydney (2016) - "Introducing CSS Round Display"</span>
-                  <a href="https://onsman.com/w3c-working-groups-future-web/" target="_blank">
-                  <img class="ref_link" src="img/foreign.svg" /></a>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section id="skills">
-            <h2 class="title">Skills &amp; Competencies</h2>
-            <div class="description__plain">
-              <ul>
-                <li><span><strong>Product:</strong> Product strategy, market analysis, roadmap management, stakeholder alignment, specification writing</span></li>
-                <li><span><strong>Technical:</strong> HTML, CSS, JavaScript, C++, WebGL, OpenCV</span></li>
-                <li><span><strong>Languages:</strong> Korean (native), English (fluent)</span></li>
-              </ul>
-            </div>
-          </section>
-        </main>
-
-        <footer class="footer">
-          <ul class="contact__list">
-            <li class="contect__item" ><a href="mailto:jihyerish@gmail.com"><img class="contect_img" src="img/mail.png" alt="email to jihye"></a></li>
-            <li class="contect__item" ><a href="https://github.com/jihyerish"><img class="contect_img" src="img/github.png" alt="github of jihye"></a></li>
-            <li class="contect__item" ><a href="https://www.linkedin.com/in/jihye-hong-03b69abb/"><img class="contect_img" src="img/linkedin.png" alt="linkedin of jihye"></a></li>
-            <li class="contect__item" ><a href="https://twitter.com/jihyerish"><img class="contect_img" src="img/twitter.png" alt="follow jihye"></a></li>
-          </ul>
-        </footer>
-      </div>
-      <script type="text/javascript" src="js/main.js"></script>
+      <section class="contact section-shell">
+        <p class="eyebrow" data-en="Let’s make something that lasts." data-ko="오래 남을 무언가를 함께 만들어요.">Let’s make something that lasts.</p>
+        <a class="contact-email" href="mailto:jihyerish@gmail.com">jihyerish@gmail.com <span>↗</span></a>
+        <div class="socials"><a href="https://github.com/jihyerish" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/jihye-hong-03b69abb/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://twitter.com/jihyerish" target="_blank" rel="noreferrer">X / Twitter</a></div>
+      </section>
+    </main>
+    <footer><span>© <span id="year"></span> Jihye Hong</span><a href="#top" data-en="Back to top ↑" data-ko="맨 위로 ↑">Back to top ↑</a></footer>
+    <script src="js/portfolio.js"></script>
   </body>
 </html>
