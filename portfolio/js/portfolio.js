@@ -10,7 +10,7 @@
     toggle.querySelector('span:last-child').style.color = language === 'en' ? 'var(--plum)' : 'var(--muted)';
     localStorage.setItem('portfolio-language', language);
   };
-  setLanguage(localStorage.getItem('portfolio-language') || 'en');
+  setLanguage(localStorage.getItem('portfolio-language') || 'ko');
   toggle.addEventListener('click', () => setLanguage(html.lang === 'en' ? 'ko' : 'en'));
   document.querySelector('#year').textContent = new Date().getFullYear();
 })();
